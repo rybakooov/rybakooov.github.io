@@ -1,10 +1,40 @@
 a, p, h1, h2, h3, h4, h5, h6, *{
   font-family: 'Roboto', sans-serif;
 }
+.circle-bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.stick-squad{
+  position: absolute;
+  top: 0;
+}
+.gen-title{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  padding-left: 29px;
+  padding-top: 7px;
+  position: relative;
+  z-index: 10;
+}
+.gen-subtitle{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 29px;
+  position: relative;
+  z-index: 10;
+}
 #header{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 .header-wrap{
   display: flex;
