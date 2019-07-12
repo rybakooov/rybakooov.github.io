@@ -2,3 +2,19 @@
     margin: 0;
     padding: 0;
 }
+a{
+  text-decoration: none;
+}
+input{
+  border-radius: 0;
+}
+input:not([type=checkbox]):not([type=radio]),
+textarea, 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:required {
+  box-shadow:none;
+}
