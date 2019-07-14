@@ -6,10 +6,21 @@ a, p, h1, h2, h3, h4, h5, h6, *{
   left: 0;
   top: 0;
   z-index: 0;
+  @include w480{
+    
+    left: auto;
+    right: 10px;
+  }
 }
 .stick-squad{
   position: absolute;
   top: 0;
+  @include w768{
+    height: 80px;
+  }
+  @include w480{
+    height: 75px;
+  }
 }
 .gen-title{
   font-style: normal;
@@ -19,6 +30,15 @@ a, p, h1, h2, h3, h4, h5, h6, *{
   padding-top: 7px;
   position: relative;
   z-index: 10;
+  @include w768{
+    font-size: 24px;
+    padding-top: 2px;
+  }
+  @include w480{
+    padding-left: 25px;
+    padding-top: 4px;
+    font-size: 20px;
+  }
 }
 .gen-subtitle{
   font-style: normal;
@@ -29,12 +49,19 @@ a, p, h1, h2, h3, h4, h5, h6, *{
   padding-left: 29px;
   position: relative;
   z-index: 10;
+  @include w768{
+    font-size: 12px;
+  }
+  @include w480{
+    padding-left: 25px;
+  }
 }
 #header{
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .header-wrap{
   display: flex;
@@ -50,6 +77,9 @@ a, p, h1, h2, h3, h4, h5, h6, *{
       color: rgba(0, 0, 0, 0.8);
       transition: color 0.2s linear;
       &:not(:last-child){
+        @include w1024{
+          margin-right: 20px;
+        }
         margin-right: 50px;
       }
       &:hover{
@@ -78,6 +108,9 @@ a, p, h1, h2, h3, h4, h5, h6, *{
         }
         &:not(:last-child){
           margin-right: 17px;
+          @include w1024{
+            margin-right: 10px;
+          }
         }
       }
     }
@@ -90,6 +123,9 @@ a, p, h1, h2, h3, h4, h5, h6, *{
       color: rgba(0, 0, 0, 0.8);
       &:not(:last-child){
         margin-right: 50px;
+        @include w1024{
+          margin-right: 20px;
+        }
       }
       svg{
         margin-right: 8px;
