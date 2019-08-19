@@ -1,127 +1,111 @@
-extend ../common/main.pug
-block title
-  title ГЛАВНАЯ
-block content
-  .main
-    section.first-sec 
-      h1.first-sec__h1 Транспортно- <br>экспедиторская <br>компания
-      h4.first-sec__h4 Перевозка внешнеторговых грузов в контейнерах
-    section.second-sec 
-      <svg class="stick-squad" preserveAspectRatio="xMaxYMax slice" width="10" height="134" viewBox="0 0 10 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0.5" y1="-2.18557e-08" x2="0.500006" y2="129" stroke="#082D84" stroke-opacity="0.2"/>
-        <rect y="124" width="10" height="10" fill="#082D84"/>
-      </svg>
-      h4.gen-subtitle Основная информация
-      h1.gen-title О компании
-      p.second-sec__p Основой работы являются морские перевозки. Сопутствующие операции – это автомобильные, железнодорожные перевозки, таможенное оформление и страхование грузов, складирование и дистрибуция, портовое экспедирование. Мы в равной мере работаем как с импортными, так и экспортными грузами.
-      img.second-sec__img(src="assets/images/ship1.png", alt="ship")
-      p.second-sec__p СиМакс является компанией нового поколения на рынке транспортных услуг. Она основана и управляется на современных принципах ведения бизнеса. В компании собраны лучшие профессионалы транспорта и логистики.  Многие сотрудники пришли в компанию из различных отраслей экономики - морского и железнодорожного транспорта, авто-предприятий, портов, складских терминалов – объединив свои знания и опыт в деле организации логистической структуры нового поколения. Наши основополагающие принципы сформулированы в философии компании
-    section.third-sec
-      <svg class="circle-bg" width="668" height="388" viewBox="0 0 668 388" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="-510" width="1178" height="388" rx="194" fill="#F8FAFC"/>
-      </svg>
-      <svg class="stick-squad" preserveAspectRatio="xMaxYMax slice" width="10" height="134" viewBox="0 0 10 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0.5" y1="-2.18557e-08" x2="0.500006" y2="129" stroke="#082D84" stroke-opacity="0.2"/>
-        <rect y="124" width="10" height="10" fill="#082D84"/>
-      </svg>
-      h4.gen-subtitle Наши ценности
-      h1.gen-title Философия компании
-      .list-wrap
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Мы обязаны быть примерными гражданами – способствовать добрым начинаниям, заниматься благотворительностью, быть приветливыми, уважать права и потребности других;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Наши сотрудники должны быть честными, инициативными, стремились к внедрению новых идей и передовых технологий, анализировали и исправляли допущенные ошибки;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Мы должны всемерно заботиться о наших клиентах, чтобы они были довольны нами, а их заказы выполнялись точно и быстро;
-        p.list__item Наши сотрудники должны быть честными, инициативными, стремились к внедрению новых идей и передовых технологий, анализировали и исправляли допущенные ошибки;
-        p.list__item Мы обязаны быть примерными гражданами – способствовать добрым начинаниям, заниматься благотворительностью, быть приветливыми, уважать права и потребности других;
-    section.fourth-sec
-      <svg class="stick-squad" preserveAspectRatio="xMaxYMax slice" width="10" height="134" viewBox="0 0 10 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0.5" y1="-2.18557e-08" x2="0.500006" y2="129" stroke="#082D84" stroke-opacity="0.2"/>
-        <rect y="124" width="10" height="10" fill="#082D84"/>
-      </svg>
-      h4.gen-subtitle Отеделы и подразделения
-      h1.gen-title Структура компании
-      h3.fourth-sec__title Отделы:
-      .parts-wrap
-        .parts-item
-          img.parts-item__img(src="assets/images/import.svg", alt="Импортный отдел")
-          p.parts-item__p Импортный отдел
-        .parts-item
-          img.parts-item__img(src="assets/images/export.svg", alt="Экспортный отдел")
-          p.parts-item__p Экспортный отдел
-        .parts-item
-          img.parts-item__img(src="assets/images/auto.svg", alt="Отдел автоперевозок")
-          p.parts-item__p Отдел автоперевозок
-        .parts-item
-          img.parts-item__img(src="assets/images/train.svg", alt="Отдел железнодорожных перевозок")
-          p.parts-item__p Отдел железнодорожных <br>перевозок
-        .parts-item
-          img.parts-item__img(src="assets/images/kass.svg", alt="Бухгалтерия")
-          p.parts-item__p Бухгалтерия
-      h3.fourth-sec__title Представительства:
-      .mission-wrap
-        .mission-item
-          .mission-item-visible
-            p.mission-item-head Санкт-Петербург
-              <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4.5 4L8 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            p.mission-item-about г. Санкт-Петербург, пр. Стачек 48, корпус 2-А, БЦ «Империал», офис 2303
-          .mission-item-invisible
-            a.mission-item__a(href="tel: +7 (988) 770-9922") +7 (988) 770-9922 <br>
-            a.mission-item__a(href="mailto: maksimov@seamax.ru") maksimov@seamax.ru
-        .mission-item
-          .mission-item-visible
-            p.mission-item-head Торгово-логистическая зона «Янино-1»
-              <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4.5 4L8 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            p.mission-item-about Ленинградская область, Всеволожский район, деревня Янино-1
-          .mission-item-invisible
-            a.mission-item__a(href="tel: +7 (988) 770-9922") +7 (988) 770-9922 <br>
-            a.mission-item__a(href="mailto: maksimov@seamax.ru") maksimov@seamax.ru
-        .mission-item
-          .mission-item-visible
-            p.mission-item-head Первый контейнерный терминал
-              <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4.5 4L8 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            p.mission-item-about г. Санкт-Петербург, Межевой канал, д.5, 3 район<br>г. Санкт-Петербург, Дорога на Турухтанные о-ва, д. 10, лит. «А»  
-          .mission-item-invisible
-            a.mission-item__a(href="tel: +7 (988) 770-9922") +7 (988) 770-9922 <br>
-            a.mission-item__a(href="mailto: maksimov@seamax.ru") maksimov@seamax.ru
-        .mission-item
-          .mission-item-visible
-            p.mission-item-head Петролеспорт
-              <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4.5 4L8 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            p.mission-item-about г. Санкт-Петербург, Гладкий остров, дом 1 
-          .mission-item-invisible
-            a.mission-item__a(href="tel: +7 (988) 770-9922") +7 (988) 770-9922 <br>
-            a.mission-item__a(href="mailto: maksimov@seamax.ru") maksimov@seamax.ru
-        .mission-item
-          .mission-item-visible
-            p.mission-item-head Новороссийск
-              <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4.5 4L8 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            p.mission-item-about Краснодарский край, г. Новороссийск, Железнодорожная петля, 2-й километр
-          .mission-item-invisible
-            a.mission-item__a(href="tel: +7 (988) 770-9922") +7 (988) 770-9922 <br>
-            a.mission-item__a(href="mailto: maksimov@seamax.ru") maksimov@seamax.ru
-        .mission-item
-          .mission-item-visible
-            p.mission-item-head Екатеринбург
-              <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4.5 4L8 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            p.mission-item-about г. Екатеринбург, пер. Красный 4а, офис 90
-          .mission-item-invisible
-            a.mission-item__a(href="tel: +7 (988) 770-9922") +7 (988) 770-9922 <br>
-            a.mission-item__a(href="mailto: maksimov@seamax.ru") maksimov@seamax.ru
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel="stylesheet", href="assets/styles/app.min.css")
+  title Document
+body
+  .wrapper
+    .upper-tabs-content
+      article.scheme-realize
+        p.scheme-realize__text
+          | Вы можете легко и быстро продать свою квартиру с помощью услуг специалистов отдела вторичной недвижимости ГК «КВС». Вырученные денежные средства можете с выгодой вложить в покупку новой квартиры. Квалифицированные специалисты Группы компаний «КВС» проведут полный цикл сделки и окажут сопровождение на всех ее этапах: от оценки имеющегося жилья до получения ключей от новой квартиры. Теперь, обратившись в «КВС», вы можете решить свой жилищный вопрос по принципу «одного окна».
+        .scheme-realize-table
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-1.svg", alt="")
+            img.scheme-realize-table-block__img.scheme-realize-table-block__img_down(src='assets/images/scheme-realize-1.png', alt='')
+            span.scheme-realize-table-block__num 1
+            p.scheme-realize-table-block__desc Обращение клиента в ГК «КВС»
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-2.svg", alt="")
+            img.scheme-realize-table-block__img.scheme-realize-table-block__img_down(src='assets/images/scheme-realize-2.png', alt='')
+            span.scheme-realize-table-block__num 2
+            p.scheme-realize-table-block__desc Оценка Вашей квартиры
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-3.svg", alt="")
+            img.scheme-realize-table-block__img(src='assets/images/scheme-realize-3.png', alt='')
+            p.scheme-realize-table-block__desc.scheme-realize-table-block__desc_big Заключение Договора об оказании консультационных услуг. 
+              span 
+                i <br>Размер комиссионного вознаграждения составляет 50 000 руб.
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-4.svg", alt="")
+            img.scheme-realize-table-block__img.scheme-realize-table-block__img_down(src='assets/images/scheme-realize-4.png', alt='')
+            span.scheme-realize-table-block__num 4
+            p.scheme-realize-table-block__desc 
+              span Проведение рекламной кампании
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-5.svg", alt="")
+            img.scheme-realize-table-block__img.scheme-realize-table-block__img_top(src='assets/images/scheme-realize-5.png', alt='')
+            span.scheme-realize-table-block__num 5
+            p.scheme-realize-table-block__desc.scheme-realize-table-block__desc_big Демонстрация Вашей квартиры потенциальным покупателям.
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-6.svg", alt="")
+            img.scheme-realize-table-block__img(src='assets/images/scheme-realize-6.png', alt='')
+            p.scheme-realize-table-block__desc.scheme-realize-table-block__desc_big 
+              span 
+                strong Покупатель найден. 
+              | Подготовка и регистрация договора купли-продажи
+          .scheme-realize-table-block
+            img.scheme-realize-table-block__bg(src="assets/images/scheme-realize-bg-7.svg", alt="")
+            img.scheme-realize-table-block__img.scheme-realize-table-block__img_top_t(src='assets/images/scheme-realize-7.png', alt='')
+            span.scheme-realize-table-block__num 7
+            p.scheme-realize-table-block__desc.scheme-realize-table-block__desc_big.scheme-realize-table-block__desc_big_b 
+              span Проведение взаиморасчетов по квартире
+          <svg id="SVGDoc" width="51" height="70" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 51 70"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Group 4499</title><g><title>Path 7282</title><path d="M7.49994,67.66675v0v-66.66699v0h42.50012v0" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="round" stroke-opacity="1" stroke="#fd7800" stroke-miterlimit="50" stroke-width="1"></path></g><g><title>Path 7284</title><path d="M1.00004,60.33374v0l6.66656,9v0l6.33331,-9v0" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="round" stroke-opacity="1" stroke="#fd7800" stroke-miterlimit="50" stroke-width="1"></path></g></g></g></svg>
+          <svg id="SVGDoc1" width="51" height="70" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 51 70"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Group 4499</title><g><title>Path 7282</title><path d="M7.49994,67.66675v0v-66.66699v0h42.50012v0" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="round" stroke-opacity="1" stroke="#fd7800" stroke-miterlimit="50" stroke-width="1"></path></g><g><title>Path 7284</title><path d="M1.00004,60.33374v0l6.66656,9v0l6.33331,-9v0" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="round" stroke-opacity="1" stroke="#fd7800" stroke-miterlimit="50" stroke-width="1"></path></g></g></g></svg>
+        .scheme-realize-double
+          .scheme-realize-double-block
+            img.scheme-realize-double-block__img(src="assets/images/scheme-realize-double-1.png", alt="")
+            p.scheme-realize-double-block__desc.scheme-realize-double-block__desc_l Поиск Новой квартиры на рынке 
+          .scheme-realize-double-block
+            img.scheme-realize-double-block__img(src="assets/images/scheme-realize-double-2.png", alt="")
+            p.scheme-realize-double-block__desc Покупка Новой квартиры в объектах ГК «КВС». 
+              span На покупку квартиры предоставляется скидка 50 000 руб. 
+              | При необходимости можно воспользоваться ипотекой или рассрочкой.
+        .scheme-realize-advantage
+          h4.scheme-realize-advantage__title Наши преимущества
+          ul.scheme-realize-advantage-list
+            li
+              span 1.
+              | Принцип «одного окна»: на всех этапах сделки Вас сопровождают квалифицированные сотрудники отдела вторичной недвижимости ГК «КВС».
+            li
+              span 2.
+              | Профессиональная оценка квартиры на основе анализа текущих и прошлых предложений, сделок на рынке недвижимости.	
+            li
+              span 3.
+              | Предпродажная подготовка квартиры.
+            li
+              span 4.
+              | Работаем с субсидиями, материнским капиталом, военной ипотекой.
+            li
+              span 5.
+              | Бесплатное одобрение ипотечного кредита через отдел ипотеки ГК «КВС».
+            li
+              span 6.
+              | Размещение рекламы по квартире за наш счет.
+            li
+              span 7.
+              | Проведение показов квартиры в удобное для Вас время с мотивированными Покупателями.
+            li
+              span 8.
+              | Проведение переговоров с Покупателями.	
+            li
+              span 9.
+              | Помощь в сборе документов для сделки.
+            li
+              span 10.
+              | Формирование проекта договора купли-продажи.
+            li
+              span 11.
+              | Организация, проведение и регистрация сделки.
+            li
+              span 12.
+              | Контроль  за выполнением взаиморасчетов по квартире.
+            li
+              span 13.
+              | Услуги по продаже Вашей квартиры будут оказаны для Вас абсолютно БЕСПЛАТНО при покупке новой квартиры в объектах ГК «КВС».
+    .super-line
+    .upper-tabs-content
+      | chechnya        
+  
