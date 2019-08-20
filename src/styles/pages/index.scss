@@ -1,4 +1,9 @@
 /* стили по KVS */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
 body{
   background-color: azure;
 }
@@ -164,4 +169,67 @@ body{
   width: 100%;
   margin: 150px 0;
   box-sizing: border-box;
+}
+
+.zachet-program{
+  &__text{
+    color: #333333;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    line-height: 18px;
+  }
+  &-imgcont{
+    margin: 14px 0 28px;
+    &__img{
+      margin: 0 auto;
+      width: 100%;
+      max-width: 770px;
+      display: none;
+      &_active{
+        display: block;
+      }
+    }
+  }
+  &-block{
+    position: relative;
+    margin-top: 24px;
+    &__title{
+      color: #333333;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 26px;
+      span{
+        color: #fd7800;
+      }
+    }
+    &__btndwn{
+      position: absolute;
+      top: 0;
+      left: calc(50% - 15.5px);
+      cursor: pointer;
+    }
+    &-card{
+      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 10px;
+      border: 1px solid #efefef;
+      background-color: #ffffff;
+      padding: 20px 40px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      &-item{
+        img, p{
+          position: absolute;
+        }
+        &__num{
+          color: #ffffff;
+          font-size: 51px;
+          font-weight: 900;
+          line-height: 61px;
+        }
+      }
+    }
+  }
 }
