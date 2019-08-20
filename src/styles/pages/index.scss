@@ -204,6 +204,14 @@ body{
   &-block{
     position: relative;
     margin-top: 24px;
+    &_active{
+      .zachet-program-block-wrap{
+        display: block;
+      }
+      .zachet-program-block__btndwn{
+        transform: rotate(180deg);
+      }
+    }
     &__title{
       color: #333333;
       font-size: 15px;
@@ -218,18 +226,57 @@ body{
       top: 0;
       left: calc(50% - 15.5px);
       cursor: pointer;
+      transition: transform 1s linear;
     }
-    &-card{
+    &-wrap{
+      display: none;
       box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
       border-radius: 10px;
       border: 1px solid #efefef;
       background-color: #ffffff;
       padding: 20px 40px;
       margin-top: 10px;
+      position: relative;
+    }
+    &-card{
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+      &:after {
+        content: "";
+        width: 30%;
+      }
+      &__clsbtn{
+        position: absolute;
+        top: 15px;
+        right: 16px;
+        cursor: pointer;
+      }
+      &-warning{
+        margin-top: 30px;
+        margin-left: -10px;
+        &:after {
+          content: " ";
+          clear: both;
+          display: table;
+        }
+        &__img{
+          margin-top: 6px;
+        }
+        &__text{
+          float: right;
+          color: #fd7800;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: 0.15px;
+          line-height: 18px;
+          max-width: calc(100% - 45px);
+        }
+      }
       &-item{
+        position: relative;
         img, p{
           position: absolute;
         }
@@ -241,10 +288,258 @@ body{
         }
         &__text{
           color: #333333;
-font-size: 15px;
-font-weight: 400;
-letter-spacing: 0.15px;
-line-height: 16px;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: 0.15px;
+          line-height: 16px;
+          display: block;
+          span{
+            color: #fd7800;
+          }
+        }
+      }
+    }
+    .zachet-program-block-card-item{
+      &_1{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 44px;
+            left: 16px;
+          }
+          &__text{
+            top: 71px;
+            left: 102px;
+            max-width: 126px;
+          }
+          &__num{
+            top: 20px;
+            right: 31px;;
+          }
+        }
+      }
+      &_2{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 36px;
+            left: 19px;
+          }
+          &__text{
+            top: 44px;
+            left: 106px;
+            max-width: 140px;
+          }
+          &__num{
+            top: 18px;
+            right: 32px;;
+          }
+        }
+      }
+      &_3{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 45px;
+            left: 58px;
+          }
+          &__text{
+            top: 59px;
+            left: 153px;
+            max-width: 109px;
+          }
+          &__num{
+            top: 17px;
+            right: 24px;
+          }
+        }
+      }
+      &_4{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 23px;
+            left: 3px;
+          }
+          &__text{
+            top: 45px;
+            left: 106px;
+            max-width: 160px;
+          }
+          &__num{
+            top: 5px;
+            right: 31px;
+          }
+        }
+      }
+      &_5{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 50px;
+            left: 16px;
+          }
+          &__text{
+            top: 50px;
+            left: 80px;
+            max-width: 200px;
+          }
+          &__num{
+            top: 12px;
+            right: 40px;
+          }
+        }
+      }
+      &_6{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 34px;
+            left: 54px;
+          }
+          &__text{
+            top: 79px;
+            left: 122px;
+            max-width: 177px;
+          }
+          &__num{
+            top: 20px;
+            right: 30px;
+          }
+        }
+      }
+      &_7{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 22px;
+            left: 24px;
+          }
+          &__text{
+            top: 63px;
+            left: 102px;
+            max-width: 171px;
+          }
+          &__num{
+            top: 10px;
+            right: 36px;
+          }
+        }
+      }
+      &_8{
+        .zachet-program-block-card-item{
+          &__img{
+            top: 14px;
+            left: 6px;
+          }
+          &__text{
+            top: 62px;
+            left: 91px;
+            max-width: 163px;
+          }
+          &__num{
+            top: 22px;
+            right: 25px;
+          }
+        }
+      }
+    }
+    &_3{
+      .zachet-program-block-card-item{
+        &_2{
+          .zachet-program-block-card-item{
+            &__img{
+              top: 39px;
+              left: 16px;
+            }
+            &__text{
+              top: 53px;
+              left: 110px;
+              max-width: 110px;
+            }
+            &__num{
+              top: 8px;
+              right: 32px;;
+            }
+          }
+        }
+        &_3{
+          .zachet-program-block-card-item{
+            &__img{
+              top: 15px;
+              left: 10px;
+            }
+            &__text{
+              top: 53px;
+              left: 113px;
+              max-width: 160px;
+            }
+            &__num{
+              top: 17px;
+              right: 17px;
+            }
+          }
+        }
+        &_4{
+          .zachet-program-block-card-item{
+            &__img{
+              top: 42px;
+              left: 20px;
+            }
+            &__text{
+              top: 64px;
+              left: 97px;
+              max-width: 171px;
+            }
+            &__num{
+              top: 1px;
+              right: 31px;
+            }
+          }
+        }
+        &_5{
+          .zachet-program-block-card-item{
+            &__img{
+              top: 38px;
+              left: 36px;
+            }
+            &__text{
+              top: 46px;
+              left: 123px;
+              max-width: 140px;
+            }
+            &__num{
+              top: 9px;
+              right: 54px;
+            }
+          }
+        }
+        &_6{
+          .zachet-program-block-card-item{
+            &__img{
+              top: 35px;
+              left: -29px;
+            }
+            &__text{
+              top: 80px;
+              left: 70px;
+              max-width: 216px;
+            }
+            &__num{
+              top: 20px;
+              right: 39px;
+            }
+          }
+        }
+        &_7{
+          .zachet-program-block-card-item{
+            &__img{
+              top: 49px;
+              left: 0px;
+            }
+            &__text{
+              top: 63px;
+              left: 93px;
+              max-width: 163px;
+            }
+            &__num{
+              top: 10px;
+              right: 36px;
+            }
+          }
         }
       }
     }
