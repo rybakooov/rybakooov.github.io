@@ -49,8 +49,8 @@ body{
         &_top{
           top: 20px;
           &_t{
-            top: 10px;
-            left: -20px;
+            top: 20px;
+            left: -10px;
           }
         }
       }
@@ -69,7 +69,7 @@ body{
       &__desc{
         position: absolute;
         top: calc(50% - 8px);
-        left: 120px;
+        left: 110px;
         color: #333333;
         display: inline-block;
         max-width: 100px;
@@ -85,8 +85,18 @@ body{
           left: auto;
           right: 0px;
           top: auto;
-          bottom: 30px;
+          bottom: 40px;
           max-width: 170px;
+          &_very{
+            top: 20px;
+            right: 10px;
+            left: auto;
+            bottom: auto;
+            max-width: 170px;
+          }
+          &_l{
+            right: 20px;
+          }
           &_b{
             bottom: 55px;
             max-width: 150px;
@@ -228,6 +238,13 @@ body{
           font-size: 51px;
           font-weight: 900;
           line-height: 61px;
+        }
+        &__text{
+          color: #333333;
+font-size: 15px;
+font-weight: 400;
+letter-spacing: 0.15px;
+line-height: 16px;
         }
       }
     }
