@@ -205,9 +205,6 @@ body{
     position: relative;
     margin-top: 24px;
     &_active{
-      .zachet-program-block-wrap{
-        display: block;
-      }
       .zachet-program-block__btndwn{
         transform: rotate(180deg);
       }
@@ -226,10 +223,9 @@ body{
       top: 0;
       left: calc(50% - 15.5px);
       cursor: pointer;
-      transition: transform 1s linear;
+      transition: transform 0.3s linear;
     }
     &-wrap{
-      display: none;
       box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16);
       border-radius: 10px;
       border: 1px solid #efefef;
@@ -543,5 +539,64 @@ body{
         }
       }
     }
+  }
+}
+@media screen and (max-width: 1023px){
+  .zachet-program-block__btndwn{
+    left: auto;
+    right: 16px;
+  }
+  .zachet-program-block-card__clsbtn{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px){
+  .zachet-program-block__btndwn{
+    position: static;
+    float: right;
+    margin: 10px 0 0 0;
+  }
+  .zachet-program-block-wrap{
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .zachet-program-block-card{
+    flex-direction: column;
+    align-items: center;
+  }
+  .zachet-program-block-card-warning{
+    margin-left: 0;
+  }
+  .scheme-realize-advantage__title{
+    padding-top: 30px
+  }
+  .scheme-realize-table-block-arrow{
+    display: none;
+  }
+  .scheme-realize-double{
+    flex-direction: column; 
+    align-items: center;
+  }
+  .scheme-realize-double-block{
+    width: 100%;
+    &:nth-child(1){
+      margin-bottom: 30px;
+    }
+  }
+  .scheme-realize-double-block__desc{
+    text-align: center !important;
+  }
+}
+@media screen and (max-width: 400px){
+  .zachet-program-block-card-item__bg svg{
+    width: 100%;
+  }
+  
+  .zachet-program-block__title{
+    max-width: 270px;
+  }
+  .zachet-program-block__btndwn{
+    margin-top: 20px;
   }
 }
