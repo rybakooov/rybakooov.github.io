@@ -1,0 +1,115 @@
+.footer{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+  &-wrap{
+    box-sizing: border-box;
+    padding: 40px 60px 18px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &-logo{
+      &__img{
+        margin-bottom: 18px;
+      }
+      &__text{
+        font-family: SF UI Display;
+        font-size: 12px;
+        line-height: 18px;
+        color: #737373;
+        display: block;
+        max-width: 173px;
+        font-weight: 300;
+      }
+    }
+    &-links{
+      display: flex;
+      &-list{
+        &:not(:last-child){
+          margin-right: 105px;
+        }
+        a.footer-wrap-links-list__link:hover{
+          color: #4479BC;
+        }
+        &__title{
+          font-family: SF UI Display;
+          font-size: 14px;
+          line-height: 17px;
+          margin-bottom: 30px;
+          color: #181818;
+        }
+        &__link{
+          font-family: SF UI Display;
+          margin-bottom: 30px;
+          font-size: 11px;
+          color: #737373;
+          display: flex;
+          align-items: center;
+          font-weight: 300;
+          text-decoration: none;
+          svg{
+            margin-right: 9px;
+          }
+        }
+        &__timing{
+          margin-bottom: 12px;
+          display: block;
+          font-family: SF UI Display;
+          font-size: 11px;
+          line-height: 13px;
+          color: #737373;
+          font-weight: 300;
+        }
+        &__clock{
+          margin-bottom: 18px;  
+          font-family: SF UI Display;
+          font-size: 11px;
+          line-height: 13px;
+          color: #181818;
+        }
+      }
+    }
+    &-subscribe{
+      &__title{
+        font-family: SF UI Display;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 30px;
+        color: #181818;
+      }
+      &-form{
+        position: relative;
+        display: flex;
+        margin-bottom: 20px;
+        input{
+          border: none;
+          background: transparent;
+          padding: 0 0 8px 0;
+          border-bottom: 1px solid #D4D4D4;
+        }
+        input[type="text"]{
+          flex: 3;
+          font-family: SF UI Display;
+          font-size: 11px;
+          color: #8D8D8D;
+        }
+        input[type="button"]{
+          font-family: SF UI Display;
+          font-size: 11px;
+          cursor: pointer;
+          flex: 1;
+        }
+      }
+      &-links{
+        display: flex;
+        align-items: center;
+        &__link{
+          &:not(:last-child){
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

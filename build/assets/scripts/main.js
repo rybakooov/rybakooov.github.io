@@ -1,68 +1,10 @@
 $(document).ready(function(){
-  $('.zachet-program-block-wrap').each(function(){
-    $(this).slideUp(0); 
-  });
-  $(window).resize(function(){
-    $('.zachet-program-block-wrap').each(function(){
-      $(this).slideUp(200); 
-      $('.zachet-program-imgcont__img_active').removeClass('zachet-program-imgcont__img_active');
-      $('.zachet-program-block_active').removeClass('zachet-program-block_active');
-      $('.zachet-program-imgcont__img:nth-child(1)').addClass('zachet-program-imgcont__img_active');
-    });
-  })
-  $('.zachet-program-block__title').click(function(){
-    if($(window).width() < 1024){
-      if(!$(this).parent().hasClass('zachet-program-block_active')){
-        $('.zachet-program-imgcont__img_active').removeClass('zachet-program-imgcont__img_active');
-        $('.zachet-program-block_active').removeClass('zachet-program-block_active');
-        $(this).parent().addClass('zachet-program-block_active');
-        $('.zachet-program-block_active .zachet-program-block-wrap').slideDown(300);
-        if($(this).parent().hasClass('zachet-program-block_1')){
-          $('.zachet-program-imgcont__img:nth-child(2)').addClass('zachet-program-imgcont__img_active');
-          $('.zachet-program-imgcont__img:nth-child(2)').addClass('zachet-program-imgcont__img_active');
-        } else {
-          if($(this).parent().hasClass('zachet-program-block_2')){
-            $('.zachet-program-imgcont__img:nth-child(3)').addClass('zachet-program-imgcont__img_active');
-          } else {
-            $('.zachet-program-imgcont__img:nth-child(4)').addClass('zachet-program-imgcont__img_active');
-          }
-        }
-      } else {
-        $('.zachet-program-block_active .zachet-program-block-wrap').slideUp(300); 
-        $('.zachet-program-imgcont__img_active').removeClass('zachet-program-imgcont__img_active');
-        $('.zachet-program-block_active').removeClass('zachet-program-block_active');
-        $('.zachet-program-imgcont__img:nth-child(1)').addClass('zachet-program-imgcont__img_active');
-      }
-    }
-    
-  });
-  $('.zachet-program-block__btndwn').click(function(){
-    if(!$(this).parent().hasClass('zachet-program-block_active')){
-      $('.zachet-program-imgcont__img_active').removeClass('zachet-program-imgcont__img_active');
-      $('.zachet-program-block_active').removeClass('zachet-program-block_active');
-      $(this).parent().addClass('zachet-program-block_active');
-      $('.zachet-program-block_active .zachet-program-block-wrap').slideDown(300);
-      if($(this).parent().hasClass('zachet-program-block_1')){
-        $('.zachet-program-imgcont__img:nth-child(2)').addClass('zachet-program-imgcont__img_active');
-        $('.zachet-program-imgcont__img:nth-child(2)').addClass('zachet-program-imgcont__img_active');
-      } else {
-        if($(this).parent().hasClass('zachet-program-block_2')){
-          $('.zachet-program-imgcont__img:nth-child(3)').addClass('zachet-program-imgcont__img_active');
-        } else {
-          $('.zachet-program-imgcont__img:nth-child(4)').addClass('zachet-program-imgcont__img_active');
-        }
-      }
-    } else {
-      $('.zachet-program-block_active .zachet-program-block-wrap').slideUp(300); 
-      $('.zachet-program-imgcont__img_active').removeClass('zachet-program-imgcont__img_active');
-      $('.zachet-program-block_active').removeClass('zachet-program-block_active');
-      $('.zachet-program-imgcont__img:nth-child(1)').addClass('zachet-program-imgcont__img_active');
-    }
-  });
-  $('.zachet-program-block-card__clsbtn').click(function(){
-    $('.zachet-program-block_active .zachet-program-block-wrap').slideUp(300); 
-    $('.zachet-program-imgcont__img_active').removeClass('zachet-program-imgcont__img_active');
-      $('.zachet-program-block_active').removeClass('zachet-program-block_active');
-      $('.zachet-program-imgcont__img:nth-child(1)').addClass('zachet-program-imgcont__img_active');
+  $('#header-search').hide();
+  $('.header-wrap-linklist__link_more').children('a').append('<svg class="more-arrow" width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3 3L5 1" stroke="black" stroke-opacity="0.75" stroke-linecap="round"/></svg>');
+  $('.header-wrap-info-search label').click(function(){
+    console.log('hui');
+    $('#header-search').toggle('slow');
+    $('.header-wrap-linklist').toggle('slow');
+    $('.header-wrap-info').toggleClass('header-wrap-info_active-search');
   });
 });
