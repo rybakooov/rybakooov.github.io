@@ -4,8 +4,33 @@ body{
   flex-direction: column;
   align-items: stretch;
 }
+.w1440{
+  max-width: 1440px;
+  padding: 90px 60px 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.title{
+  &-36{
+    font-family: SF UI Display;
+    font-size: 36px;
+    line-height: 150%;
+    color: #000000;
+  }
+  &-48{
+    font-family: SF UI Display;
+    font-size: 48px;
+    line-height: 150%;
+    color: #000000;
+  }
+}
 .header{
   border-bottom: 1px solid #EBEBEB;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 5;
   &-wrap{
     box-sizing: border-box;
     max-width: 1440px;
@@ -70,9 +95,6 @@ body{
             margin-left: 4px;
             transition: transform 0.2s ease-in;
             transform: scale(1.5);
-          }
-          &:hover .header-wrap-linklist-block{
-            display: block;
           }
         }
         a{
