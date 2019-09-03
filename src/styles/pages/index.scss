@@ -287,7 +287,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 100px;
   &-desc{
     padding-left: 154px;
     &__subtitle{
@@ -324,8 +323,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100% - 100px);
-    bottom: 0;
     right: 60px;
     &__link{
       margin-bottom: 23px;
@@ -876,5 +873,71 @@
         }
       }
     } 
+  }
+}
+.safe{
+  &-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 90px 0 100px;
+    &-right{
+      width: calc(50% - 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      svg{
+        position: absolute;
+        z-index: -5;
+        width: auto;
+      }
+      &__img{
+        width: auto;
+      }
+    }
+    &-left{
+      width: calc(50% - 10px);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: -10px;
+      &-item{
+        width: calc(50% - 20px);
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__ellipse{
+          position: absolute;
+        }
+        &__num{
+          margin: 16px auto 0;
+          font-family: SF UI Display;
+          font-size: 100px;
+          line-height: 125%;
+        }
+        &__title{
+          margin-bottom: 52px;
+          font-family: SF UI Display;
+          font-size: 18px;
+          line-height: 150%;
+          font-weight: 400;
+        }
+        &__text{
+          display: block;
+          max-width: 262px;
+          text-align: center;
+          font-family: SF UI Display;
+          font-size: 16px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.75);
+        }
+        &__img{
+          margin-top: 26px;
+        }
+      }
+    }
   }
 }

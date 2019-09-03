@@ -1,12 +1,18 @@
 $(document).ready(function(){
 
   /*header anim*/
-  $('#header-search').hide();
   $('.header-wrap-linklist__link_more').children('a').append('<svg class="more-arrow" width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3 3L5 1" stroke="black" stroke-opacity="0.75" stroke-linecap="round"/></svg>');
-  $('.header-wrap-info-search label').click(function(){
-    $('#header-search').toggle('slow');
-    $('.header-wrap-linklist').toggle('slow');
-    $('.header-wrap-info').toggleClass('header-wrap-info_active-search');
+  $('.header-wrap-info-search').click(function(){
+    if($('.search').hasClass('search_active')){
+      $('.search').slideUp('fast');
+    } else {
+      $('.search').slideDown('fast');
+    }
+    $('.search').toggleClass('search_active');
+  });
+  $('.search-form-top__close').click(function(){
+    $('.search').slideUp('fast');
+    $('.search').toggleClass('search_active');
   });
 
   $('.header-wrap-linklist__link_more').hover(
@@ -44,10 +50,8 @@ $(document).ready(function(){
   $('.selector-view').click(function(){
     if($(this).parent().hasClass('selector_open')){
       $(this).parent().children('.selector-list').slideUp('fast');
-      console.log('da');
     } else {
       $(this).parent().children('.selector-list').slideDown('fast');
-      console.log('net');
     }
     $(this).parent().toggleClass('selector_open');
   });
@@ -85,9 +89,6 @@ $(document).ready(function(){
 
   /*stages dots*/
 
-  $('.stages-slider-dots').children('li').each(function(){
-    $(this).html('dsakdbjasdjaskdjj');
-  });
 
   /******************************slick********************************/
   $('.fourth-slider').slick({
@@ -115,5 +116,13 @@ $(document).ready(function(){
     dots: true,
     dotsClass: 'stages-slider-dots',
     infinite: false
+  });
+
+
+  
+  $('.stages-slider-dots').children('li').each(function(index){
+    let html1 = '0' + $(this).find('button').html();
+    $(this).find('button').html(html1);
+    $('.stages-slider-item[data-slick-index=' + index + ']').find('.stages-slider-item-desc__num').html(html1);
   });
 });

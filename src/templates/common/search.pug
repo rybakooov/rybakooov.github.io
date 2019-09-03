@@ -1,0 +1,131 @@
+.search
+	form.search-form(action="#")
+		.search-form-top
+			.search-form-top-title
+				span Поиск по
+				.search-form-top-title__btn.active(data-id="parametrs")
+					img(src="assets/images/filter-emodji1.png", alt="") 
+					span По параметрам
+				.search-form-top-title__btn(data-id="family")
+					img(src="assets/images/filter-emodji2.png", alt="") 
+					span По типу семьи
+			.search-form-top__close
+		.search-form-main.parametrs
+			.search-form-main-col
+				.search-form-main-col-row
+					.search-form-main-col-row-price
+						span Цена от
+						input(type="text" min-value="10000" data-type="price")
+						span До
+						input(type="text" max-value="33354000" data-type="price")
+					.search-form-main-col-row-select
+						select(name="" multiple placeholder="Этажность")
+							option 1 этаж
+							option 2 этажа
+							option 3 этажа
+							option 4 этажа
+				.search-form-main-col-row
+					.search-form-main-col-row-price.search-form-main-col-row-square
+						span Площадь от
+						input(type="text" min-value="10" data-type="square")
+						span До
+						input(type="text" max-value="874" data-type="square")
+					.search-form-main-col-row-select
+						select(name="" multiple placeholder="Комнаты")
+							option 1 комната
+							option 2 комнаты
+							option 3 комнаты
+							option 4 комнаты
+			.search-form-main-col.options
+				.search-form-main-col__title Опции
+				.search-form-main-col-wrap
+					label(for="input1")
+						input(type="checkbox" id="input1")
+						span
+						span Дом на склоне
+					label(for="input2")
+						input(type="checkbox" id="input2")
+						span
+						span Узкий участок
+					label(for="input3")
+						input(type="checkbox" id="input3")
+						span
+						span С пристанью
+					label(for="input4")
+						input(type="checkbox" id="input4")
+						span
+						span Наличие гаража
+					label(for="input5")
+						input(type="checkbox" id="input5")
+						span
+						span С баней
+					label(for="input6")
+						input(type="checkbox" id="input6")
+						span
+						span Большая гостиная
+					label(for="input7")
+						input(type="checkbox" id="input7")
+						span
+						span Акция
+					label(for="input8")
+						input(type="checkbox" id="input8")
+						span
+						span Две семьи
+		.search-form-main.family
+			label.search-form-main-item(for="family1")
+				input(type="checkbox" id="family1")
+				img(src="assets/images/filter-search-item1.svg", alt="")
+				span Одинокий молодой
+			label.search-form-main-item(for="family2")
+				input(type="checkbox" id="family2")
+				img(src="assets/images/filter-search-item2.svg", alt="")
+				span Холостой взрослый
+			label.search-form-main-item(for="family3")
+				input(type="checkbox" id="family3")
+				img(src="assets/images/filter-search-item3.svg", alt="")
+				span Молодая пара
+			label.search-form-main-item(for="family4")
+				input(type="checkbox" id="family4")
+				img(src="assets/images/filter-search-item4.svg", alt="")
+				span Взрослая пара
+			label.search-form-main-item(for="family5")
+				input(type="checkbox" id="family5")
+				img(src="assets/images/filter-search-item5.svg", alt="")
+				span Родитель с одним ребёнком
+			label.search-form-main-item(for="family6")
+				input(type="checkbox" id="family6")
+				img(src="assets/images/filter-search-item6.svg", alt="")
+				span Семья с одним ребёнком
+			label.search-form-main-item(for="family7")
+				input(type="checkbox" id="family7")
+				img(src="assets/images/filter-search-item7.svg", alt="")
+				span Родитель с двумя детьми
+			label.search-form-main-item(for="family8")
+				input(type="checkbox" id="family8")
+				img(src="assets/images/filter-search-item8.svg", alt="")
+				span Семья с двумя детьми
+			label.search-form-main-item(for="family9")
+				input(type="checkbox" id="family9")
+				img(src="assets/images/filter-search-item9.svg", alt="")
+				span Семья с одним ребенком и старшими родителями
+			label.search-form-main-item(for="family10")
+				input(type="checkbox" id="family10")
+				img(src="assets/images/filter-search-item10.svg", alt="")
+				span Семья с тремя детьми
+			label.search-form-main-item(for="family11")
+				input(type="checkbox" id="family11")
+				img(src="assets/images/filter-search-item11.svg", alt="")
+				span Семья с двумя детьми и старшими родителемя
+			label.search-form-main-item(for="family12")
+				input(type="checkbox" id="family12")
+				img(src="assets/images/filter-search-item12.svg", alt="")
+				span Холостой взрослый с родителеми
+		.search-form-bot
+			.search-form-bot__btn
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8158 12.8969L20 18.0811L18.0811 20L12.8969 14.8158C9.4382 17.2767 4.67067 16.6765 1.92988 13.4351C-0.810911 10.1937 -0.61038 5.39272 2.39117 2.39117C5.39272 -0.61038 10.1937 -0.810911 13.4351 1.92988C16.6765 4.67067 17.2767 9.4382 14.8158 12.8969ZM8.18934 1.8592C4.6934 1.8592 1.85937 4.69323 1.85937 8.18917C1.86336 11.6835 4.69505 14.5152 8.18934 14.5191C11.6853 14.5191 14.5193 11.6851 14.5193 8.18917C14.5193 4.69323 11.6853 1.8592 8.18934 1.8592Z" fill="white"/>
+				</svg> Искать
+			.search-form-bot__btn.reset
+				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+					<path d="M1 11L6 6M11 1L6 6M6 6L11 11M6 6L1 1" stroke="#D60909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg> Сбросить
