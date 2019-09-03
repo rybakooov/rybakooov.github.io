@@ -767,3 +767,111 @@
     }
   }
 }
+.stages{
+  &-slider{
+    display: flex;
+    margin-top: 80px;
+    &-dots{
+      order: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .slick-active{
+        button{
+          color: #4479BC;  
+          &:before{
+            width: 18px;
+            margin-right: 4px;
+          }
+          &:hover{
+            color: #4479BC;   
+          }
+        }
+      }
+      li{
+        button{
+          display: flex; 
+          align-items: center;
+          transition: all 0.2s linear;
+          border: none;
+          cursor: pointer;
+          background: none;
+          font-family: SF UI Display;
+          font-size: 18px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.25);
+          &:before{
+            width: 0px;
+            transition: all 0.2s linear;
+            height: 1.7px;
+            content: '';
+            display: block;
+            background-color: #4479BC;
+          }
+          &:hover{
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+        &:not(:last-child){
+          margin-bottom: 28px;
+        }
+      }
+    }
+    .slick-list{
+      order: 1;
+    }
+    &-item{
+      display: flex !important;
+      align-items: stretch;
+      width: 100%;
+      &-imagebox{
+        width: 40%;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-around;
+        &__img{
+          width: auto;
+        }
+      }
+      &-desc{
+        margin-left: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 60%;
+        &__num{
+          color: #fff;
+          font-family: SF UI Display;
+          font-size: 64px;
+          line-height: 150%;
+          text-shadow: 1px 0 1px rgba(0, 0, 0, 0.15), 
+          0 1px 1px rgba(0, 0, 0, 0.15), 
+          -1px 0 1px rgba(0, 0, 0, 0.15), 
+          0 -1px 1px rgba(0, 0, 0, 0.15);
+          position: absolute;
+          left: -40px;
+          bottom: -16px;
+          z-index: -4;
+        }
+        &__title{
+          position: relative;
+          font-family: SF UI Display;
+          font-size: 24px;
+          line-height: 150%;
+          color: #4479BC;
+          margin-bottom: 30px;
+        }
+        &__text{
+          font-family: SF UI Display;
+          font-size: 16px;
+          line-height: 150%;
+          font-weight: 300;
+          color: rgba(0, 0, 0, 0.75);
+          display: block;
+        }
+      }
+    } 
+  }
+}

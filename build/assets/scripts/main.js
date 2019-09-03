@@ -83,6 +83,12 @@ $(document).ready(function(){
   });
 
 
+  /*stages dots*/
+
+  $('.stages-slider-dots').children('li').each(function(){
+    $(this).html('dsakdbjasdjaskdjj');
+  });
+
   /******************************slick********************************/
   $('.fourth-slider').slick({
     arrow: true,
@@ -99,6 +105,15 @@ $(document).ready(function(){
     cssEase: 'linear',
     prevArrow: $('.fifth-review-arrow__arr_prev'),
     nextArrow: $('.fifth-review-arrow__arr_next'),
+    infinite: false
+  });
+
+  $('.stages-slider').slick({
+    arrows: false,
+    fade: true,
+    cssEase: 'linear',
+    dots: true,
+    dotsClass: 'stages-slider-dots',
     infinite: false
   });
 });
