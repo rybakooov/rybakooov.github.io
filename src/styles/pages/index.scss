@@ -584,7 +584,8 @@
     font-family: SF UI Display;
     font-size: 14px;
     line-height: 150%;
-    font-weight: 300;
+    font-weight: normal;
+
   }
   &-test{
     max-width: 1188px;
@@ -618,6 +619,7 @@
         font-size: 14px;
         line-height: 150%;
         margin-bottom: 36px;
+        font-weight: 300;
       }
       &__link{
         display: flex;
@@ -761,6 +763,7 @@
             font-family: SF UI Display;
             font-size: 12px;
             line-height: 100%;
+            font-weight: 300;
           }
         }
       }

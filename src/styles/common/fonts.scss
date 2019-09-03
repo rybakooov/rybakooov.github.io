@@ -21,12 +21,13 @@
   
 @font-face {
   font-family: SF UI Display;
-  font-weight: 400;
-  src: url('../fonts/SFUIDisplay-Regular.otf') format('woff');
+  font-weight: normal;
+  src: url('../fonts/SFUIDisplay-Regular.otf');
 }
+
 @font-face {
   font-family: SF UI Display;
-  font-weight: normal;
+  font-weight: 500;
   src: url('../fonts/sf-ui-display-medium-58646be638f96.woff') format('woff');
 }
   
