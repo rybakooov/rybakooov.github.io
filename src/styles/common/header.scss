@@ -13,6 +13,27 @@ a{
   box-sizing: border-box;
   margin: 0 auto;
 }
+.breadcrumbs{
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 60px;
+  box-sizing: border-box;
+  &__item{
+    font-family: SF UI Display;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A1A1A;
+    svg{
+      margin: 0 20px;
+    }
+    &:last-child{
+      svg{
+        display: none;
+      }
+    }
+  }
+}
 .title{
   &-36{
     font-family: SF UI Display;

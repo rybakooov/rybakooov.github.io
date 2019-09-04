@@ -1,0 +1,181 @@
+.card{
+  display: flex;
+  padding-top: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  align-items: center;
+  &-slider{
+    margin-right: 40px;
+    width: calc(68% - 30px);
+    height: 100%;
+    max-height: 600px;
+    position: relative;
+    &-prev{
+      position: absolute;
+      top: calc(50% - 20px);
+      cursor: pointer;
+      z-index: 12;
+      left: 0;
+      padding: 20px;
+    }
+    &-next{
+      position: absolute;
+      top: calc(50% - 20px);
+      cursor: pointer;
+      z-index: 12;
+      padding: 20px;
+      right: 0;
+    }
+    .slick-track{
+      display: flex;
+      align-items: center;
+    }
+    &-wrap{
+      width: 100%;
+      position: static;
+      height: 100%;
+      margin-bottom: 0 !important;
+    }
+    &-item{
+      position: relative;
+      height: 100%;
+      &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+      }
+      &__look{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  &-desc{
+    height: 600px;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font-family: SF UI Display;
+      font-size: 48px;
+      line-height: 150%;
+      margin-bottom: 25px;
+    }
+    &__description{
+      font-family: SF UI Display;
+      font-size: 18px;
+      line-height: 150%;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+    }
+    &__sum{
+      font-family: SF UI Display;
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 300;
+      span{
+        font-family: SF UI Display;
+        font-size: 24px;
+        line-height: 150%;
+        margin: 0 4px;
+        font-weight: 500;
+      }
+    }
+    &__subsum{
+      font-family: SF UI Display;
+      font-size: 12px;
+      line-height: 150%;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+    }
+    &-advantages{
+      display: flex;
+      flex-wrap: wrap;
+      &-item{
+        width: 50%;
+        box-sizing: border-box;
+        &:nth-child(5n - 4), &:nth-child(5n - 3){
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+        &:nth-child(n + 3){
+          padding-top: 20px;
+        }
+        &:nth-child(2n){
+          border-left: 1px solid rgba(0, 0, 0, 0.15);
+          padding-left: 40px;
+        }
+        &__title{
+          font-family: SF UI Display;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba(0, 0, 0, 0.5);
+          margin-bottom: 17px;
+        }
+        &__value{
+          font-family: SF UI Display;
+          font-size: 18px;
+          line-height: 150%;
+          display: flex;
+          color: #000000;
+          align-items: center;
+          img{
+            margin-right: 10px;
+          }
+
+        }
+      }
+    }
+    .general-btn{
+      margin: auto 0 0;
+    }
+    &-linkblock{
+      margin-top: auto;
+      &__link{
+        &:not(:last-child){
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+  &-slider-nav{
+    max-width: 1440px;
+    padding: 0 60px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    cursor: pointer;
+    &-wrap{
+      .slick-track{
+        margin-left: 0;
+      }
+    }
+    &-imagebox{
+      width: 150px;
+      height: 100px;
+      &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+    }
+  }
+}
+.complect{
+  .title-36{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: block;
+    padding: 40px 60px 30px;
+    box-sizing: border-box;
+  }
+  &ation{
+
+  }
+}

@@ -118,6 +118,25 @@ $(document).ready(function(){
     infinite: false
   });
 
+  $('.card-slider-wrap').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: 'ondemand',
+    infinite: false,
+    asNavFor: '.card-slider-nav-wrap',
+    arrows: true,
+    prevArrow: $('.card-slider-prev'),
+    nextArrow: $('.card-slider-next'),
+  });
+  $('.card-slider-nav-wrap').slick({
+    arrows: false,
+    slidesToScroll: 1,
+    slidesToShow: 6,
+    infinite: false,
+    asNavFor: '.card-slider-wrap',
+    focusOnSelect: true
+  })
+
 
   
   $('.stages-slider-dots').children('li').each(function(index){
