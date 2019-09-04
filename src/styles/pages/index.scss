@@ -204,6 +204,9 @@ a{
   flex-wrap: wrap;
   margin: -18px;
   padding-top: 38px;
+  &_three{
+    flex-wrap: nowrap;
+  }
   &-item{
     margin: 18px;
     width: calc(100% / 3 - 36px);

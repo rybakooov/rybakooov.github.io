@@ -176,6 +176,158 @@
     box-sizing: border-box;
   }
   &ation{
-
+    &-tr{
+      padding: 0 60px;
+      &:not(:first-child):hover{
+        background-color: rgba(68, 121, 188, 0.1);
+        cursor: pointer;
+      }
+      &:last-child{
+        &:hover{
+          background-color: #fff;
+          cursor: default;
+        }
+        .complectation-tr-wrap-1{
+          padding: 13px 10px;
+          align-self: center;
+          font-family: SF UI Display;
+          font-size: 18px;
+          line-height: 150%;
+        }
+        .general-btn{
+          margin: 0 auto;
+        }
+      }
+      &_more{
+        .complectation-tr-wrap-left__text{
+          display: none;
+        }
+      }
+      &_th{
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        .complectation-tr-wrap-1{
+          font-family: SF UI Display;
+          font-size: 18px;
+          line-height: 150%;
+          color: #000000;
+          padding-top: 13px;
+        }
+        .complectation-tr-wrap{
+          border: none !important;
+        }
+      }
+      &:not(:last-child) .complectation-tr-wrap{
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+      }
+      &-wrap{
+        max-width: 1320px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        &-left{
+          flex: 6;
+          padding: 23px 0 26px;
+          font-family: SF UI Display;
+          font-size: 18px;
+          line-height: 150%;
+          color: #4479BC;
+          &__text{
+            padding-top: 10px;
+            font-family: SF UI Display;
+            font-size: 16px;
+            line-height: 150%;
+            color: rgba(0, 0, 0, 0.75);
+          }
+          svg{
+            margin-right: 2px;
+            line{
+              transition: all 0.2s linear;
+              transform-origin: center center;
+            }
+          }
+          .line-svg{
+            &_active{
+              transform: rotate(90deg);
+            }
+          }
+        }
+        &-1{
+          padding: 28px 10px 14px;
+          flex: 2;
+          box-sizing: border-box;
+          text-align: center;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+.maylike{
+  padding-bottom: 100px;
+}
+.general-form{
+  padding: 0 60px 100px;
+  &-wrap{
+    max-width: 730px;
+    margin: 0 auto;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 20px 40px;
+    &__title{
+      font-family: SF UI Display;
+      font-size: 36px;
+      line-height: 125%;
+      text-align: center;
+      padding: 33px 0;
+    }
+    &-form{
+      input{
+        width: calc(50% - 12px);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-family: SF UI Display;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 20px;
+        &:first-child{
+          margin-right: 20px;
+        }
+      }
+      textarea{
+        padding: 12px 20px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: SF UI Display;
+        font-size: 14px;
+        line-height: 150%;
+        resize: none;
+        margin-bottom: 16px;
+      }
+      &__pers{
+        text-align: center;
+        font-family: SF UI Display;
+        font-size: 12px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+        a{
+          border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+          padding-bottom: 4px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      .general-btn{
+        margin: 0 auto;
+        border: none;
+        cursor: pointer;
+      }
+    }
   }
 }

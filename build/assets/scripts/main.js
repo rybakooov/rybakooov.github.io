@@ -85,7 +85,20 @@ $(document).ready(function(){
       $(this).attr('data-check', 'true');
     }
   });
+  
 
+ 
+  
+
+  /*plus minus*/
+  $('.complectation-tr_more').each(function(){
+    $(this).find('.complectation-tr-wrap-left').prepend('<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><line class="line-svg" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="10" x2="5" y1="0" x1="5" stroke-width="1.5" stroke="#4479bc" fill="none"/><line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="5" x2="10" y1="5" x1="0" stroke-width="1.5" stroke="#4479bc" fill="none"/></svg>');
+  });
+
+  $('.complectation-tr_more').click(function(){
+    $(this).find('.complectation-tr-wrap-left__text').slideToggle();
+    $(this).find('.line-svg').toggleClass('line-svg_active');
+  });
 
   /*stages dots*/
 
@@ -130,7 +143,7 @@ $(document).ready(function(){
   });
   $('.card-slider-nav-wrap').slick({
     arrows: false,
-    slidesToScroll: 1,
+    slidesToScroll: 6,
     slidesToShow: 6,
     infinite: false,
     asNavFor: '.card-slider-wrap',

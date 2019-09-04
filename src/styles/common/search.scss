@@ -8,6 +8,7 @@
 	display: none;
 	position: absolute;
 	width: 100%;
+	z-index: 50;
 	&-form{
 		max-width: 1440px;
 		margin: 0 auto;
