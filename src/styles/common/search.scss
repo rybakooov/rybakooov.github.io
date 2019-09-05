@@ -8,7 +8,7 @@
 	display: none;
 	position: absolute;
 	width: 100%;
-	z-index: 50;
+	z-index: 14;
 	&-form{
 		max-width: 1440px;
 		margin: 0 auto;
@@ -161,6 +161,7 @@
 						display: flex;
 						align-items: center;
 						position: relative;
+						justify-content: space-between;
 						input{
 							height: 100%;
 							border: none;
@@ -181,11 +182,11 @@
 						}
 						input:first-of-type{
 							padding-left: 72px;
-							width: 60%;
+							width: 55%;
 						}
 						input:last-of-type{
 							padding-left: 32px;
-							width: 40%;
+							width: 45%;
 						}
 						span{
 							position: absolute;
@@ -196,7 +197,7 @@
 							left: 15px;
 						}
 						span:last-of-type{
-							left: 240px;
+							left: 56%;
 						}
 					}
 					&-square{

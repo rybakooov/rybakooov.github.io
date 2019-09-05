@@ -92,6 +92,7 @@ $(document).ready(function(){
 
   /*plus minus*/
   $('.complectation-tr_more').each(function(){
+
     $(this).find('.complectation-tr-wrap-left').prepend('<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><line class="line-svg" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="10" x2="5" y1="0" x1="5" stroke-width="1.5" stroke="#4479bc" fill="none"/><line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="5" x2="10" y1="5" x1="0" stroke-width="1.5" stroke="#4479bc" fill="none"/></svg>');
   });
 
@@ -157,4 +158,10 @@ $(document).ready(function(){
     $(this).find('button').html(html1);
     $('.stages-slider-item[data-slick-index=' + index + ']').find('.stages-slider-item-desc__num').html(html1);
   });
+
+
+
+
+  /*отключаем поиск на странице каталога*/
+  $('.catalog').parent().parent().parent().find('.header-wrap-info-search').hide();
 });
