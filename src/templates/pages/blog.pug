@@ -1,0 +1,13 @@
+extend ../common/main.pug
+block title 
+ | Блог | Finnkoti
+block content
+  .wrapper
+    include ../common/breadcrumbs.pug
+    section.news.w1440
+      h1.title-36 Блог
+      .news-wrap
+        include ../common/news-article.pug
+        include ../common/news-article.pug
+        include ../common/news-article.pug
+      include ../common/pagination.pug
