@@ -36,13 +36,23 @@ $(document).ready(function(){
   $('.house-wrap-item-imagebox').each(function(){
     $(this).height($(this).width() * k4);
   });
-  
+  let k5 = 240 / 427;
+  $('.stock-wrap-item-top').each(function(){
+    $(this).height($(this).width() * k5);
+  });
+
   /*ресайз*/
   $(window).resize(function(){
     $('.first').height($('.first').width() * k1);
     $('.second-block-images').height($('.second-block-images').width() * k2);
     $('.third-block-card-imgblock').each(function(){
       $(this).height($(this).width() * k3);
+    });
+    $('.house-wrap-item-imagebox').each(function(){
+      $(this).height($(this).width() * k4);
+    });
+    $('.stock-wrap-item-top').each(function(){
+      $(this).height($(this).width() * k5);
     });
   });
 
