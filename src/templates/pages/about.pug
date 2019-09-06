@@ -1,0 +1,70 @@
+extend ../common/main.pug
+block title 
+ | О нас | Finnkoti
+block content
+  .wrapper
+    include ../common/breadcrumbs.pug
+    section.about.w1440
+      .about-left
+        h1.title-36 О нас
+        p.about-left__text Свою работу компания Finnkoti начала в 2017 году в партнерстве с ведущими финскими производителями домов. Так родилась идея сделать финские дома доступными, не теряя качества. Имея колоссальный опыт строительства финских домов, понимая технологии строительства и производства качественных домов, оценивая этот шаг, как вклад в развитие внутреннего потенциала нашей страны, мы решили построить производство на территории РФ. Дома Finnkoti производятся по исключительным финским технологиям.
+        p.about-left__text Слаженная работа молодого коллектива способствовала стремительному развитию нашей компании.
+      .about-right
+        .safe-wrap-left-item
+          .safe-wrap-left-item__ellipse
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="99.5" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+            </svg>
+          .safe-wrap-left-item__num 10
+          .safe-wrap-left-item__title Лет
+          .safe-wrap-left-item__text Гарантия на все несущие конструкции
+        .safe-wrap-left-item
+          .safe-wrap-left-item__ellipse
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="99.5" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+            </svg>
+          .safe-wrap-left-item__num 3
+          .safe-wrap-left-item__title Года
+          .safe-wrap-left-item__text Гарантия на строительно-монтажные работы
+    section.what-we-do.w1440
+      h3.what-we-do__title Что мы делаем
+      .what-we-do-wrap
+        .what-we-do-wrap-item
+          .what-we-do-wrap-item__title Проектирование
+          .what-we-do-wrap-item__text Проектирование каркасных домов европейскими специалистами по строгим стандартам Евросоюза с учетом ветровых, снеговых нагрузок и сейсмических условий.
+        .what-we-do-wrap-item
+          .what-we-do-wrap-item__title Изготовление
+          .what-we-do-wrap-item__text Изготовление каркасных домов из сухого строганного пиломатериала высокого качества.
+        .what-we-do-wrap-item
+          .what-we-do-wrap-item__title Сборка
+          .what-we-do-wrap-item__text Сборка панелей, установка окон и дверей только в заводских условиях.
+        .what-we-do-wrap-item
+          .what-we-do-wrap-item__title Производство
+          .what-we-do-wrap-item__text Производство каркасных домов на современном европейском оборудовании в заводских условиях с высочайшей точностью размеров.
+    section.worth.w1440
+      h3.worth__title Наши ценности
+      .worth-wrap
+        ul.worth-ul
+          li.worth-ul__li 
+            img(src="assets/images/ul-li-marker.svg", alt="")
+            | Мы не экономим на материалах и оптимизируем процессы, чтобы клиент оставался в выигрыше.
+          li.worth-ul__li 
+            img(src="assets/images/ul-li-marker.svg", alt="")
+            | Помогаем подобрать проект дома на любой бюджет и вкус.
+          li.worth-ul__li 
+            img(src="assets/images/ul-li-marker.svg", alt="")
+            | Предоставляем смету без скрытых платежей и неожиданного увеличения.
+          li.worth-ul__li 
+            img(src="assets/images/ul-li-marker.svg", alt="")
+            | Даём гарантии на ваш дом в течение 10 лет.
+        img(src="assets/images/cat-shadow.jpg", alt="").worth__img
+    section.purpose
+      .purpose-imgwrap
+        .purpose-imgwrap-wrap
+          .purpose-imgwrap-wrap-50
+            img(src="assets/images/purpose-house.png", alt="").purpose__img
+      .purpose-wrap
+        .purpose-desc
+          h1.purpose-desc__title Цель компании —  пусть будет больше счастливых семей. 
+          p.purpose-desc__text Живете в квартире и мечтаете о своем доме?
+          a(href="#").general-btn Хочу свой дом
