@@ -9,6 +9,7 @@
 	position: absolute;
 	width: 100%;
 	z-index: 14;
+	transition: .2s;
 	&-form{
 		max-width: 1440px;
 		margin: 0 auto;
@@ -121,6 +122,11 @@
 							font-size: 14px;
 							margin-bottom: 15px;
 							cursor: pointer;
+							&:hover{
+								input:not(:checked) + span:first-of-type:before{
+									opacity: 0.5;
+								}
+							}
 							input{
 								display: none;
 							}
@@ -135,6 +141,9 @@
 								position: relative;
 							}
 							input:checked + span:first-of-type:before{
+								opacity: 1;
+							}
+							span:first-of-type:before{
 								content: '';
 								width: 9px;
 								height: 9px;
@@ -143,6 +152,8 @@
 								position: absolute;
 								top: 2px;
 								left: 2px;
+								opacity: 0;
+								transition: .2s;
 							}
 						}
 					}

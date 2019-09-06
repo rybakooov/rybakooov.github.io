@@ -67,6 +67,13 @@ $(document).ready(function(){
 		}
 	});
 
+  $(document).mouseup(function (e){ 
+		var div = $(".search_active"); 
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
+      div.slideUp('fast');
+		}
+	});
+
   /* finnkoti swap*/
   $('.finnkoti-swap__finn').click(function(){
     if($(this).hasClass('finnkoti-swap__finnfull') && $(this).parent().attr('data-position') == '1'){
@@ -164,4 +171,5 @@ $(document).ready(function(){
 
   /*отключаем поиск на странице каталога*/
   $('.catalog').parent().parent().parent().find('.header-wrap-info-search').hide();
+
 });
