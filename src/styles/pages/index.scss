@@ -111,23 +111,26 @@ a{
 .finnkoti-swap{
   display: flex;
   margin-right: 16px;
-  &[data-position="0"]{
-    .finnkoti-swap__finnfull{
+  input{
+    display: none;
+  }
+  #finnkoti:checked{
+    & + .finnkoti-swap__finnfull{
       background-color: #4479BC;
       border-color: #4479BC;
       color: white;
     }
-    .finnkoti-swap__finnlite:hover{
+    & + .finnkoti-swap__finnlite:hover{
       background-color: #E9F3FF;
     }
   }
-  &[data-position="1"]{
-    .finnkoti-swap__finnlite{
+  #finnkoti_lite:checked{
+    & + .finnkoti-swap__finnlite{
       background-color: #4479BC;
       border-color: #4479BC;
       color: white;
     }
-    .finnkoti-swap__finnfull:hover{
+    & + .finnkoti-swap__finnfull:hover{
       background-color: #E9F3FF;
     }
   }
@@ -157,17 +160,17 @@ a{
   }
 }
 .check-item{
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &[data-check="true"]{
-    span div{
-      opacity: 1;
+  label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    input:checked{
+      & + span div{
+        opacity: 1;
+      }
     }
-  }
-  &[data-check="false"]{
-    &:hover{
-      span div{
+    input:not(:checked):hover{
+      & + span div{
         background: #4479BC;
         opacity: 0.5;
       }
@@ -561,18 +564,30 @@ a{
   &-wrap{
     display: flex;
     margin-top: 38px;
-    .selector{
-      &:not(:last-child){
-        margin-right: 16px;
-      }
-      &:last-child{
-        margin-left: auto;
+    .search-form-main-col-row{
+      width: 100%;
+      justify-content: start;
+      &-select{
+        box-sizing: border-box;
+        width: 183px;
+        &:not(:last-child){
+          margin-right: 20px;
+        }
+        &:last-child{
+          margin-left: auto;
+        }
+        .SumoSelect > .CaptionCont{
+          box-sizing: border-box;
+        }
       }
     }
   }
   &-check{
     display: flex;
     margin-top: 17px;
+    input{
+      display: none;
+    }
     .check-item{
       margin-right: 30px;
     }

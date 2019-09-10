@@ -56,19 +56,7 @@ $(document).ready(function(){
     });
   });
 
-  /*селекторы*/
-  $('.selector-view').click(function(){
-    if($(this).parent().hasClass('selector_open')){
-      $(this).parent().children('.selector-list').slideUp('fast');
-    } else {
-      $(this).parent().children('.selector-list').slideDown('fast');
-    }
-    $(this).parent().toggleClass('selector_open');
-  });
-  $('.selector-list__item').click(function(){
-    $(this).parent().find('.selector-list__item_active').toggleClass('selector-list__item_active');
-    $(this).addClass('selector-list__item_active');
-  });
+  
   $(document).mouseup(function (e){ 
 		var div = $(".selector_open"); 
 		if (!div.is(e.target) && div.has(e.target).length === 0) {
@@ -85,14 +73,7 @@ $(document).ready(function(){
 	});
 
   /* finnkoti swap*/
-  $('.finnkoti-swap__finn').click(function(){
-    if($(this).hasClass('finnkoti-swap__finnfull') && $(this).parent().attr('data-position') == '1'){
-      $('.finnkoti-swap').attr('data-position', '0');
-    }
-    if($(this).hasClass('finnkoti-swap__finnlite') && $(this).parent().attr('data-position') == '0'){
-      $('.finnkoti-swap').attr('data-position', '1');
-    }
-  });
+  
 
   /*checkbox */ 
   $('.check-item').click(function(){

@@ -114,65 +114,57 @@ block content
           </svg>
     section.fifth.w1440
       h1.title-36 Каталог проектов и домов
-      .fifth-wrap
-        .finnkoti-swap(data-position="0")
-          .finnkoti-swap__finn.finnkoti-swap__finnfull FinnKoti
-          .finnkoti-swap__finn.finnkoti-swap__finnlite FinnKoti Lite
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7.5" cy="7.5" r="7.5" fill="black" fill-opacity="0.25"/>
-              <path d="M7.02505 11.0181C6.63232 11.0181 6.43596 10.7891 6.43596 10.3309C6.43596 10.2081 6.45641 10.0363 6.49732 9.81542L7.0005 7.26269C7.02505 7.14815 7.03732 7.05406 7.03732 6.98042C7.03732 6.87406 7.01687 6.79633 6.97596 6.74724C6.93505 6.68997 6.88187 6.66133 6.81641 6.66133C6.6446 6.66133 6.41141 6.82497 6.11687 7.15224C6.10869 7.16042 6.09641 7.16451 6.08005 7.16451C6.04732 7.16451 6.02278 7.15224 6.00641 7.12769C5.99005 7.09497 5.99005 7.06633 6.00641 7.04178C6.30096 6.69815 6.56687 6.4486 6.80414 6.29315C7.04141 6.13769 7.2746 6.05997 7.50369 6.05997C7.89641 6.05997 8.09278 6.27269 8.09278 6.69815C8.09278 6.83724 8.07641 6.97633 8.04369 7.11542L7.52823 9.81542C7.51187 9.88906 7.50369 9.98315 7.50369 10.0977C7.50369 10.2941 7.56505 10.3922 7.68778 10.3922C7.7696 10.3922 7.8596 10.3554 7.95778 10.2818C8.06414 10.2081 8.19096 10.1018 8.33823 9.96269C8.3546 9.94633 8.37096 9.93815 8.38732 9.93815C8.41187 9.93815 8.43232 9.95451 8.44869 9.98724C8.46505 10.0118 8.46096 10.0363 8.43641 10.0609C8.15823 10.3881 7.90869 10.6295 7.68778 10.785C7.47505 10.9404 7.25414 11.0181 7.02505 11.0181ZM7.84732 4.7836C7.6346 4.7836 7.46278 4.72224 7.33187 4.59951C7.20914 4.4686 7.14778 4.29269 7.14778 4.07178C7.14778 3.87542 7.20914 3.71588 7.33187 3.59315C7.46278 3.47042 7.6346 3.40906 7.84732 3.40906C8.06005 3.40906 8.22369 3.47042 8.33823 3.59315C8.46096 3.71588 8.52232 3.87542 8.52232 4.07178C8.52232 4.30088 8.46096 4.47678 8.33823 4.59951C8.22369 4.72224 8.06005 4.7836 7.84732 4.7836Z" fill="white"/>
-            </svg>
-        .selector
-          .selector-view Этажность
-            <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L3.5 3L6 1" stroke="black" stroke-opacity="0.5"/>
-            </svg>
-          .selector-list
-            .selector-list__item.selector-list__item_active 1
-            .selector-list__item 2
-        .selector
-          .selector-view Комнаты
-            <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L3.5 3L6 1" stroke="black" stroke-opacity="0.5"/>
-            </svg>
-          .selector-list
-            .selector-list__item.selector-list__item_active Возрастанию цены
-            .selector-list__item Убыванию цены
-        .selector
-          .selector-view Площадь
-            <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L3.5 3L6 1" stroke="black" stroke-opacity="0.5"/>
-            </svg>
-          .selector-list.selector-list_check
-            .check-item(data-check="true")
-              p Акция
+      form(action="", method="get").fifth-form
+        .fifth-wrap
+          .finnkoti-swap
+            label
+              input#finnkoti(type="radio", name="finnkoti" checked)
+              p.finnkoti-swap__finn.finnkoti-swap__finnfull Finnkoti
+            label
+              input#finnkoti_lite(type="radio", name="finnkoti")
+              p.finnkoti-swap__finn.finnkoti-swap__finnlite Finnkoti Lite
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7.5" cy="7.5" r="7.5" fill="black" fill-opacity="0.25"/>
+                  <path d="M7.02505 11.0181C6.63232 11.0181 6.43596 10.7891 6.43596 10.3309C6.43596 10.2081 6.45641 10.0363 6.49732 9.81542L7.0005 7.26269C7.02505 7.14815 7.03732 7.05406 7.03732 6.98042C7.03732 6.87406 7.01687 6.79633 6.97596 6.74724C6.93505 6.68997 6.88187 6.66133 6.81641 6.66133C6.6446 6.66133 6.41141 6.82497 6.11687 7.15224C6.10869 7.16042 6.09641 7.16451 6.08005 7.16451C6.04732 7.16451 6.02278 7.15224 6.00641 7.12769C5.99005 7.09497 5.99005 7.06633 6.00641 7.04178C6.30096 6.69815 6.56687 6.4486 6.80414 6.29315C7.04141 6.13769 7.2746 6.05997 7.50369 6.05997C7.89641 6.05997 8.09278 6.27269 8.09278 6.69815C8.09278 6.83724 8.07641 6.97633 8.04369 7.11542L7.52823 9.81542C7.51187 9.88906 7.50369 9.98315 7.50369 10.0977C7.50369 10.2941 7.56505 10.3922 7.68778 10.3922C7.7696 10.3922 7.8596 10.3554 7.95778 10.2818C8.06414 10.2081 8.19096 10.1018 8.33823 9.96269C8.3546 9.94633 8.37096 9.93815 8.38732 9.93815C8.41187 9.93815 8.43232 9.95451 8.44869 9.98724C8.46505 10.0118 8.46096 10.0363 8.43641 10.0609C8.15823 10.3881 7.90869 10.6295 7.68778 10.785C7.47505 10.9404 7.25414 11.0181 7.02505 11.0181ZM7.84732 4.7836C7.6346 4.7836 7.46278 4.72224 7.33187 4.59951C7.20914 4.4686 7.14778 4.29269 7.14778 4.07178C7.14778 3.87542 7.20914 3.71588 7.33187 3.59315C7.46278 3.47042 7.6346 3.40906 7.84732 3.40906C8.06005 3.40906 8.22369 3.47042 8.33823 3.59315C8.46096 3.71588 8.52232 3.87542 8.52232 4.07178C8.52232 4.30088 8.46096 4.47678 8.33823 4.59951C8.22369 4.72224 8.06005 4.7836 7.84732 4.7836Z" fill="white"/>
+                </svg>
+          .search-form-main-col-row
+            .search-form-main-col-row-select
+              select(name="" multiple placeholder="Этажность")
+                option 1 этаж
+                option 2 этажа
+                option 3 этажа
+                option 4 этажа
+            .search-form-main-col-row-select
+              select(name="" multiple placeholder="Комнаты")
+                option 1 комната
+                option 2 комнаты
+                option 3 комнаты
+                option 4 комнаты
+            .search-form-main-col-row-select
+              select(name="" multiple placeholder="Сортировать по")
+                option 1 комната
+                option 2 комнаты
+                option 3 комнаты
+                option 4 комнаты
+        .fifth-check
+          .check-item
+            label(for="garage")
+              p Наличие гаража
+              input#garage(type="checkbox", name="gar1")
               span
                 div
-            .check-item(data-check="false")
-              p Акция
+          .check-item
+            label(for="sklon")
+              p Дом на склоне
+              input#sklon(type="checkbox", name="sklon")
               span
                 div
-        .selector
-          .selector-view Сортировать по
-            <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L3.5 3L6 1" stroke="black" stroke-opacity="0.5"/>
-            </svg>
-          .selector-list
-            .selector-list__item.selector-list__item_active Возрастанию цены
-            .selector-list__item Убыванию цены
-      .fifth-check
-        .check-item(data-check="true") 
-          p Наличие гаража
-          span
-            div
-        .check-item(data-check="false")
-          p Дом на склоне
-          span
-            div
-        .check-item(data-check="false")
-          p Акция
-          span
-            div
+          .check-item
+            label(for="stock")
+              p Акция
+              input#stock(type="checkbox", name="akciya")
+              span
+                div
       .house-wrap
         include ../common/house-wrap-item.pug
         include ../common/house-wrap-item.pug
