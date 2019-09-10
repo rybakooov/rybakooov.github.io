@@ -40,7 +40,10 @@ $(document).ready(function(){
   $('.stock-wrap-item-top').each(function(){
     $(this).height($(this).width() * k5);
   });
-
+  let k6 = 170 / 315;
+  $('.galery-main-item-top').each(function(){
+    $(this).height($(this).width() * k6);
+  });
   /*ресайз*/
   $(window).resize(function(){
     $('.first').height($('.first').width() * k1);
@@ -54,7 +57,11 @@ $(document).ready(function(){
     $('.stock-wrap-item-top').each(function(){
       $(this).height($(this).width() * k5);
     });
+    $('.galery-main-item-top').each(function(){
+      $(this).height($(this).width() * k6);
+    });
   });
+  $('.galery-wrap .galery-main:not(.galery-main_active)').css('display', 'none');
 
   
   $(document).mouseup(function (e){ 
@@ -158,7 +165,6 @@ $(document).ready(function(){
   /* ********** contacts *********** */
   $('.contacts-wrap-right-toggle__btn').click(function(){
     if($(this).hasClass('contacts-wrap-right-toggle__btn_active')){ 
-      console.log('hu');
     } else {
       if($(this).hasClass('contacts-wrap-right-toggle__btn_l')) {
         $('.contacts-wrap-right-main-block_active').toggleClass('contacts-wrap-right-main-block_active');
@@ -174,8 +180,40 @@ $(document).ready(function(){
       }
     }
   });
+  /****************** galery ******************* */
+  $('.galery-swap__item').click(function(){
+    if($(this).hasClass('galery-swap__item_active')){ 
+
+    } else {
+      if($(this).hasClass('galery-swap__item_l')) {
+        $('.galery-main_active').toggleClass('galery-main_active');
+        $('.galery-wrap .galery-main:first-child').toggleClass('galery-main_active');
+        $('.galery-swap__item_active').toggleClass('galery-swap__item_active');
+        $(this).toggleClass('galery-swap__item_active');
+        $('.galery-wrap .galery-main:not(.galery-main_active)').css('display', 'none');
+      }
+      if($(this).hasClass('galery-swap__item_r')) {
+        $('.galery-main_active').toggleClass('galery-main_active');
+        $('.galery-wrap .galery-main:last-child').toggleClass('galery-main_active');
+        $('.galery-swap__item_active').toggleClass('galery-swap__item_active');
+        $(this).toggleClass('galery-swap__item_active');
+        $('.galery-wrap .galery-main:not(.galery-main_active)').css('display', 'none');
+      }
+    }
+  });
 
   /*отключаем поиск на странице каталога*/
   $('.catalog').parent().parent().parent().find('.header-wrap-info-search').hide();
+
+
+  /*************** yandex map **************/
+  ymaps.ready(init);    
+  function init(){ 
+      var myMap = new ymaps.Map("map-objects", {
+          center: [55.76, 37.64],
+          zoom: 7
+      }); 
+    myMap.behaviors.disable('scrollZoom');
+  }
 
 });
