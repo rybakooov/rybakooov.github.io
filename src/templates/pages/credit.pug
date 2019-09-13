@@ -1,0 +1,100 @@
+extend ../common/main.pug
+block title 
+ | Кредитование | Finnkoti
+block content
+  .wrapper
+    article.w1440.credit.article
+      .article-top
+        h1.article-top__title Кредитование
+        .article-top-bot
+          img(src="assets/images/logo-1.png", alt="").article-top-bot__img
+          img(src="assets/images/logo-2.png", alt="").article-top-bot__img
+        .article-top-right
+          img(src="assets/images/credit-img.png", alt="").article-top-right__img
+      .article-main
+        p.article-main__text Когда человек что-то твердо решил, то его уже ничего не остановит. Тем более, что сегодня можно выбрать выгодный кредитный продукт, помогающий осуществить желания здесь и сейчас.
+        p.article-main__text Мы являемся партнерами Локо Банка, где действуют особые ставки для наших клиентов.
+        .article-main-row
+          .article-main-row-item.article-main-row-item_210
+            .article-main-row-item_top от 10,4% до 15,9%
+            .article-main-row-item_bot Процентная ставка по предоствляемому кредиту
+          .article-main-row-item
+            .article-main-row-item_top 5 000 000
+            .article-main-row-item_bot Сумма кредита<br>(при залоге авто)
+          .article-main-row-item
+            .article-main-row-item_top 3 000 000
+            .article-main-row-item_bot Сумма кредита<br>(без залога авто)
+          .article-main-row-item
+            .article-main-row-item_top 7 лет
+            .article-main-row-item_bot Максимальный срок кредита
+        h3.article-main__title Требования к заемщику:
+        ul.article-main-list
+          li 
+            span
+            | Гражданство РФ
+          li 
+            span
+            | Постоянная регистрация в регионе присутствия
+          li 
+            span
+            | Наличие постоянного источника дохода (без залога)
+          li 
+            span
+            | Возраст от 21 года до 70 лет на момент окончания срока действия кредитного договора 
+          li 
+            span
+            | Непрерывный стаж на последнем месте работы не менее 4 месяцев
+          li 
+            span
+            | Общий трудовой стаж — не менее 2 лет
+        p.article-main__text Также можно взять ипотеку на строительство  в Сбербанке.
+        h3.article-main__title Условия кредитования
+        .article-main-table
+          .article-main-table-row
+            .article-main-table-row__col Первоначальный взнос
+            .article-main-table-row__col от 25%
+          .article-main-table-row
+            .article-main-table-row__col Срок кредита
+            .article-main-table-row__col до 30 лет
+          .article-main-table-row
+            .article-main-table-row__col Минимальная сумма кредита
+            .article-main-table-row__col 300 000
+          .article-main-table-row
+            .article-main-table-row__col Максимальная сумма кредита
+            .article-main-table-row__col не должна превышать меньшую из величин:
+              .article-main-list
+                li 
+                  span
+                  | 75% договорной стоимости кредитуемого жилого помещения;
+                li 
+                  span
+                  | 75% оценочной стоимости кредитуемого или иного оформляемого в залог жилого помещения.
+          .article-main-table-row
+            .article-main-table-row__col Комиссия за выдачу 
+            .article-main-table-row__col отсутствует
+          .article-main-table-row
+            .article-main-table-row__col Валюта кредита
+            .article-main-table-row__col рубли РФ
+        h3.article-main__title Обеспечение по кредиту
+        p.article-main__text Залог кредитуемого или иного жилого помещения. На период до оформления в залог кредитуемого жилого помещения необходимо предоставить иные формы обеспечения:
+        ul.article-main-list
+          li 
+            span
+            | Поручительство физических лиц
+          li 
+            span
+            | Залог иного жилого помещения
+        p.article-main__text В случае оформления в обеспечение по кредиту залога жилого дома / его части(доли) требуется оформление залога земельного участка или залога права аренды на земельный участок, на котором находится данный дом.
+        h3.article-main__title Страхование
+        p.article-main__text Обязательное страхование передаваемого в залог имущества (за исключением земельного участка) от рисков утраты/гибели, повреждения в пользу Банка на весь срок действия кредитного договора.
+    section.general-form
+      .general-form-wrap
+        h1.general-form-wrap__title Остались вопросы?<br>Пишите, мы ответим
+        form.general-form-wrap-form(action="GET")
+          input#general-form__name(type="text", name="", placeholder="Имя")
+          input#general-form__mail-or-phone(type="text", name="", placeholder="E-mail или телефон")
+          br
+          textarea#general-form__textarea(name="", cols="30", rows="2", placeholder="Текст сообщения")
+          p.general-form-wrap-form__pers Отправляя данную форму Вы соглашаетесь на 
+            a(href="#") обработку персональных данных
+          button(type="submit").general-btn Запросить цену

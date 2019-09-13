@@ -1,0 +1,53 @@
+extend ../common/main.pug
+block title 
+ | Ландшафтные работы | Finnkoti
+block content
+  .wrapper
+    article.w1440.land.article
+      .article-top
+        h1.article-top__title Ландшафтные работы
+        h2.article-top__subtitle Выполняем любые ландшафтные работы на вашем участке: от проекта<br>до реализации. 
+      .article-main
+        h3.article-main__title Что важно на участке, в саду? Гармония, единство, баланс. 
+        p.article-main__text Растения, пруды, подпорные стенки должны сочетаться с домом, дорожками, гаражом или навесом. Важно, чтобы пространство было не перегруженным, вы получали удовольствие от прогулки по вашей территории, уход не был сложным, а все растения подобраны согласно климату и сторонам света.
+        p.article-main__text Компания Finnkoti выполняет любые ландшафтные работы на вашем участке: от проекта до реализации. Вы можете быть уверены в неповторимости Вашего будущего дизайн-проекта. Мы не применяем никаких шаблонных решений.
+        h3.article-main__title Наши специалисты решают не только творческие, но и технические задачи: 
+        ul.article-main-list
+          li 
+            span
+            | Выравнивание рельефа территории 
+          li 
+            span
+            | Создание искусственных неровностей
+          li 
+            span
+            | Разработка и внедрение дренажной системы
+          li 
+            span
+            | Организация и выполнение системы освещения территории
+        .article-main-galery
+          h3.article-main__title_b Наши работы
+          .article-main-galery-wrap 
+            a(href="assets/images/land-1.png" data-fancybox="images" data-caption="1")
+              img(src="assets/images/land-1.png", alt="")
+            a(href="assets/images/land-2.png" data-fancybox="images" data-caption="2")
+              img(src="assets/images/land-2.png", alt="")
+            a(href="assets/images/land-3.png" data-fancybox="images" data-caption="3")
+              img(src="assets/images/land-3.png", alt="")
+            a(href="assets/images/land-3.png" data-fancybox="images" data-caption="3")
+              img(src="assets/images/land-3.png", alt="")
+            a(href="assets/images/land-2.png" data-fancybox="images" data-caption="2")
+              img(src="assets/images/land-2.png", alt="")
+            a(href="assets/images/land-1.png" data-fancybox="images" data-caption="1")
+              img(src="assets/images/land-1.png", alt="")
+    section.general-form
+      .general-form-wrap
+        h1.general-form-wrap__title Закажите ландшафтные работы
+        form.general-form-wrap-form(action="GET")
+          input#general-form__name(type="text", name="", placeholder="Имя")
+          input#general-form__mail-or-phone(type="text", name="", placeholder="E-mail или телефон")
+          br
+          textarea#general-form__textarea(name="", cols="30", rows="2", placeholder="Текст сообщения")
+          p.general-form-wrap-form__pers Отправляя данную форму Вы соглашаетесь на 
+            a(href="#") обработку персональных данных
+          button(type="submit").general-btn Запросить цену
