@@ -9,6 +9,38 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include w1024{
+      flex-wrap: wrap;
+      padding: 40px 20px 10px;
+      .footer-wrap-subscribe{
+        width: 100%;
+        display: flex;
+        &__title{
+          margin-right: 18px;
+          margin-bottom: 0;
+        }
+        &-form{
+          margin-bottom: 0;
+        }
+        &-links{
+          margin-left: auto;
+        }
+      }
+      &-links{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        width: calc(100% - 173px - 20px);
+        &-list{
+          margin: 0 !important;
+          width: 25%;
+          box-sizing: border-box;
+          &:not(:last-child){
+            padding-right: 10px;
+          }
+        }
+      }
+    }
     &-logo{
       &__img{
         margin-bottom: 18px;

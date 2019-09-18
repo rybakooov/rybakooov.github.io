@@ -1,5 +1,11 @@
 header.header
   .header-wrap
+    .header-wrap-hamburger
+      <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 22H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     a(href="index.html").header-wrap-logo
       img.header-wrap-logo__img(src="assets/images/logo.png", alt="Finnkoti")
       br
@@ -7,13 +13,18 @@ header.header
     ul.header-wrap-linklist
       li.header-wrap-linklist__link
         a(href="catalog.html") Проекты и цены
-      li.header-wrap-linklist__link
+      li.header-wrap-linklist__link.header-wrap-linklist__link_more
         a(href="#") Технологии
+        .header-wrap-linklist-block
+          a(href="credit.html")     Производство
+          a(href="ur-sopr.html")    Технология
+          a(href="landshaft.html")  Этапы работ
+          a(href="smeta.html")      Гарантия
       li.header-wrap-linklist__link.header-wrap-linklist__link_more
         a(href="uslugi.html") Услуги
         .header-wrap-linklist-block
           a(href="credit.html")     Кредитование
-          a(href="ur-sopr.html")    Юр. помощь
+          a(href="ur-sopr.html")    Юридическое  сопровождение при покупке участка
           a(href="landshaft.html")  Ландшафт
           a(href="smeta.html")      Анализ сметы
           a(href="tech.html")       Техобслуживание
