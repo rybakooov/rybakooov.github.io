@@ -7,6 +7,5 @@
 #bfdhbhfs
 #bfdhbhfs
 /src
-package.json
-package-lock.json
+*.json
 gulpfile.js
