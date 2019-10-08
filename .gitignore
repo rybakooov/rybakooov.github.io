@@ -1,4 +1,4 @@
-/node_modules
+/node_modules/*
 #bfdhbhfs
 #bfdhbhfs
 #bfdhbhfs
@@ -6,6 +6,6 @@
 #bfdhbhfs
 #bfdhbhfs
 #bfdhbhfs
-/src
+/src/*
 *.json
 gulpfile.js
