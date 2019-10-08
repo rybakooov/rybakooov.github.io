@@ -1,11 +1,4 @@
-/node_modules/*
-#bfdhbhfs
-#bfdhbhfs
-#bfdhbhfs
-#bfdhbhfs
-#bfdhbhfs
-#bfdhbhfs
-#bfdhbhfs
-/src/*
-/*.json
-/gulpfile.js
+node_modules
+src
+*.json
+gulpfile.js
