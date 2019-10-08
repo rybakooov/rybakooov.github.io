@@ -1,0 +1,16 @@
+input, textarea, select, button {
+  -webkit-appearance: none;
+  box-shadow: none;
+  display: block;
+  min-height: 30px;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    background-color: transparent;
+    outline: none;
+}
