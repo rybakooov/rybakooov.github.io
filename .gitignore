@@ -7,5 +7,5 @@
 #bfdhbhfs
 #bfdhbhfs
 /src/*
-*.json
-gulpfile.js
+/*.json
+/gulpfile.js
