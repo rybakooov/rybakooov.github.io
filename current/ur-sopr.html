@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/jquery.sumoselect.min.js"></script>
+    <script src="assets/scripts/search.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d9d410cb-5d08-4c80-897e-eeffcb77b023&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Юридическое сопровождение при покупке участка | Finnkoti
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-wrap">
+        <div class="header-wrap-hamburger"><svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 12H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 22H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </div><a class="header-wrap-logo" href="index.html"><img class="header-wrap-logo__img" src="assets/images/logo.png" alt="Finnkoti"/><br/>
+          <p class="header-wrap-logo__text">Дома счастливых семей</p></a>
+        <ul class="header-wrap-linklist">
+          <li class="header-wrap-linklist__link"><a href="catalog.html">Проекты и цены</a></li>
+          <li class="header-wrap-linklist__link header-wrap-linklist__link_more"><a href="production.html">Производство</a>
+            <div class="header-wrap-linklist-block"><a href="credit.html">    Производство</a><a href="technology.html">   Технология</a></div>
+          </li>
+          <li class="header-wrap-linklist__link header-wrap-linklist__link_more"><a href="uslugi.html">Услуги</a>
+            <div class="header-wrap-linklist-block"><a href="credit.html">    Кредитование</a><a href="ur-sopr.html">   Юридическое  сопровождение при покупке участка</a><a href="landshaft.html"> Ландшафт</a><a href="smeta.html">     Анализ сметы</a><a href="tech.html">      Техобслуживание</a></div>
+          </li>
+          <li class="header-wrap-linklist__link"><a href="stock.html">Акции</a></li>
+          <li class="header-wrap-linklist__link header-wrap-linklist__link_more"><a href="about.html">О комании</a>
+            <div class="header-wrap-linklist-block"><a href="news.html">Новости</a><a href="blog.html">Блог</a></div>
+          </li>
+          <li class="header-wrap-linklist__link"><a href="galery.html">Галерея объектов</a></li>
+          <li class="header-wrap-linklist__link"><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="header-wrap-info">
+          <div class="header-wrap-info-search"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5197 16.1211L25 22.6014L22.6014 25L16.1211 18.5197C11.7977 21.5959 5.83834 20.8456 2.41235 16.7939C-1.01364 12.7421 -0.762975 6.74091 2.98897 2.98897C6.74091 -0.762975 12.7421 -1.01364 16.7939 2.41235C20.8456 5.83834 21.5959 11.7977 18.5197 16.1211ZM10.2366 2.32402C5.86665 2.32402 2.32412 5.86654 2.32412 10.2365C2.3291 14.6043 5.86871 18.144 10.2366 18.1489C14.6065 18.1489 18.149 14.6064 18.149 10.2365C18.149 5.86654 14.6065 2.32402 10.2366 2.32402Z" fill="#111111"/>
+</svg>
+          </div>
+          <div class="header-wrap-info-contacts"><a class="header-wrap-info-contacts__phone" href="tel: 8-921-889-32-26">8 (921) 889-32-26</a>
+            <div class="header-wrap-info-contacts__time"><span></span>10:00 - 19:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <form class="search-form" action="#">
+          <div class="search-form-top">
+            <div class="search-form-top-title"><span>Поиск по</span>
+              <div class="search-form-top-title__btn active" data-id="parametrs"><img src="assets/images/filter-emodji1.png" alt=""/><span>По параметрам</span></div>
+              <div class="search-form-top-title__btn" data-id="family"><img src="assets/images/filter-emodji2.png" alt=""/><span>По типу семьи</span></div>
+            </div>
+            <div class="search-form-top__close"></div>
+          </div>
+          <div class="search-form-main parametrs">
+            <div class="search-form-main-col">
+              <div class="search-form-main-col-row">
+                <div class="search-form-main-col-row-price"><span>Цена от</span>
+                  <input type="text" min-value="10000" data-type="price"/><span>До</span>
+                  <input type="text" max-value="33354000" data-type="price"/>
+                </div>
+                <div class="search-form-main-col-row-select">
+                  <select name="" multiple="multiple" placeholder="Этажность">
+                    <option>1 этаж</option>
+                    <option>2 этажа</option>
+                    <option>3 этажа</option>
+                    <option>4 этажа</option>
+                  </select>
+                </div>
+              </div>
+              <div class="search-form-main-col-row">
+                <div class="search-form-main-col-row-price search-form-main-col-row-square"><span>Площадь от</span>
+                  <input type="text" min-value="10" data-type="square"/><span>До</span>
+                  <input type="text" max-value="874" data-type="square"/>
+                </div>
+                <div class="search-form-main-col-row-select">
+                  <select name="" multiple="multiple" placeholder="Комнаты">
+                    <option>1 комната</option>
+                    <option>2 комнаты</option>
+                    <option>3 комнаты</option>
+                    <option>4 комнаты</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="search-form-main-col options">
+              <div class="search-form-main-col__title">Опции</div>
+              <div class="search-form-main-col-wrap">
+                <label for="input1">
+                  <input type="checkbox" id="input1"/><span></span><span>Дом на склоне</span>
+                </label>
+                <label for="input2">
+                  <input type="checkbox" id="input2"/><span></span><span>Узкий участок</span>
+                </label>
+                <label for="input3">
+                  <input type="checkbox" id="input3"/><span></span><span>С пристанью</span>
+                </label>
+                <label for="input4">
+                  <input type="checkbox" id="input4"/><span></span><span>Наличие гаража</span>
+                </label>
+                <label for="input5">
+                  <input type="checkbox" id="input5"/><span></span><span>С баней</span>
+                </label>
+                <label for="input6">
+                  <input type="checkbox" id="input6"/><span></span><span>Большая гостиная</span>
+                </label>
+                <label for="input7">
+                  <input type="checkbox" id="input7"/><span></span><span>Акция</span>
+                </label>
+                <label for="input8">
+                  <input type="checkbox" id="input8"/><span></span><span>Две семьи</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="search-form-main family">
+            <label class="search-form-main-item" for="family1">
+              <input type="checkbox" id="family1"/><img src="assets/images/filter-search-item1.svg" alt=""/><span>Одинокий молодой</span>
+            </label>
+            <label class="search-form-main-item" for="family2">
+              <input type="checkbox" id="family2"/><img src="assets/images/filter-search-item2.svg" alt=""/><span>Холостой взрослый</span>
+            </label>
+            <label class="search-form-main-item" for="family3">
+              <input type="checkbox" id="family3"/><img src="assets/images/filter-search-item3.svg" alt=""/><span>Молодая пара</span>
+            </label>
+            <label class="search-form-main-item" for="family4">
+              <input type="checkbox" id="family4"/><img src="assets/images/filter-search-item4.svg" alt=""/><span>Взрослая пара</span>
+            </label>
+            <label class="search-form-main-item" for="family5">
+              <input type="checkbox" id="family5"/><img src="assets/images/filter-search-item5.svg" alt=""/><span>Родитель с одним ребёнком</span>
+            </label>
+            <label class="search-form-main-item" for="family6">
+              <input type="checkbox" id="family6"/><img src="assets/images/filter-search-item6.svg" alt=""/><span>Семья с одним ребёнком</span>
+            </label>
+            <label class="search-form-main-item" for="family7">
+              <input type="checkbox" id="family7"/><img src="assets/images/filter-search-item7.svg" alt=""/><span>Родитель с двумя детьми</span>
+            </label>
+            <label class="search-form-main-item" for="family8">
+              <input type="checkbox" id="family8"/><img src="assets/images/filter-search-item8.svg" alt=""/><span>Семья с двумя детьми</span>
+            </label>
+            <label class="search-form-main-item" for="family9">
+              <input type="checkbox" id="family9"/><img src="assets/images/filter-search-item9.svg" alt=""/><span>Семья с одним ребенком и старшими родителями</span>
+            </label>
+            <label class="search-form-main-item" for="family10">
+              <input type="checkbox" id="family10"/><img src="assets/images/filter-search-item10.svg" alt=""/><span>Семья с тремя детьми</span>
+            </label>
+            <label class="search-form-main-item" for="family11">
+              <input type="checkbox" id="family11"/><img src="assets/images/filter-search-item11.svg" alt=""/><span>Семья с двумя детьми и старшими родителемя</span>
+            </label>
+            <label class="search-form-main-item" for="family12">
+              <input type="checkbox" id="family12"/><img src="assets/images/filter-search-item12.svg" alt=""/><span>Холостой взрослый с родителеми</span>
+            </label>
+          </div>
+          <div class="search-form-bot">
+            <div class="search-form-bot__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8158 12.8969L20 18.0811L18.0811 20L12.8969 14.8158C9.4382 17.2767 4.67067 16.6765 1.92988 13.4351C-0.810911 10.1937 -0.61038 5.39272 2.39117 2.39117C5.39272 -0.61038 10.1937 -0.810911 13.4351 1.92988C16.6765 4.67067 17.2767 9.4382 14.8158 12.8969ZM8.18934 1.8592C4.6934 1.8592 1.85937 4.69323 1.85937 8.18917C1.86336 11.6835 4.69505 14.5152 8.18934 14.5191C11.6853 14.5191 14.5193 11.6851 14.5193 8.18917C14.5193 4.69323 11.6853 1.8592 8.18934 1.8592Z" fill="white"/>
+</svg> Искать
+            </div>
+            <div class="search-form-bot__btn reset"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M1 11L6 6M11 1L6 6M6 6L11 11M6 6L1 1" stroke="#D60909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> Сбросить
+            </div>
+          </div>
+        </form>
+      </div>
+    </header>
+    <div class="wrapper">
+      <article class="w1440 ur-sopr article">
+        <div class="article-top">
+          <h1 class="article-top__title">Юридическое сопровождение<br>при покупке участка</h1>
+        </div>
+        <div class="article-main">
+          <p class="article-main__text">Наступил день, когда вы стали уставать от шумной и постоянно подвижной атмосферы города и у вас начали зарождаться мысли о переезде за город, в приятный и спокойный климат небольшого поселка. Но одного решения для переезда недостаточно. Перед вами возникнет еще много вопросов, на которые нужно правильно ответить, много всего изучить.<br></p>
+          <p class="article-main__text">Каждый этап необходимо пройти шаг за шагом, не торопясь, вникая в детали, чтобы не ошибиться. Итак, первое, что вам придется решать - это выбор земельного участка. <br></p>
+          <p class="article-main__text">Помимо местоположения земельного участка, придется изучить и разобраться во всех деталях: </p>
+          <ul class="article-main-list">
+            <li> <span></span>назначение земель, </li>
+            <li> <span></span>подъездные пути, </li>
+            <li> <span></span>коммуникации (есть или только обещают, документы на коммуникации), </li>
+            <li> <span></span>как будет проходить сделка (ячейка, аккредитив, ипотека) и т.д. </li>
+          </ul>
+          <p class="article-main__text_line">Мы не оставляем наших клиентов наедине с этими проблемами и помогаем<br>решить все вопросы.<br>Услуга для покупателей наших домов бесплатна.</p>
+        </div>
+      </article>
+      <section class="general-form">
+        <div class="general-form-wrap">
+          <h1 class="general-form-wrap__title">Остались вопросы?<br>Пишите, мы ответим</h1>
+          <form class="general-form-wrap-form" action="GET">
+            <input id="general-form__name" type="text" name="" placeholder="Имя"/>
+            <input id="general-form__mail-or-phone" type="text" name="" placeholder="E-mail или телефон"/><br/>
+            <textarea id="general-form__textarea" name="" cols="30" rows="2" placeholder="Текст сообщения"></textarea>
+            <p class="general-form-wrap-form__pers">Отправляя данную форму Вы соглашаетесь на <a href="#">обработку персональных данных</a></p>
+            <button class="general-btn" type="submit">Запросить цену</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-wrap-logo"><img class="footer-wrap-logo__img" src="assets/images/logo.png" alt="Finnkoti"/>
+          <p class="footer-wrap-logo__text">Финское качество на всех этапах строительства</p>
+        </div>
+        <div class="footer-wrap-links">
+          <ul class="footer-wrap-links-list">
+            <li>
+              <h2 class="footer-wrap-links-list__title">О компании</h2>
+            </li>
+            <li> <a class="footer-wrap-links-list__link" href="#">Принципы</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Стратегии</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Отзывы</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Статьи</a></li>
+          </ul>
+          <ul class="footer-wrap-links-list">
+            <li>
+              <h2 class="footer-wrap-links-list__title">Покупка</h2>
+            </li>
+            <li> <a class="footer-wrap-links-list__link" href="#">Каталог</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Этапы получения</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Документы</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Требования</a></li>
+          </ul>
+          <ul class="footer-wrap-links-list">
+            <li>
+              <h2 class="footer-wrap-links-list__title">Время работы</h2>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__timing">Понедельник - Суббота</p>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__clock">7:00 - 22:00</p>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__timing">Воскресенье</p>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__clock">9:00 - 22:00</p>
+            </li>
+          </ul>
+          <ul class="footer-wrap-links-list">
+            <li>   
+              <h2 class="footer-wrap-links-list__title">Контакты</h2>
+            </li>
+            <li><a class="footer-wrap-links-list__link" href="tel: +7 (812) 124-33-22">
+                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.9253 14.3879L14.3883 10.9249C15.1683 10.1459 15.1683 8.87686 14.3883 8.09686L7.90334 1.61186C7.12334 0.831855 5.85534 0.831855 5.07534 1.61186L1.61234 5.07486C0.832344 5.85386 0.832344 7.12286 1.61234 7.90286L8.09734 14.3879C8.87734 15.1679 10.1453 15.1679 10.9253 14.3879ZM9.51137 12.9739L3.02637 6.48888L6.48937 3.02588L12.9754 9.50988L9.51137 12.9739Z" fill="#181818"/>
+<path d="M6 16H5C2.243 16 0 13.757 0 11V10H2V11C2 12.654 3.346 14 5 14H6V16Z" fill="#181818"/>
+<path d="M10 0H11C13.757 0 16 2.243 16 5V6H14V5C14 3.346 12.654 2 11 2H10V0Z" fill="#181818"/>
+</svg>+7 (812) 124-33-22</a></li>
+            <li><a class="footer-wrap-links-list__link" href="mailto: info@finnkoti.ru">
+                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 0H1C0.448 0 0 0.447 0 1V13C0 13.553 0.448 14 1 14H15C15.552 14 16 13.553 16 13V1C16 0.447 15.552 0 15 0ZM14 5.72314V12.0001H2V5.72314L7.504 8.86814C7.812 9.04414 8.189 9.04414 8.496 8.86814L14 5.72314ZM8 6.849L14 3.42V2H2V3.42L8 6.849Z" fill="#181818"/>
+</svg>info@finnkoti.ru</a></li>
+            <li>
+              <p class="footer-wrap-links-list__link">
+                 <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#181818"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.59106 15.0688C5.99516 15.427 6.27478 15.6748 6.3 15.7C6.7 16.1 7.3 16.1 7.7 15.8C7.75 15.75 8.77502 14.825 9.80003 13.9C10.825 12.975 11.85 12.05 11.9 12C13.3 10.7 14 8.9 14 7C14 3.1 10.9 0 7 0C3.1 0 0 3.1 0 7C0 8.9 0.7 10.7 2.1 11.9C2.1 11.9748 4.3928 14.0068 5.59106 15.0688ZM7 13.7001L3.6 10.7001C2.6 9.7001 2 8.4001 2 7.0001C2 4.2001 4.2 2.1001 7 2.1001C9.8 2.1001 12 4.3001 12 7.1001C12 8.5001 11.4 9.7001 10.4 10.7001L7 13.7001Z" fill="#181818"/>
+</svg>ул. Пушкина д.5
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-wrap-subscribe">
+          <div class="footer-wrap-subscribe__title">Подпишитесь на рассылку</div>
+          <form class="footer-wrap-subscribe-form" action="">
+            <input id="footer-email" type="text" name="footer-email" placeholder="Введите e-mail"/>
+            <input type="button" value="Подписаться"/>
+          </form>
+          <div class="footer-wrap-subscribe-links"><a class="footer-wrap-subscribe-links__link" href="#"><svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.77187 15V8.29102H0.375V5.625H2.77187V3.52441C2.77187 1.24219 4.25938 0 6.43125 0C7.47188 0 8.36562 0.0732422 8.625 0.105469V2.49023H7.11875C5.9375 2.49023 5.70937 3.01758 5.70937 3.78809V5.625H8.375L8.00938 8.29102H5.70937V15" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="9" height="15">
+<path d="M2.77187 15V8.29102H0.375V5.625H2.77187V3.52441C2.77187 1.24219 4.25938 0 6.43125 0C7.47188 0 8.36562 0.0732422 8.625 0.105469V2.49023H7.11875C5.9375 2.49023 5.70937 3.01758 5.70937 3.78809V5.625H8.375L8.00938 8.29102H5.70937V15" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.4581 3.09568C13.4676 3.23154 13.4676 3.36742 13.4676 3.50328C13.4676 7.64703 10.3744 12.4216 4.72081 12.4216C2.97905 12.4216 1.36104 11.9072 0 11.0145C0.247471 11.0436 0.485391 11.0533 0.742383 11.0533C2.17954 11.0533 3.50253 10.5584 4.559 9.7141C3.20748 9.68497 2.07486 8.78247 1.68463 7.5403C1.875 7.56939 2.06534 7.58881 2.26523 7.58881C2.54124 7.58881 2.81728 7.54998 3.07424 7.48208C1.66562 7.19092 0.609111 5.92937 0.609111 4.40578V4.36698C1.01836 4.59988 1.49429 4.74545 1.99869 4.76483C1.17064 4.20197 0.628154 3.24125 0.628154 2.15435C0.628154 1.5721 0.78041 1.03836 1.04692 0.572544C2.56025 2.4746 4.83501 3.71674 7.38574 3.85262C7.33816 3.61972 7.3096 3.37713 7.3096 3.13452C7.3096 1.40712 8.68017 0 10.3838 0C11.269 0 12.0685 0.37847 12.63 0.989846C13.3248 0.853991 13.991 0.59196 14.5812 0.232907C14.3527 0.960751 13.8673 1.57213 13.2296 1.96028C13.8483 1.89238 14.4479 1.71766 14.9999 1.47508C14.5812 2.09613 14.0577 2.64926 13.4581 3.09568Z" fill="black"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="13">
+<path d="M13.4581 3.09568C13.4676 3.23154 13.4676 3.36742 13.4676 3.50328C13.4676 7.64703 10.3744 12.4216 4.72081 12.4216C2.97905 12.4216 1.36104 11.9072 0 11.0145C0.247471 11.0436 0.485391 11.0533 0.742383 11.0533C2.17954 11.0533 3.50253 10.5584 4.559 9.7141C3.20748 9.68497 2.07486 8.78247 1.68463 7.5403C1.875 7.56939 2.06534 7.58881 2.26523 7.58881C2.54124 7.58881 2.81728 7.54998 3.07424 7.48208C1.66562 7.19092 0.609111 5.92937 0.609111 4.40578V4.36698C1.01836 4.59988 1.49429 4.74545 1.99869 4.76483C1.17064 4.20197 0.628154 3.24125 0.628154 2.15435C0.628154 1.5721 0.78041 1.03836 1.04692 0.572544C2.56025 2.4746 4.83501 3.71674 7.38574 3.85262C7.33816 3.61972 7.3096 3.37713 7.3096 3.13452C7.3096 1.40712 8.68017 0 10.3838 0C11.269 0 12.0685 0.37847 12.63 0.989846C13.3248 0.853991 13.991 0.59196 14.5812 0.232907C14.3527 0.960751 13.8673 1.57213 13.2296 1.96028C13.8483 1.89238 14.4479 1.71766 14.9999 1.47508C14.5812 2.09613 14.0577 2.64926 13.4581 3.09568Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 8.5C15 13.0488 11.6431 16.7344 7.5 16.7344C6.72581 16.7344 5.98185 16.6049 5.28024 16.3658C5.58569 15.818 6.04234 14.9215 6.21169 14.2076C6.30242 13.8225 6.67742 12.2486 6.67742 12.2486C6.92238 12.76 7.63609 13.1949 8.39516 13.1949C10.6573 13.1949 12.2873 10.9105 12.2873 8.07168C12.2873 5.35234 10.2641 3.31699 7.66331 3.31699C4.42742 3.31699 2.70665 5.70098 2.70665 8.30078C2.70665 9.50938 3.29335 11.0135 4.22782 11.4916C4.36996 11.5647 4.44556 11.5314 4.47883 11.382C4.50302 11.2691 4.63004 10.708 4.6875 10.449C4.70565 10.366 4.69657 10.293 4.63609 10.2133C4.33065 9.79824 4.08266 9.04121 4.08266 8.33399C4.08266 6.51777 5.33468 4.76133 7.46976 4.76133C9.31149 4.76133 10.6028 6.13926 10.6028 8.11152C10.6028 10.3395 9.57762 11.8834 8.24395 11.8834C7.50907 11.8834 6.95565 11.216 7.13407 10.3959C7.34577 9.41641 7.75403 8.36055 7.75403 7.65332C7.75403 7.02246 7.44556 6.49453 6.80444 6.49453C6.05141 6.49453 5.44657 7.34785 5.44657 8.49336C5.44657 9.22383 5.67036 9.71524 5.67036 9.71524C5.67036 9.71524 4.92944 13.1617 4.79335 13.8059C4.64214 14.5164 4.70262 15.5191 4.76613 16.1699C1.97782 14.9713 0 11.9896 0 8.5C0 3.95117 3.35685 0.265625 7.5 0.265625C11.6431 0.265625 15 3.95117 15 8.5Z" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="17">
+<path d="M15 8.5C15 13.0488 11.6431 16.7344 7.5 16.7344C6.72581 16.7344 5.98185 16.6049 5.28024 16.3658C5.58569 15.818 6.04234 14.9215 6.21169 14.2076C6.30242 13.8225 6.67742 12.2486 6.67742 12.2486C6.92238 12.76 7.63609 13.1949 8.39516 13.1949C10.6573 13.1949 12.2873 10.9105 12.2873 8.07168C12.2873 5.35234 10.2641 3.31699 7.66331 3.31699C4.42742 3.31699 2.70665 5.70098 2.70665 8.30078C2.70665 9.50938 3.29335 11.0135 4.22782 11.4916C4.36996 11.5647 4.44556 11.5314 4.47883 11.382C4.50302 11.2691 4.63004 10.708 4.6875 10.449C4.70565 10.366 4.69657 10.293 4.63609 10.2133C4.33065 9.79824 4.08266 9.04121 4.08266 8.33399C4.08266 6.51777 5.33468 4.76133 7.46976 4.76133C9.31149 4.76133 10.6028 6.13926 10.6028 8.11152C10.6028 10.3395 9.57762 11.8834 8.24395 11.8834C7.50907 11.8834 6.95565 11.216 7.13407 10.3959C7.34577 9.41641 7.75403 8.36055 7.75403 7.65332C7.75403 7.02246 7.44556 6.49453 6.80444 6.49453C6.05141 6.49453 5.44657 7.34785 5.44657 8.49336C5.44657 9.22383 5.67036 9.71524 5.67036 9.71524C5.67036 9.71524 4.92944 13.1617 4.79335 13.8059C4.64214 14.5164 4.70262 15.5191 4.76613 16.1699C1.97782 14.9713 0 11.9896 0 8.5C0 3.95117 3.35685 0.265625 7.5 0.265625C11.6431 0.265625 15 3.95117 15 8.5Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0563 0.513564C13.6682 0.688168 14.1502 1.20267 14.3137 1.85595C14.6109 3.04005 14.6109 5.51058 14.6109 5.51058C14.6109 5.51058 14.6109 7.9811 14.3137 9.16521C14.1502 9.81849 13.6682 10.3116 13.0563 10.4862C11.9472 10.8034 7.49979 10.8034 7.49979 10.8034C7.49979 10.8034 3.0524 10.8034 1.94326 10.4862C1.33135 10.3116 0.849427 9.81849 0.685859 9.16521C0.388672 7.9811 0.388672 5.51058 0.388672 5.51058C0.388672 5.51058 0.388672 3.04005 0.685859 1.85595C0.849427 1.20267 1.33135 0.688195 1.94326 0.513564C3.0524 0.196289 7.49979 0.196289 7.49979 0.196289C7.49979 0.196289 11.9472 0.196289 13.0563 0.513564ZM6.04517 3.26758V7.75368L9.76233 5.51068L6.04517 3.26758Z" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="11">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0563 0.513564C13.6682 0.688168 14.1502 1.20267 14.3137 1.85595C14.6109 3.04005 14.6109 5.51058 14.6109 5.51058C14.6109 5.51058 14.6109 7.9811 14.3137 9.16521C14.1502 9.81849 13.6682 10.3116 13.0563 10.4862C11.9472 10.8034 7.49979 10.8034 7.49979 10.8034C7.49979 10.8034 3.0524 10.8034 1.94326 10.4862C1.33135 10.3116 0.849427 9.81849 0.685859 9.16521C0.388672 7.9811 0.388672 5.51058 0.388672 5.51058C0.388672 5.51058 0.388672 3.04005 0.685859 1.85595C0.849427 1.20267 1.33135 0.688195 1.94326 0.513564C3.0524 0.196289 7.49979 0.196289 7.49979 0.196289C7.49979 0.196289 11.9472 0.196289 13.0563 0.513564ZM6.04517 3.26758V7.75368L9.76233 5.51068L6.04517 3.26758Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.234375C3.35988 0.234375 0 3.48926 0 7.5C0 11.5107 3.35988 14.7656 7.5 14.7656C11.6401 14.7656 15 11.5107 15 7.5C15 3.48926 11.6401 0.234375 7.5 0.234375ZM5.36194 11.1328C3.28129 11.1328 1.61194 9.50684 1.61194 7.5C1.61194 5.49316 3.28129 3.86719 5.36194 3.86719C6.30851 3.86719 7.17948 4.18945 7.87202 4.81348L6.85589 5.76855C6.4567 5.39062 5.90932 5.20898 5.36194 5.20898C4.06456 5.20898 3.02726 6.24902 3.02726 7.49707C3.02726 8.74512 4.06154 9.78516 5.36194 9.78516C6.34783 9.78516 7.32464 9.22559 7.4819 8.22363H5.36194V6.97559H8.89722C8.93653 7.1748 8.95468 7.37402 8.95468 7.58203C8.95468 9.65625 7.51819 11.1328 5.36194 11.1328ZM12.3236 9.06152V8.02148H13.3881V6.98145H12.3236V5.94141H11.25V6.98145H10.1764V8.02148H11.25V9.06152H12.3236Z" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="15">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.234375C3.35988 0.234375 0 3.48926 0 7.5C0 11.5107 3.35988 14.7656 7.5 14.7656C11.6401 14.7656 15 11.5107 15 7.5C15 3.48926 11.6401 0.234375 7.5 0.234375ZM5.36194 11.1328C3.28129 11.1328 1.61194 9.50684 1.61194 7.5C1.61194 5.49316 3.28129 3.86719 5.36194 3.86719C6.30851 3.86719 7.17948 4.18945 7.87202 4.81348L6.85589 5.76855C6.4567 5.39062 5.90932 5.20898 5.36194 5.20898C4.06456 5.20898 3.02726 6.24902 3.02726 7.49707C3.02726 8.74512 4.06154 9.78516 5.36194 9.78516C6.34783 9.78516 7.32464 9.22559 7.4819 8.22363H5.36194V6.97559H8.89722C8.93653 7.1748 8.95468 7.37402 8.95468 7.58203C8.95468 9.65625 7.51819 11.1328 5.36194 11.1328ZM12.3236 9.06152V8.02148H13.3881V6.98145H12.3236V5.94141H11.25V6.98145H10.1764V8.02148H11.25V9.06152H12.3236Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

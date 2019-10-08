@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/jquery.sumoselect.min.js"></script>
+    <script src="assets/scripts/search.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d9d410cb-5d08-4c80-897e-eeffcb77b023&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Главная | Finnkoti
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-wrap">
+        <div class="header-wrap-hamburger"><svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 12H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 22H27" stroke="#4479BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </div><a class="header-wrap-logo" href="index.html"><img class="header-wrap-logo__img" src="assets/images/logo.png" alt="Finnkoti"/><br/>
+          <p class="header-wrap-logo__text">Дома счастливых семей</p></a>
+        <ul class="header-wrap-linklist">
+          <li class="header-wrap-linklist__link"><a href="catalog.html">Проекты и цены</a></li>
+          <li class="header-wrap-linklist__link header-wrap-linklist__link_more"><a href="production.html">Производство</a>
+            <div class="header-wrap-linklist-block"><a href="credit.html">    Производство</a><a href="technology.html">   Технология</a></div>
+          </li>
+          <li class="header-wrap-linklist__link header-wrap-linklist__link_more"><a href="uslugi.html">Услуги</a>
+            <div class="header-wrap-linklist-block"><a href="credit.html">    Кредитование</a><a href="ur-sopr.html">   Юридическое  сопровождение при покупке участка</a><a href="landshaft.html"> Ландшафт</a><a href="smeta.html">     Анализ сметы</a><a href="tech.html">      Техобслуживание</a></div>
+          </li>
+          <li class="header-wrap-linklist__link"><a href="stock.html">Акции</a></li>
+          <li class="header-wrap-linklist__link header-wrap-linklist__link_more"><a href="about.html">О комании</a>
+            <div class="header-wrap-linklist-block"><a href="news.html">Новости</a><a href="blog.html">Блог</a></div>
+          </li>
+          <li class="header-wrap-linklist__link"><a href="galery.html">Галерея объектов</a></li>
+          <li class="header-wrap-linklist__link"><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="header-wrap-info">
+          <div class="header-wrap-info-search"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5197 16.1211L25 22.6014L22.6014 25L16.1211 18.5197C11.7977 21.5959 5.83834 20.8456 2.41235 16.7939C-1.01364 12.7421 -0.762975 6.74091 2.98897 2.98897C6.74091 -0.762975 12.7421 -1.01364 16.7939 2.41235C20.8456 5.83834 21.5959 11.7977 18.5197 16.1211ZM10.2366 2.32402C5.86665 2.32402 2.32412 5.86654 2.32412 10.2365C2.3291 14.6043 5.86871 18.144 10.2366 18.1489C14.6065 18.1489 18.149 14.6064 18.149 10.2365C18.149 5.86654 14.6065 2.32402 10.2366 2.32402Z" fill="#111111"/>
+</svg>
+          </div>
+          <div class="header-wrap-info-contacts"><a class="header-wrap-info-contacts__phone" href="tel: 8-921-889-32-26">8 (921) 889-32-26</a>
+            <div class="header-wrap-info-contacts__time"><span></span>10:00 - 19:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <form class="search-form" action="#">
+          <div class="search-form-top">
+            <div class="search-form-top-title"><span>Поиск по</span>
+              <div class="search-form-top-title__btn active" data-id="parametrs"><img src="assets/images/filter-emodji1.png" alt=""/><span>По параметрам</span></div>
+              <div class="search-form-top-title__btn" data-id="family"><img src="assets/images/filter-emodji2.png" alt=""/><span>По типу семьи</span></div>
+            </div>
+            <div class="search-form-top__close"></div>
+          </div>
+          <div class="search-form-main parametrs">
+            <div class="search-form-main-col">
+              <div class="search-form-main-col-row">
+                <div class="search-form-main-col-row-price"><span>Цена от</span>
+                  <input type="text" min-value="10000" data-type="price"/><span>До</span>
+                  <input type="text" max-value="33354000" data-type="price"/>
+                </div>
+                <div class="search-form-main-col-row-select">
+                  <select name="" multiple="multiple" placeholder="Этажность">
+                    <option>1 этаж</option>
+                    <option>2 этажа</option>
+                    <option>3 этажа</option>
+                    <option>4 этажа</option>
+                  </select>
+                </div>
+              </div>
+              <div class="search-form-main-col-row">
+                <div class="search-form-main-col-row-price search-form-main-col-row-square"><span>Площадь от</span>
+                  <input type="text" min-value="10" data-type="square"/><span>До</span>
+                  <input type="text" max-value="874" data-type="square"/>
+                </div>
+                <div class="search-form-main-col-row-select">
+                  <select name="" multiple="multiple" placeholder="Комнаты">
+                    <option>1 комната</option>
+                    <option>2 комнаты</option>
+                    <option>3 комнаты</option>
+                    <option>4 комнаты</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="search-form-main-col options">
+              <div class="search-form-main-col__title">Опции</div>
+              <div class="search-form-main-col-wrap">
+                <label for="input1">
+                  <input type="checkbox" id="input1"/><span></span><span>Дом на склоне</span>
+                </label>
+                <label for="input2">
+                  <input type="checkbox" id="input2"/><span></span><span>Узкий участок</span>
+                </label>
+                <label for="input3">
+                  <input type="checkbox" id="input3"/><span></span><span>С пристанью</span>
+                </label>
+                <label for="input4">
+                  <input type="checkbox" id="input4"/><span></span><span>Наличие гаража</span>
+                </label>
+                <label for="input5">
+                  <input type="checkbox" id="input5"/><span></span><span>С баней</span>
+                </label>
+                <label for="input6">
+                  <input type="checkbox" id="input6"/><span></span><span>Большая гостиная</span>
+                </label>
+                <label for="input7">
+                  <input type="checkbox" id="input7"/><span></span><span>Акция</span>
+                </label>
+                <label for="input8">
+                  <input type="checkbox" id="input8"/><span></span><span>Две семьи</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="search-form-main family">
+            <label class="search-form-main-item" for="family1">
+              <input type="checkbox" id="family1"/><img src="assets/images/filter-search-item1.svg" alt=""/><span>Одинокий молодой</span>
+            </label>
+            <label class="search-form-main-item" for="family2">
+              <input type="checkbox" id="family2"/><img src="assets/images/filter-search-item2.svg" alt=""/><span>Холостой взрослый</span>
+            </label>
+            <label class="search-form-main-item" for="family3">
+              <input type="checkbox" id="family3"/><img src="assets/images/filter-search-item3.svg" alt=""/><span>Молодая пара</span>
+            </label>
+            <label class="search-form-main-item" for="family4">
+              <input type="checkbox" id="family4"/><img src="assets/images/filter-search-item4.svg" alt=""/><span>Взрослая пара</span>
+            </label>
+            <label class="search-form-main-item" for="family5">
+              <input type="checkbox" id="family5"/><img src="assets/images/filter-search-item5.svg" alt=""/><span>Родитель с одним ребёнком</span>
+            </label>
+            <label class="search-form-main-item" for="family6">
+              <input type="checkbox" id="family6"/><img src="assets/images/filter-search-item6.svg" alt=""/><span>Семья с одним ребёнком</span>
+            </label>
+            <label class="search-form-main-item" for="family7">
+              <input type="checkbox" id="family7"/><img src="assets/images/filter-search-item7.svg" alt=""/><span>Родитель с двумя детьми</span>
+            </label>
+            <label class="search-form-main-item" for="family8">
+              <input type="checkbox" id="family8"/><img src="assets/images/filter-search-item8.svg" alt=""/><span>Семья с двумя детьми</span>
+            </label>
+            <label class="search-form-main-item" for="family9">
+              <input type="checkbox" id="family9"/><img src="assets/images/filter-search-item9.svg" alt=""/><span>Семья с одним ребенком и старшими родителями</span>
+            </label>
+            <label class="search-form-main-item" for="family10">
+              <input type="checkbox" id="family10"/><img src="assets/images/filter-search-item10.svg" alt=""/><span>Семья с тремя детьми</span>
+            </label>
+            <label class="search-form-main-item" for="family11">
+              <input type="checkbox" id="family11"/><img src="assets/images/filter-search-item11.svg" alt=""/><span>Семья с двумя детьми и старшими родителемя</span>
+            </label>
+            <label class="search-form-main-item" for="family12">
+              <input type="checkbox" id="family12"/><img src="assets/images/filter-search-item12.svg" alt=""/><span>Холостой взрослый с родителеми</span>
+            </label>
+          </div>
+          <div class="search-form-bot">
+            <div class="search-form-bot__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8158 12.8969L20 18.0811L18.0811 20L12.8969 14.8158C9.4382 17.2767 4.67067 16.6765 1.92988 13.4351C-0.810911 10.1937 -0.61038 5.39272 2.39117 2.39117C5.39272 -0.61038 10.1937 -0.810911 13.4351 1.92988C16.6765 4.67067 17.2767 9.4382 14.8158 12.8969ZM8.18934 1.8592C4.6934 1.8592 1.85937 4.69323 1.85937 8.18917C1.86336 11.6835 4.69505 14.5152 8.18934 14.5191C11.6853 14.5191 14.5193 11.6851 14.5193 8.18917C14.5193 4.69323 11.6853 1.8592 8.18934 1.8592Z" fill="white"/>
+</svg> Искать
+            </div>
+            <div class="search-form-bot__btn reset"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M1 11L6 6M11 1L6 6M6 6L11 11M6 6L1 1" stroke="#D60909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> Сбросить
+            </div>
+          </div>
+        </form>
+      </div>
+    </header>
+    <div class="wrapper">
+      <section class="first">
+        <div class="first-desc">
+          <h3 class="first-desc__subtitle">Проектирование и строительство</h3>
+          <h1 class="first-desc__title">Энергоэффективные<br><span>дома</span></h1>
+          <p class="first-desc__text">Мы разрабатываем, изготавливаем и продаем загородные каркасные, панельно-каркасные дома и коттеджи, таунхаусы и многоквартирные дома</p>
+        </div>
+        <div class="first-linkblock"><a class="first-linkblock__link" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.32095 0.944196C6.12508 0.915178 5.45042 0.857142 4.66693 0.857142C3.02742 0.857142 1.90298 1.85826 1.90298 3.69364V5.27511H0.0530939V7.42243H1.90298V12.9286H4.12285V7.42243H5.96548L6.24841 5.27511H4.12285V3.90402C4.12285 3.28739 4.2897 2.85937 5.182 2.85937H6.32095V0.944196Z" fill="white"/>
+</svg></a><a class="first-linkblock__link" href="#"><svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.2156 1.20149C11.7949 1.38285 11.3378 1.51343 10.8663 1.56421C11.3523 1.27403 11.7223 0.816999 11.8964 0.272914C11.4466 0.541329 10.9388 0.7372 10.4092 0.838762C9.98124 0.381731 9.37186 0.098807 8.6972 0.098807C7.39865 0.098807 6.354 1.1507 6.354 2.442C6.354 2.62336 6.37577 2.80472 6.41204 2.97883C4.46784 2.87727 2.73403 1.9487 1.58057 0.52682C1.37744 0.875034 1.26137 1.27403 1.26137 1.7093C1.26137 2.5218 1.67487 3.23999 2.30601 3.66075C1.92153 3.64624 1.5588 3.53742 1.24686 3.36332C1.24686 3.37057 1.24686 3.38508 1.24686 3.39233C1.24686 4.53128 2.05211 5.47437 3.12577 5.692C2.9299 5.74278 2.71952 5.7718 2.50914 5.7718C2.35679 5.7718 2.2117 5.75729 2.06662 5.73553C2.36405 6.6641 3.22733 7.33876 4.25746 7.36053C3.45222 7.99166 2.44385 8.36164 1.34842 8.36164C1.15255 8.36164 0.971191 8.35439 0.782575 8.33262C1.81996 9.00003 3.05322 9.38452 4.38079 9.38452C8.68994 9.38452 11.0476 5.81532 11.0476 2.71767C11.0476 2.61611 11.0476 2.51454 11.0404 2.41298C11.4974 2.07928 11.8964 1.66577 12.2156 1.20149Z" fill="white"/>
+</svg></a><a class="first-linkblock__link" href="#"><svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.15792 6.80947V3.16047L8.66909 4.99585L5.15792 6.80947ZM6.5 0.556117C3.76507 0.556117 1.95145 0.686698 1.95145 0.686698C1.69754 0.715715 1.13895 0.715715 0.645647 1.23804C0.645647 1.23804 0.246652 1.62978 0.13058 2.52933C-0.00725446 3.58123 0 4.63313 0 4.63313V5.61973C0 5.61973 -0.00725446 6.67163 0.13058 7.72353C0.246652 8.61583 0.645647 9.01482 0.645647 9.01482C1.13895 9.52989 1.79185 9.51538 2.08203 9.56616C2.08203 9.56616 3.11942 9.66772 6.5 9.69674C9.23493 9.69674 11.0485 9.55891 11.0485 9.55891C11.3025 9.52989 11.861 9.52989 12.3544 9.01482C12.3544 9.01482 12.7533 8.61583 12.8694 7.72353C13.0073 6.67163 13 5.61973 13 5.61973V4.63313C13 4.63313 13.0073 3.58123 12.8694 2.52933C12.7533 1.62978 12.3544 1.23804 12.3544 1.23804C11.861 0.715715 11.3025 0.715715 11.0485 0.686698C11.0485 0.686698 9.23493 0.556117 6.5 0.556117Z" fill="white"/>
+</svg></a><a class="first-linkblock__link" href="#"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.9327 6.51095C7.9327 7.53383 7.09844 8.36809 6.07556 8.36809C5.05268 8.36809 4.21842 7.53383 4.21842 6.51095C4.21842 5.48807 5.05268 4.65381 6.07556 4.65381C7.09844 4.65381 7.9327 5.48807 7.9327 6.51095ZM8.93382 6.51095C8.93382 4.92948 7.65703 3.65269 6.07556 3.65269C4.49409 3.65269 3.2173 4.92948 3.2173 6.51095C3.2173 8.09242 4.49409 9.36921 6.07556 9.36921C7.65703 9.36921 8.93382 8.09242 8.93382 6.51095ZM9.7173 3.53662C9.7173 3.16664 9.41987 2.86921 9.04989 2.86921C8.67991 2.86921 8.38248 3.16664 8.38248 3.53662C8.38248 3.9066 8.67991 4.20403 9.04989 4.20403C9.41987 4.20403 9.7173 3.9066 9.7173 3.53662ZM6.07556 1.94064C6.88806 1.94064 8.62913 1.87535 9.36183 2.16553C9.61574 2.26709 9.80436 2.39042 10.0002 2.58629C10.1961 2.78216 10.3194 2.97077 10.421 3.22468C10.7112 3.95738 10.6459 5.69845 10.6459 6.51095C10.6459 7.32345 10.7112 9.06452 10.421 9.79722C10.3194 10.0511 10.1961 10.2397 10.0002 10.4356C9.80436 10.6315 9.61574 10.7548 9.36183 10.8564C8.62913 11.1466 6.88806 11.0813 6.07556 11.0813C5.26306 11.0813 3.52199 11.1466 2.78929 10.8564C2.53538 10.7548 2.34677 10.6315 2.1509 10.4356C1.95502 10.2397 1.8317 10.0511 1.73014 9.79722C1.43996 9.06452 1.50525 7.32345 1.50525 6.51095C1.50525 5.69845 1.43996 3.95738 1.73014 3.22468C1.8317 2.97077 1.95502 2.78216 2.1509 2.58629C2.34677 2.39042 2.53538 2.26709 2.78929 2.16553C3.52199 1.87535 5.26306 1.94064 6.07556 1.94064ZM11.647 6.51095C11.647 5.74198 11.6542 4.98026 11.6107 4.21129C11.5672 3.31899 11.3641 2.52825 10.7112 1.87535C10.0583 1.22245 9.26753 1.01932 8.37523 0.975795C7.60625 0.932268 6.84453 0.939522 6.07556 0.939522C5.30659 0.939522 4.54487 0.932268 3.7759 0.975795C2.8836 1.01932 2.09286 1.22245 1.43996 1.87535C0.787056 2.52825 0.583931 3.31899 0.540404 4.21129C0.496877 4.98026 0.504132 5.74198 0.504132 6.51095C0.504132 7.27992 0.496877 8.04164 0.540404 8.81062C0.583931 9.70292 0.787056 10.4937 1.43996 11.1466C2.09286 11.7995 2.8836 12.0026 3.7759 12.0461C4.54487 12.0896 5.30659 12.0824 6.07556 12.0824C6.84453 12.0824 7.60625 12.0896 8.37523 12.0461C9.26753 12.0026 10.0583 11.7995 10.7112 11.1466C11.3641 10.4937 11.5672 9.70292 11.6107 8.81062C11.6542 8.04164 11.647 7.27992 11.647 6.51095Z" fill="white"/>
+</svg></a><a class="first-linkblock__link" href="#"><svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.436711 4.72663C0.436711 5.67697 0.813943 7.06257 1.85133 7.37451C1.8876 7.38177 1.93839 7.39627 1.97466 7.39627C2.21406 7.39627 2.35189 6.72886 2.35189 6.54025C2.35189 6.31536 1.77879 5.83656 1.77879 4.90074C1.77879 2.95654 3.2587 1.57819 5.17388 1.57819C6.82064 1.57819 8.03939 2.51402 8.03939 4.23333C8.03939 5.51737 7.52432 7.92585 5.8558 7.92585C5.25368 7.92585 4.73861 7.49058 4.73861 6.8667C4.73861 5.95264 5.377 5.06759 5.377 4.12451C5.377 3.55141 5.05055 3.08712 4.44118 3.08712C3.61417 3.08712 3.10635 4.01569 3.10635 4.7484C3.10635 5.15465 3.15714 5.60442 3.3385 5.9744C3.00479 7.41078 2.32287 9.55085 2.32287 11.0308C2.32287 11.4878 2.38816 11.9376 2.43169 12.3946L2.49698 12.4671L2.59854 12.4309C3.81729 10.7623 3.77376 10.4359 4.3251 8.2523C4.62254 8.81815 5.39151 9.12284 6.00089 9.12284C8.56897 9.12284 9.72243 6.62005 9.72243 4.36391C9.72243 1.96268 7.64765 0.395716 5.36975 0.395716C2.88872 0.395716 0.436711 2.04973 0.436711 4.72663Z" fill="white"/>
+</svg></a></div>
+      </section>
+      <section class="second w1440">
+        <h1 class="title-36">О компании</h1>
+        <div class="second-block">
+          <div class="second-block-desc">
+            <p class="second-block-desc__text">Свою работу компания Finnkoti начала в 2017 году в партнерстве с ведущими финскими производителями домов. Так родилась идея сделать финские дома доступными, не теряя качества. Имея колоссальный опыт строительства финских домов, понимая технологии строительства и производства качественных домов, оценивая этот шаг, как вклад в развитие внутреннего потенциала нашей страны, мы решили построить производство на территории РФ. Дома Finnkoti производятся по исключительным финским технологиям.</p>
+            <p class="second-block-desc__text">Слаженная работа молодого коллектива способствовала стремительному развитию нашей компании.</p><a class="second-block-desc__link" href="#">
+              Читать полностью<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L4 3.83286L1 7" stroke="black" stroke-opacity="0.5"/>
+<path d="M5.5 1L8.5 3.83286L5.5 7" stroke="black" stroke-opacity="0.5"/>
+</svg>  </a>
+          </div>
+          <div class="second-block-images"><img class="second-block-images__img second-block-images__img-1" src="assets/images/second-block-house-1.png" alt=""/>
+            <div class="second-block-images-right"><img class="second-block-images__img" src="assets/images/second-block-house-2.png" alt=""/><img class="second-block-images__img" src="assets/images/second-block-house-3.png" alt=""/></div>
+          </div>
+        </div>
+      </section>
+      <section class="third w1440">
+        <h1 class="third__title">Надежная команда</h1>
+        <h2 class="third__subtitle">Качество и надежность построенных домов обеспечиваются командой профессионалов, контролирующих проектирование и строительство на каждом этапе.</h2>
+        <div class="third-block">
+          <div class="third-block-card">
+            <div class="third-block-card-imgblock"><img src="assets/images/man-1.png" alt="man 1"/></div>
+            <div class="third-block-card-desc">
+              <p class="third-block-card-desc__name">Алексей Иванов</p>
+              <p class="third-block-card-desc__pos">Инженер-технолог, стаж 23 года</p>
+              <p class="third-block-card-desc__desc">Инженер-технолог выбирает оборудование, на котором следует осуществлять технологический процесс, оптимальные режимы работы, основные методы контроля качества, ведёт технологическую документацию.</p>
+              <div class="third-block-card-desc-down">
+                <p class="third-block-card-desc-down__text">Узнайте о правильном и грамотном строительстве:</p><a class="general-btn" href="#">Читать в блоге</a>
+              </div>
+            </div>
+          </div>
+          <div class="third-block-card">
+            <div class="third-block-card-imgblock"><img src="assets/images/man-2.png" alt="man 2"/></div>
+            <div class="third-block-card-desc">
+              <p class="third-block-card-desc__name">Иван Алексеев</p>
+              <p class="third-block-card-desc__pos">Архитектор, стаж 23 года</p>
+              <p class="third-block-card-desc__desc">Инженер-технолог выбирает оборудование, на котором следует осуществлять технологический процесс, оптимальные режимы работы, основные методы контроля качества, ведёт технологическую документацию.</p>
+              <div class="third-block-card-desc-down">
+                <p class="third-block-card-desc-down__text">Узнайте о правильном и грамотном строительстве:</p><a class="general-btn" href="#">Читать в блоге</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fourth w1440">
+        <h1 class="title-36">Прозрачность в использовании материалов</h1>
+        <div>
+          <div class="fourth-slider">
+            <div class="fourth-slider-item">
+              <div class="fourth-slider-item-imgblock"><img class="fourth-slider-item-imgblock__img" src="assets/images/slide-1.png" alt=""/></div>
+              <div class="fourth-slider-item-desc">
+                <div class="fourth-slider-item-desc__title">Low-energy панели</div>
+                <div class="fourth-slider-item-desc__text">Это позволяет вам сэкономить на отоплении дома до 50 %. Снижает ваши расходы на содержание дома в процессе его эксплуатации. Благодаря этому вы получаете дополнительные денежные средства, которые можете потратить на себя. Это дает вам огромное преимущество перед домовладельцами, которые не обращают внимания на энергоэффективность, выбирают энергозатратное жилье и всю жизнь топят улицу.</div>
+              </div>
+              <div class="fourth-slider-item-images"><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-1.png" alt=""/><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-2.png" alt=""/><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-3.png" alt=""/></div>
+            </div>
+            <div class="fourth-slider-item">
+              <div class="fourth-slider-item-imgblock"><img class="fourth-slider-item-imgblock__img" src="assets/images/slide-1.png" alt=""/></div>
+              <div class="fourth-slider-item-desc">
+                <div class="fourth-slider-item-desc__title">Low-energy панели1</div>
+                <div class="fourth-slider-item-desc__text">Это позволяет вам сэкономить на отоплении дома до 50 %. Снижает ваши расходы на содержание дома в процессе его эксплуатации. Благодаря этому вы получаете дополнительные денежные средства, которые можете потратить на себя. Это дает вам огромное преимущество перед домовладельцами, которые не обращают внимания на энергоэффективность, выбирают энергозатратное жилье и всю жизнь топят улицу.</div>
+              </div>
+              <div class="fourth-slider-item-images"><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-1.png" alt=""/><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-2.png" alt=""/><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-3.png" alt=""/></div>
+            </div>
+            <div class="fourth-slider-item">
+              <div class="fourth-slider-item-imgblock"><img class="fourth-slider-item-imgblock__img" src="assets/images/slide-1.png" alt=""/></div>
+              <div class="fourth-slider-item-desc">
+                <div class="fourth-slider-item-desc__title">Low-energy панели2</div>
+                <div class="fourth-slider-item-desc__text">Это позволяет вам сэкономить на отоплении дома до 50 %. Снижает ваши расходы на содержание дома в процессе его эксплуатации. Благодаря этому вы получаете дополнительные денежные средства, которые можете потратить на себя. Это дает вам огромное преимущество перед домовладельцами, которые не обращают внимания на энергоэффективность, выбирают энергозатратное жилье и всю жизнь топят улицу.</div>
+              </div>
+              <div class="fourth-slider-item-images"><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-1.png" alt=""/><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-2.png" alt=""/><img class="fourth-slider-item-images__img" src="assets/images/slider-mini-3.png" alt=""/></div>
+            </div>
+          </div>
+          <div class="fourth-arrow">
+            <div class="fourth-arrow__prev"><svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 12H47M47 12L33.0342 1M47 12L33.0342 23" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+            </div>
+            <div class="fourth-arrow__next"><svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 12H47M47 12L33.0342 1M47 12L33.0342 23" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fifth w1440">
+        <h1 class="title-36">Каталог проектов и домов</h1>
+        <form class="fifth-form" action="" method="get">
+          <div class="fifth-wrap">
+            <div class="finnkoti-swap">
+              <label>
+                <input id="finnkoti" type="radio" name="finnkoti" checked="checked"/>
+                <p class="finnkoti-swap__finn finnkoti-swap__finnfull">Finnkoti</p>
+              </label>
+              <label>
+                <input id="finnkoti_lite" type="radio" name="finnkoti"/>
+                <p class="finnkoti-swap__finn finnkoti-swap__finnlite">
+                  Finnkoti Lite<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="7.5" cy="7.5" r="7.5" fill="black" fill-opacity="0.25"/>
+<path d="M7.02505 11.0181C6.63232 11.0181 6.43596 10.7891 6.43596 10.3309C6.43596 10.2081 6.45641 10.0363 6.49732 9.81542L7.0005 7.26269C7.02505 7.14815 7.03732 7.05406 7.03732 6.98042C7.03732 6.87406 7.01687 6.79633 6.97596 6.74724C6.93505 6.68997 6.88187 6.66133 6.81641 6.66133C6.6446 6.66133 6.41141 6.82497 6.11687 7.15224C6.10869 7.16042 6.09641 7.16451 6.08005 7.16451C6.04732 7.16451 6.02278 7.15224 6.00641 7.12769C5.99005 7.09497 5.99005 7.06633 6.00641 7.04178C6.30096 6.69815 6.56687 6.4486 6.80414 6.29315C7.04141 6.13769 7.2746 6.05997 7.50369 6.05997C7.89641 6.05997 8.09278 6.27269 8.09278 6.69815C8.09278 6.83724 8.07641 6.97633 8.04369 7.11542L7.52823 9.81542C7.51187 9.88906 7.50369 9.98315 7.50369 10.0977C7.50369 10.2941 7.56505 10.3922 7.68778 10.3922C7.7696 10.3922 7.8596 10.3554 7.95778 10.2818C8.06414 10.2081 8.19096 10.1018 8.33823 9.96269C8.3546 9.94633 8.37096 9.93815 8.38732 9.93815C8.41187 9.93815 8.43232 9.95451 8.44869 9.98724C8.46505 10.0118 8.46096 10.0363 8.43641 10.0609C8.15823 10.3881 7.90869 10.6295 7.68778 10.785C7.47505 10.9404 7.25414 11.0181 7.02505 11.0181ZM7.84732 4.7836C7.6346 4.7836 7.46278 4.72224 7.33187 4.59951C7.20914 4.4686 7.14778 4.29269 7.14778 4.07178C7.14778 3.87542 7.20914 3.71588 7.33187 3.59315C7.46278 3.47042 7.6346 3.40906 7.84732 3.40906C8.06005 3.40906 8.22369 3.47042 8.33823 3.59315C8.46096 3.71588 8.52232 3.87542 8.52232 4.07178C8.52232 4.30088 8.46096 4.47678 8.33823 4.59951C8.22369 4.72224 8.06005 4.7836 7.84732 4.7836Z" fill="white"/>
+</svg>
+                </p>
+              </label>
+            </div>
+            <div class="search-form-main-col-row">
+              <div class="search-form-main-col-row-select">
+                <select name="" multiple="multiple" placeholder="Этажность">
+                  <option>1 этаж</option>
+                  <option>2 этажа</option>
+                  <option>3 этажа</option>
+                  <option>4 этажа</option>
+                </select>
+              </div>
+              <div class="search-form-main-col-row-select">
+                <select name="" multiple="multiple" placeholder="Комнаты">
+                  <option>1 комната</option>
+                  <option>2 комнаты</option>
+                  <option>3 комнаты</option>
+                  <option>4 комнаты</option>
+                </select>
+              </div>
+              <div class="selector">
+                <div class="selector-view">Площадь<img src="assets/images/filter-select-arr.svg" alt=""/></div>
+                <div class="selector-list">
+                  <div class="search-form-main-col-row-price search-form-main-col-row-square">
+                    <div><span>От</span>
+                      <input type="text" min-value="10" data-type="square"/>
+                    </div>
+                    <div><span>До</span>
+                      <input type="text" max-value="874" data-type="square"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-form-main-col-row-select fifth-wrap-sort">
+              <select name="" placeholder="Сортировать по">
+                <option>По возрастанию</option>
+                <option>По убыванию</option>
+              </select>
+            </div>
+            <div class="fifth-wrap-param fifth-wrap-param_open">Подбор по параметрам</div>
+          </div>
+          <div class="fifth-check">
+            <div class="check-item">
+              <label for="garage">
+                <p>Наличие гаража</p>
+                <input id="garage" type="checkbox" name="gar1"/><span>
+                  <div></div></span>
+              </label>
+            </div>
+            <div class="check-item">
+              <label for="sklon">
+                <p>Дом на склоне</p>
+                <input id="sklon" type="checkbox" name="sklon"/><span>
+                  <div></div></span>
+              </label>
+            </div>
+            <div class="check-item">
+              <label for="stock">
+                <p>Акция</p>
+                <input id="stock" type="checkbox" name="akciya"/><span>
+                  <div></div></span>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="house-wrap"><a class="house-wrap-item" href="item-card.html">
+            <div class="house-wrap-item-imagebox"><img class="house-wrap-item-imagebox__img" src="assets/images/house.png" alt="House"/></div>
+            <div class="house-wrap-item-desc">
+              <div class="house-wrap-item-desc-top">
+                <div class="house-wrap-item-desc-top-left">
+                  <p class="house-wrap-item-desc-top-left__title">Atmosphere</p>
+                  <p class="house-wrap-item-desc-top-left__subtitle">Panorama</p>
+                </div>
+                <p class="house-wrap-item-desc-top-right">от<span>3 345 000</span>руб</p>
+              </div>
+              <div class="house-wrap-item-desc-down">
+                <p class="house-wrap-item-desc-down__item"><img src="assets/images/area.svg" alt="area"/>254 кв.м</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/stairs.svg" alt="stairs"/>1,5 этажа</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/home.svg" alt="home"/>6 шт.</p>
+              </div>
+            </div></a><a class="house-wrap-item" href="item-card.html">
+            <div class="house-wrap-item-imagebox"><img class="house-wrap-item-imagebox__img" src="assets/images/house.png" alt="House"/></div>
+            <div class="house-wrap-item-desc">
+              <div class="house-wrap-item-desc-top">
+                <div class="house-wrap-item-desc-top-left">
+                  <p class="house-wrap-item-desc-top-left__title">Atmosphere</p>
+                  <p class="house-wrap-item-desc-top-left__subtitle">Panorama</p>
+                </div>
+                <p class="house-wrap-item-desc-top-right">от<span>3 345 000</span>руб</p>
+              </div>
+              <div class="house-wrap-item-desc-down">
+                <p class="house-wrap-item-desc-down__item"><img src="assets/images/area.svg" alt="area"/>254 кв.м</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/stairs.svg" alt="stairs"/>1,5 этажа</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/home.svg" alt="home"/>6 шт.</p>
+              </div>
+            </div></a><a class="house-wrap-item" href="item-card.html">
+            <div class="house-wrap-item-imagebox"><img class="house-wrap-item-imagebox__img" src="assets/images/house.png" alt="House"/></div>
+            <div class="house-wrap-item-desc">
+              <div class="house-wrap-item-desc-top">
+                <div class="house-wrap-item-desc-top-left">
+                  <p class="house-wrap-item-desc-top-left__title">Atmosphere</p>
+                  <p class="house-wrap-item-desc-top-left__subtitle">Panorama</p>
+                </div>
+                <p class="house-wrap-item-desc-top-right">от<span>3 345 000</span>руб</p>
+              </div>
+              <div class="house-wrap-item-desc-down">
+                <p class="house-wrap-item-desc-down__item"><img src="assets/images/area.svg" alt="area"/>254 кв.м</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/stairs.svg" alt="stairs"/>1,5 этажа</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/home.svg" alt="home"/>6 шт.</p>
+              </div>
+            </div></a><a class="house-wrap-item" href="item-card.html">
+            <div class="house-wrap-item-imagebox"><img class="house-wrap-item-imagebox__img" src="assets/images/house.png" alt="House"/></div>
+            <div class="house-wrap-item-desc">
+              <div class="house-wrap-item-desc-top">
+                <div class="house-wrap-item-desc-top-left">
+                  <p class="house-wrap-item-desc-top-left__title">Atmosphere</p>
+                  <p class="house-wrap-item-desc-top-left__subtitle">Panorama</p>
+                </div>
+                <p class="house-wrap-item-desc-top-right">от<span>3 345 000</span>руб</p>
+              </div>
+              <div class="house-wrap-item-desc-down">
+                <p class="house-wrap-item-desc-down__item"><img src="assets/images/area.svg" alt="area"/>254 кв.м</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/stairs.svg" alt="stairs"/>1,5 этажа</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/home.svg" alt="home"/>6 шт.</p>
+              </div>
+            </div></a><a class="house-wrap-item" href="item-card.html">
+            <div class="house-wrap-item-imagebox"><img class="house-wrap-item-imagebox__img" src="assets/images/house.png" alt="House"/></div>
+            <div class="house-wrap-item-desc">
+              <div class="house-wrap-item-desc-top">
+                <div class="house-wrap-item-desc-top-left">
+                  <p class="house-wrap-item-desc-top-left__title">Atmosphere</p>
+                  <p class="house-wrap-item-desc-top-left__subtitle">Panorama</p>
+                </div>
+                <p class="house-wrap-item-desc-top-right">от<span>3 345 000</span>руб</p>
+              </div>
+              <div class="house-wrap-item-desc-down">
+                <p class="house-wrap-item-desc-down__item"><img src="assets/images/area.svg" alt="area"/>254 кв.м</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/stairs.svg" alt="stairs"/>1,5 этажа</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/home.svg" alt="home"/>6 шт.</p>
+              </div>
+            </div></a><a class="house-wrap-item" href="item-card.html">
+            <div class="house-wrap-item-imagebox"><img class="house-wrap-item-imagebox__img" src="assets/images/house.png" alt="House"/></div>
+            <div class="house-wrap-item-desc">
+              <div class="house-wrap-item-desc-top">
+                <div class="house-wrap-item-desc-top-left">
+                  <p class="house-wrap-item-desc-top-left__title">Atmosphere</p>
+                  <p class="house-wrap-item-desc-top-left__subtitle">Panorama</p>
+                </div>
+                <p class="house-wrap-item-desc-top-right">от<span>3 345 000</span>руб</p>
+              </div>
+              <div class="house-wrap-item-desc-down">
+                <p class="house-wrap-item-desc-down__item"><img src="assets/images/area.svg" alt="area"/>254 кв.м</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/stairs.svg" alt="stairs"/>1,5 этажа</p>
+                <p class="house-wrap-item-desc-down__item"> <img src="assets/images/home.svg" alt="home"/>6 шт.</p>
+              </div>
+            </div></a></div><a class="general-btn fifth-btnor" href="#">Смотреть каталог</a>
+        <p class="fifth__or">или</p>
+        <div class="fifth-test">
+          <div class="fifth-test-left"><img class="fifth-test-left__img" src="assets/images/dom.png" alt=""/></div>
+          <div class="fifth-test-right">
+            <div class="fifth-test-right__line"></div>
+            <h3 class="fifth-test-right__title">Ответь на 5 вопросов и узнай какой дом подходит именно тебе</h3>
+            <p class="fifth-test-right__subtitle">В конце теста тебя ждет подарок: каталог домов 2019 года</p><a class="fifth-test-right__link" href="#">Пройти тест</a>
+          </div>
+        </div>
+        <div class="fifth-review">
+          <h3 class="title-36">Отзывы</h3>
+          <div class="fifth-review-arrow">
+            <div class="fifth-review-arrow__arr_prev fifth-review-arrow__arr"><svg width="35" height="8" viewBox="0 0 35 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34.3536 4.35355C34.5488 4.15829 34.5488 3.84171 34.3536 3.64645L31.1716 0.464466C30.9763 0.269204 30.6597 0.269204 30.4645 0.464466C30.2692 0.659728 30.2692 0.976311 30.4645 1.17157L33.2929 4L30.4645 6.82843C30.2692 7.02369 30.2692 7.34027 30.4645 7.53553C30.6597 7.7308 30.9763 7.7308 31.1716 7.53553L34.3536 4.35355ZM0 4.5H34V3.5H0V4.5Z" fill="black"/>
+</svg>
+            </div>
+            <div class="fifth-review-arrow__arr_next fifth-review-arrow__arr"><svg width="35" height="8" viewBox="0 0 35 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34.3536 4.35355C34.5488 4.15829 34.5488 3.84171 34.3536 3.64645L31.1716 0.464466C30.9763 0.269204 30.6597 0.269204 30.4645 0.464466C30.2692 0.659728 30.2692 0.976311 30.4645 1.17157L33.2929 4L30.4645 6.82843C30.2692 7.02369 30.2692 7.34027 30.4645 7.53553C30.6597 7.7308 30.9763 7.7308 31.1716 7.53553L34.3536 4.35355ZM0 4.5H34V3.5H0V4.5Z" fill="black"/>
+</svg>
+            </div>
+          </div>
+          <div class="fifth-review-wrap">
+            <div class="fifth-review-wrap-item">
+              <div class="fifth-review-wrap-item-imagebox"><img class="fifth-review-wrap-item-imagebox__img" src="assets/images/dom-1.png" alt=""/></div>
+              <div class="fifth-review-wrap-item-desc">
+                <p class="fifth-review-wrap-item-desc__name">Алексей Иванов 1</p>
+                <div class="fifth-review-wrap-item-desc__line"> </div>
+                <p class="fifth-review-wrap-item-desc__review">Как у всех людей, решающих строить свой первый дом, главный вопрос – из какого материала? Как и многие, рассматривали четыре альтернативы - газобетон, кирпич, клееный брус, каркас...</p><a class="fifth-review-wrap-item-desc__link" href="#">
+                  Читать далее<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 4H12M12 4L7 7M12 4L7 1" stroke="black" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                <div class="fifth-review-wrap-item-desc__zap">
+                   <svg width="94" height="87" viewBox="0 0 94 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.4726 3.83519V19.4565C40.4726 21.5751 38.7482 23.2917 36.6208 23.2917C29.0309 23.2917 24.9023 31.0444 24.3301 46.3458H36.6208C38.7482 46.3458 40.4726 48.064 40.4726 50.1818V83.1653C40.4726 85.2829 38.7482 86.9997 36.6208 86.9997H3.85098C1.72286 86.9997 0 85.2815 0 83.1653V50.1818C0 42.8466 0.741599 36.1154 2.20352 30.1728C3.70288 24.0796 6.00442 18.752 9.04218 14.3375C12.168 9.80078 16.0779 6.24074 20.6643 3.76064C25.2817 1.26553 30.6512 0 36.6222 0C38.7482 0 40.4726 1.7166 40.4726 3.83519ZM90.1479 23.2919C92.2742 23.2919 94 21.5737 94 19.4568V3.83546C94 1.71687 92.2745 0.000268029 90.1479 0.000268029C84.1793 0.000268029 78.8091 1.26606 74.1933 3.76091C69.6061 6.24101 65.694 9.80105 62.5677 14.3378C59.531 18.7523 57.2294 24.0801 55.7298 30.1747C54.2687 36.1191 53.5271 42.8503 53.5271 50.182V83.1656C53.5271 85.2831 55.2521 87 57.3789 87H90.1477C92.2739 87 93.9981 85.2818 93.9981 83.1656V50.1818C93.9981 48.0642 92.2742 46.3458 90.1477 46.3458H78.0322C78.5958 31.0447 82.6641 23.2919 90.1479 23.2919Z" fill="#4479BC" fill-opacity="0.2"/>
+</svg>
+                </div>
+                <div class="fifth-review-wrap-item-desc__who">Проект SnowBall</div>
+              </div>
+            </div>
+            <div class="fifth-review-wrap-item">
+              <div class="fifth-review-wrap-item-imagebox"><img class="fifth-review-wrap-item-imagebox__img" src="assets/images/dom.png" alt=""/></div>
+              <div class="fifth-review-wrap-item-desc">
+                <p class="fifth-review-wrap-item-desc__name">Алексей Иванов 2</p>
+                <div class="fifth-review-wrap-item-desc__line"> </div>
+                <p class="fifth-review-wrap-item-desc__review">Как у всех людей, решающих строить свой первый дом, главный вопрос – из какого материала? Как и многие, рассматривали четыре альтернативы - газобетон, кирпич, клееный брус, каркас...</p><a class="fifth-review-wrap-item-desc__link" href="#">
+                  Читать далее<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 4H12M12 4L7 7M12 4L7 1" stroke="black" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                <div class="fifth-review-wrap-item-desc__zap">
+                   <svg width="94" height="87" viewBox="0 0 94 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.4726 3.83519V19.4565C40.4726 21.5751 38.7482 23.2917 36.6208 23.2917C29.0309 23.2917 24.9023 31.0444 24.3301 46.3458H36.6208C38.7482 46.3458 40.4726 48.064 40.4726 50.1818V83.1653C40.4726 85.2829 38.7482 86.9997 36.6208 86.9997H3.85098C1.72286 86.9997 0 85.2815 0 83.1653V50.1818C0 42.8466 0.741599 36.1154 2.20352 30.1728C3.70288 24.0796 6.00442 18.752 9.04218 14.3375C12.168 9.80078 16.0779 6.24074 20.6643 3.76064C25.2817 1.26553 30.6512 0 36.6222 0C38.7482 0 40.4726 1.7166 40.4726 3.83519ZM90.1479 23.2919C92.2742 23.2919 94 21.5737 94 19.4568V3.83546C94 1.71687 92.2745 0.000268029 90.1479 0.000268029C84.1793 0.000268029 78.8091 1.26606 74.1933 3.76091C69.6061 6.24101 65.694 9.80105 62.5677 14.3378C59.531 18.7523 57.2294 24.0801 55.7298 30.1747C54.2687 36.1191 53.5271 42.8503 53.5271 50.182V83.1656C53.5271 85.2831 55.2521 87 57.3789 87H90.1477C92.2739 87 93.9981 85.2818 93.9981 83.1656V50.1818C93.9981 48.0642 92.2742 46.3458 90.1477 46.3458H78.0322C78.5958 31.0447 82.6641 23.2919 90.1479 23.2919Z" fill="#4479BC" fill-opacity="0.2"/>
+</svg>
+                </div>
+                <div class="fifth-review-wrap-item-desc__who">Проект SnowBall</div>
+              </div>
+            </div>
+            <div class="fifth-review-wrap-item">
+              <div class="fifth-review-wrap-item-imagebox"><img class="fifth-review-wrap-item-imagebox__img" src="assets/images/dom-1.png" alt=""/></div>
+              <div class="fifth-review-wrap-item-desc">
+                <p class="fifth-review-wrap-item-desc__name">Алексей Иванов 3</p>
+                <div class="fifth-review-wrap-item-desc__line"> </div>
+                <p class="fifth-review-wrap-item-desc__review">Как у всех людей, решающих строить свой первый дом, главный вопрос – из какого материала? Как и многие, рассматривали четыре альтернативы - газобетон, кирпич, клееный брус, каркас...</p><a class="fifth-review-wrap-item-desc__link" href="#">
+                  Читать далее<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 4H12M12 4L7 7M12 4L7 1" stroke="black" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                <div class="fifth-review-wrap-item-desc__zap">
+                   <svg width="94" height="87" viewBox="0 0 94 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.4726 3.83519V19.4565C40.4726 21.5751 38.7482 23.2917 36.6208 23.2917C29.0309 23.2917 24.9023 31.0444 24.3301 46.3458H36.6208C38.7482 46.3458 40.4726 48.064 40.4726 50.1818V83.1653C40.4726 85.2829 38.7482 86.9997 36.6208 86.9997H3.85098C1.72286 86.9997 0 85.2815 0 83.1653V50.1818C0 42.8466 0.741599 36.1154 2.20352 30.1728C3.70288 24.0796 6.00442 18.752 9.04218 14.3375C12.168 9.80078 16.0779 6.24074 20.6643 3.76064C25.2817 1.26553 30.6512 0 36.6222 0C38.7482 0 40.4726 1.7166 40.4726 3.83519ZM90.1479 23.2919C92.2742 23.2919 94 21.5737 94 19.4568V3.83546C94 1.71687 92.2745 0.000268029 90.1479 0.000268029C84.1793 0.000268029 78.8091 1.26606 74.1933 3.76091C69.6061 6.24101 65.694 9.80105 62.5677 14.3378C59.531 18.7523 57.2294 24.0801 55.7298 30.1747C54.2687 36.1191 53.5271 42.8503 53.5271 50.182V83.1656C53.5271 85.2831 55.2521 87 57.3789 87H90.1477C92.2739 87 93.9981 85.2818 93.9981 83.1656V50.1818C93.9981 48.0642 92.2742 46.3458 90.1477 46.3458H78.0322C78.5958 31.0447 82.6641 23.2919 90.1479 23.2919Z" fill="#4479BC" fill-opacity="0.2"/>
+</svg>
+                </div>
+                <div class="fifth-review-wrap-item-desc__who">Проект SnowBall</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stages w1440">
+        <h1 class="title-36">Этапы работ</h1>
+        <div class="stages-slider">
+          <div class="stages-slider-item">
+            <div class="stages-slider-item-imagebox"><img class="stages-slider-item-imagebox__img" src="assets/images/plan.png" alt=""/></div>
+            <div class="stages-slider-item-desc">
+              <h4 class="stages-slider-item-desc__title">Выбор проекта дома.<span class="stages-slider-item-desc__num"> </span></h4>
+              <p class="stages-slider-item-desc__text">Строительство дома – важный и очень ответственный шаг в жизни. Чтобы не было впоследствии мучительно больно от того, что не все предусмотрели, проект дома лучше выбирать с помощью специалиста. Возможно, вам нужен дом значительно меньше, чем вы думали и все пожелания по спальням, кабинетам и сауне можно разместить более эргономично. <br>Сколько комнат выбрать? Лучше одноэтажный или двухэтажный дом? Какая планировка дешевле? Что предусмотреть на будущее? На эти и еще множество других вопросов вам ответит наш специалист на встрече в офисе. </p>
+            </div>
+          </div>
+          <div class="stages-slider-item">
+            <div class="stages-slider-item-imagebox"><img class="stages-slider-item-imagebox__img" src="assets/images/plan.png" alt=""/></div>
+            <div class="stages-slider-item-desc">
+              <h4 class="stages-slider-item-desc__title">Выбор проекта дома.<span class="stages-slider-item-desc__num"> </span></h4>
+              <p class="stages-slider-item-desc__text">Строительство дома – важный и очень ответственный шаг в жизни. Чтобы не было впоследствии мучительно больно от того, что не все предусмотрели, проект дома лучше выбирать с помощью специалиста. Возможно, вам нужен дом значительно меньше, чем вы думали и все пожелания по спальням, кабинетам и сауне можно разместить более эргономично. <br>Сколько комнат выбрать? Лучше одноэтажный или двухэтажный дом? Какая планировка дешевле? Что предусмотреть на будущее? На эти и еще множество других вопросов вам ответит наш специалист на встрече в офисе. </p>
+            </div>
+          </div>
+          <div class="stages-slider-item">
+            <div class="stages-slider-item-imagebox"><img class="stages-slider-item-imagebox__img" src="assets/images/plan.png" alt=""/></div>
+            <div class="stages-slider-item-desc">
+              <h4 class="stages-slider-item-desc__title">Выбор проекта дома.<span class="stages-slider-item-desc__num"> </span></h4>
+              <p class="stages-slider-item-desc__text">Строительство дома – важный и очень ответственный шаг в жизни. Чтобы не было впоследствии мучительно больно от того, что не все предусмотрели, проект дома лучше выбирать с помощью специалиста. Возможно, вам нужен дом значительно меньше, чем вы думали и все пожелания по спальням, кабинетам и сауне можно разместить более эргономично. <br>Сколько комнат выбрать? Лучше одноэтажный или двухэтажный дом? Какая планировка дешевле? Что предусмотреть на будущее? На эти и еще множество других вопросов вам ответит наш специалист на встрече в офисе. </p>
+            </div>
+          </div>
+          <div class="stages-slider-item">
+            <div class="stages-slider-item-imagebox"><img class="stages-slider-item-imagebox__img" src="assets/images/plan.png" alt=""/></div>
+            <div class="stages-slider-item-desc">
+              <h4 class="stages-slider-item-desc__title">Выбор проекта дома.<span class="stages-slider-item-desc__num"> </span></h4>
+              <p class="stages-slider-item-desc__text">Строительство дома – важный и очень ответственный шаг в жизни. Чтобы не было впоследствии мучительно больно от того, что не все предусмотрели, проект дома лучше выбирать с помощью специалиста. Возможно, вам нужен дом значительно меньше, чем вы думали и все пожелания по спальням, кабинетам и сауне можно разместить более эргономично. <br>Сколько комнат выбрать? Лучше одноэтажный или двухэтажный дом? Какая планировка дешевле? Что предусмотреть на будущее? На эти и еще множество других вопросов вам ответит наш специалист на встрече в офисе. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="safe w1440">
+        <h1 class="title-36">Сроки и гарантии</h1>
+        <div class="safe-wrap">
+          <div class="safe-wrap-left">
+            <div class="safe-wrap-left-item">
+              <div class="safe-wrap-left-item__ellipse"><svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="99.5" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+</svg>
+              </div>
+              <div class="safe-wrap-left-item__num">4</div>
+              <div class="safe-wrap-left-item__title">Месяца</div>
+              <div class="safe-wrap-left-item__text">Средний срок постройки в зависимости от сложности проекта и выбора комплектующих</div>
+            </div>
+            <div class="safe-wrap-left-item">
+              <div class="safe-wrap-left-item__ellipse"><svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="99.5" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+</svg>
+              </div>
+              <div class="safe-wrap-left-item__num">10</div>
+              <div class="safe-wrap-left-item__title">Лет</div>
+              <div class="safe-wrap-left-item__text">Гарантия на все несущие конструкции</div>
+            </div>
+            <div class="safe-wrap-left-item">
+              <div class="safe-wrap-left-item__ellipse"><svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="99.5" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+</svg>
+              </div>
+              <div class="safe-wrap-left-item__num">3</div>
+              <div class="safe-wrap-left-item__title">Года</div>
+              <div class="safe-wrap-left-item__text">Гарантия на строительно-монтажные работы</div>
+            </div>
+            <div class="safe-wrap-left-item"><img class="safe-wrap-left-item__img" src="assets/images/kot1.png" alt=""/></div>
+          </div>
+          <div class="safe-wrap-right"><svg width="634" height="634" viewBox="0 0 634 634" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="317.5" cy="316.5" r="217" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+<circle cx="317" cy="317" r="316.5" stroke="black" stroke-opacity="0.15" stroke-dasharray="10 10"/>
+<circle cx="479" cy="442" r="67" fill="url(#paint0_radial)"/>
+<circle cx="109" cy="376" r="47" fill="url(#paint1_radial)"/>
+<circle cx="482.5" cy="47.5" r="11.5" fill="url(#paint2_radial)"/>
+<circle cx="590" cy="260" r="19" fill="url(#paint3_radial)"/>
+<rect x="143" y="44" width="456" height="465" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="translate(-0.160088 -0.192005) scale(0.000580044)"/>
+</pattern>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(479 442) rotate(90) scale(67)">
+<stop stop-color="#4479BC"/>
+<stop offset="1" stop-color="#0098CE"/>
+</radialGradient>
+<radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(109 376) rotate(90) scale(47)">
+<stop stop-color="#4479BC"/>
+<stop offset="1" stop-color="#0098CE"/>
+</radialGradient>
+<radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(482.5 47.5) rotate(90) scale(11.5)">
+<stop stop-color="#4479BC"/>
+<stop offset="1" stop-color="#0098CE"/>
+</radialGradient>
+<radialGradient id="paint3_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(590 260) rotate(90) scale(19)">
+<stop stop-color="#4479BC"/>
+<stop offset="1" stop-color="#0098CE"/>
+</radialGradient>
+</defs>
+</svg><img class="safe-wrap-right__img" src="assets/images/document.png" alt=""/>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-wrap-logo"><img class="footer-wrap-logo__img" src="assets/images/logo.png" alt="Finnkoti"/>
+          <p class="footer-wrap-logo__text">Финское качество на всех этапах строительства</p>
+        </div>
+        <div class="footer-wrap-links">
+          <ul class="footer-wrap-links-list">
+            <li>
+              <h2 class="footer-wrap-links-list__title">О компании</h2>
+            </li>
+            <li> <a class="footer-wrap-links-list__link" href="#">Принципы</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Стратегии</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Отзывы</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Статьи</a></li>
+          </ul>
+          <ul class="footer-wrap-links-list">
+            <li>
+              <h2 class="footer-wrap-links-list__title">Покупка</h2>
+            </li>
+            <li> <a class="footer-wrap-links-list__link" href="#">Каталог</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Этапы получения</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Документы</a></li>
+            <li><a class="footer-wrap-links-list__link" href="#">Требования</a></li>
+          </ul>
+          <ul class="footer-wrap-links-list">
+            <li>
+              <h2 class="footer-wrap-links-list__title">Время работы</h2>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__timing">Понедельник - Суббота</p>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__clock">7:00 - 22:00</p>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__timing">Воскресенье</p>
+            </li>
+            <li>
+              <p class="footer-wrap-links-list__clock">9:00 - 22:00</p>
+            </li>
+          </ul>
+          <ul class="footer-wrap-links-list">
+            <li>   
+              <h2 class="footer-wrap-links-list__title">Контакты</h2>
+            </li>
+            <li><a class="footer-wrap-links-list__link" href="tel: +7 (812) 124-33-22">
+                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.9253 14.3879L14.3883 10.9249C15.1683 10.1459 15.1683 8.87686 14.3883 8.09686L7.90334 1.61186C7.12334 0.831855 5.85534 0.831855 5.07534 1.61186L1.61234 5.07486C0.832344 5.85386 0.832344 7.12286 1.61234 7.90286L8.09734 14.3879C8.87734 15.1679 10.1453 15.1679 10.9253 14.3879ZM9.51137 12.9739L3.02637 6.48888L6.48937 3.02588L12.9754 9.50988L9.51137 12.9739Z" fill="#181818"/>
+<path d="M6 16H5C2.243 16 0 13.757 0 11V10H2V11C2 12.654 3.346 14 5 14H6V16Z" fill="#181818"/>
+<path d="M10 0H11C13.757 0 16 2.243 16 5V6H14V5C14 3.346 12.654 2 11 2H10V0Z" fill="#181818"/>
+</svg>+7 (812) 124-33-22</a></li>
+            <li><a class="footer-wrap-links-list__link" href="mailto: info@finnkoti.ru">
+                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 0H1C0.448 0 0 0.447 0 1V13C0 13.553 0.448 14 1 14H15C15.552 14 16 13.553 16 13V1C16 0.447 15.552 0 15 0ZM14 5.72314V12.0001H2V5.72314L7.504 8.86814C7.812 9.04414 8.189 9.04414 8.496 8.86814L14 5.72314ZM8 6.849L14 3.42V2H2V3.42L8 6.849Z" fill="#181818"/>
+</svg>info@finnkoti.ru</a></li>
+            <li>
+              <p class="footer-wrap-links-list__link">
+                 <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" fill="#181818"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.59106 15.0688C5.99516 15.427 6.27478 15.6748 6.3 15.7C6.7 16.1 7.3 16.1 7.7 15.8C7.75 15.75 8.77502 14.825 9.80003 13.9C10.825 12.975 11.85 12.05 11.9 12C13.3 10.7 14 8.9 14 7C14 3.1 10.9 0 7 0C3.1 0 0 3.1 0 7C0 8.9 0.7 10.7 2.1 11.9C2.1 11.9748 4.3928 14.0068 5.59106 15.0688ZM7 13.7001L3.6 10.7001C2.6 9.7001 2 8.4001 2 7.0001C2 4.2001 4.2 2.1001 7 2.1001C9.8 2.1001 12 4.3001 12 7.1001C12 8.5001 11.4 9.7001 10.4 10.7001L7 13.7001Z" fill="#181818"/>
+</svg>ул. Пушкина д.5
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-wrap-subscribe">
+          <div class="footer-wrap-subscribe__title">Подпишитесь на рассылку</div>
+          <form class="footer-wrap-subscribe-form" action="">
+            <input id="footer-email" type="text" name="footer-email" placeholder="Введите e-mail"/>
+            <input type="button" value="Подписаться"/>
+          </form>
+          <div class="footer-wrap-subscribe-links"><a class="footer-wrap-subscribe-links__link" href="#"><svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.77187 15V8.29102H0.375V5.625H2.77187V3.52441C2.77187 1.24219 4.25938 0 6.43125 0C7.47188 0 8.36562 0.0732422 8.625 0.105469V2.49023H7.11875C5.9375 2.49023 5.70937 3.01758 5.70937 3.78809V5.625H8.375L8.00938 8.29102H5.70937V15" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="9" height="15">
+<path d="M2.77187 15V8.29102H0.375V5.625H2.77187V3.52441C2.77187 1.24219 4.25938 0 6.43125 0C7.47188 0 8.36562 0.0732422 8.625 0.105469V2.49023H7.11875C5.9375 2.49023 5.70937 3.01758 5.70937 3.78809V5.625H8.375L8.00938 8.29102H5.70937V15" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.4581 3.09568C13.4676 3.23154 13.4676 3.36742 13.4676 3.50328C13.4676 7.64703 10.3744 12.4216 4.72081 12.4216C2.97905 12.4216 1.36104 11.9072 0 11.0145C0.247471 11.0436 0.485391 11.0533 0.742383 11.0533C2.17954 11.0533 3.50253 10.5584 4.559 9.7141C3.20748 9.68497 2.07486 8.78247 1.68463 7.5403C1.875 7.56939 2.06534 7.58881 2.26523 7.58881C2.54124 7.58881 2.81728 7.54998 3.07424 7.48208C1.66562 7.19092 0.609111 5.92937 0.609111 4.40578V4.36698C1.01836 4.59988 1.49429 4.74545 1.99869 4.76483C1.17064 4.20197 0.628154 3.24125 0.628154 2.15435C0.628154 1.5721 0.78041 1.03836 1.04692 0.572544C2.56025 2.4746 4.83501 3.71674 7.38574 3.85262C7.33816 3.61972 7.3096 3.37713 7.3096 3.13452C7.3096 1.40712 8.68017 0 10.3838 0C11.269 0 12.0685 0.37847 12.63 0.989846C13.3248 0.853991 13.991 0.59196 14.5812 0.232907C14.3527 0.960751 13.8673 1.57213 13.2296 1.96028C13.8483 1.89238 14.4479 1.71766 14.9999 1.47508C14.5812 2.09613 14.0577 2.64926 13.4581 3.09568Z" fill="black"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="13">
+<path d="M13.4581 3.09568C13.4676 3.23154 13.4676 3.36742 13.4676 3.50328C13.4676 7.64703 10.3744 12.4216 4.72081 12.4216C2.97905 12.4216 1.36104 11.9072 0 11.0145C0.247471 11.0436 0.485391 11.0533 0.742383 11.0533C2.17954 11.0533 3.50253 10.5584 4.559 9.7141C3.20748 9.68497 2.07486 8.78247 1.68463 7.5403C1.875 7.56939 2.06534 7.58881 2.26523 7.58881C2.54124 7.58881 2.81728 7.54998 3.07424 7.48208C1.66562 7.19092 0.609111 5.92937 0.609111 4.40578V4.36698C1.01836 4.59988 1.49429 4.74545 1.99869 4.76483C1.17064 4.20197 0.628154 3.24125 0.628154 2.15435C0.628154 1.5721 0.78041 1.03836 1.04692 0.572544C2.56025 2.4746 4.83501 3.71674 7.38574 3.85262C7.33816 3.61972 7.3096 3.37713 7.3096 3.13452C7.3096 1.40712 8.68017 0 10.3838 0C11.269 0 12.0685 0.37847 12.63 0.989846C13.3248 0.853991 13.991 0.59196 14.5812 0.232907C14.3527 0.960751 13.8673 1.57213 13.2296 1.96028C13.8483 1.89238 14.4479 1.71766 14.9999 1.47508C14.5812 2.09613 14.0577 2.64926 13.4581 3.09568Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 8.5C15 13.0488 11.6431 16.7344 7.5 16.7344C6.72581 16.7344 5.98185 16.6049 5.28024 16.3658C5.58569 15.818 6.04234 14.9215 6.21169 14.2076C6.30242 13.8225 6.67742 12.2486 6.67742 12.2486C6.92238 12.76 7.63609 13.1949 8.39516 13.1949C10.6573 13.1949 12.2873 10.9105 12.2873 8.07168C12.2873 5.35234 10.2641 3.31699 7.66331 3.31699C4.42742 3.31699 2.70665 5.70098 2.70665 8.30078C2.70665 9.50938 3.29335 11.0135 4.22782 11.4916C4.36996 11.5647 4.44556 11.5314 4.47883 11.382C4.50302 11.2691 4.63004 10.708 4.6875 10.449C4.70565 10.366 4.69657 10.293 4.63609 10.2133C4.33065 9.79824 4.08266 9.04121 4.08266 8.33399C4.08266 6.51777 5.33468 4.76133 7.46976 4.76133C9.31149 4.76133 10.6028 6.13926 10.6028 8.11152C10.6028 10.3395 9.57762 11.8834 8.24395 11.8834C7.50907 11.8834 6.95565 11.216 7.13407 10.3959C7.34577 9.41641 7.75403 8.36055 7.75403 7.65332C7.75403 7.02246 7.44556 6.49453 6.80444 6.49453C6.05141 6.49453 5.44657 7.34785 5.44657 8.49336C5.44657 9.22383 5.67036 9.71524 5.67036 9.71524C5.67036 9.71524 4.92944 13.1617 4.79335 13.8059C4.64214 14.5164 4.70262 15.5191 4.76613 16.1699C1.97782 14.9713 0 11.9896 0 8.5C0 3.95117 3.35685 0.265625 7.5 0.265625C11.6431 0.265625 15 3.95117 15 8.5Z" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="17">
+<path d="M15 8.5C15 13.0488 11.6431 16.7344 7.5 16.7344C6.72581 16.7344 5.98185 16.6049 5.28024 16.3658C5.58569 15.818 6.04234 14.9215 6.21169 14.2076C6.30242 13.8225 6.67742 12.2486 6.67742 12.2486C6.92238 12.76 7.63609 13.1949 8.39516 13.1949C10.6573 13.1949 12.2873 10.9105 12.2873 8.07168C12.2873 5.35234 10.2641 3.31699 7.66331 3.31699C4.42742 3.31699 2.70665 5.70098 2.70665 8.30078C2.70665 9.50938 3.29335 11.0135 4.22782 11.4916C4.36996 11.5647 4.44556 11.5314 4.47883 11.382C4.50302 11.2691 4.63004 10.708 4.6875 10.449C4.70565 10.366 4.69657 10.293 4.63609 10.2133C4.33065 9.79824 4.08266 9.04121 4.08266 8.33399C4.08266 6.51777 5.33468 4.76133 7.46976 4.76133C9.31149 4.76133 10.6028 6.13926 10.6028 8.11152C10.6028 10.3395 9.57762 11.8834 8.24395 11.8834C7.50907 11.8834 6.95565 11.216 7.13407 10.3959C7.34577 9.41641 7.75403 8.36055 7.75403 7.65332C7.75403 7.02246 7.44556 6.49453 6.80444 6.49453C6.05141 6.49453 5.44657 7.34785 5.44657 8.49336C5.44657 9.22383 5.67036 9.71524 5.67036 9.71524C5.67036 9.71524 4.92944 13.1617 4.79335 13.8059C4.64214 14.5164 4.70262 15.5191 4.76613 16.1699C1.97782 14.9713 0 11.9896 0 8.5C0 3.95117 3.35685 0.265625 7.5 0.265625C11.6431 0.265625 15 3.95117 15 8.5Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0563 0.513564C13.6682 0.688168 14.1502 1.20267 14.3137 1.85595C14.6109 3.04005 14.6109 5.51058 14.6109 5.51058C14.6109 5.51058 14.6109 7.9811 14.3137 9.16521C14.1502 9.81849 13.6682 10.3116 13.0563 10.4862C11.9472 10.8034 7.49979 10.8034 7.49979 10.8034C7.49979 10.8034 3.0524 10.8034 1.94326 10.4862C1.33135 10.3116 0.849427 9.81849 0.685859 9.16521C0.388672 7.9811 0.388672 5.51058 0.388672 5.51058C0.388672 5.51058 0.388672 3.04005 0.685859 1.85595C0.849427 1.20267 1.33135 0.688195 1.94326 0.513564C3.0524 0.196289 7.49979 0.196289 7.49979 0.196289C7.49979 0.196289 11.9472 0.196289 13.0563 0.513564ZM6.04517 3.26758V7.75368L9.76233 5.51068L6.04517 3.26758Z" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="11">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0563 0.513564C13.6682 0.688168 14.1502 1.20267 14.3137 1.85595C14.6109 3.04005 14.6109 5.51058 14.6109 5.51058C14.6109 5.51058 14.6109 7.9811 14.3137 9.16521C14.1502 9.81849 13.6682 10.3116 13.0563 10.4862C11.9472 10.8034 7.49979 10.8034 7.49979 10.8034C7.49979 10.8034 3.0524 10.8034 1.94326 10.4862C1.33135 10.3116 0.849427 9.81849 0.685859 9.16521C0.388672 7.9811 0.388672 5.51058 0.388672 5.51058C0.388672 5.51058 0.388672 3.04005 0.685859 1.85595C0.849427 1.20267 1.33135 0.688195 1.94326 0.513564C3.0524 0.196289 7.49979 0.196289 7.49979 0.196289C7.49979 0.196289 11.9472 0.196289 13.0563 0.513564ZM6.04517 3.26758V7.75368L9.76233 5.51068L6.04517 3.26758Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a><a class="footer-wrap-subscribe-links__link" href="#"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.234375C3.35988 0.234375 0 3.48926 0 7.5C0 11.5107 3.35988 14.7656 7.5 14.7656C11.6401 14.7656 15 11.5107 15 7.5C15 3.48926 11.6401 0.234375 7.5 0.234375ZM5.36194 11.1328C3.28129 11.1328 1.61194 9.50684 1.61194 7.5C1.61194 5.49316 3.28129 3.86719 5.36194 3.86719C6.30851 3.86719 7.17948 4.18945 7.87202 4.81348L6.85589 5.76855C6.4567 5.39062 5.90932 5.20898 5.36194 5.20898C4.06456 5.20898 3.02726 6.24902 3.02726 7.49707C3.02726 8.74512 4.06154 9.78516 5.36194 9.78516C6.34783 9.78516 7.32464 9.22559 7.4819 8.22363H5.36194V6.97559H8.89722C8.93653 7.1748 8.95468 7.37402 8.95468 7.58203C8.95468 9.65625 7.51819 11.1328 5.36194 11.1328ZM12.3236 9.06152V8.02148H13.3881V6.98145H12.3236V5.94141H11.25V6.98145H10.1764V8.02148H11.25V9.06152H12.3236Z" fill="#181818"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="15">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.234375C3.35988 0.234375 0 3.48926 0 7.5C0 11.5107 3.35988 14.7656 7.5 14.7656C11.6401 14.7656 15 11.5107 15 7.5C15 3.48926 11.6401 0.234375 7.5 0.234375ZM5.36194 11.1328C3.28129 11.1328 1.61194 9.50684 1.61194 7.5C1.61194 5.49316 3.28129 3.86719 5.36194 3.86719C6.30851 3.86719 7.17948 4.18945 7.87202 4.81348L6.85589 5.76855C6.4567 5.39062 5.90932 5.20898 5.36194 5.20898C4.06456 5.20898 3.02726 6.24902 3.02726 7.49707C3.02726 8.74512 4.06154 9.78516 5.36194 9.78516C6.34783 9.78516 7.32464 9.22559 7.4819 8.22363H5.36194V6.97559H8.89722C8.93653 7.1748 8.95468 7.37402 8.95468 7.58203C8.95468 9.65625 7.51819 11.1328 5.36194 11.1328ZM12.3236 9.06152V8.02148H13.3881V6.98145H12.3236V5.94141H11.25V6.98145H10.1764V8.02148H11.25V9.06152H12.3236Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+</g>
+</svg></a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
