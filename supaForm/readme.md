@@ -6,6 +6,9 @@
 * Скачали и подключили jQuery
 * Скачали и подключили SupaShop
 
+Пример: <a href=""></a>
+[туть](https://rybakooov.github.io/supaForm/index.html)
+
 Применять следующие атрибуты для <input type="text>
 ### Атрибуты data-*="..."
 * data-type="email" — вставляет  маску почты
