@@ -20,8 +20,12 @@
 * "clean" — очищает форму
 
 ## Внимание!!!
-* Для отправки формы всегда использовать ```html<button type="submit"></button>```
-* Все элементы формы обязательно должны находиться в ```html<form></form>```
+* Для отправки формы всегда использовать 
+```html<button type="submit"></button>
+```
+* Все элементы формы обязательно должны находиться в 
+```html<form></form>
+```
 
 Используем  
 ```javascript<script>
@@ -35,4 +39,5 @@
       ifSuccess($(this).closest('form'));         //функция ifSuccess
     }
   })
-</script>```
+</script>
+```
