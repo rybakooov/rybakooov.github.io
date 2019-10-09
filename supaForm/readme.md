@@ -1,34 +1,40 @@
 # SupaForm Documentation
 
-<hr>
-
 ### Первый запуск
 * Скачали и подключили jQuery
 * Скачали и подключили SupaShop
 
-Пример: <a href=""></a>
-[туть](https://rybakooov.github.io/supaForm/index.html)
+Пример: [туть](https://rybakooov.github.io/supaForm/index.html)
 
-Применять следующие атрибуты для ```html<input type="text>```
+Применять следующие атрибуты для 
+```
+<input type="text>
+```
 ### Атрибуты data-*="..."
 * data-type="email" — вставляет  маску почты
 * data-type="tel" — вставляет 
 * data-required — делает атрибут обязательным
 
-Применять следующие атрибуты для <button></button>
+Применять следующие атрибуты для
+```
+<button></button>
+```
 ### Атрибуты data-type="..."
 * "clean" — очищает форму
 
 ## Внимание!!!
 * Для отправки формы всегда использовать 
-```html<button type="submit"></button>
+```
+<button type="submit"></button>
 ```
 * Все элементы формы обязательно должны находиться в 
-```html<form></form>
+```
+<form></form>
 ```
 
 Используем  
-```javascript<script>
+```
+<script>
   $('button[type="submit"]').click(function(e){
     e.preventDefault();
     if(!raValidation($(this).closest('form'))){   //если не проходит валидация
