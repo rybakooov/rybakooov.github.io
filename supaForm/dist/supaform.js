@@ -161,12 +161,9 @@ function ifError(form) {
 }
 
 /******************** Очистим форму ******************/
-$('[data-type="cleanForm"]').click(function(e){
-  e.preventDefault();
-  console.log('huo');
-  $(this).closest('form').find('input, textarea').val('');
-  $(this).closest('form').find('input, textarea').removeClass('input-border');
-  $(this).closest('form').find('input, textarea').removeClass('input-err');
+$('[data-type="cleanForm"]').click(function(ev){
+  ev.preventDefault();
+  $(this).closest('form')[0].reset();
 });
 
   
