@@ -10,7 +10,7 @@
     <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/main.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=6f18ee74-899f-460d-958f-dc0ae844847e&amp;lang=ru_RU" type="text/javascript"></script>
-    <title> Главная | ГК "Паруса"
+    <title> Ордер | ГК "Паруса"
     </title>
   </head>
   <body><svg class="svg-gradient">
@@ -138,45 +138,92 @@
         <div class="header-right__burger"><span></span><span></span><span></span></div>
       </div>
     </header>
-    <section class="main">
-      <div class="main-banner">
-        <div class="main-banner-desc">
-          <h1 class="main-banner-desc__title">Рекламно-<br>производственная<br>компания</h1>
-          <div class="main-banner-desc-quote">
-            <div class="main-banner-desc-quote__text">Ты не можешь менять направление ветра, но всегда можешь поднять паруса, чтобы достичь своей цели</div>
-            <div class="main-banner-desc-quote__name">О. Уайлд</div>
+    <section class="order">
+      <div class="order-preview"><img src="assets/images/press-slider.png" alt=""/></div>
+      <div class="order-description">
+        <h1 class="order-description__title">Пресс-волл</h1>
+        <form class="order-description-form" action="">
+          <div class="order-description-form-block order-description-form-block_f">
+            <p class="order-description-form-block__title">Тип конструкции</p>
+            <p class="order-description-form-block__change">Изменить</p>
+            <p class="order-description-form-block__current"></p>
+            <input type="radio" name="tritix" id="first_tritix" data-name-input="Тритикс"/>
+            <label class="order-description-form-block__label" for="first_tritix">
+              <div class="order-description-form-block__label-img"><img class="order-description-form-block__label__img" src="assets/images/believix.png" alt=""/></div>
+              <p class="order-description-form-block__label__text">Тритикс</p>
+            </label>
+            <input type="radio" name="tritix" id="second_tritix" data-name-input="Битрикс"/>
+            <label class="order-description-form-block__label" for="second_tritix">
+              <div class="order-description-form-block__label-img"><img class="order-description-form-block__label__img" src="assets/images/believix.png" alt=""/></div>
+              <p class="order-description-form-block__label__text">Битрикс</p>
+            </label>
           </div>
-          <div class="main-banner-desc__text">Широкий спектр услуг от печати до оформления мероприятий</div>
-        </div>
-        <div class="main-banner-imgbox">
-           <!--img(src="assets/images/main-banner.png", alt="Корабль")--></div>
-      </div>
-      <div class="main-bottom">
-        <div class="main-bottom-item">
-          <div class="main-bottom-item-imgbox"><img class="main-bottom-item-imgbox__img" src="assets/images/prod-flag.png" alt=""/></div>
-          <p class="main-bottom-item__price">от 300 руб</p>
-          <p class="main-bottom-item__title">Флаги и флагштоки</p><a class="general__btn main-bottom-item__look" href="#">Просмотреть</a>
-        </div>
-        <div class="main-bottom-item">
-          <div class="main-bottom-item-imgbox"><img class="main-bottom-item-imgbox__img" src="assets/images/prod-scenes.png" alt=""/></div>
-          <p class="main-bottom-item__price">от 30 000 руб</p>
-          <p class="main-bottom-item__title">Подиумы и сцены</p><a class="general__btn main-bottom-item__look" href="#">Просмотреть</a>
-        </div>
-        <div class="main-bottom-item">
-          <div class="main-bottom-item-imgbox"><img class="main-bottom-item-imgbox__img" src="assets/images/prod-presswall.png" alt=""/></div>
-          <p class="main-bottom-item__price">от 2500 руб</p>
-          <p class="main-bottom-item__title">Пресс-волл</p><a class="general__btn main-bottom-item__look" href="#">Просмотреть</a>
-        </div>
-        <div class="main-bottom-item">
-          <div class="main-bottom-item-imgbox"><img class="main-bottom-item-imgbox__img" src="assets/images/prod-events.png" alt=""/></div>
-          <p class="main-bottom-item__price">от 300 руб</p>
-          <p class="main-bottom-item__title">Оформление мероприятий</p><a class="general__btn main-bottom-item__look" href="#">Просмотреть</a>
-        </div>
-        <div class="main-bottom-item">
-          <div class="main-bottom-item-imgbox"><img class="main-bottom-item-imgbox__img" src="assets/images/prod-print.png" alt=""/></div>
-          <p class="main-bottom-item__price">от 300 руб</p>
-          <p class="main-bottom-item__title">Печатное производство</p><a class="general__btn main-bottom-item__look" href="#">Просмотреть</a>
-        </div>
+          <div class="order-description-form-block-next" data-disabled="true">
+            <div class="order-description-form-block">
+              <p class="order-description-form-block__title">Дополнительная обработка</p>
+              <input type="checkbox" id="1-in"/>
+              <label class="order-description-form-block__label" for="1-in">
+                <div class="order-description-form-block__label-img"><img class="order-description-form-block__label__img" src="assets/images/believix.png" alt=""/></div>
+                <p class="order-description-form-block__label__text">На колесиках</p>
+              </label>
+              <input type="checkbox" id="2-in"/>
+              <label class="order-description-form-block__label" for="2-in">
+                <div class="order-description-form-block__label-img"><img class="order-description-form-block__label__img" src="assets/images/believix.png" alt=""/></div>
+                <p class="order-description-form-block__label__text">С подсветкой</p>
+              </label>
+              <input type="checkbox" id="3-in"/>
+              <label class="order-description-form-block__label" for="3-in">
+                <div class="order-description-form-block__label-img"><img class="order-description-form-block__label__img" src="assets/images/believix.png" alt=""/></div>
+                <p class="order-description-form-block__label__text">Фотозона под ключ</p>
+              </label>
+              <input type="checkbox" id="4-in"/>
+              <label class="order-description-form-block__label" for="4-in"> 
+                <div class="order-description-form-block__label-img"><img class="order-description-form-block__label__img" src="assets/images/believix.png" alt=""/></div>
+                <p class="order-description-form-block__label__text">Декор</p>
+              </label>
+            </div>
+            <div class="order-description-form-block order-description-form-block_options">
+              <p class="order-description-form-block__title">Опции</p>
+              <div class="order-description-form-block__item order-description-form-block__item_h">
+                <input class="general__input order-description-form-block__item__inputSize" name="" id="ordSize" data-required="data-required"/>
+                <label for="ordSize">Введите размер</label>
+              </div>
+              <div class="order-description-form-block__item order-description-form-block__item_h order-description-form-block__item_sizer">
+                <div class="order-description-form-block__item__size">2х2 м</div>
+                <div class="order-description-form-block__item__size">2.5х3 м</div>
+                <div class="order-description-form-block__item__size">3х4 м</div>
+              </div>
+              <div class="order-description-form-block__item">
+                <input class="general__input" name="" id="ordMore"/>
+                <label for="ordMore">Дополнительные пожелания</label>
+              </div>
+              <div class="order-description-form-block__item order-description-form-block__item_h">
+                <input class="general__input" type="text" id="ordName" data-required="data-required"/>
+                <label for="ordName">Имя</label>
+              </div>
+              <div class="order-description-form-block__item order-description-form-block__item_h">
+                <input class="general__input" type="text" id="ordEmail" data-type="email" data-required="data-required"/>
+                <label for="ordEmail">E-mail</label>
+              </div>
+              <div class="order-description-form-block__item order-description-form-block__item_h">
+                <input class="general__input" type="text" id="ordTel" data-type="tel" data-required="data-required"/>
+                <label for="ordTel">Телефон</label>
+              </div>
+              <div class="order-description-form-block-label order-description-form-block__item_h">
+                <div class="order-description-form-block-label-exit"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="14px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve"><g id="close"><polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5 "/></g></svg></div>
+                <label>
+                  <p style="display: flex;"><img src="assets/images/file-order.svg" alt="file"/>Прикрепить файл</p>
+                  <input type="file" multiple="multiple" id="filesCallOrder2"/>
+                </label>
+                <div class="order-description-form-block-label-box"></div>
+              </div>
+              <div class="order-description-form-block-bottom">
+                <button class="general__btn order-description-form-block-bottom__submit" type="submit">Отправить</button>
+                <p class="order-description-form-block-bottom__text">Отправляя данную форму, Вы соглашаетесь на обработку персональных данных</p>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     <footer class="footer">
