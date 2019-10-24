@@ -160,7 +160,7 @@ $(document).ready(function(){
 
   /* YANDEX MAP API*/
 
-  if($('#contacts__map').lenght){
+  if($('#contacts__map').length){
     ymaps.ready(init);
     function init(){
       // Создание карты.
@@ -277,7 +277,7 @@ if($('.ourWorks').length){
   })
 }
 
-if($('.whywe').legth){
+if($('.whywe').length){
   $('.whywe-wrap-slider').slick({
     infinite: false,
     arrows: true,
