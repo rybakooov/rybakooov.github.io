@@ -64,16 +64,21 @@ $(document).ready(function(){
 
 
   /*селектор с ссылками услуги*/
+  
   $(document).on('click', '.amen-aside__title', function () {
-    $(this).closest('.amen-aside').find('.amen-aside-wrap').fadeToggle('fast');
-    $(this).find('svg').toggleClass('arrow-top');
+    if($(window).width() < 1023){
+      $(this).closest('.amen-aside').find('.amen-aside-wrap').fadeToggle('fast');
+      $(this).find('svg').toggleClass('arrow-top');
+    }
   });
   $(function($){
     $(document).on('click touchend', function (e){
-      let div = $('.amen-aside');
-      if ((!div.is(e.target) && div.has(e.target).length === 0)) {
-        div.find('.amen-aside-wrap').fadeOut('fast');
-        $(this).find('svg').removeClass('arrow-top');
+      if($(window).width() < 1023){
+        let div = $('.amen-aside');
+        if ((!div.is(e.target) && div.has(e.target).length === 0)) {
+          div.find('.amen-aside-wrap').fadeOut('fast');
+          $(this).find('svg').removeClass('arrow-top');
+        }
       }
     });
   });
