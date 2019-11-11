@@ -94,4 +94,9 @@ $(document).ready(function(){
       }
     });
   });
+
+  $(document).on('click', '.amen-aside-wrap-block__title', function () {
+    $(this).closest('.amen-aside-wrap-block').toggleClass('amen-aside-wrap-block_active');
+  })
+
 });
