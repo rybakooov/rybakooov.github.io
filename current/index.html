@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,245 +8,80 @@
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/main.js"></script>
-    <title> РекламаГрад
+    <title> Мастерская Путешествий
     </title>
   </head>
   <body>
-    <header class="header"><a class="header-logo" href="index.html"><img src="assets/images/logo.png"/></a>
-      <div class="header-linklist">
-        <div class="header-linklist-wrap"><a class="header-linklist__link" href="#">О компании</a><a class="header-linklist__link" href="#">Услуги</a><a class="header-linklist__link" href="#">Партнёры</a><a class="header-linklist__link" href="#">Наши работы</a><a class="header-linklist__link" href="#">Контакты</a></div>
-        <form class="header-linklist-search">
-          <input type="text" placeholder="Искать..."/>
-          <button type="submit">Поиск</button>
-        </form>
-      </div>
-      <div class="header-search"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14.4641 7.83203C14.4641 9.66375 13.7231 11.3201 12.5216 12.5216C11.3201 13.7231 9.66374 14.4641 7.83203 14.4641C4.16926 14.4641 1.2 11.4948 1.2 7.83203C1.2 4.16926 4.16926 1.2 7.83203 1.2C11.4948 1.2 14.4641 4.16926 14.4641 7.83203Z" stroke="#2153A0" stroke-width="2.4"/>
-<path d="M13.2166 13.2166L16 16" stroke="#2153A0" stroke-width="2.4" stroke-linecap="round"/>
+    <header class="header"><a class="header-logo" href="/">
+        <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M57.6637 25.6991L60.1062 32.708L61.5929 35.6814L55.9608 31.2212L52.2478 42.6903L51.292 45.4513L38.9978 41.3097L20.9204 60L16.5664 38.4425L18.2871 36.6372L0 6.0531L24 28.2478L57.6637 0L48.5947 26.6549L50.1239 25.3805L57.6637 25.6991Z" fill="#3270F7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42.1593 32.0177L29.5221 24.8496L40.5664 33.3451L42.1593 32.0177Z" fill="#2051BC"/>
+<path d="M57.0265 27.9292L60.1062 32.708L57.9011 26.3802C57.7578 25.9691 57.3781 25.687 56.9431 25.6687L50.1239 25.3805L57.0265 27.9292Z" fill="#2051BC"/>
+<path d="M60.1062 32.708L57.0265 27.9292L55.9608 31.2212L58.9867 33.6175L61.5929 35.6814L60.1062 32.708Z" fill="#2051BC"/>
+<path d="M52.2478 42.6903L45.9823 34.0885L38.9978 41.3097L50.294 45.1151L51.292 45.4513L51.6365 44.4561L52.2478 42.6903Z" fill="#2051BC"/>
+<path d="M45.9823 34.0885L41.7345 34.7257L16.5664 38.4425L20.5205 58.02C20.6898 58.8584 21.7301 59.1628 22.3247 58.548L38.9978 41.3097L45.9823 34.0885Z" fill="#5085F9"/>
+<path d="M22.3247 58.548C21.7301 59.1628 20.6898 58.8584 20.5205 58.02L20.9204 60L22.3247 58.548Z" fill="#5085F9"/>
+<path d="M29.5221 24.8496L42.1593 32.0177L48.5947 26.6549L56.439 3.59965L57.6637 0L54.751 2.4441L24 28.2478L29.5221 24.8496Z" fill="#5085F9"/>
+<path d="M29.5221 24.8496L24 28.2478L5.42333 11.0685L0 6.0531L3.79087 12.3931L18.2871 36.6372L29.5221 24.8496Z" fill="#5085F9"/>
+</svg>Мастерская<br>путешествий</a>
+      <div class="header-linklist"><a class="header-linklist__link" href="#">Контакты</a><a class="header-linklist__link" href="#">О компании</a><a class="header-linklist__link" href="#">Приятные предложения</a></div>
+      <div class="header-right"><a class="header-right__tel" href="tel: 8 (910) 973-31-95">8 (910) 973-31-95</a><a class="header-right__pop-up-btn" href="#">Пообщаемся</a><!--a(href="#").header-right__switch-theme 
+<svg class="header-right__switch-theme_moon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5 8.75C12.4997 10.4883 13.0173 12.1873 13.9865 13.6303C14.9558 15.0732 16.3329 16.1948 17.9422 16.852C19.5515 17.5091 21.3201 17.672 23.0224 17.3199C24.7246 16.9678 26.2834 16.1166 27.5 14.875V15C27.5 21.9037 21.9037 27.5 15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5H15.125C14.2925 3.31391 13.6314 4.28621 13.1806 5.3596C12.7298 6.433 12.4984 7.58577 12.5 8.75ZM5 15C4.99909 17.2312 5.74441 19.3987 7.11736 21.1575C8.49032 22.9162 10.412 24.1653 12.5768 24.706C14.7415 25.2467 17.0249 25.0479 19.0636 24.1412C21.1023 23.2346 22.7792 21.6721 23.8275 19.7025C21.9618 20.142 20.0147 20.0976 18.171 19.5734C16.3273 19.0492 14.6481 18.0626 13.2928 16.7072C11.9374 15.3519 10.9508 13.6727 10.4266 11.829C9.90239 9.98527 9.85796 8.0382 10.2975 6.1725C8.69697 7.02517 7.35848 8.29708 6.42532 9.85205C5.49216 11.407 4.99947 13.1865 5 15Z" fill="white"/>
 </svg>
+<svg class="header-right__switch-theme_sun" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 22.5C13.0109 22.5 11.1032 21.7098 9.6967 20.3033C8.29018 18.8968 7.5 16.9891 7.5 15C7.5 13.0109 8.29018 11.1032 9.6967 9.6967C11.1032 8.29018 13.0109 7.5 15 7.5C16.9891 7.5 18.8968 8.29018 20.3033 9.6967C21.7098 11.1032 22.5 13.0109 22.5 15C22.5 16.9891 21.7098 18.8968 20.3033 20.3033C18.8968 21.7098 16.9891 22.5 15 22.5ZM15 20C16.3261 20 17.5979 19.4732 18.5355 18.5355C19.4732 17.5979 20 16.3261 20 15C20 13.6739 19.4732 12.4021 18.5355 11.4645C17.5979 10.5268 16.3261 10 15 10C13.6739 10 12.4021 10.5268 11.4645 11.4645C10.5268 12.4021 10 13.6739 10 15C10 16.3261 10.5268 17.5979 11.4645 18.5355C12.4021 19.4732 13.6739 20 15 20ZM13.75 1.25H16.25V5H13.75V1.25ZM13.75 25H16.25V28.75H13.75V25ZM4.39375 6.16125L6.16125 4.39375L8.8125 7.045L7.045 8.8125L4.39375 6.1625V6.16125ZM21.1875 22.955L22.955 21.1875L25.6063 23.8387L23.8387 25.6063L21.1875 22.955ZM23.8387 4.3925L25.6063 6.16125L22.955 8.8125L21.1875 7.045L23.8387 4.39375V4.3925ZM7.045 21.1875L8.8125 22.955L6.16125 25.6063L4.39375 23.8387L7.045 21.1875ZM28.75 13.75V16.25H25V13.75H28.75ZM5 13.75V16.25H1.25V13.75H5Z" fill="white"/>
+</svg>-->
       </div>
-      <div class="header-contacts"><a class="header-contacts__link" href="mailto: reklama-grad@mail.ru">
-          <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.243 17.1H21.0872C22.3358 17.1 23.4314 16.0608 23.3804 14.755V3.243C23.3804 1.94166 22.3387 0.9 21.0374 0.9H3.243C1.94166 0.9 0.9 1.94166 0.9 3.243V14.757C0.9 16.0583 1.94166 17.1 3.243 17.1ZM2.59535 3.243C2.59535 2.8995 2.89946 2.59535 3.243 2.59535H21.0374C21.3809 2.59535 21.685 2.89946 21.685 3.243V14.757C21.685 15.1005 21.3809 15.4046 21.0374 15.4046H3.243C2.8995 15.4046 2.59535 15.1005 2.59535 14.757V3.243Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.2"/>
-<path d="M21.5714 1.57114L21.5714 1.5711L21.5692 1.57304L12.1651 9.88832L2.76315 1.57501C2.4208 1.23536 1.85881 1.2928 1.57406 1.6303C1.2347 1.97352 1.29338 2.5365 1.6326 2.82037L11.5982 11.6399C11.6805 11.7217 11.7661 11.7794 11.8613 11.8161C11.9569 11.8528 12.0571 11.8663 12.1651 11.8663C12.2595 11.8663 12.3613 11.8356 12.4537 11.7959C12.5478 11.7556 12.6404 11.7025 12.719 11.6502L12.7195 11.6509L12.7298 11.6418L22.6975 2.82038C22.8723 2.67406 22.9559 2.45844 22.9628 2.24309C22.9698 2.02756 22.9006 1.80371 22.759 1.63379C22.6127 1.45818 22.3966 1.37428 22.1807 1.36732C21.9652 1.36036 21.7414 1.42953 21.5714 1.57114Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.2"/>
-<path d="M2.50809 16.1812L2.50093 16.186C2.34644 16.289 2.12663 16.4022 1.89718 16.4022C1.66528 16.4022 1.44174 16.2873 1.27821 16.1237L2.50809 16.1812ZM2.50809 16.1812L2.51434 16.1753L9.54014 9.49836C9.87811 9.21411 9.93617 8.65222 9.59728 8.30947C9.3122 7.97158 8.74924 7.9144 8.407 8.25536L1.3323 14.9315C0.993144 15.2166 0.935723 15.7812 1.27819 16.1237L2.50809 16.1812Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.2"/>
-<path d="M14.7362 9.4944L14.7361 9.49443L14.7382 9.49642L21.815 16.1746C21.8977 16.257 21.9837 16.3151 22.0793 16.3519C22.175 16.3887 22.2751 16.4022 22.3832 16.4022C22.6151 16.4022 22.8386 16.2872 23.0022 16.1237L23.0025 16.124L23.0083 16.117C23.2892 15.7798 23.2895 15.2727 22.9523 14.9355L22.9524 14.9355L22.9503 14.9335L15.8724 8.25439L15.8725 8.25425L15.8678 8.25029C15.5306 7.96935 15.0235 7.96908 14.6863 8.30625L14.686 8.30596L14.6802 8.31294C14.3992 8.65008 14.399 9.15723 14.7362 9.4944Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.2"/>
-</svg>reklama-grad@mail.ru</a><a class="header-contacts__link" href="tel: +7 (495) 740-24-49">
-          <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.6481 7.682C7.58644 9.33048 8.95163 10.6957 10.6001 11.634L11.4841 10.396C11.6263 10.1969 11.8365 10.0569 12.0749 10.0023C12.3134 9.94779 12.5635 9.98254 12.7781 10.1C14.1924 10.8729 15.7543 11.3378 17.3611 11.464C17.6119 11.4839 17.846 11.5975 18.0167 11.7823C18.1874 11.9671 18.2821 12.2094 18.2821 12.461V16.923C18.2822 17.1706 18.1904 17.4094 18.0245 17.5932C17.8586 17.777 17.6304 17.8927 17.3841 17.918C16.8541 17.973 16.3201 18 15.7821 18C7.2221 18 0.282104 11.06 0.282104 2.5C0.282104 1.962 0.309105 1.428 0.364105 0.898C0.389359 0.651697 0.505089 0.423521 0.688894 0.257634C0.8727 0.0917472 1.11151 -5.33578e-05 1.3591 2.32673e-08H5.8211C6.07267 -3.15185e-05 6.315 0.0947515 6.49979 0.265451C6.68457 0.43615 6.79823 0.670224 6.8181 0.921C6.94433 2.52779 7.40918 4.08968 8.1821 5.504C8.29957 5.71856 8.33432 5.96874 8.27977 6.2072C8.22522 6.44565 8.08517 6.65584 7.8861 6.798L6.6481 7.682ZM4.1261 7.025L6.0261 5.668C5.48689 4.50409 5.11746 3.26884 4.9291 2H2.2921C2.2861 2.166 2.2831 2.333 2.2831 2.5C2.2821 9.956 8.32611 16 15.7821 16C15.9491 16 16.1161 15.997 16.2821 15.99V13.353C15.0133 13.1646 13.778 12.7952 12.6141 12.256L11.2571 14.156C10.7108 13.9437 10.1801 13.6931 9.6691 13.406L9.6111 13.373C7.64968 12.2567 6.02538 10.6324 4.9091 8.671L4.8761 8.613C4.58901 8.10199 4.33839 7.57134 4.1261 7.025Z" fill="#2153A0"/>
-</svg>+7 (495) 740-24-49</a></div>
-      <div class="header-burger"><span></span><span></span></div>
     </header>
-    <div class="amen">
-      <aside class="amen-aside">
-        <h5 class="amen-aside__title">
-          Услуги<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.533447L10 1.70011L5 6.70011L-5.09966e-08 1.70011L1.16667 0.533447L5 4.36678L8.83333 0.533447Z" fill="#2153A0"/>
-</svg>
-        </h5>
-        <div class="amen-aside-wrap">
-          <div class="amen-aside-wrap-block amen-aside-wrap-block_active">
-            <div class="amen-aside-wrap-block__title">
-              Интерьерная печать<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.53334 0.533325L8.46667 1.46666L4.46667 5.46666L0.466675 1.46666L1.40001 0.533325L4.46667 3.59999L7.53334 0.533325Z" fill="#2153A0"/>
-</svg>
-            </div>
-            <div class="amen-aside-wrap-block-bottom"><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке</a><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке с ламинацией</a></div>
-          </div>
-          <div class="amen-aside-wrap-block">
-            <div class="amen-aside-wrap-block__title">
-              Интерьерная печать<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.53334 0.533325L8.46667 1.46666L4.46667 5.46666L0.466675 1.46666L1.40001 0.533325L4.46667 3.59999L7.53334 0.533325Z" fill="#2153A0"/>
-</svg>
-            </div>
-            <div class="amen-aside-wrap-block-bottom"><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке</a><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке с</a></div>
-          </div>
-          <div class="amen-aside-wrap-block">
-            <div class="amen-aside-wrap-block__title">
-              Интерьерная печать<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.53334 0.533325L8.46667 1.46666L4.46667 5.46666L0.466675 1.46666L1.40001 0.533325L4.46667 3.59999L7.53334 0.533325Z" fill="#2153A0"/>
-</svg>
-            </div>
-            <div class="amen-aside-wrap-block-bottom"><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке</a><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке с ламинацией</a></div>
-          </div>
-          <div class="amen-aside-wrap-block">
-            <div class="amen-aside-wrap-block__title">
-              Интерьерная печать<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.53334 0.533325L8.46667 1.46666L4.46667 5.46666L0.466675 1.46666L1.40001 0.533325L4.46667 3.59999L7.53334 0.533325Z" fill="#2153A0"/>
-</svg>
-            </div>
-            <div class="amen-aside-wrap-block-bottom"><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке</a><a class="amen-aside-wrap-block-bottom__item" href="#">На плёнке с ламинацией</a></div>
-          </div>
+    <section class="wrapper">
+      <div class="banner">
+        <div class="banner-wrap">
+          <h1 class="banner__title">Мастерская<br>путешествий</h1>
+          <p class="banner__text">У нас самые свежие и актуальные туры в городе Ярославле</p>
+          <div class="banner-bottom"><a class="banner-bottom__link" href="#">Наши предложения</a><a class="banner-bottom__link banner-bottom__link_trans" href="#">О компании</a><a class="banner-bottom__link banner-bottom__link_refresh" href="#">
+               <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.7167 21.7238C37.5642 21.4936 37.2539 21.4307 37.0237 21.5832L33.2723 24.0686C33.0421 24.2211 32.9792 24.5313 33.1317 24.7615C33.2842 24.9917 33.5944 25.0547 33.8246 24.9022L37.1592 22.693L39.3684 26.0275C39.521 26.2577 39.8312 26.3207 40.0614 26.1682C40.2916 26.0157 40.3546 25.7054 40.2021 25.4752L37.7167 21.7238ZM36.8099 21.9005C35.2348 29.6599 28.3738 35.5 20.1499 35.5V36.5C28.8588 36.5 36.1221 30.3157 37.7899 22.0995L36.8099 21.9005ZM20.1499 35.5C11.9261 35.5 5.06508 29.6599 3.49001 21.9005L2.50999 22.0995C4.17781 30.3157 11.4411 36.5 20.1499 36.5V35.5Z" fill="#E9EAEA"/>
+<path d="M2.58318 15.2762C2.7357 15.5064 3.04595 15.5693 3.27615 15.4168L7.02754 12.9314C7.25774 12.7789 7.32072 12.4687 7.1682 12.2385C7.01569 12.0083 6.70543 11.9453 6.47523 12.0978L3.14067 14.307L0.931435 10.9725C0.77892 10.7423 0.468665 10.6793 0.238461 10.8318C0.00825787 10.9843 -0.0547206 11.2946 0.097795 11.5248L2.58318 15.2762ZM3.49001 15.0995C5.06508 7.34006 11.9261 1.5 20.1499 1.5V0.5C11.4411 0.5 4.17781 6.68426 2.50999 14.9005L3.49001 15.0995ZM20.1499 1.5C28.0706 1.5 34.7272 6.91731 36.6144 14.2496L37.5828 14.0004C35.5847 6.23696 28.5379 0.5 20.1499 0.5V1.5Z" fill="#E9EAEA"/>
+</svg>Одно из самых популярных направлений этого года — США</a></div>
         </div>
-      </aside>
-      <main class="amen-main">
-        <div class="amen-main-breadcrumbs"><a class="amen-main-breadcrumbs__item" href="#">
-            Главная<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.933333L0.933333 0L4.93333 4L0.933333 8L0 7.06667L3.06667 4L0 0.933333Z" fill="#333333"/>
-</svg></a><a class="amen-main-breadcrumbs__item" href="#">
-            Услуги<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.933333L0.933333 0L4.93333 4L0.933333 8L0 7.06667L3.06667 4L0 0.933333Z" fill="#333333"/>
-</svg></a><a class="amen-main-breadcrumbs__item" href="#">
-            Изготовление вывесок<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.933333L0.933333 0L4.93333 4L0.933333 8L0 7.06667L3.06667 4L0 0.933333Z" fill="#333333"/>
-</svg></a></div>
-        <h1 class="amen-main__title">Изготовление вывесок</h1>
-        <div class="amen-main-wrap">
-          <div class="amen-main-slider">
-            <div class="amen-main-slider1">
-              <div class="amen-main-slider1-imgbox"><img src="assets/images/bank.png" alt=""/></div>
-              <div class="amen-main-slider1-imgbox"><img src="assets/images/bank.png" alt=""/></div>
-              <div class="amen-main-slider1-imgbox"><img src="assets/images/bank.png" alt=""/></div>
-              <div class="amen-main-slider1-imgbox"><img src="assets/images/bank.png" alt=""/></div>
+      </div>
+      <main class="main">
+        <section class="tours">
+          <h4 class="main__subtitle">Туры</h4>
+          <h3 class="main__title">Лучшие предложения</h3>
+          <div class="tours-wrap">
+            <div class="tours-wrap-item" style="background-image: url('assets/images/tour1.png')">
+              <p class="tours-wrap-item__where">Салерно, Италия</p>
+              <p class="tours-wrap-item__info">22.12.2019 на 7 ночей</p>
+              <div class="tours-wrap-item-bottom"><a class="tours-wrap-item__btn" href="#">Подробнее</a>
+                <p class="tours-wrap-item__price"><span>50 000</span> ₽</p>
+              </div>
             </div>
-            <div class="amen-main-slider2">
-              <div class="amen-main-slider2-imgbox"><img src="assets/images/bank.png" alt=""/></div>
-              <div class="amen-main-slider2-imgbox"><img src="assets/images/bank.png" alt=""/></div>
-              <div class="amen-main-slider2-imgbox"><img src="assets/images/bank.png" alt=""/></div>
-              <div class="amen-main-slider2-imgbox"><img src="assets/images/bank.png" alt=""/></div>
+            <div class="tours-wrap-item" style="background-image: url('assets/images/tour2.png')">
+              <p class="tours-wrap-item__where">Тенерифе, Испания</p>
+              <p class="tours-wrap-item__info">22.12.2019 на 7 ночей</p>
+              <div class="tours-wrap-item-bottom"><a class="tours-wrap-item__btn" href="#">Подробнее</a>
+                <p class="tours-wrap-item__price"><span>67 000</span> ₽</p>
+              </div>
             </div>
-            <div class="amen-main-slider2_btn amen-main-slider2__prev"><svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.16666 1.16667L4.99999 0L-1.04904e-05 5L4.99999 10L6.16666 8.83333L2.33332 5L6.16666 1.16667Z" fill="#2153A0"/>
-</svg>
-            </div>
-            <div class="amen-main-slider2_btn amen-main-slider2__next"><svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.16667L1.16667 0L6.16667 5L1.16667 10L0 8.83333L3.83333 5L0 1.16667Z" fill="#2153A0"/>
-</svg>
+            <div class="tours-wrap-item" style="background-image: url('assets/images/tour3.png')">
+              <p class="tours-wrap-item__where">Охрид, Македония</p>
+              <p class="tours-wrap-item__info">22.12.2019 на 7 ночей</p>
+              <div class="tours-wrap-item-bottom"><a class="tours-wrap-item__btn" href="#">Подробнее</a>
+                <p class="tours-wrap-item__price"><span>89 000</span> ₽</p>
+              </div>
             </div>
           </div>
-          <div class="amen-main-desc">
-            <p class="amen-main-desc__text">Наклейки и стикеры могут быть самой разнообразной формы, размера и цветового исполнения. Их можно наносить на любую гладкую поверхность на улице, в помещении, автомобиль или мебель.</p>
-            <ul class="amen-main-desc__ul">
-              <li>
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.01493 10.139L2.43051 6.55457L2.25373 6.37779L2.07695 6.55457L0.823223 7.8083L0.646447 7.98507L0.823223 8.16185L5.83815 13.1768L6.01493 13.3536L6.1917 13.1768L16.938 2.43051L17.1147 2.25373L16.938 2.07695L15.6842 0.823223L15.5075 0.646447L15.3307 0.823223L6.01493 10.139Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.5"/>
-</svg>Полноцветная печать
-              </li>
-              <li>
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.01493 10.139L2.43051 6.55457L2.25373 6.37779L2.07695 6.55457L0.823223 7.8083L0.646447 7.98507L0.823223 8.16185L5.83815 13.1768L6.01493 13.3536L6.1917 13.1768L16.938 2.43051L17.1147 2.25373L16.938 2.07695L15.6842 0.823223L15.5075 0.646447L15.3307 0.823223L6.01493 10.139Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.5"/>
-</svg>Индивидуальный дизайн
-              </li>
-              <li>
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.01493 10.139L2.43051 6.55457L2.25373 6.37779L2.07695 6.55457L0.823223 7.8083L0.646447 7.98507L0.823223 8.16185L5.83815 13.1768L6.01493 13.3536L6.1917 13.1768L16.938 2.43051L17.1147 2.25373L16.938 2.07695L15.6842 0.823223L15.5075 0.646447L15.3307 0.823223L6.01493 10.139Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.5"/>
-</svg>Полноцветная печать
-              </li>
-              <li>
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.01493 10.139L2.43051 6.55457L2.25373 6.37779L2.07695 6.55457L0.823223 7.8083L0.646447 7.98507L0.823223 8.16185L5.83815 13.1768L6.01493 13.3536L6.1917 13.1768L16.938 2.43051L17.1147 2.25373L16.938 2.07695L15.6842 0.823223L15.5075 0.646447L15.3307 0.823223L6.01493 10.139Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.5"/>
-</svg>Профессиональное оборудование
-              </li>
-              <li>
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.01493 10.139L2.43051 6.55457L2.25373 6.37779L2.07695 6.55457L0.823223 7.8083L0.646447 7.98507L0.823223 8.16185L5.83815 13.1768L6.01493 13.3536L6.1917 13.1768L16.938 2.43051L17.1147 2.25373L16.938 2.07695L15.6842 0.823223L15.5075 0.646447L15.3307 0.823223L6.01493 10.139Z" fill="#2153A0" stroke="#2153A0" stroke-width="0.5"/>
-</svg>Полный цикл производства
-              </li>
-            </ul>
+          <div class="tours-bottom"><a class="tours-bottom__btn" href="#">Все предложения</a>
+            <p class="tours-bottom__text">Ознакомьтесь с полным списком предложений</p>
           </div>
-        </div>
-        <div class="amen-main-order"><a class="amen-main-order__link" href="#">Заказать</a>от 300 руб/м</div>
+        </section>
       </main>
-    </div>
-    <div class="callOrder">
-      <div class="callOrder-wrap">
-        <h6 class="callOrder__title">Хотите привлекательную наружную рекламу?</h6>
-        <div class="callOrder__hr"></div>
-        <p class="callOrder__subtitle">Оставьте заявку и получите бесплатную консультацию и макет для вашей будущей рекламы</p>
-        <form>
-          <input data-required="data-required" type="text" id="name" placeholder="Ваше имя"/>
-          <input data-required="data-required" data-type="tel" type="text" id="tel" placeholder="Ваш телефон"/>
-          <button type="submit">Заказать рекламу</button>
-        </form>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer-where">
-        <h6 class="footer-where__title">Как нас найти</h6><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A363ee7ab7ecd6f557e9c68763ef418304f03cf2b5027cf6a99493bec4afdb869&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-      </div>
-      <div class="footer-footer">
-        <div class="footer-footer-item"><img src="assets/images/logo.png" alt=""/></div>
-        <div class="footer-footer-item"><img src="assets/images/metro.png" alt=""/>
-          <p>Преображенская площадь 1-я улица Бухвостова, 12/11к20</p>
-        </div>
-        <div class="footer-footer-item">
-          <div class="footer-footer-item-block">
-            <div class="footer-footer-item-block__item"><svg width="23" height="32" viewBox="0 0 23 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.5469 1C5.73133 1 1 5.73133 1 11.5469C1 13.5118 1.54428 15.4293 2.57436 17.0929L10.9465 30.5845C11.1069 30.843 11.3894 31 11.6933 31C11.6956 31 11.6979 31 11.7003 31C12.0068 30.9976 12.2899 30.8357 12.4473 30.5727L20.6061 16.9504C21.5794 15.322 22.0938 13.4535 22.0938 11.5469C22.0938 5.73133 17.3624 1 11.5469 1ZM19.0976 16.0479L11.68 28.4328L4.06838 16.1668C3.21098 14.7821 2.74609 13.1846 2.74609 11.5469C2.74609 6.70059 6.70059 2.74609 11.5469 2.74609C16.3932 2.74609 20.3418 6.70059 20.3418 11.5469C20.3418 13.136 19.9076 14.6927 19.0976 16.0479Z" fill="black" fill-opacity="0.75"/>
-<path d="M11.6762 27.9525L18.883 15.9197L11.6762 27.9525ZM11.6762 27.9525L4.28093 16.0351C3.44752 14.6892 2.99609 13.1371 2.99609 11.5469C2.99609 6.83866 6.83866 2.99609 11.5469 2.99609C16.2549 2.99609 20.0918 6.83844 20.0918 11.5469C20.0918 13.0904 19.67 14.6027 18.8831 15.9195L11.6762 27.9525ZM2.3618 17.2245L2.36193 17.2247L10.7341 30.7163C10.9401 31.0483 11.303 31.25 11.6933 31.25H11.6933H11.6934H11.6934H11.6934H11.6934H11.6935H11.6935H11.6935H11.6935H11.6935H11.6936H11.6936H11.6936H11.6936H11.6936H11.6937H11.6937H11.6937H11.6937H11.6938H11.6938H11.6938H11.6938H11.6938H11.6939H11.6939H11.6939H11.6939H11.6939H11.694H11.694H11.694H11.694H11.694H11.6941H11.6941H11.6941H11.6941H11.6942H11.6942H11.6942H11.6942H11.6942H11.6943H11.6943H11.6943H11.6943H11.6944H11.6944H11.6944H11.6944H11.6944H11.6945H11.6945H11.6945H11.6945H11.6945H11.6946H11.6946H11.6946H11.6946H11.6947H11.6947H11.6947H11.6947H11.6948H11.6948H11.6948H11.6948H11.6949H11.6949H11.6949H11.6949H11.695H11.695H11.695H11.695H11.6951H11.6951H11.6951H11.6951H11.6952H11.6952H11.6952H11.6952H11.6953H11.6953H11.6953H11.6953H11.6954H11.6954H11.6954H11.6955H11.6955H11.6955H11.6955H11.6956H11.6956H11.6956H11.6956H11.6957H11.6957H11.6957H11.6958H11.6958H11.6958H11.6958H11.6959H11.6959H11.6959H11.6959H11.696H11.696H11.696H11.696H11.6961H11.6961H11.6961H11.6961H11.6962H11.6962H11.6962H11.6962H11.6963H11.6963H11.6963H11.6963H11.6964H11.6964H11.6964H11.6964H11.6965H11.6965H11.6965H11.6965H11.6966H11.6966H11.6966H11.6966H11.6967H11.6967H11.6967H11.6967H11.6968H11.6968H11.6968H11.6968H11.6969H11.6969H11.6969H11.6969H11.697H11.697H11.697H11.697H11.6971H11.6971H11.6971H11.6971H11.6972H11.6972H11.6972H11.6972H11.6972H11.6973H11.6973H11.6973H11.6974H11.6974H11.6974H11.6974H11.6975H11.6975H11.6975H11.6975H11.6975H11.6976H11.6976H11.6976H11.6977H11.6977H11.6977H11.6977H11.6978H11.6978H11.6978H11.6978H11.6979H11.6979H11.6979H11.6979H11.698H11.698H11.698H11.698H11.6981H11.6981H11.6981H11.6982H11.6982H11.6982H11.6982H11.6983H11.6983H11.6983H11.6983H11.6984H11.6984H11.6984H11.6985H11.6985H11.6985H11.6985H11.6986H11.6986H11.6986H11.6986H11.6987H11.6987H11.6987H11.6987H11.6988H11.6988H11.6988H11.6988H11.6989H11.6989H11.6989H11.6989H11.6989H11.699H11.699H11.699H11.699H11.6991H11.6991H11.6991H11.6991H11.6992H11.6992H11.6992H11.6992H11.6992H11.6993H11.6993H11.6993H11.6993H11.6993H11.6994H11.6994H11.6994H11.6994H11.6995H11.6995H11.6995H11.6995H11.6995H11.6996H11.6996H11.6996H11.6996H11.6997H11.6997H11.6997H11.6997H11.6997H11.6998H11.6998H11.6998H11.6998H11.6998H11.6999H11.6999H11.6999H11.6999H11.6999H11.7H11.7H11.7H11.7H11.7001H11.7001H11.7001H11.7001H11.7002H11.7002H11.7002H11.7002H11.7002H11.7003L11.7003 31V31.25L11.7022 31.25C12.0959 31.2469 12.4596 31.039 12.6618 30.7012C12.6618 30.7012 12.6618 30.7012 12.6618 30.7012L20.8206 17.0788L20.8207 17.0786C21.8172 15.4112 22.3438 13.4984 22.3438 11.5469C22.3438 5.59326 17.5005 0.75 11.5469 0.75C5.59326 0.75 0.75 5.59326 0.75 11.5469C0.75 13.558 1.30713 15.5212 2.3618 17.2245Z" stroke="black" stroke-opacity="0.75" stroke-width="0.5"/>
-<path d="M11.5469 6.27344C8.6391 6.27344 6.27344 8.6391 6.27344 11.5469C6.27344 14.4361 8.60061 16.8203 11.5469 16.8203C14.5295 16.8203 16.8203 14.4043 16.8203 11.5469C16.8203 8.6391 14.4546 6.27344 11.5469 6.27344ZM11.5469 15.0742C9.59822 15.0742 8.01953 13.4903 8.01953 11.5469C8.01953 9.60836 9.60836 8.01953 11.5469 8.01953C13.4854 8.01953 15.0684 9.60836 15.0684 11.5469C15.0684 13.4619 13.5264 15.0742 11.5469 15.0742Z" fill="black" fill-opacity="0.75"/>
-<path d="M11.5469 6.02344C8.50103 6.02344 6.02344 8.50103 6.02344 11.5469C6.02344 14.5724 8.46077 17.0703 11.5469 17.0703C14.6714 17.0703 17.0703 14.5385 17.0703 11.5469C17.0703 8.50103 14.5927 6.02344 11.5469 6.02344ZM11.5469 14.8242C9.73654 14.8242 8.26953 13.3524 8.26953 11.5469C8.26953 9.74643 9.74643 8.26953 11.5469 8.26953C13.3468 8.26953 14.8184 9.74589 14.8184 11.5469C14.8184 13.3274 13.3848 14.8242 11.5469 14.8242Z" stroke="black" stroke-opacity="0.75" stroke-width="0.5"/>
-</svg>
-              <div class="footer-footer-item-block__item-desc">
-                <div class="footer-footer-item-block__item-desc__title">Наш офис:</div>
-                <div class="footer-footer-item-block__item-desc__text">Преображенская площадь <br>1-я улица Бухвостова, 12/11к20</div>
-              </div>
-            </div>
-            <div class="footer-footer-item-block__item"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 30C6.7155 30 0 23.2845 0 15C0 6.7155 6.7155 0 15 0C23.2845 0 30 6.7155 30 15C30 23.2845 23.2845 30 15 30ZM15 27C18.1826 27 21.2348 25.7357 23.4853 23.4853C25.7357 21.2348 27 18.1826 27 15C27 11.8174 25.7357 8.76515 23.4853 6.51472C21.2348 4.26428 18.1826 3 15 3C11.8174 3 8.76515 4.26428 6.51472 6.51472C4.26428 8.76515 3 11.8174 3 15C3 18.1826 4.26428 21.2348 6.51472 23.4853C8.76515 25.7357 11.8174 27 15 27ZM16.5 15H22.5V18H13.5V7.5H16.5V15Z" fill="black" fill-opacity="0.75"/>
-</svg>
-              <div class="footer-footer-item-block__item-desc">
-                <div class="footer-footer-item-block__item-desc__title">Пн-Пт</div>
-                <div class="footer-footer-item-block__item-desc__text">с 10:00 до 22:00</div>
-                <div class="footer-footer-item-block__item-desc__title">Сб</div>
-                <div class="footer-footer-item-block__item-desc__text">с 10:00 до 22:00</div>
-              </div>
-            </div>
-            <div class="footer-footer-item-block__item"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10.61 12.8033C12.1739 15.5508 14.4492 17.8261 17.1967 19.39L18.67 17.3267C18.9069 16.9949 19.2572 16.7615 19.6547 16.6706C20.0521 16.5796 20.4691 16.6376 20.8267 16.8333C23.1839 18.1215 25.787 18.8963 28.465 19.1067C28.883 19.1398 29.2731 19.3292 29.5576 19.6372C29.8421 19.9452 30.0001 20.3491 30 20.7683V28.205C30.0001 28.6177 29.8471 29.0157 29.5706 29.322C29.2941 29.6284 28.9138 29.8212 28.5033 29.8633C27.62 29.955 26.73 30 25.8333 30C11.5667 30 0 18.4333 0 4.16667C0 3.27 0.045 2.38 0.136667 1.49667C0.178758 1.08616 0.371641 0.705868 0.677983 0.42939C0.984325 0.152912 1.38234 -8.89296e-05 1.795 3.87788e-08H9.23167C9.65094 -5.25309e-05 10.0548 0.157919 10.3628 0.442418C10.6708 0.726917 10.8602 1.11704 10.8933 1.535C11.1037 4.21299 11.8785 6.81613 13.1667 9.17333C13.3624 9.53094 13.4204 9.9479 13.3294 10.3453C13.2385 10.7427 13.0051 11.0931 12.6733 11.33L10.61 12.8033ZM6.40667 11.7083L9.57333 9.44667C8.67464 7.50682 8.05892 5.44807 7.745 3.33333H3.35C3.34 3.61 3.335 3.88833 3.335 4.16667C3.33333 16.5933 13.4067 26.6667 25.8333 26.6667C26.1117 26.6667 26.39 26.6617 26.6667 26.65V22.255C24.5519 21.9411 22.4932 21.3254 20.5533 20.4267L18.2917 23.5933C17.3811 23.2395 16.4967 22.8218 15.645 22.3433L15.5483 22.2883C12.2793 20.4279 9.57213 17.7207 7.71167 14.4517L7.65667 14.355C7.17818 13.5033 6.76047 12.6189 6.40667 11.7083Z" fill="black" fill-opacity="0.75"/>
-</svg>
-              <div class="footer-footer-item-block__item-desc">
-                <div class="footer-footer-item-block__item-desc__title">Контакты:</div>
-                <div class="footer-footer-item-block__item-desc__text">+7 (495) 740-24-49</div>
-                <div class="footer-footer-item-block__item-desc__text">+7 (926) 702-41-70</div>
-                <div class="footer-footer-item-block__item-desc__text">+7 (926) 702-41-70</div>
-                <div class="footer-footer-item-block__item-desc__text">+7 (977) 688-75-77</div>
-                <div class="footer-footer-item-block__item-desc__text">+7 (968) 372-88-82</div>
-              </div>
-            </div>
-            <div class="footer-footer-item-block__item"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M27.0449 21.542H3.01992C1.34218 21.542 0 20.1998 0 18.5221V3.01992C0 1.34218 1.34218 0 3.01992 0H26.9778C28.6556 0 29.9977 1.34218 29.9977 3.01992V18.5221C30.0648 20.1998 28.6556 21.542 27.0449 21.542ZM3.01992 2.0133C2.48302 2.0133 2.0133 2.48309 2.0133 3.01992V18.5221C2.0133 19.059 2.48309 19.5287 3.01992 19.5287H26.9778C27.5147 19.5287 27.9844 19.0589 27.9844 18.5221V3.01992C27.9844 2.48302 27.5147 2.0133 26.9778 2.0133H3.01992Z" fill="black" fill-opacity="0.75"/>
-<path d="M15.0324 14.4956C14.764 14.4956 14.5626 14.4285 14.3613 14.2271L0.939485 2.34887C0.536813 2.01331 0.469701 1.34225 0.872373 0.939577C1.20793 0.536904 1.87899 0.469792 2.28167 0.872465L15.0323 12.1468L27.783 0.872465C28.1857 0.536904 28.8567 0.536904 29.1923 0.939577C29.5279 1.34225 29.5279 2.01331 29.1252 2.34887L15.7034 14.2271C15.5021 14.3614 15.2337 14.4956 15.0324 14.4956Z" fill="black" fill-opacity="0.75"/>
-<path d="M1.20796 20.6025C0.939508 20.6025 0.671059 20.4682 0.469785 20.2669C0.0671127 19.8642 0.134225 19.1932 0.536898 18.8576L10.0664 9.86502C10.4691 9.46235 11.1401 9.52946 11.4757 9.93213C11.8783 10.3348 11.8112 11.0059 11.4086 11.3414L1.94613 20.334C1.74485 20.4682 1.4764 20.6025 1.20796 20.6025Z" fill="black" fill-opacity="0.75"/>
-<path d="M28.7897 20.6024C28.5213 20.6024 28.32 20.5353 28.1186 20.3339L18.5892 11.3414C18.1865 10.9387 18.1865 10.3347 18.5221 9.93206C18.9248 9.52939 19.5287 9.52939 19.9314 9.86495L29.4609 18.8575C29.8635 19.2602 29.8635 19.8642 29.528 20.2668C29.3266 20.4682 29.0582 20.6024 28.7897 20.6024Z" fill="black" fill-opacity="0.75"/>
-</svg>
-              <div class="footer-footer-item-block__item-desc">
-                <div class="footer-footer-item-block__item-desc__title">Почта:</div>
-                <div class="footer-footer-item-block__item-desc__text">reklama-grad@mail.ru</div>
-              </div>
-            </div>
-            <div class="footer-footer-item-block__item"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.0628 0H8.93716C4.00919 0 0 4.00919 0 8.93716V21.0628C0 25.9908 4.00919 30 8.93716 30H21.0628C25.9908 30 30 25.9908 30 21.0628V8.93716C29.9999 4.00919 25.9908 0 21.0628 0ZM26.982 21.0628C26.982 24.3319 24.3319 26.982 21.0628 26.982H8.93716C5.66813 26.982 3.018 24.3319 3.018 21.0628V8.93716C3.018 5.66807 5.66813 3.018 8.93716 3.018H21.0628C24.3319 3.018 26.982 5.66807 26.982 8.93716V21.0628Z" fill="url(#paint0_linear)"/>
-<path d="M15 7.24097C10.7216 7.24097 7.24094 10.7217 7.24094 15C7.24094 19.2783 10.7216 22.759 15 22.759C19.2784 22.759 22.7591 19.2783 22.7591 15C22.7591 10.7216 19.2784 7.24097 15 7.24097ZM15 19.7411C12.3816 19.7411 10.2589 17.6185 10.2589 15C10.2589 12.3816 12.3816 10.259 15 10.259C17.6184 10.259 19.7411 12.3816 19.7411 15C19.7411 17.6184 17.6184 19.7411 15 19.7411Z" fill="url(#paint1_linear)"/>
-<path d="M22.7741 9.15841C23.8009 9.15841 24.6333 8.326 24.6333 7.29917C24.6333 6.27235 23.8009 5.43994 22.7741 5.43994C21.7473 5.43994 20.9149 6.27235 20.9149 7.29917C20.9149 8.326 21.7473 9.15841 22.7741 9.15841Z" fill="url(#paint2_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="15" y1="29.9127" x2="15" y2="0.233015" gradientUnits="userSpaceOnUse">
-<stop stop-color="#E09B3D"/>
-<stop offset="0.3" stop-color="#C74C4D"/>
-<stop offset="0.6" stop-color="#C21975"/>
-<stop offset="1" stop-color="#7024C4"/>
-</linearGradient>
-<linearGradient id="paint1_linear" x1="15" y1="29.9127" x2="15" y2="0.233051" gradientUnits="userSpaceOnUse">
-<stop stop-color="#E09B3D"/>
-<stop offset="0.3" stop-color="#C74C4D"/>
-<stop offset="0.6" stop-color="#C21975"/>
-<stop offset="1" stop-color="#7024C4"/>
-</linearGradient>
-<linearGradient id="paint2_linear" x1="22.7741" y1="29.9127" x2="22.7741" y2="0.233002" gradientUnits="userSpaceOnUse">
-<stop stop-color="#E09B3D"/>
-<stop offset="0.3" stop-color="#C74C4D"/>
-<stop offset="0.6" stop-color="#C21975"/>
-<stop offset="1" stop-color="#7024C4"/>
-</linearGradient>
-</defs>
-</svg>
-              <div class="footer-footer-item-block__item-desc">
-                <div class="footer-footer-item-block__item-desc__title">reklama_grad</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </section>
+    <footer class="footer"><a class="footer__home" href="/">Мастерская<br>путешествий</a>
+      <div class="footer-linklist"><a class="footer-linklist__link" href="#">Контакты</a><a class="footer-linklist__link" href="#">О компании</a><a class="footer-linklist__link" href="#">Приятные предложения</a></div>
+      <p class="footer__allright">Все права защищены</p>
     </footer>
   </body>
 </html>
