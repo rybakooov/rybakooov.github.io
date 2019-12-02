@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Days+One|Rubik&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="icon" href="assets/images/favicon.png"/>
+    <meta property="og:image" content="assets/images/@1x/preview.jpg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/wow.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/first-developer-script.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4a1ed107-792c-45d4-b593-9aebaea3d8c9&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Нижегородский ЦСМ
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo header__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="header__info"><a class="header__gumburger"></a>
+              <div class="d-none d-md-block header__phone"><a href="+78002002214"><span>8 800 200-22-14</span></a></div>
+              <div class="d-none d-md-block header__mail"><a href="mailto:mail@nncsm.ru"><span>Связь с нами</span></a></div>
+              <div class="d-none d-md-block d-xl-none header__search--mobile"><a href=""></a></div>
+              <div class="header__login"><a href=""><span>Личный кабинет</span></a></div>
+            </div>
+          </div>
+          <div class="col-xl-9">
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item menu-item--close"><img src="assets/images/cross_icon.svg" alt=""/></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">О центре</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">История</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Структура</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Документы</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Услуги</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Метрология</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Конкурсы</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Новости</a></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Обратная связь</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">FAQ</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+                <li class="menu__item menu__item--social"><a class="menu__link menu__item--social_link" href=""><img src="assets/images/phone_icon.svg" alt=""/></a><a class="menu__link menu__item--social_link" href=""><img src="assets/images/email_icon.svg" alt=""/></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-8 col-md-3">
+            <div class="search header__search">
+              <form class="search__form" action="">
+                <input class="search__input" type="search" name="search" placeholder="Поиск по сайту..."/>
+                <button class="search__button" type="submit"><img class="serach__img" src="assets/images/search_icon.svg" alt=""/></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="about-banner"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/p7IrFPGQrCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="about-banner-block">
+        <div class="breadcrumbs"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">О центре</a></div>
+        <div class="about-banner-block-wrap">
+          <div class="about-banner-block__title">О центре<a href="https://www.youtube-nocookie.com/embed/p7IrFPGQrCo?rel=0" data-fancybox="video"><svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M61 51C61 56.5228 56.5228 61 51 61L10 61C4.47715 61 -3.42329e-06 56.5228 -2.94047e-06 51L6.43864e-07 10C1.12669e-06 4.47715 4.47716 -1.12669e-06 10 -6.43865e-07L51 2.94047e-06C56.5229 3.42329e-06 61 4.47716 61 10L61 51Z" fill="white" fill-opacity="0.6"/>
+<g filter="url(#filter0_d)">
+<path d="M21.1374 15.193L44.6987 28.796C45.6485 29.3444 45.6485 30.7157 44.6987 31.264L21.1374 44.867C20.1877 45.4154 19 44.7298 19 43.633V16.427C19 15.3302 20.1871 14.6446 21.1374 15.193Z" fill="#50BCD6"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="15" y="15" width="34.411" height="38.06" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<clipPath id="clip0">
+<rect width="61" height="61" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></div>
+          <p class="about-banner-block__text">ФБУ «Нижегородский ЦСМ» — государственный региональный центр стандартизации, метрологии и сертификации в Нижегородской области, осуществляет полномочия Федерального агентства по техническому регулированию и метрологии в целях реализации государственной политики в сфере стандартизации, обеспечения единства измерений, оценки компетентности в пределах функций, определенных Уставом.</p>
+        </div>
+      </div>
+    </div>
+    <section class="sect-services">
+      <div class="tabs-menu-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="tabs-menu">
+                <ul class="tabs-menu__slider">
+                  <li class="tabs-menu__item tabs-menu__item--active" data-tabindex="0"><span>Метрология</span>
+                    <ul class="tabs-menu__submenu">
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Проверка</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Калибровка</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Аттестация методик (методов) измерений, метрологическая экспертиза документов</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания средств измерений в целях утверждения типа</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Метрологический контроль систем измерения параметров транспортных средств в движении</a></li>
+                    </ul>
+                  </li>
+                  <li class="tabs-menu__item" data-tabindex="1"><span>Испытание</span>
+                    <ul class="tabs-menu__submenu">
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Техническая экспертиза конструкции колесных транспортных средств</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания продукции пищевой промышленности</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания продукции легкой промышленности и средств индивидуальной защиты</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания по электромагнитной совместимости технических средств</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания нефти и продуктов нефтепереработки</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания мебели</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания бытовой техники и электроники, низковольтного оборудования</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания тепловых сетей по определению фактических потерь тепловой энергии</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Исследования показателей качества электрической энергии в электрических сетях общего назначения</a></li>
+                    </ul>
+                  </li>
+                  <li class="tabs-menu__item" data-tabindex="2"><span>Подтверждение соответствия</span>
+                    <ul class="tabs-menu__submenu">
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация продукции и услуг и регистрация деклараций о соответствии</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация в национальной системе сертификации</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация систем ХАССП</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация продукции без искусственных компонентов и ГМО</a></li>
+                      <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация систем менеджмента качества, экологического менеджмента, безопасности труда и охраны здоровья</a></li>
+                    </ul>
+                  </li>
+                  <li class="tabs-menu__item" data-tabindex="3"><a class="tabs-menu__link" href=""><span>Аттестация испытательного оборудования</span></a></li>
+                  <li class="tabs-menu__item" data-tabindex="4"><a class="tabs-menu__link" href=""><span>Оценка состояния измерений</span></a></li>
+                  <li class="tabs-menu__item" data-tabindex="5"><a class="tabs-menu__link" href=""><span>Производство стандартных образцов</span></a></li>
+                  <li class="tabs-menu__item" data-tabindex="6"><a class="tabs-menu__link" href=""><span>Узлы учета энергоресурсов</span></a></li>
+                  <li class="tabs-menu__item" data-tabindex="7"><a class="tabs-menu__link" href=""><span>Межлабораторные сличительные испытания (МСИ)</span></a></li>
+                  <li class="tabs-menu__item" data-tabindex="8"><a class="tabs-menu__link" href=""><span>Инструментальный контроль технического состояния изделий медицинской техники</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="tabs-menu__dots">
+              <ul class="slick-dots">
+                <li class="toggle-slick slick-active" data-slide="0"></li>
+                <li class="toggle-slick" data-slide="1"></li>
+                <li class="toggle-slick" data-slide="2"></li>
+                <li class="toggle-slick" data-slide="3"></li>
+                <li class="toggle-slick" data-slide="4"></li>
+                <li class="toggle-slick" data-slide="5"></li>
+                <li class="toggle-slick" data-slide="6"></li>
+                <li class="toggle-slick" data-slide="7"></li>
+                <li class="toggle-slick" data-slide="8"></li>
+              </ul>
+            </div>
+            <div class="tabs-menu-cont sect-services__tabs-menu-cont">
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Проверка</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Калибровка</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Аттестация методик (методов) измерений, метрологическая экспертиза документов</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания средств измерений в целях утверждения типа</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Метрологический контроль систем измерения параметров транспортных средств в движении</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Техническая экспертиза конструкции колесных транспортных средств</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания продукции пищевой промышленности</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания продукции легкой промышленности и средств индивидуальной защиты</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания по электромагнитной совместимости технических средств</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания нефти и продуктов нефтепереработки</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания мебели</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания бытовой техники и электроники, низковольтного оборудования</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания тепловых сетей по определению фактических потерь тепловой энергии</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Исследования показателей качества электрической энергии в электрических сетях общего назначения</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация продукции и услуг и регистрация деклараций о соответствии</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация в национальной системе сертификации</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация систем ХАССП</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация продукции без искусственных компонентов и ГМО</a></li>
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация систем менеджмента качества, экологического менеджмента, безопасности труда и охраны здоровья</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Аттестация испытательного оборудования</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Оценка состояния измерений</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Производство стандартных образцов</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Узлы учета энергоресурсов</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Межлабораторные сличительные испытания (МСИ)</a></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont__div">
+                <ul class="tabs-menu-container">
+                  <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Инструментальный контроль технического состояния изделий медицинской техники</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="directions">
+      <div class="directions-wrap">
+        <h5 class="directions__title">Основные направления деятельности</h5>
+        <div class="directions-block">
+          <div class="directions-block__item">
+            <div class="directions-block__item--imgbox"><img src="assets/images/metrologia.png" alt=""/></div>
+            <p class="directions-block__item__title">Метрология</p>
+            <p class="directions-block__item__text">Поверка бытовых счетчиков воды производится ФБУ «Нижегородский ЦСМ» с выездом специалиста на дом или с доставкой счетчика в бюро приема и выдачи средств измерений.</p><a class="directions-block__item__more" href="#">
+              Узнать больше<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0557 3.75013C13.3358 3.74918 13.6126 3.81099 13.8656 3.93104C14.1187 4.05108 14.3417 4.22629 14.5181 4.44381L23.5735 15.6928C23.8493 16.0282 24 16.449 24 16.8833C24 17.3175 23.8493 17.7383 23.5735 18.0738L14.1994 29.3227C13.8812 29.7056 13.4239 29.9464 12.9281 29.9921C12.4324 30.0378 11.9388 29.8847 11.5559 29.5664C11.173 29.2482 10.9322 28.7909 10.8865 28.2952C10.8408 27.7994 10.9939 27.3058 11.3122 26.9229L19.6926 16.8739L11.5934 6.82484C11.3641 6.54964 11.2185 6.21453 11.1737 5.85916C11.129 5.50379 11.1869 5.14303 11.3408 4.81957C11.4946 4.49611 11.7379 4.22349 12.0418 4.03397C12.3457 3.84444 12.6976 3.74594 13.0557 3.75013Z" fill="#2387AA"/>
+</svg></a>
+          </div>
+          <div class="directions-block__item">
+            <div class="directions-block__item--imgbox"><img src="assets/images/metrologia.png" alt=""/></div>
+            <p class="directions-block__item__title">Метрология</p>
+            <p class="directions-block__item__text">Поверка бытовых счетчиков воды производится ФБУ «Нижегородский ЦСМ» с выездом специалиста на дом или с доставкой счетчика в бюро приема и выдачи средств измерений.</p><a class="directions-block__item__more" href="#">
+              Узнать больше<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0557 3.75013C13.3358 3.74918 13.6126 3.81099 13.8656 3.93104C14.1187 4.05108 14.3417 4.22629 14.5181 4.44381L23.5735 15.6928C23.8493 16.0282 24 16.449 24 16.8833C24 17.3175 23.8493 17.7383 23.5735 18.0738L14.1994 29.3227C13.8812 29.7056 13.4239 29.9464 12.9281 29.9921C12.4324 30.0378 11.9388 29.8847 11.5559 29.5664C11.173 29.2482 10.9322 28.7909 10.8865 28.2952C10.8408 27.7994 10.9939 27.3058 11.3122 26.9229L19.6926 16.8739L11.5934 6.82484C11.3641 6.54964 11.2185 6.21453 11.1737 5.85916C11.129 5.50379 11.1869 5.14303 11.3408 4.81957C11.4946 4.49611 11.7379 4.22349 12.0418 4.03397C12.3457 3.84444 12.6976 3.74594 13.0557 3.75013Z" fill="#2387AA"/>
+</svg></a>
+          </div>
+          <div class="directions-block__item">
+            <div class="directions-block__item--imgbox"><img src="assets/images/metrologia.png" alt=""/></div>
+            <p class="directions-block__item__title">Метрология</p>
+            <p class="directions-block__item__text">Поверка бытовых счетчиков воды производится ФБУ «Нижегородский ЦСМ» с выездом специалиста на дом или с доставкой счетчика в бюро приема и выдачи средств измерений.</p><a class="directions-block__item__more" href="#">
+              Узнать больше<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0557 3.75013C13.3358 3.74918 13.6126 3.81099 13.8656 3.93104C14.1187 4.05108 14.3417 4.22629 14.5181 4.44381L23.5735 15.6928C23.8493 16.0282 24 16.449 24 16.8833C24 17.3175 23.8493 17.7383 23.5735 18.0738L14.1994 29.3227C13.8812 29.7056 13.4239 29.9464 12.9281 29.9921C12.4324 30.0378 11.9388 29.8847 11.5559 29.5664C11.173 29.2482 10.9322 28.7909 10.8865 28.2952C10.8408 27.7994 10.9939 27.3058 11.3122 26.9229L19.6926 16.8739L11.5934 6.82484C11.3641 6.54964 11.2185 6.21453 11.1737 5.85916C11.129 5.50379 11.1869 5.14303 11.3408 4.81957C11.4946 4.49611 11.7379 4.22349 12.0418 4.03397C12.3457 3.84444 12.6976 3.74594 13.0557 3.75013Z" fill="#2387AA"/>
+</svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sect-facts">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h2">Нижегородский ЦСМ в фактах и цифрах</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="facts-round">
+              <div class="progress-circle progress-86"><span>86</span></div>
+              <div class="facts-round__text">ФБУ «Нижегородский ЦСМ» выполняет 86% всех поверочных работ в Нижегородской области.</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="facts-round">
+              <div class="progress-circle progress-65"><span>65</span></div>
+              <div class="facts-round__text">65% испытаний продуктов питания производится в ФБУ «Нижегородский ЦСМ»</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="facts-round">
+              <div class="progress-circle progress-86"><span>86</span></div>
+              <div class="facts-round__text">ФБУ «Нижегородский ЦСМ» выполняет 86% всех поверочных работ в Нижегородской области..</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="facts-round">
+              <div class="progress-circle progress-65"><span>65</span></div>
+              <div class="facts-round__text">65% испытаний продуктов питания производится в ФБУ «Нижегородский ЦСМ»       </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="servers">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <div class="facts-number"><span>1200</span>
+                <p>клиентов</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="facts-number"><span>1650</span>
+                <p>аттестованных эталонов</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="facts-number"><span>25</span>
+                <p>технических регламентов</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="facts-number"><span>1650</span>
+                <p>аттестованных эталонов</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">О центре</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">История</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Структура</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Документы</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Услуги</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Метрология</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <nav class="footer-menu footer-menu--submenu_fix">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Конкурсы</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Новости</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Обратная связь</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">FAQ</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__infoblock">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="logo footer__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+                <p class="footer__copy d-none d-lg-block">© РСТ Нижегородский ЦСМ, 2019</p>
+                <div class="social footer__social footer__social--mobile d-block d-lg-none"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="social footer__social"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="footer__info">
+                  <p>Россия, Нижний Новгород,</p>
+                  <p>603950, ул. Республиканская, 1</p><br/>
+                  <p><a href="+78002002214">8 800 200-22-14</a></p>
+                  <p><a href="mailto:mail@nncsm.ru">mail@nncsm.ru</a></p>
+                  <p class="footer__copy d-block d-md-block d-lg-none">© РСТ Нижегородский ЦСМ, 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

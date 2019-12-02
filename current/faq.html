@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Days+One|Rubik&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="icon" href="assets/images/favicon.png"/>
+    <meta property="og:image" content="assets/images/@1x/preview.jpg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/wow.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/first-developer-script.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4a1ed107-792c-45d4-b593-9aebaea3d8c9&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Нижегородский ЦСМ
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo header__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="header__info"><a class="header__gumburger"></a>
+              <div class="d-none d-md-block header__phone"><a href="+78002002214"><span>8 800 200-22-14</span></a></div>
+              <div class="d-none d-md-block header__mail"><a href="mailto:mail@nncsm.ru"><span>Связь с нами</span></a></div>
+              <div class="d-none d-md-block d-xl-none header__search--mobile"><a href=""></a></div>
+              <div class="header__login"><a href=""><span>Личный кабинет</span></a></div>
+            </div>
+          </div>
+          <div class="col-xl-9">
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item menu-item--close"><img src="assets/images/cross_icon.svg" alt=""/></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">О центре</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">История</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Структура</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Документы</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Услуги</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Метрология</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Конкурсы</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Новости</a></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Обратная связь</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">FAQ</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+                <li class="menu__item menu__item--social"><a class="menu__link menu__item--social_link" href=""><img src="assets/images/phone_icon.svg" alt=""/></a><a class="menu__link menu__item--social_link" href=""><img src="assets/images/email_icon.svg" alt=""/></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-8 col-md-3">
+            <div class="search header__search">
+              <form class="search__form" action="">
+                <input class="search__input" type="search" name="search" placeholder="Поиск по сайту..."/>
+                <button class="search__button" type="submit"><img class="serach__img" src="assets/images/search_icon.svg" alt=""/></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="subheader">
+      <div class="subheader-wrap">
+        <div class="breadcrumbs"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">О центре</a><a class="breadcrumbs__link" href="#">FAQ</a></div>
+        <div class="subheader-wrap__title">FAQ</div>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-top">
+            <div class="faq-item-top__title">Как можно получить информацию о соблюдении требований технических регламентов? Как осуществляется информирование?</div>
+            <div class="faq-item-top__btn">
+               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.4851 16.1111H6.51492C5.67825 16.1111 5 16.7893 5 17.626V17.7855C5 18.6221 5.67825 19.3004 6.51492 19.3004H28.4851C29.3217 19.3004 30 18.6221 30 17.7855V17.626C30 16.7893 29.3217 16.1111 28.4851 16.1111Z" fill="#697882"/>
+<path d="M16.1111 6.51492L16.1111 28.4851C16.1111 29.3217 16.7893 30 17.626 30L17.7855 30C18.6221 30 19.3004 29.3217 19.3004 28.4851L19.3004 6.51492C19.3004 5.67825 18.6221 5 17.7855 5L17.626 5C16.7893 5 16.1111 5.67825 16.1111 6.51492Z" fill="#697882"/>
+</svg>
+            </div>
+          </div>
+          <div class="faq-item-main">
+            <p>Лаборатория проводит испытания продукции по подтверждению соответствия требованиям технических регламентов Таможенного союза. Стоимость можно уточнить по телефону 8 800 200-22-14.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="pagination-top">1 - 7 из 20</div>
+      <div class="pagination-bot"><a class="pagination-bot__link" href="#"><span>Начало</span></a>|<a class="pagination-bot__link" href="#"><span>Пред</span></a>|<a class="pagination-bot__link" href="#"><span>1</span></a><a class="pagination-bot__link pagination-bot__link_active" href="#"><span>2</span></a><a class="pagination-bot__link pagination-bot__link_active" href="#"><span>3</span></a><a class="pagination-bot__link pagination-bot__link_active" href="#"><span>4</span></a><a class="pagination-bot__link pagination-bot__link_active" href="#"><span>5</span></a>|<a class="pagination-bot__link pagination-bot__link_active" href="#"><span>След</span></a>|<a class="pagination-bot__link pagination-bot__link_active" href="#"><span>Конец</span></a>|<a class="pagination-bot__link pagination-bot__link_active" href="#"><span>Все</span></a></div>
+    </div>
+    <section class="sect-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h2 sect-news__h2">Связаться с нами</h2>
+          </div>
+        </div>
+      </div>
+      <div class="form-sect">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="h3 form-sect__h3">Задать вопрос специалисту</h3>
+            </div>
+          </div>
+        </div>
+        <form class="form" action="">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" name="Имя" placeholder="Ваше имя"/>
+                <input type="text" name="Телефон" placeholder="+7 (____) ___-__-__"/>
+                <input type="text" name="Email" placeholder="E-mail"/>
+                <div class="form__confirm">
+                  <p>Нажимая кнопку «Отправить» вы даете согласие на <a target="_blank" href="">обработку персональных данных</a>.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <textarea name="textarea" placeholder="Сообщение"></textarea>
+                <div class="form__textarea-footer">
+                  <button class="btn btn--blue form__btn"><span class="buttor__inner"><span class="button__icon">Отправить</span></span></button>
+                  <div class="form__captcha"><img src="assets/images/@2x/reCAPTCHA.jpg" alt=""/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">О центре</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">История</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Структура</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Документы</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Услуги</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Метрология</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <nav class="footer-menu footer-menu--submenu_fix">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Конкурсы</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Новости</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Обратная связь</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">FAQ</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__infoblock">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="logo footer__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+                <p class="footer__copy d-none d-lg-block">© РСТ Нижегородский ЦСМ, 2019</p>
+                <div class="social footer__social footer__social--mobile d-block d-lg-none"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="social footer__social"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="footer__info">
+                  <p>Россия, Нижний Новгород,</p>
+                  <p>603950, ул. Республиканская, 1</p><br/>
+                  <p><a href="+78002002214">8 800 200-22-14</a></p>
+                  <p><a href="mailto:mail@nncsm.ru">mail@nncsm.ru</a></p>
+                  <p class="footer__copy d-block d-md-block d-lg-none">© РСТ Нижегородский ЦСМ, 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Days+One|Rubik&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="icon" href="assets/images/favicon.png"/>
+    <meta property="og:image" content="assets/images/@1x/preview.jpg"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/wow.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/first-developer-script.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4a1ed107-792c-45d4-b593-9aebaea3d8c9&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Нижегородский ЦСМ
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo header__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="header__info"><a class="header__gumburger"></a>
+              <div class="d-none d-md-block header__phone"><a href="+78002002214"><span>8 800 200-22-14</span></a></div>
+              <div class="d-none d-md-block header__mail"><a href="mailto:mail@nncsm.ru"><span>Связь с нами</span></a></div>
+              <div class="d-none d-md-block d-xl-none header__search--mobile"><a href=""></a></div>
+              <div class="header__login"><a href=""><span>Личный кабинет</span></a></div>
+            </div>
+          </div>
+          <div class="col-xl-9">
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item menu-item--close"><img src="assets/images/cross_icon.svg" alt=""/></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">О центре</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">История</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Структура</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Документы</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Услуги</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Метрология</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Конкурсы</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Новости</a></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Обратная связь</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">FAQ</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+                <li class="menu__item menu__item--social"><a class="menu__link menu__item--social_link" href=""><img src="assets/images/phone_icon.svg" alt=""/></a><a class="menu__link menu__item--social_link" href=""><img src="assets/images/email_icon.svg" alt=""/></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-8 col-md-3">
+            <div class="search header__search">
+              <form class="search__form" action="">
+                <input class="search__input" type="search" name="search" placeholder="Поиск по сайту..."/>
+                <button class="search__button" type="submit"><img class="serach__img" src="assets/images/search_icon.svg" alt=""/></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="subheader">
+      <div class="subheader-wrap">
+        <div class="breadcrumbs"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">О центре</a><a class="breadcrumbs__link" href="#">28.10.2019</a></div>
+        <div class="subheader-wrap__title">28.10.2019</div>
+      </div>
+    </div>
+    <div class="one-news">
+      <h1 class="one-news__title">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</h1>
+      <div class="one-news-top">
+        <div class="one-news-top-imgbox"><img src="assets/images/one-news.png" alt=""/></div>
+        <div class="one-news-top-linkbox">
+          <p>Поделиться:<a href="#"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M25.8622 18.9798C25.8307 18.912 25.8013 18.8557 25.7741 18.8106C25.323 17.9982 24.4609 17.001 23.1885 15.8187L23.1616 15.7916L23.1481 15.7783L23.1345 15.7647H23.1209C22.5434 15.2142 22.1777 14.844 22.0245 14.6545C21.7443 14.2935 21.6815 13.9281 21.8347 13.5578C21.9429 13.2781 22.3493 12.6873 23.053 11.7847C23.4232 11.3063 23.7163 10.9229 23.9328 10.6341C25.4942 8.55827 26.1712 7.23181 25.9635 6.65416L25.8828 6.51917C25.8286 6.4379 25.6888 6.36356 25.4634 6.29576C25.2375 6.22809 24.9488 6.21691 24.5968 6.262L20.6982 6.28893C20.635 6.26655 20.5448 6.26863 20.4274 6.29576C20.31 6.32288 20.2513 6.33648 20.2513 6.33648L20.1835 6.37039L20.1296 6.41111C20.0845 6.43805 20.0348 6.48541 19.9806 6.55312C19.9267 6.62059 19.8816 6.69977 19.8456 6.79C19.4211 7.882 18.9385 8.89728 18.3969 9.8358C18.063 10.3954 17.7563 10.8804 17.4762 11.2911C17.1965 11.7016 16.9619 12.0041 16.7725 12.1979C16.5829 12.392 16.4117 12.5475 16.258 12.6649C16.1045 12.7824 15.9873 12.8321 15.9062 12.8139C15.8249 12.7957 15.7483 12.7777 15.6758 12.7597C15.5496 12.6784 15.448 12.5679 15.3714 12.428C15.2945 12.2882 15.2427 12.1121 15.2157 11.9C15.1887 11.6878 15.1728 11.5053 15.1683 11.3518C15.164 11.1985 15.166 10.9817 15.1751 10.7019C15.1845 10.422 15.1887 10.2327 15.1887 10.1334C15.1887 9.79038 15.1954 9.41813 15.2088 9.01653C15.2225 8.61493 15.2335 8.29673 15.2428 8.06232C15.252 7.82766 15.2563 7.5794 15.2563 7.31768C15.2563 7.05595 15.2403 6.85069 15.2088 6.70172C15.1777 6.55293 15.13 6.40851 15.0671 6.26849C15.0038 6.12862 14.9111 6.02042 14.7896 5.94361C14.6678 5.86689 14.5163 5.80601 14.3361 5.76078C13.8577 5.65253 13.2486 5.59398 12.5084 5.58487C10.8299 5.56686 9.75136 5.67524 9.27305 5.9099C9.08353 6.00904 8.91204 6.1445 8.7587 6.31586C8.59621 6.51448 8.57355 6.62287 8.69085 6.64069C9.23242 6.72182 9.61581 6.91589 9.84145 7.2227L9.92277 7.38529C9.98602 7.50259 10.0492 7.71027 10.1124 8.00803C10.1755 8.30579 10.2162 8.63518 10.2341 8.996C10.2792 9.65492 10.2792 10.219 10.2341 10.6882C10.189 11.1576 10.1463 11.523 10.1055 11.7847C10.0648 12.0464 10.0039 12.2585 9.92277 12.4209C9.84145 12.5834 9.78735 12.6827 9.76023 12.7187C9.73316 12.7547 9.71059 12.7774 9.69267 12.7863C9.57536 12.8313 9.45337 12.8542 9.3271 12.8542C9.20065 12.8542 9.04731 12.7909 8.86685 12.6645C8.68644 12.5381 8.4992 12.3645 8.30513 12.1434C8.11107 11.9222 7.8922 11.6131 7.64845 11.216C7.40488 10.819 7.15216 10.3497 6.89043 9.80825L6.67389 9.41557C6.53852 9.16294 6.35361 8.7951 6.11896 8.31238C5.88416 7.82947 5.67663 7.36234 5.49622 6.9111C5.4241 6.72158 5.31576 6.5773 5.17138 6.47802L5.10363 6.43729C5.05858 6.40125 4.98628 6.36299 4.88708 6.32221C4.78775 6.28148 4.6841 6.25228 4.57572 6.23431L0.866543 6.26124C0.487514 6.26124 0.230339 6.3471 0.0949234 6.5186L0.0407289 6.59973C0.0136553 6.64491 0 6.71708 0 6.81641C0 6.9157 0.0270736 7.03755 0.0812681 7.18183C0.622739 8.45443 1.21158 9.68175 1.84778 10.864C2.48399 12.0462 3.03684 12.9985 3.506 13.7201C3.97526 14.4421 4.45358 15.1236 4.94095 15.7642C5.42832 16.405 5.75093 16.8157 5.90877 16.9961C6.0668 17.1768 6.19093 17.3119 6.28116 17.4022L6.61965 17.727C6.83624 17.9436 7.15429 18.2031 7.57396 18.5054C7.99372 18.8078 8.45842 19.1056 8.96832 19.3991C9.4783 19.6922 10.0716 19.9313 10.7485 20.1163C11.4254 20.3015 12.0841 20.3758 12.725 20.3399H14.2818C14.5975 20.3127 14.8367 20.2134 14.9993 20.042L15.0531 19.9742C15.0894 19.9203 15.1233 19.8366 15.1546 19.724C15.1862 19.6112 15.202 19.4869 15.202 19.3518C15.1927 18.9638 15.2223 18.6141 15.2898 18.3028C15.3572 17.9915 15.4342 17.7569 15.5202 17.5988C15.6061 17.441 15.7031 17.3077 15.8111 17.1997C15.9193 17.0915 15.9964 17.0259 16.0416 17.0033C16.0866 16.9806 16.1225 16.9652 16.1495 16.956C16.3661 16.8838 16.621 16.9537 16.9146 17.166C17.208 17.378 17.4831 17.6399 17.7405 17.9511C17.9977 18.2626 18.3067 18.6121 18.6677 19.0001C19.0288 19.3883 19.3446 19.6768 19.6152 19.8666L19.8859 20.029C20.0666 20.1374 20.3013 20.2367 20.5901 20.3269C20.8785 20.4171 21.1311 20.4397 21.348 20.3946L24.8134 20.3405C25.1561 20.3405 25.4228 20.2838 25.612 20.1712C25.8016 20.0584 25.9142 19.9341 25.9505 19.7989C25.9867 19.6636 25.9887 19.5101 25.9574 19.3384C25.9253 19.1672 25.8937 19.0475 25.8622 18.9798Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="26" height="26" fill="white"/>
+</clipPath>
+</defs>
+</svg></a><a href="#"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5048 13.0839V22.3936C10.5048 22.5194 10.6097 22.6452 10.7565 22.6452H14.2161C14.3419 22.6452 14.4677 22.5403 14.4677 22.3936V12.9161H16.9629C17.0887 12.9161 17.1936 12.8113 17.2145 12.6855L17.4242 9.85486C17.4452 9.70808 17.3194 9.58227 17.1726 9.58227H14.4468V7.56937C14.4468 7.08711 14.8242 6.70969 15.3065 6.70969H17.2355C17.3613 6.70969 17.4871 6.60486 17.4871 6.45808V3.62744C17.4871 3.50163 17.3823 3.37582 17.2355 3.37582H13.9645C12.0565 3.37582 10.5048 4.92744 10.5048 6.8355V9.58227H8.78549C8.65968 9.58227 8.53387 9.68711 8.53387 9.83389V12.6855C8.53387 12.8113 8.63871 12.9371 8.78549 12.9371H10.5048V13.0839Z" fill="white"/>
+</svg></a><a href="#"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.2887 7.67419C21.7016 7.94677 21.0306 8.11451 20.4016 8.21935C20.7161 8.17742 21.1564 7.61129 21.3452 7.40161C21.6177 7.06613 21.8484 6.66774 21.9742 6.24838C21.9952 6.20645 21.9952 6.16451 21.9742 6.14355C21.9323 6.12258 21.9113 6.14355 21.8693 6.14355C21.1564 6.52097 20.4226 6.81451 19.6258 7.00322C19.5629 7.02419 19.521 7.00322 19.479 6.96129C19.4161 6.87742 19.3532 6.81451 19.2903 6.75161C18.9548 6.47903 18.5984 6.24839 18.2 6.08064C17.6758 5.87097 17.0887 5.76613 16.5226 5.80806C15.9774 5.85 15.4323 5.99677 14.95 6.24838C14.4677 6.5 14.0274 6.85645 13.671 7.29677C13.3145 7.73709 13.0419 8.26129 12.9161 8.82742C12.7903 9.37258 12.7903 9.89677 12.8742 10.4419C12.8952 10.5258 12.8742 10.5468 12.7903 10.5258C9.68709 10.0855 7.12902 8.99516 5.05322 6.6258C4.96935 6.52097 4.90644 6.52097 4.84354 6.6258C3.94193 7.98871 4.38225 10.1694 5.51451 11.2597C5.66128 11.4065 5.82903 11.5532 5.99677 11.679C5.93386 11.7 5.17903 11.6161 4.50806 11.2597C4.42419 11.1968 4.38225 11.2387 4.36128 11.3435C4.36128 11.4903 4.36128 11.6161 4.38225 11.7839C4.54999 13.1677 5.51451 14.4468 6.81451 14.929C6.96128 14.9919 7.14999 15.0548 7.31773 15.0758C7.02419 15.1387 6.70967 15.1806 5.84999 15.1177C5.74515 15.0968 5.70322 15.1597 5.74515 15.2435C6.37419 17.0048 7.75806 17.529 8.80644 17.8226C8.95322 17.8435 9.07902 17.8435 9.2258 17.8855C9.2258 17.9065 9.20483 17.9065 9.20483 17.9065C8.86935 18.4306 7.67419 18.829 7.10806 19.0177C6.10161 19.3742 4.99032 19.521 3.92096 19.4161C3.75322 19.3952 3.71128 19.3952 3.66935 19.4161C3.62741 19.4371 3.66935 19.479 3.71128 19.521C3.92096 19.6677 4.15161 19.7935 4.38225 19.9194C5.05322 20.2758 5.76612 20.5694 6.49999 20.779C10.3161 21.8274 14.6355 21.0516 17.5081 18.2C19.7516 15.9774 20.5484 12.8952 20.5484 9.79193C20.5484 9.66613 20.6952 9.60322 20.779 9.54032C21.3661 9.1 21.8274 8.5758 22.2677 7.98871C22.3726 7.8629 22.3516 7.73709 22.3516 7.69516V7.67419C22.3516 7.63226 22.3726 7.63226 22.2887 7.67419Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.83386 21.1984C9.83386 21.1564 10.1693 21.1984 9.83386 21.1984C9.83386 21.1774 9.8758 21.1984 9.83386 21.1984Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4597 5.85001C16.4387 5.87097 16.4177 5.87097 16.3758 5.85001C16.3968 5.85001 16.4387 5.85001 16.4597 5.85001Z" fill="white"/>
+</svg></a></p>
+        </div>
+      </div>
+      <div class="one-news-main">
+        <div class="one-news-main-wrap">
+          <p class="one-news-main__text">24 октября депутаты Законодательного Собрания Нижегородской области приняли в двух чтениях изменения в закон «Об областном бюджете на 2019 год и на плановый период 2020 и 2021 годов» в части предоставления новой субсидии региональным предприятиям. </p>
+          <p class="one-news-main__text">Законопроектом предусмотрено перераспределение бюджетных ассигнований в рамках госпрограммы «Развитие предпринимательства Нижегородской области» в сумме 3 млн. рублей на предоставление новой субсидии на возмещение части затрат промышленным предприятиям, связанных с оплатой услуг по добровольной сертификации. В том числе в рамках федерального проекта «Национальная система сертификации», который был создан в 2016 году. В рамках проекта нижегородские производители могут добровольно подтвердить соответствие выпускаемой продукции требованиям  национальных стандартов. Нижегородская область одной из первых вошла в проект. В 2019 году подписано Соглашение между Правительством Нижегородской области и Росстандартом о развитии НСС в регионе.</p>
+          <p class="one-news-main__text">«Добровольная сертификация – это сигнал для потенциальных клиентов о том, что предприятие предъявляет повышенные требования к качеству своей продукции и дополнительный аргумент в выборе такой компании в качестве партнера.  Субсидию в размере до 300 тысяч рублей на уже понесенные затраты по получению сертификата смогут получить не менее 10 предприятий. Это могут быть как крупные компании, так и субъекты МСП», - отметил министр промышленности, торговли и предпринимательства Нижегородской области Максим Черкасов.</p>
+          <p class="one-news-main__text">«Сегодня система является важным инструментом в вопросе повышения качества продукции наших товаропроизводителей. Субсидии смогут получить и те предприятия, кто уже состоит в НСС, и товаропроизводители, которые только планируют к нему присоединиться. Сертификация – это не просто испытания образцов, которые нам привозят в лабораторию. Это совокупность правил выполнения работ, инфраструктура, процесс производства, логистика. Поэтому все, кто подтвердил свою продукцию в национальной системе, надежны однозначно», - отметил директор ЦСМ Росстандарта в Нижегородской области Денис Миронов.</p>
+          <p class="one-news-main__text">На сегодняшний день в реестр объектов оценки соответствия НСС внесено 2109 записей, 431 из них – это продукция Нижегородской области.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">О центре</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">История</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Структура</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Документы</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Услуги</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Метрология</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <nav class="footer-menu footer-menu--submenu_fix">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Конкурсы</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Новости</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Обратная связь</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">FAQ</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__infoblock">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="logo footer__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+                <p class="footer__copy d-none d-lg-block">© РСТ Нижегородский ЦСМ, 2019</p>
+                <div class="social footer__social footer__social--mobile d-block d-lg-none"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="social footer__social"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="footer__info">
+                  <p>Россия, Нижний Новгород,</p>
+                  <p>603950, ул. Республиканская, 1</p><br/>
+                  <p><a href="+78002002214">8 800 200-22-14</a></p>
+                  <p><a href="mailto:mail@nncsm.ru">mail@nncsm.ru</a></p>
+                  <p class="footer__copy d-block d-md-block d-lg-none">© РСТ Нижегородский ЦСМ, 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

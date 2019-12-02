@@ -1,87 +1,1052 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Days+One|Rubik&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="icon" href="assets/images/favicon.png"/>
+    <meta property="og:image" content="assets/images/@1x/preview.jpg"/>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/wow.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/first-developer-script.js"></script>
     <script src="assets/scripts/main.js"></script>
-    <title> Мастерская Путешествий
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4a1ed107-792c-45d4-b593-9aebaea3d8c9&amp;lang=ru_RU" type="text/javascript"></script>
+    <title> Нижегородский ЦСМ
     </title>
   </head>
   <body>
-    <header class="header"><a class="header-logo" href="/">
-        <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M57.6637 25.6991L60.1062 32.708L61.5929 35.6814L55.9608 31.2212L52.2478 42.6903L51.292 45.4513L38.9978 41.3097L20.9204 60L16.5664 38.4425L18.2871 36.6372L0 6.0531L24 28.2478L57.6637 0L48.5947 26.6549L50.1239 25.3805L57.6637 25.6991Z" fill="#3270F7"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M42.1593 32.0177L29.5221 24.8496L40.5664 33.3451L42.1593 32.0177Z" fill="#2051BC"/>
-<path d="M57.0265 27.9292L60.1062 32.708L57.9011 26.3802C57.7578 25.9691 57.3781 25.687 56.9431 25.6687L50.1239 25.3805L57.0265 27.9292Z" fill="#2051BC"/>
-<path d="M60.1062 32.708L57.0265 27.9292L55.9608 31.2212L58.9867 33.6175L61.5929 35.6814L60.1062 32.708Z" fill="#2051BC"/>
-<path d="M52.2478 42.6903L45.9823 34.0885L38.9978 41.3097L50.294 45.1151L51.292 45.4513L51.6365 44.4561L52.2478 42.6903Z" fill="#2051BC"/>
-<path d="M45.9823 34.0885L41.7345 34.7257L16.5664 38.4425L20.5205 58.02C20.6898 58.8584 21.7301 59.1628 22.3247 58.548L38.9978 41.3097L45.9823 34.0885Z" fill="#5085F9"/>
-<path d="M22.3247 58.548C21.7301 59.1628 20.6898 58.8584 20.5205 58.02L20.9204 60L22.3247 58.548Z" fill="#5085F9"/>
-<path d="M29.5221 24.8496L42.1593 32.0177L48.5947 26.6549L56.439 3.59965L57.6637 0L54.751 2.4441L24 28.2478L29.5221 24.8496Z" fill="#5085F9"/>
-<path d="M29.5221 24.8496L24 28.2478L5.42333 11.0685L0 6.0531L3.79087 12.3931L18.2871 36.6372L29.5221 24.8496Z" fill="#5085F9"/>
-</svg>Мастерская<br>путешествий</a>
-      <div class="header-linklist"><a class="header-linklist__link" href="#">Контакты</a><a class="header-linklist__link" href="#">О компании</a><a class="header-linklist__link" href="#">Приятные предложения</a></div>
-      <div class="header-right"><a class="header-right__tel" href="tel: 8 (910) 973-31-95">8 (910) 973-31-95</a><a class="header-right__pop-up-btn" href="#">Пообщаемся</a><!--a(href="#").header-right__switch-theme 
-<svg class="header-right__switch-theme_moon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.5 8.75C12.4997 10.4883 13.0173 12.1873 13.9865 13.6303C14.9558 15.0732 16.3329 16.1948 17.9422 16.852C19.5515 17.5091 21.3201 17.672 23.0224 17.3199C24.7246 16.9678 26.2834 16.1166 27.5 14.875V15C27.5 21.9037 21.9037 27.5 15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5H15.125C14.2925 3.31391 13.6314 4.28621 13.1806 5.3596C12.7298 6.433 12.4984 7.58577 12.5 8.75ZM5 15C4.99909 17.2312 5.74441 19.3987 7.11736 21.1575C8.49032 22.9162 10.412 24.1653 12.5768 24.706C14.7415 25.2467 17.0249 25.0479 19.0636 24.1412C21.1023 23.2346 22.7792 21.6721 23.8275 19.7025C21.9618 20.142 20.0147 20.0976 18.171 19.5734C16.3273 19.0492 14.6481 18.0626 13.2928 16.7072C11.9374 15.3519 10.9508 13.6727 10.4266 11.829C9.90239 9.98527 9.85796 8.0382 10.2975 6.1725C8.69697 7.02517 7.35848 8.29708 6.42532 9.85205C5.49216 11.407 4.99947 13.1865 5 15Z" fill="white"/>
-</svg>
-<svg class="header-right__switch-theme_sun" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 22.5C13.0109 22.5 11.1032 21.7098 9.6967 20.3033C8.29018 18.8968 7.5 16.9891 7.5 15C7.5 13.0109 8.29018 11.1032 9.6967 9.6967C11.1032 8.29018 13.0109 7.5 15 7.5C16.9891 7.5 18.8968 8.29018 20.3033 9.6967C21.7098 11.1032 22.5 13.0109 22.5 15C22.5 16.9891 21.7098 18.8968 20.3033 20.3033C18.8968 21.7098 16.9891 22.5 15 22.5ZM15 20C16.3261 20 17.5979 19.4732 18.5355 18.5355C19.4732 17.5979 20 16.3261 20 15C20 13.6739 19.4732 12.4021 18.5355 11.4645C17.5979 10.5268 16.3261 10 15 10C13.6739 10 12.4021 10.5268 11.4645 11.4645C10.5268 12.4021 10 13.6739 10 15C10 16.3261 10.5268 17.5979 11.4645 18.5355C12.4021 19.4732 13.6739 20 15 20ZM13.75 1.25H16.25V5H13.75V1.25ZM13.75 25H16.25V28.75H13.75V25ZM4.39375 6.16125L6.16125 4.39375L8.8125 7.045L7.045 8.8125L4.39375 6.1625V6.16125ZM21.1875 22.955L22.955 21.1875L25.6063 23.8387L23.8387 25.6063L21.1875 22.955ZM23.8387 4.3925L25.6063 6.16125L22.955 8.8125L21.1875 7.045L23.8387 4.39375V4.3925ZM7.045 21.1875L8.8125 22.955L6.16125 25.6063L4.39375 23.8387L7.045 21.1875ZM28.75 13.75V16.25H25V13.75H28.75ZM5 13.75V16.25H1.25V13.75H5Z" fill="white"/>
-</svg>-->
-      </div>
-    </header>
-    <section class="wrapper">
-      <div class="banner">
-        <div class="banner-wrap">
-          <h1 class="banner__title">Мастерская<br>путешествий</h1>
-          <p class="banner__text">У нас самые свежие и актуальные туры в городе Ярославле</p>
-          <div class="banner-bottom"><a class="banner-bottom__link" href="#">Наши предложения</a><a class="banner-bottom__link banner-bottom__link_trans" href="#">О компании</a><a class="banner-bottom__link banner-bottom__link_refresh" href="#">
-               <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M37.7167 21.7238C37.5642 21.4936 37.2539 21.4307 37.0237 21.5832L33.2723 24.0686C33.0421 24.2211 32.9792 24.5313 33.1317 24.7615C33.2842 24.9917 33.5944 25.0547 33.8246 24.9022L37.1592 22.693L39.3684 26.0275C39.521 26.2577 39.8312 26.3207 40.0614 26.1682C40.2916 26.0157 40.3546 25.7054 40.2021 25.4752L37.7167 21.7238ZM36.8099 21.9005C35.2348 29.6599 28.3738 35.5 20.1499 35.5V36.5C28.8588 36.5 36.1221 30.3157 37.7899 22.0995L36.8099 21.9005ZM20.1499 35.5C11.9261 35.5 5.06508 29.6599 3.49001 21.9005L2.50999 22.0995C4.17781 30.3157 11.4411 36.5 20.1499 36.5V35.5Z" fill="#E9EAEA"/>
-<path d="M2.58318 15.2762C2.7357 15.5064 3.04595 15.5693 3.27615 15.4168L7.02754 12.9314C7.25774 12.7789 7.32072 12.4687 7.1682 12.2385C7.01569 12.0083 6.70543 11.9453 6.47523 12.0978L3.14067 14.307L0.931435 10.9725C0.77892 10.7423 0.468665 10.6793 0.238461 10.8318C0.00825787 10.9843 -0.0547206 11.2946 0.097795 11.5248L2.58318 15.2762ZM3.49001 15.0995C5.06508 7.34006 11.9261 1.5 20.1499 1.5V0.5C11.4411 0.5 4.17781 6.68426 2.50999 14.9005L3.49001 15.0995ZM20.1499 1.5C28.0706 1.5 34.7272 6.91731 36.6144 14.2496L37.5828 14.0004C35.5847 6.23696 28.5379 0.5 20.1499 0.5V1.5Z" fill="#E9EAEA"/>
-</svg>Одно из самых популярных направлений этого года — США</a></div>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="logo header__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="header__info"><a class="header__gumburger"></a>
+              <div class="d-none d-md-block header__phone"><a href="+78002002214"><span>8 800 200-22-14</span></a></div>
+              <div class="d-none d-md-block header__mail"><a href="mailto:mail@nncsm.ru"><span>Связь с нами</span></a></div>
+              <div class="d-none d-md-block d-xl-none header__search--mobile"><a href=""></a></div>
+              <div class="header__login"><a href=""><span>Личный кабинет</span></a></div>
+            </div>
+          </div>
+          <div class="col-xl-9">
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item menu-item--close"><img src="assets/images/cross_icon.svg" alt=""/></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">О центре</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">История</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Структура</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Документы</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Услуги</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Метрология</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Конкурсы</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Новости</a></li>
+                <li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="">Обратная связь</a><span class="menu__item--hassubmenu__span"></span>
+                  <ul class="menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">FAQ</a></li>
+                    <li class="menu__sub-item"><a class="menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+                <li class="menu__item menu__item--social"><a class="menu__link menu__item--social_link" href=""><img src="assets/images/phone_icon.svg" alt=""/></a><a class="menu__link menu__item--social_link" href=""><img src="assets/images/email_icon.svg" alt=""/></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-8 col-md-3">
+            <div class="search header__search">
+              <form class="search__form" action="">
+                <input class="search__input" type="search" name="search" placeholder="Поиск по сайту..."/>
+                <button class="search__button" type="submit"><img class="serach__img" src="assets/images/search_icon.svg" alt=""/></button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <main class="main">
-        <section class="tours">
-          <h4 class="main__subtitle">Туры</h4>
-          <h3 class="main__title">Лучшие предложения</h3>
-          <div class="tours-wrap">
-            <div class="tours-wrap-item" style="background-image: url('assets/images/tour1.png')">
-              <p class="tours-wrap-item__where">Салерно, Италия</p>
-              <p class="tours-wrap-item__info">22.12.2019 на 7 ночей</p>
-              <div class="tours-wrap-item-bottom"><a class="tours-wrap-item__btn" href="#">Подробнее</a>
-                <p class="tours-wrap-item__price"><span>50 000</span> ₽</p>
-              </div>
-            </div>
-            <div class="tours-wrap-item" style="background-image: url('assets/images/tour2.png')">
-              <p class="tours-wrap-item__where">Тенерифе, Испания</p>
-              <p class="tours-wrap-item__info">22.12.2019 на 7 ночей</p>
-              <div class="tours-wrap-item-bottom"><a class="tours-wrap-item__btn" href="#">Подробнее</a>
-                <p class="tours-wrap-item__price"><span>67 000</span> ₽</p>
-              </div>
-            </div>
-            <div class="tours-wrap-item" style="background-image: url('assets/images/tour3.png')">
-              <p class="tours-wrap-item__where">Охрид, Македония</p>
-              <p class="tours-wrap-item__info">22.12.2019 на 7 ночей</p>
-              <div class="tours-wrap-item-bottom"><a class="tours-wrap-item__btn" href="#">Подробнее</a>
-                <p class="tours-wrap-item__price"><span>89 000</span> ₽</p>
+    </header>
+    <div class="promo">
+      <div class="slider">
+        <div class="slide">
+          <div class="slide__wrap">
+            <div class="slide__img"><img src="assets/images/@2x/slide_bg_01.jpg" alt=""/></div>
+            <div class="slide__inner">
+              <div class="container">
+                <div class="col-12">
+                  <div class="slide__info">
+                    <div class="slide__title">
+                      <h1 class="h1 slide__h1">Метрология</h1>
+                    </div>
+                    <div class="slide__desc">ФБУ «Нижегородский ЦСМ» проводит испытания бытовой техники и электроники, технических средств, средств измерений, мебели, продуктов, нефти и продуктов нефтепереработки.</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="tours-bottom"><a class="tours-bottom__btn" href="#">Все предложения</a>
-            <p class="tours-bottom__text">Ознакомьтесь с полным списком предложений</p>
+        </div>
+        <div class="slide">
+          <div class="slide__wrap">
+            <div class="slide__img"><img src="assets/images/@2x/slide_bg_02.jpg" alt=""/></div>
+            <div class="slide__inner">
+              <div class="container">
+                <div class="col-12">
+                  <div class="slide__info">
+                    <div class="slide__title">
+                      <h1 class="h1 slide__h1">Испытания</h1>
+                    </div>
+                    <div class="slide__desc">ФБУ «Нижегородский ЦСМ» проводит испытания бытовой техники и электроники, технических средств, средств измерений, мебели, продуктов, нефти и продуктов нефтепереработки.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-      </main>
-    </section>
-    <footer class="footer"><a class="footer__home" href="/">Мастерская<br>путешествий</a>
-      <div class="footer-linklist"><a class="footer-linklist__link" href="#">Контакты</a><a class="footer-linklist__link" href="#">О компании</a><a class="footer-linklist__link" href="#">Приятные предложения</a></div>
-      <p class="footer__allright">Все права защищены</p>
+        </div>
+        <div class="slide">
+          <div class="slide__wrap">
+            <div class="slide__img"><img src="assets/images/@2x/slide_bg_03.jpg" alt=""/></div>
+            <div class="slide__inner">
+              <div class="container">
+                <div class="col-12">
+                  <div class="slide__info">
+                    <div class="slide__title">
+                      <h1 class="h1 slide__h1">Лаборатория</h1>
+                    </div>
+                    <div class="slide__desc">ФБУ «Нижегородский ЦСМ» проводит испытания бытовой техники и электроники, технических средств, средств измерений, мебели, продуктов, нефти и продуктов нефтепереработки.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__wrap">
+            <div class="slide__img"><img src="assets/images/@2x/slide_bg_04.jpg" alt=""/></div>
+            <div class="slide__inner">
+              <div class="container">
+                <div class="col-12">
+                  <div class="slide__info">
+                    <div class="slide__title">
+                      <h1 class="h1 slide__h1">Поверка средств измерений</h1>
+                    </div>
+                    <div class="slide__desc">ФБУ «Нижегородский ЦСМ» проводит испытания бытовой техники и электроники, технических средств, средств измерений,...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__wrap">
+            <div class="slide__img"><img src="assets/images/@2x/slide_bg_05.jpg" alt=""/></div>
+            <div class="slide__inner">
+              <div class="container">
+                <div class="col-12">
+                  <div class="slide__info">
+                    <div class="slide__title">
+                      <h1 class="h1 slide__h1">Сертификация</h1>
+                    </div>
+                    <div class="slide__desc">ФБУ «Нижегородский ЦСМ» проводит испытания бытовой техники и электроники, технических средств, средств измерений, мебели, продуктов, нефти и продуктов нефтепереработки.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main-content">
+      <div class="slick-dots-wrap"></div>
+      <section class="sect-services">
+        <div class="tabs-menu-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="tabs-menu">
+                  <ul class="tabs-menu__slider">
+                    <li class="tabs-menu__item tabs-menu__item--active" data-tabindex="0"><span>Метрология</span>
+                      <ul class="tabs-menu__submenu">
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Проверка</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Калибровка</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Аттестация методик (методов) измерений, метрологическая экспертиза документов</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания средств измерений в целях утверждения типа</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Метрологический контроль систем измерения параметров транспортных средств в движении</a></li>
+                      </ul>
+                    </li>
+                    <li class="tabs-menu__item" data-tabindex="1"><span>Испытание</span>
+                      <ul class="tabs-menu__submenu">
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Техническая экспертиза конструкции колесных транспортных средств</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания продукции пищевой промышленности</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания продукции легкой промышленности и средств индивидуальной защиты</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания по электромагнитной совместимости технических средств</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания нефти и продуктов нефтепереработки</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания мебели</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания бытовой техники и электроники, низковольтного оборудования</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Испытания тепловых сетей по определению фактических потерь тепловой энергии</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Исследования показателей качества электрической энергии в электрических сетях общего назначения</a></li>
+                      </ul>
+                    </li>
+                    <li class="tabs-menu__item" data-tabindex="2"><span>Подтверждение соответствия</span>
+                      <ul class="tabs-menu__submenu">
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация продукции и услуг и регистрация деклараций о соответствии</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация в национальной системе сертификации</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация систем ХАССП</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация продукции без искусственных компонентов и ГМО</a></li>
+                        <li class="tabs-menu__sub-item"><a class="tabs-menu__sub-link" href="">Сертификация систем менеджмента качества, экологического менеджмента, безопасности труда и охраны здоровья</a></li>
+                      </ul>
+                    </li>
+                    <li class="tabs-menu__item" data-tabindex="3"><a class="tabs-menu__link" href=""><span>Аттестация испытательного оборудования</span></a></li>
+                    <li class="tabs-menu__item" data-tabindex="4"><a class="tabs-menu__link" href=""><span>Оценка состояния измерений</span></a></li>
+                    <li class="tabs-menu__item" data-tabindex="5"><a class="tabs-menu__link" href=""><span>Производство стандартных образцов</span></a></li>
+                    <li class="tabs-menu__item" data-tabindex="6"><a class="tabs-menu__link" href=""><span>Узлы учета энергоресурсов</span></a></li>
+                    <li class="tabs-menu__item" data-tabindex="7"><a class="tabs-menu__link" href=""><span>Межлабораторные сличительные испытания (МСИ)</span></a></li>
+                    <li class="tabs-menu__item" data-tabindex="8"><a class="tabs-menu__link" href=""><span>Инструментальный контроль технического состояния изделий медицинской техники</span></a></li>
+                    <li class="tabs-menu__item" data-tabindex="9"><a class="tabs-menu__link" href=""><span>Ремонт оптико-механических приборов</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="tabs-menu__dots">
+                <ul class="slick-dots">
+                  <li class="toggle-slick slick-active" data-slide="0"></li>
+                  <li class="toggle-slick" data-slide="1"></li>
+                  <li class="toggle-slick" data-slide="2"></li>
+                  <li class="toggle-slick" data-slide="3"></li>
+                  <li class="toggle-slick" data-slide="4"></li>
+                  <li class="toggle-slick" data-slide="5"></li>
+                  <li class="toggle-slick" data-slide="6"></li>
+                  <li class="toggle-slick" data-slide="7"></li>
+                  <li class="toggle-slick" data-slide="8"></li>
+                  <li class="toggle-slick" data-slide="9"></li>
+                </ul>
+              </div>
+              <div class="tabs-menu-cont sect-services__tabs-menu-cont">
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Проверка</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Калибровка</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Аттестация методик (методов) измерений, метрологическая экспертиза документов</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания средств измерений в целях утверждения типа</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Метрологический контроль систем измерения параметров транспортных средств в движении</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Техническая экспертиза конструкции колесных транспортных средств</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания продукции пищевой промышленности</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания продукции легкой промышленности и средств индивидуальной защиты</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания по электромагнитной совместимости технических средств</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания нефти и продуктов нефтепереработки</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания мебели</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания бытовой техники и электроники, низковольтного оборудования</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Испытания тепловых сетей по определению фактических потерь тепловой энергии</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Исследования показателей качества электрической энергии в электрических сетях общего назначения</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация продукции и услуг и регистрация деклараций о соответствии</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация в национальной системе сертификации</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация систем ХАССП</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация продукции без искусственных компонентов и ГМО</a></li>
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Сертификация систем менеджмента качества, экологического менеджмента, безопасности труда и охраны здоровья</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Аттестация испытательного оборудования</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Оценка состояния измерений</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Производство стандартных образцов</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Узлы учета энергоресурсов</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Межлабораторные сличительные испытания (МСИ)</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Инструментальный контроль технического состояния изделий медицинской техники</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu-cont__div">
+                  <ul class="tabs-menu-container">
+                    <li class="tabs-menu-container__item"><a class="tabs-menu-container__link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-physical">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h2">Физическим лицам</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="water_meters wow animated fadeInLeft" data-wow-duration="2s">
+                <div class="water_meters__img-inner"><img class="d-none d-sm-block water_meters__img" src="assets/images/@2x/water_meters.jpg" alt=""/><img class="d-block d-sm-none water_meters__img" src="assets/images/@2x/water_meters--sm.jpg" alt=""/></div>
+                <div class="water_meters__info">
+                  <div class="water_meters__title">
+                    <h3 class="h3">Поверка счетчиков воды</h3>
+                  </div>
+                  <div class="water_meters__text">Поверка бытовых счетчиков воды производится ФБУ «Нижегородский ЦСМ» с выездом специалиста на дом или с доставкой счетчика в бюро приема и выдачи средств измерений.</div>
+                  <div class="learn-more-link water_meters__learn-more-link"><a href="">Узнать больше</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="means-measurement wow animated fadeInRight" data-wow-duration="2s">
+                <div class="means-measurement__title">
+                  <h3 class="h3 means-measurement__h3">Поверка средств измерений</h3>
+                </div>
+                <div class="means-measurement__text">
+                  <p>Поверка средств измерений производится ФБУ «Нижегородский ЦСМ» с доставкой счетчика в бюро приема и выдачи средств измерений.</p>
+                  <p>Предварительная запись на сдачу СИ доступна в <a href="">личном кабинете</a>.</p>
+                </div>
+                <div class="learn-more-link means-measurement__learn-more-link"><a href="">Узнать больше</a></div>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-2">
+              <div class="reception wow animated fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+                <div class="reception__title">
+                  <h3 class="h3 reception__h3">Бюро приема и выдачи</h3>
+                </div>
+                <div class="reception__text">
+                  <p>Правила приема и выдачи средств измерений, часы работы, информацию о готовности СИ можно узнать в соответствующем разделе.</p>
+                </div>
+                <div class="learn-more-link reception__learn-more-link"><a href="">Узнать больше</a></div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="check-service wow animated fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+                <div class="check-service__title">
+                  <h3 class="h3 check-service__h3">Проверить готовность заявки/услуги</h3>
+                </div>
+                <div class="check-service__form">
+                  <form class="form-min" action="">
+                    <input class="form-min__input" type="text" placeholder="Введите номер заявки"/>
+                    <button class="btn btn--green form-min__btn"><span class="buttor__inner"><span class="button__icon">Проверить</span></span></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-facts">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h2">Нижегородский ЦСМ в фактах и цифрах</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="facts-round">
+                <div class="progress-circle progress-86"><span>86</span></div>
+                <div class="facts-round__text">ФБУ «Нижегородский ЦСМ» выполняет 86% всех поверочных работ в Нижегородской области.</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="facts-round">
+                <div class="progress-circle progress-65"><span>65</span></div>
+                <div class="facts-round__text">65% испытаний продуктов питания производится в ФБУ «Нижегородский ЦСМ»</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="facts-round">
+                <div class="progress-circle progress-86"><span>86</span></div>
+                <div class="facts-round__text">ФБУ «Нижегородский ЦСМ» выполняет 86% всех поверочных работ в Нижегородской области..</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="facts-round">
+                <div class="progress-circle progress-65"><span>65</span></div>
+                <div class="facts-round__text">65% испытаний продуктов питания производится в ФБУ «Нижегородский ЦСМ»</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="servers">
+          <div class="container">
+            <div class="row no-gutters">
+              <div class="col-md-3">
+                <div class="facts-number"><span>1200</span>
+                  <p>клиентов</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="facts-number"><span>1650</span>
+                  <p>аттестованных эталонов</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="facts-number"><span>25</span>
+                  <p>технических регламентов</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="facts-number"><span>1650</span>
+                  <p>аттестованных эталонов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="sect-news">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h2 sect-news__h2">Новости</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="sect-news__slider">
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sect-news__slide">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-8">
+                        <div class="sect-news__wrap--first"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_01.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_02.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Нижегородским предприятиям будет предоставлена субсидия на добровольную сертификацию продукции</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_03.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> Экспертиза: как проверить счетчик воды и не заплатить дважды? </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_04.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc"> На сайте Росстандарта запущен поиск отзываемых авто по WIN-номеру </div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                      <div class="d-none d-xl-block col-xl-4">
+                        <div class="sect-news__wrap"><a href="">
+                            <div class="sect-news__img"><img src="assets/images/@2x/new_slide_05.png" alt=""/></div>
+                            <div class="sect-news__info">
+                              <div class="sect-news__desc">Поверить счетчик на воду и не стать жертвой фирм-мошенников. Лайфхаки нижегородцам от экспертов ЦСМ ...</div>
+                              <div class="learn-more-link sect-news__learn-more-link">28 октября 2019</div>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="news-slick-dots-wrap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="sect-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h2 sect-news__h2">Связаться с нами</h2>
+            </div>
+          </div>
+        </div>
+        <div class="form-sect">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="h3 form-sect__h3">Задать вопрос специалисту</h3>
+              </div>
+            </div>
+          </div>
+          <form class="form" action="">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" name="Имя" placeholder="Ваше имя"/>
+                  <input type="text" name="Телефон" placeholder="+7 (____) ___-__-__"/>
+                  <input type="text" name="Email" placeholder="E-mail"/>
+                  <div class="form__confirm">
+                    <p>Нажимая кнопку «Отправить» вы даете согласие на <a target="_blank" href="">обработку персональных данных</a>.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <textarea name="textarea" placeholder="Сообщение"></textarea>
+                  <div class="form__textarea-footer">
+                    <button class="btn btn--blue form__btn"><span class="buttor__inner"><span class="button__icon">Отправить</span></span></button>
+                    <div class="form__captcha"><img src="assets/images/@2x/reCAPTCHA.jpg" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">О центре</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">История</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Структура</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Документы</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Реквизиты</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Благодарственные письма</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Профсоюзная организация</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Работа и стажировка</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Область акредитации</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Услуги</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Метрология</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Подтверждение соответствия</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Аттестация испытательного оборудования</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Оценка состояния измерений</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Производство стандартных образцов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Узлы учета энергоресурсов</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Межлабораторные сличительные испытания</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Иструментальный контроль технического состояния изделий медицинской техники</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Ремонт оптико-механических приборов</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4">
+            <nav class="footer-menu footer-menu--submenu_fix">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Конкурсы</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Новости</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link footer-menu__link--has_sub" href="">Обратная связь</a>
+                  <ul class="footer-menu__submenu">
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">FAQ</a></li>
+                    <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="">Жалобы, предложения</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__infoblock">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="logo footer__logo"><a href="/"><img class="logo__img" src="assets/images/logo.svg" alt=""/></a></div>
+                <p class="footer__copy d-none d-lg-block">© РСТ Нижегородский ЦСМ, 2019</p>
+                <div class="social footer__social footer__social--mobile d-block d-lg-none"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="social footer__social"><a class="social__link" href=""><i class="fa fa-vk"></i></a><a class="social__link" href=""><i class="fa fa-facebook"></i></a><a class="social__link" href=""><i class="fa fa-twitter"></i></a></div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="footer__info">
+                  <p>Россия, Нижний Новгород,</p>
+                  <p>603950, ул. Республиканская, 1</p><br/>
+                  <p><a href="+78002002214">8 800 200-22-14</a></p>
+                  <p><a href="mailto:mail@nncsm.ru">mail@nncsm.ru</a></p>
+                  <p class="footer__copy d-block d-md-block d-lg-none">© РСТ Нижегородский ЦСМ, 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
