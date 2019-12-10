@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Каталог</title>
+    <title>Карточка товара</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -139,172 +139,199 @@
       </div>
       <div class="overlay"></div>
       <div class="content">
-        <div class="catalog">
-          <h1 class="title">Винтовые сваи</h1>
-          <div class="catalog-content">
-            <form class="catalog-content-filters" action="#">
-              <div class="catalog-content-filters-wrap">
-                <div class="catalog-content-filters-category">
-                  <div class="catalog-content-filters-category__title active">Вид</div>
-                  <div class="catalog-content-filters-category-items">
-                    <label class="catalog-content-filters-category-items__item" for="check8">
-                      <input type="checkbox" id="check8"><span></span>57 мм
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check9">
-                      <input type="checkbox" id="check9"><span></span>57 мм
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check10">
-                      <input type="checkbox" id="check10"><span></span>57 мм
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check11">
-                      <input type="checkbox" id="check11"><span></span>57 мм
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check12">
-                      <input type="checkbox" id="check12"><span></span>57 мм
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check13">
-                      <input type="checkbox" id="check13"><span></span>57 мм
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check14">
-                      <input type="checkbox" id="check14"><span></span>57 мм
-                    </label>
+        <div class="goodpage">
+          <div class="title">Комбинированные сваи для заборов</div>
+          <div class="goodpage-navigation">
+            <div class="goodpage-navigation__item">Для тяжёлых заборов из профлиста, деревянных заборов</div>
+          </div>
+          <div class="goodpage-tabs">
+            <form class="goodpage-tabs-item" action="#">
+              <div class="goodpage-tabs-item-row">
+                <div class="goodpage-tabs-item-gallery">
+                  <div class="goodpage-tabs-item-gallery-mini"><a class="goodpage-tabs-item-gallery-mini__item" href="assets/images/gallery-item.jpg" data-fancybox="gallery"><img src="assets/images/gallery-item.jpg" alt=""></a><a class="goodpage-tabs-item-gallery-mini__item" href="assets/images/gallery-item1.jpg" data-fancybox="gallery"><img src="assets/images/gallery-item1.jpg" alt=""></a><a class="goodpage-tabs-item-gallery-mini__item" href="assets/images/gallery-item2.jpg" data-fancybox="gallery"><img src="assets/images/gallery-item2.jpg" alt=""></a></div><a class="goodpage-tabs-item-gallery-main" href="assets/images/gallery-item.jpg" data-fancybox="gallery"><img src="assets/images/gallery-item.jpg" alt=""></a>
+                </div>
+                <div class="goodpage-tabs-item-info">
+                  <div class="goodpage-tabs-item-info-selections">
+                    <div class="goodpage-tabs-item-info-col">
+                      <div class="goodpage-tabs-item-info-selections__title">Диаметр сваи</div>
+                      <select class="goodpage-tabs-item-info-selections__select" name="#">
+                        <option value="57">57 мм</option>
+                        <option value="76">76 мм</option>
+                        <option value="89">89 мм</option>
+                        <option value="102">102 мм</option>
+                        <option value="108">108 мм</option>
+                        <option value="133">133 мм</option>
+                        <option value="more133">от 133 мм</option>
+                      </select>
+                    </div>
+                    <div class="goodpage-tabs-item-info-col">
+                      <div class="goodpage-tabs-item-info-selections__title">Длина ствола</div>
+                      <select class="goodpage-tabs-item-info-selections__select" name="#">
+                        <option value="1650">1 650 мм</option>
+                        <option value="1650">1 650 мм</option>
+                        <option value="1650">1 650 мм</option>
+                        <option value="1650">1 650 мм</option>
+                      </select>
+                    </div>
+                    <div class="goodpage-tabs-item-info-col">
+                      <div class="goodpage-tabs-item-info-selections__title">Количество</div>
+                      <div class="goodpage-tabs-item-info-selections-num">
+                        <div class="goodpage-tabs-item-info-selections-num__dec">-</div>
+                        <input class="goodpage-tabs-item-info-selections-num__input" type="text" name="input-vol" value="6">
+                        <div class="goodpage-tabs-item-info-selections-num__add">+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="goodpage-tabs-item-info-checkboxes">
+                    <div class="goodpage-tabs-item-info-col">
+                      <label for="check1">
+                        <input type="checkbox" id="check1">
+                        <div></div><span>Оголовок</span><span class="default">+ 150 ₽</span>
+                      </label>
+                    </div>
+                    <div class="goodpage-tabs-item-info-col">
+                      <label for="montazInput" id="montaz">
+                        <input type="checkbox" id="montazInput">
+                        <div></div><span>Монтаж</span><span class="default">+ 1 000 ₽</span><span class="disabled">Монтаж доступен от 6 шт</span>
+                      </label>
+                    </div>
+                    <div class="goodpage-tabs-item-info-col">
+                      <label for="deliveryInput" id="delivery">
+                        <input type="checkbox" id="deliveryInput">
+                        <div></div><span>Доставка</span><span class="default">Уточните стоимость у оператора</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="goodpage-tabs-item-price-delivery">
+                    <div class="goodpage-tabs-item-price-delivery__close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.53553 12.6066L9.07107 9.07104M12.6066 5.53551L9.07107 9.07104M5.53553 5.53551L9.07107 9.07104M9.07107 9.07104L12.6066 12.6066" stroke="#404040" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                    </div>
+                    <div class="goodpage-tabs-item-price-delivery__title">Укажите адрес доставки</div>
+                    <input class="goodpage-tabs-item-price-delivery__input" type="text" placeholder="Адрес" id="address">
+                    <button class="goodpage-tabs-item-price-delivery__btn" type="submit" id="withDelivery">Доставить сюда</button>
+                  </div>
+                  <div class="goodpage-tabs-item-info-bonus">
+                    <div class="goodpage-tabs-item-info-bonus-icon"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.4097 19.1613H6.59034L4.4613 23.4193H6.3871V33H26.6129V23.4193H28.5387L26.4097 19.1613ZM25.7516 20.2258L26.8161 22.3548H18.4258L17.3613 20.2258H25.7516ZM7.24838 20.2258H15.6387L14.5742 22.3548H6.18387L7.24838 20.2258ZM25.5484 31.9355H17.0323V28.2097H15.9677V31.9355H7.45162V23.4193H15.2323L15.9677 21.9481V26.6129H17.0323V21.9481L17.7678 23.4193H25.5484V31.9355Z" fill="#FFA500"/>
+<path d="M8.51611 27.6774H11.7097V28.7419H8.51611V27.6774Z" fill="#FFA500"/>
+<path d="M8.51611 29.8064H11.7097V30.871H8.51611V29.8064Z" fill="#FFA500"/>
+<path d="M12.7742 29.8064H13.8387V30.871H12.7742V29.8064Z" fill="#FFA500"/>
+<path d="M14.0419 8.65673L16.4999 8.03013L18.958 8.65621L19.1506 6.01675L20.4563 3.78636L18.1469 2.78682L16.4999 0.750565L14.8525 2.78682L12.5431 3.78636L13.8488 6.01675L14.0419 8.65673ZM15.5157 3.65927L16.4999 2.44298L17.4841 3.65979L18.9307 4.28639L18.1074 5.69292L17.9891 7.31153L16.4999 6.93209L15.0108 7.31101L14.8925 5.6924L14.0692 4.28561L15.5157 3.65927Z" fill="#FFA500"/>
+<path d="M5.84423 9.74308L6.61767 8.42257L5.24752 7.82898L4.25812 6.60541L3.26871 7.82846L1.89856 8.42205L2.672 9.74256L2.78635 11.3175L4.25812 10.9433L5.7304 11.318L5.84423 9.74308ZM4.80103 9.41821L4.76049 9.9723L4.25812 9.8447L3.75626 9.9723L3.7152 9.41821L3.42412 8.92052L3.93143 8.70091L4.25812 8.29782L4.58428 8.70143L5.09159 8.9213L4.80103 9.41821Z" fill="#FFA500"/>
+<path d="M30.328 9.74308L31.1014 8.42257L29.7313 7.82898L28.7419 6.60541L27.7525 7.82846L26.3823 8.42205L27.1558 9.74256L27.2701 11.3175L28.7419 10.9433L30.2142 11.318L30.328 9.74308ZM29.2848 9.41821L29.2443 9.9723L28.7419 9.8447L28.24 9.9723L28.1995 9.41821L27.9084 8.92052L28.4157 8.70091L28.7419 8.29782L29.068 8.70143L29.5754 8.9213L29.2848 9.41821Z" fill="#FFA500"/>
+<path d="M6.6238 12.6848C7.63738 13.3608 8.5379 14.1857 9.29861 15.1374L11.4068 17.7717L10.9707 14.2842C10.7431 12.4634 9.77057 10.7873 8.3027 9.68668L7.7928 9.30438L6.23267 12.4239L6.6238 12.6848ZM8.15794 10.955C9.05795 11.8066 9.66843 12.9403 9.87765 14.1667C9.20531 13.3771 8.44252 12.6736 7.60177 12.0673L8.15794 10.955Z" fill="#FFA500"/>
+<path d="M22.0292 14.2842L21.5931 17.7716L23.7014 15.1369C24.4626 14.1851 25.3626 13.3602 26.3762 12.6843L26.7668 12.4233L25.2067 9.30386L24.6968 9.6872C23.2294 10.7878 22.2564 12.4634 22.0292 14.2842ZM25.3982 12.0673C24.5575 12.6736 23.7942 13.3766 23.1223 14.1667C23.3321 12.9403 23.942 11.8066 24.842 10.9549L25.3982 12.0673Z" fill="#FFA500"/>
+<path d="M18.629 18.0968H19.6935V15.8666C19.6935 13.3101 20.5946 10.8214 22.2319 8.85684L21.4138 8.17541C19.6179 10.3307 18.629 13.0621 18.629 15.8666V18.0968Z" fill="#FFA500"/>
+<path d="M22.3549 6.3871H23.4194V7.45162H22.3549V6.3871Z" fill="#FFA500"/>
+<path d="M23.9515 4.25806H25.0161V5.32258H23.9515V4.25806Z" fill="#FFA500"/>
+<path d="M13.3064 18.0968H14.3709V15.8666C14.3709 13.0616 13.382 10.3307 11.5867 8.17541L10.7686 8.85684C12.4054 10.8214 13.3064 13.3101 13.3064 15.8666V18.0968Z" fill="#FFA500"/>
+<path d="M9.58069 6.3871H10.6452V7.45162H9.58069V6.3871Z" fill="#FFA500"/>
+<path d="M7.98389 4.25806H9.0484V5.32258H7.98389V4.25806Z" fill="#FFA500"/>
+<path d="M15.9678 9.04839H17.0323V10.1129H15.9678V9.04839Z" fill="#FFA500"/>
+<path d="M15.9678 11.1774H17.0323V18.0968H15.9678V11.1774Z" fill="#FFA500"/>
+<path d="M30.871 14.371H31.9355V15.4355H30.871V14.371Z" fill="#FFA500"/>
+<path d="M30.871 16.5H31.9355V17.5645H30.871V16.5Z" fill="#FFA500"/>
+<path d="M31.9354 15.4355H32.9999V16.5H31.9354V15.4355Z" fill="#FFA500"/>
+<path d="M29.8064 15.4355H30.8709V16.5H29.8064V15.4355Z" fill="#FFA500"/>
+<path d="M29.2742 0H30.3387V1.06452H29.2742V0Z" fill="#FFA500"/>
+<path d="M29.2742 2.12904H30.3387V3.19355H29.2742V2.12904Z" fill="#FFA500"/>
+<path d="M30.3387 1.06451H31.4033V2.12903H30.3387V1.06451Z" fill="#FFA500"/>
+<path d="M28.2097 1.06451H29.2742V2.12903H28.2097V1.06451Z" fill="#FFA500"/>
+<path d="M1.06458 16.5H2.12909V17.5645H1.06458V16.5Z" fill="#FFA500"/>
+<path d="M1.06458 18.629H2.12909V19.6935H1.06458V18.629Z" fill="#FFA500"/>
+<path d="M2.12903 17.5645H3.19354V18.629H2.12903V17.5645Z" fill="#FFA500"/>
+<path d="M0 17.5645H1.06452V18.629H0V17.5645Z" fill="#FFA500"/>
+<path d="M1.06458 0H2.12909V1.06452H1.06458V0Z" fill="#FFA500"/>
+<path d="M1.06458 2.12904H2.12909V3.19355H1.06458V2.12904Z" fill="#FFA500"/>
+<path d="M2.12903 1.06451H3.19354V2.12903H2.12903V1.06451Z" fill="#FFA500"/>
+<path d="M0 1.06451H1.06452V2.12903H0V1.06451Z" fill="#FFA500"/>
+</svg>
+                    </div>Пробное закручивание бесплатно
                   </div>
                 </div>
-                <div class="catalog-content-filters-category">
-                  <div class="catalog-content-filters-category__title active">Применение</div>
-                  <div class="catalog-content-filters-category-items">
-                    <label class="catalog-content-filters-category-items__item" for="check0">
-                      <input type="checkbox" id="check0"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check1">
-                      <input type="checkbox" id="check1"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check2">
-                      <input type="checkbox" id="check2"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check3">
-                      <input type="checkbox" id="check3"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check4">
-                      <input type="checkbox" id="check4"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check5">
-                      <input type="checkbox" id="check5"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check6">
-                      <input type="checkbox" id="check6"><span></span>Лёгкие вентилируемые заборы
-                    </label>
-                    <label class="catalog-content-filters-category-items__item" for="check7">
-                      <input type="checkbox" id="check7"><span></span>Лёгкие вентилируемые заборы
-                    </label>
+                <div class="goodpage-tabs-item-price">
+                  <div class="goodpage-tabs-item-price-wrap">
+                    <div class="goodpage-tabs-item-price__val">950 ₽</div>
+                    <div class="goodpage-tabs-item-price__info">Оплата наличными и картой при получении</div>
+                    <button class="goodpage-tabs-item-price__btn" type="submit" id="withoutDelivery">Заказать</button>
                   </div>
                 </div>
               </div>
-              <div class="catalog-content-filters-btns">
-                <button class="catalog-content-filters-btns__submit" type="submit">Показать</button>
-                <button class="catalog-content-filters-btns__reset" type="reset">Сбросить все</button>
+              <div class="goodpage-tabs-item-row">
+                <div class="goodpage-tabs-item-info-adv__title">Характеристики сваи</div>
+                <div class="goodpage-tabs-item-info-adv">
+                  <div class="goodpage-tabs-item-info-adv-item">
+                    <div class="goodpage-tabs-item-info-adv-item-circle"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                    </div><span>ствол</span>
+                  </div>
+                  <div class="goodpage-tabs-item-info-adv-item">
+                    <div class="goodpage-tabs-item-info-adv-item-circle"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>200 </span>мм</span>
+                    </div><span>лопасть</span>
+                  </div>
+                  <div class="goodpage-tabs-item-info-adv-item">
+                    <div class="goodpage-tabs-item-info-adv-item-circle"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.669 47.773C29.468 55.974 16.1715 55.974 7.97052 47.773C-0.230489 39.572 -0.230489 26.2755 7.97052 18.0745C16.1715 9.87348 29.468 9.87348 37.669 18.0745C45.87 26.2755 45.87 39.572 37.669 47.773Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M28.0033 12.707C27.9917 8.93545 29.3041 2.99097 34.0154 1.87126C40.5772 0.311735 54.8465 15.423 53.7179 21.5737C52.8138 26.5006 46.7416 27.9098 42.8526 27.5563" stroke="#FFBC40" stroke-width="3"/>
+</svg><span> <span>800 </span>кг</span>
+                    </div><span>max нагрузка на сваю</span>
+                  </div>
+                  <div class="goodpage-tabs-item-info-adv-item">
+                    <div class="goodpage-tabs-item-info-adv-item-circle"><svg width="40" height="46" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 44C11.402 44 2 34.598 2 23C2 11.402 11.402 2 23 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M3.5 36.5L16 25H38" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M23 36C16.3726 36 11 30.1797 11 23C11 15.8203 16.3726 10 23 10" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>3.5 </span>мм</span>
+                    </div><span>стенка ствола</span>
+                  </div>
+                  <div class="goodpage-tabs-item-info-adv-item">
+                    <div class="goodpage-tabs-item-info-adv-item-circle"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 23C44 11.402 34.598 2 23 2C11.402 2 2 11.402 2 23C2 34.598 11.402 44 23 44" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M31.078 21C33.1372 24.9091 31.6376 29.7473 27.7285 31.8065" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M43.5 13L28.5 24.5L9 24.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>4 </span>мм</span>
+                    </div><span>стенка лопасти</span>
+                  </div>
+                </div>
+                <div class="goodpage-tabs-item-info-text">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="30" cy="30" r="30" fill="white"/>
+<path d="M38.6086 31.8706C36.6203 34.3823 35.4674 37.533 35.3297 40.8001C35.6102 40.8861 35.8601 41.0518 36.0462 41.286C36.3261 41.6382 36.4212 42.0878 36.307 42.5199L35.9008 44.0516C36.5437 44.2306 37.0162 44.8077 37.0162 45.4917V47.2415C37.0162 48.0673 36.3272 48.7392 35.4804 48.7392H34.6563L34.0754 50.9295C33.9078 51.5598 33.3244 52 32.6565 52H26.3104C25.6426 52 25.0591 51.5598 24.8917 50.9293L24.3108 48.7393H23.4866C22.6398 48.7393 21.9508 48.0673 21.9508 47.2416V45.4917C21.9508 44.8077 22.4234 44.2306 23.0663 44.0517L22.6599 42.5194C22.5458 42.0877 22.6409 41.6381 22.9209 41.286C23.1154 41.0412 23.3797 40.8713 23.6757 40.7892C23.5617 37.5677 22.4122 34.4687 20.3324 31.7958C19.5865 30.8366 19.0072 29.7735 18.6106 28.6365C18.4903 28.2918 18.6794 27.9174 19.0328 27.8001C19.105 27.7762 19.1784 27.7649 19.2506 27.7649C19.5321 27.7649 19.7948 27.9377 19.8905 28.212C20.2403 29.2151 20.7515 30.1529 21.4096 30.9992C23.6573 33.8878 24.9008 37.2416 25.0265 40.7325H26.2994V31.3504C26.2994 30.9863 26.602 30.6913 26.9754 30.6913C27.3488 30.6913 27.6514 30.9863 27.6514 31.3504V33.4141C28.0108 33.5721 28.6126 33.7391 29.0222 33.3396C29.2609 33.1069 29.6425 33.084 29.9114 33.2825C29.9985 33.3467 30.7094 33.8445 31.3155 33.4909V31.3505C31.3155 30.9864 31.618 30.6914 31.9914 30.6914C32.3649 30.6914 32.6674 30.9864 32.6674 31.3505V33.8052C32.6674 33.8055 32.6674 33.8058 32.6674 33.8058V40.7324H33.9795C34.1314 37.199 35.3825 33.7884 37.5384 31.0649C38.9186 29.322 39.648 27.2333 39.648 25.0243C39.648 24.0753 39.5105 23.1368 39.2392 22.2349C39.1341 21.8855 39.3392 21.5192 39.6975 21.4167C39.7611 21.3986 39.8251 21.3899 39.8881 21.3899C40.1804 21.3899 40.4499 21.5763 40.5365 21.8637C40.844 22.8863 41 23.9496 41 25.0243C41.0001 27.5275 40.1731 29.8949 38.6086 31.8706ZM26.2993 43.8176V42.0508H24.0787C24.042 42.0508 24.0119 42.0651 23.9895 42.0934C23.9737 42.1133 23.9574 42.1462 23.9688 42.1898L24.4471 43.9932H26.3243C26.3084 43.9372 26.2993 43.8785 26.2993 43.8176ZM31.3154 34.8938C30.6622 35.0227 30.0171 34.8439 29.5407 34.6055C28.9281 34.961 28.239 34.951 27.6513 34.8038V40.7324H31.3155V34.8938H31.3154ZM31.3155 43.8175V42.0508H31.3154H27.6512V43.8175C27.6512 43.8784 27.642 43.9371 27.6262 43.9931H31.3404C31.3246 43.9371 31.3155 43.8784 31.3155 43.8175ZM23.4866 45.3113C23.3852 45.3113 23.3027 45.3922 23.3027 45.4915V47.2415C23.3027 47.3404 23.3852 47.4208 23.4866 47.4208H24.8317C24.8326 47.4208 24.8336 47.4206 24.8345 47.4206C24.8352 47.4206 24.8359 47.4208 24.8365 47.4208H29.7254C30.0988 47.4208 30.4014 47.7159 30.4014 48.08C30.4014 48.4441 30.0988 48.7392 29.7254 48.7392H25.707L26.2004 50.5988C26.2133 50.6475 26.2585 50.6815 26.3103 50.6815H32.6564C32.7083 50.6815 32.7535 50.6475 32.7664 50.599L33.2598 48.7391H32.3392C31.9658 48.7391 31.6632 48.444 31.6632 48.0799C31.6632 47.7158 31.9658 47.4207 32.3392 47.4207H35.4802C35.5816 47.4207 35.6641 47.3403 35.6641 47.2414V45.4915C35.6641 45.3922 35.5816 45.3113 35.4802 45.3113H23.4866ZM34.9776 42.0934C34.955 42.065 34.925 42.0507 34.8882 42.0507H34.6395C34.6385 42.0507 34.6376 42.0507 34.6366 42.0507H32.6674V43.8175C32.6674 43.8784 32.6583 43.9371 32.6425 43.9931H34.5199L34.9979 42.1903C35.0096 42.1461 34.9933 42.1132 34.9776 42.0934Z" fill="#FFA500"/>
+<path d="M39.1785 20.2474C38.8566 20.4321 38.4425 20.3273 38.2531 20.0136C36.4289 16.9902 33.0837 15.1278 29.496 15.1278C29.4469 15.1278 29.3977 15.1281 29.3486 15.1288C23.8948 15.2064 19.4107 19.5969 19.3526 24.9159C19.3493 25.2205 19.3617 25.5391 19.3896 25.8628C19.4209 26.2255 19.1445 26.5443 18.7725 26.5748C18.4025 26.6047 18.0735 26.336 18.0423 25.973C18.0109 25.6082 17.9969 25.2478 18.0006 24.9018C18.0326 21.9733 19.226 19.2091 21.361 17.1187C23.4962 15.0282 26.3259 13.8533 29.3288 13.8106C29.3848 13.8098 29.4399 13.8094 29.4959 13.8094C33.5611 13.8097 37.3516 15.9196 39.4183 19.3449C39.6077 19.6587 39.5002 20.0627 39.1785 20.2474Z" fill="#FFA500"/>
+<path d="M27.1614 19.0204C23.6375 20.004 22.9532 23.4974 22.9249 23.6503C22.8602 24.0082 22.5105 24.2483 22.1434 24.1853C21.7756 24.1229 21.5293 23.7816 21.5933 23.4229C21.6255 23.2416 22.4354 18.9683 26.7892 17.753C26.8514 17.7356 26.914 17.7273 26.9756 17.7273C27.2696 17.7273 27.5402 17.9159 27.6251 18.2053C27.728 18.5552 27.5202 18.9202 27.1614 19.0204Z" fill="#FFA500"/>
+<path d="M29.5002 12.0944C29.1267 12.0944 28.8242 11.7993 28.8242 11.4352V7.65917C28.8242 7.29504 29.1267 6.99999 29.5002 6.99999C29.8736 6.99999 30.1761 7.29504 30.1761 7.65917V11.4352C30.1761 11.7993 29.8735 12.0944 29.5002 12.0944Z" fill="#FFA500"/>
+<path d="M22.1065 13.6655C21.8426 13.9228 21.4146 13.9229 21.1505 13.6654L18.4124 10.9954C18.1484 10.7379 18.1484 10.3206 18.4125 10.0632C18.5444 9.93449 18.7175 9.87015 18.8905 9.87015C19.0634 9.87015 19.2365 9.93449 19.3685 10.0632L22.1066 12.7333C22.3706 12.9908 22.3706 13.4081 22.1065 13.6655Z" fill="#FFA500"/>
+<path d="M40.588 10.9953L37.8498 13.6654C37.5857 13.9228 37.1577 13.9229 36.8939 13.6654C36.6298 13.4079 36.6298 12.9906 36.8938 12.7332L39.6319 10.0632C39.7639 9.9344 39.9369 9.87006 40.1099 9.87006C40.2829 9.87006 40.4559 9.9344 40.5879 10.0631C40.852 10.3206 40.852 10.7379 40.588 10.9953Z" fill="#FFA500"/>
+</svg>Винтовые сваи 57 мм используются при сооружении бытовых помещений, парников, беседок, террас, в качестве опоры для заборов и автомобильных навесов и других лёгких конструкций.
+                </div>
+                <div class="goodpage-tabs-item-row__next"><a class="goodpage-tabs-item-row__next-page" href="#">
+                    Лёгкие заборы усиленной конструкции	<svg width="31" height="12" viewBox="0 0 31 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30.5303 6.53033C30.8232 6.23744 30.8232 5.76256 30.5303 5.46967L25.7574 0.696699C25.4645 0.403806 24.9896 0.403806 24.6967 0.696699C24.4038 0.989593 24.4038 1.46447 24.6967 1.75736L28.9393 6L24.6967 10.2426C24.4038 10.5355 24.4038 11.0104 24.6967 11.3033C24.9896 11.5962 25.4645 11.5962 25.7574 11.3033L30.5303 6.53033ZM0 6.75H30V5.25H0V6.75Z" fill="#47657A"/>
+</svg></a></div>
               </div>
             </form>
-            <div class="catalog-content-main">
-              <div class="catalog-content-main-sort-wrap">
-                <form class="catalog-content-main-sort" action="#">
-                  <select name="sort">
-                    <option value="1">Цена по возрастанию</option>
-                    <option value="2">Цена по убыванию</option>
-                    <option value="3">Цена по возрастанию</option>
-                    <option value="4">Цена по убыванию</option>
-                  </select>
-                </form>
-                <div class="catalog-content-filters-popup">
-                   <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 3H17" stroke="black" stroke-linecap="round"/>
-<circle cx="6" cy="3" r="3" fill="black"/>
-<path d="M17 11H1" stroke="black" stroke-linecap="round"/>
-<circle r="3" transform="matrix(-1 0 0 1 12 11)" fill="black"/>
-</svg>Фильтры
-                </div>
+          </div>
+        </div>
+        <div class="callOrder">
+          <div class="callOrder-wrap">
+            <div class="callOrder-imgbox"><img src="assets/images/callorder-house.png" alt=""></div>
+            <form class="callOrder-form" action="#">
+              <div class="callOrder-form__title">Оставьте заявку на бесплатное закручивание</div>
+              <div class="callOrder-form-inpbox">
+                <input class="callOrder-form-inpbox__input" type="text" name="" placeholder="Ваше имя">
+                <input class="callOrder-form-inpbox__input" type="text" name="" placeholder="Телефон">
+                <button class="callOrder-form-inpbox__submit" type="submit">Перезвоните мне</button>
               </div>
-              <div class="catalog-content-main-items">
-                <div class="catalog-content-main-items-wrap"><a class="catalog-content-main-items-item" href="#">
-                    <div class="catalog-content-main-items-item__img"><img src="assets/images/gallery-item.jpg" alt=""></div>
-                    <div class="catalog-content-main-items-item-info">
-                      <div class="catalog-content-main-items-item-info-top">
-                        <div class="catalog-content-main-items-item-info-top__title">Стандартные винтовые сваи со сварным наконечником</div>
-                        <div class="catalog-content-main-items-item-info-top__price">от 950 ₽</div>
-                      </div>
-                      <div class="catalog-content-main-items-item-info-mid">
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                      </div>
-                      <div class="catalog-content-main-items-item-info-bot">
-                        <div class="catalog-content-main-items-item-info-bot-adv"><span>Тяжёлые заборы из профлиста/из дерева</span><span>Лёгкие заборы усиленной конструкции</span></div>
-                        <div class="catalog-content-main-items-item-info-bot__btn">Подробнее</div>
-                      </div>
-                    </div></a><a class="catalog-content-main-items-item" href="#">
-                    <div class="catalog-content-main-items-item__img"><img src="assets/images/gallery-item.jpg" alt=""></div>
-                    <div class="catalog-content-main-items-item-info">
-                      <div class="catalog-content-main-items-item-info-top">
-                        <div class="catalog-content-main-items-item-info-top__title">Стандартные винтовые сваи со сварным наконечником</div>
-                        <div class="catalog-content-main-items-item-info-top__price">от 950 ₽</div>
-                      </div>
-                      <div class="catalog-content-main-items-item-info-mid">
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
-<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
-</svg><span> <span>57 </span>мм</span>
-                        </div>
-                      </div>
-                      <div class="catalog-content-main-items-item-info-bot">
-                        <div class="catalog-content-main-items-item-info-bot-adv"><span>Тяжёлые заборы из профлиста/из дерева</span><span>Лёгкие заборы усиленной конструкции</span></div>
-                        <div class="catalog-content-main-items-item-info-bot__btn">Подробнее</div>
-                      </div>
-                    </div></a></div>
-                <div class="catalog-content-main-pagination"> <a class="catalog-content-main-pagination__arrow arr-prev disabled" href="#"></a>
-                  <div class="catalog-content-main-pagination-items"><a class="catalog-content-main-pagination__item active disabled" href="#">1</a><a class="catalog-content-main-pagination__item" href="#">2</a><a class="catalog-content-main-pagination__item disabled" href="#">...</a><a class="catalog-content-main-pagination__item" href="#">10</a></div><a class="catalog-content-main-pagination__arrow arr-next" href="#"></a>
-                </div>
-              </div>
-            </div>
+              <p class="callOrder-form__text">Заполняя форму, вы даёте согласие на обработку <a href="#">персональных данных</a></p>
+            </form>
           </div>
         </div>
       </div>
