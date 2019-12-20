@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/images/apple-touch-icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.suggestions/16.6/css/suggestions.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=23917ddc-db58-4a2e-ab6b-3b77d35e4afc&amp;lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header visible">
+        <div class="header-top">
+          <div class="header-col"><a class="header-logo" href="/"><svg width="88" height="30" viewBox="0 0 88 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M67.2412 0.974475V3.72404C67.2412 4.43689 67.5492 5.14973 68.1653 5.55707L79.9733 14.3149C80.4867 14.6204 80.4867 15.4351 79.9733 15.7406L68.1653 24.4985C67.5492 24.9058 67.2412 25.6186 67.2412 26.3315V29.0811C67.2412 29.7939 68.0626 30.3031 68.6787 29.7939L87.4688 15.8425C88.0849 15.4351 88.0849 14.5186 87.4688 14.1112L68.6787 0.159804C68.0626 -0.247537 67.2412 0.159792 67.2412 0.974475Z" fill="#393939"/>
+<path d="M68.9451 10.5249L73.9349 14.037C74.6651 14.4901 74.6651 15.5098 73.9349 15.963L68.9451 19.4751C68.2148 19.9283 67.2412 19.4751 67.2412 18.6821V11.3179C67.2412 10.5248 68.2148 10.0717 68.9451 10.5249Z" fill="#FFA500"/>
+<path d="M0 14.6778C2.93828 14.8612 5.01236 14.9529 6.22224 14.9529C6.48726 14.9529 6.69467 14.8734 6.84446 14.7145C7.00578 14.5433 7.08644 14.3171 7.08644 14.0359V13.3023C7.08644 12.5687 6.74076 12.2019 6.0494 12.2019H1.90124V9.63432H5.70372C6.39508 9.63432 6.74076 9.26753 6.74076 8.53393V8.16713C6.74076 7.43353 6.39508 7.06674 5.70372 7.06674H0.17284V4.49915H6.56792C7.69714 4.49915 8.52677 4.77424 9.05681 5.32444C9.58685 5.86241 9.85188 6.68771 9.85188 7.80033C9.85188 8.53393 9.69056 9.13303 9.36793 9.59764C9.05681 10.05 8.642 10.3679 8.12348 10.5513C9.05681 10.8203 9.69056 11.4805 10.0247 12.532C10.1399 12.9111 10.1976 13.3512 10.1976 13.8525V14.0359C10.1976 15.2341 9.93253 16.1144 9.40249 16.6769C8.87245 17.2393 8.04282 17.5205 6.9136 17.5205C4.98931 17.5205 2.68478 17.3982 0 17.1537V14.6778Z" fill="black" fill-opacity="0.75"/>
+<path d="M22.2903 17.3371H19.1792V9.45093L15.031 17.3371H11.747V4.49915H14.8582V12.3853L19.0063 4.49915H22.2903V17.3371Z" fill="black" fill-opacity="0.75"/>
+<path d="M34.7429 10.1845L32.3231 14.7695H29.9033L27.4836 10.1845V17.3371H24.3725V4.49915H27.6564L31.1132 11.2849L34.57 4.49915H37.854V17.3371H34.7429V10.1845Z" fill="black" fill-opacity="0.75"/>
+<path d="M50.478 17.3371H47.3669V9.45093L43.2188 17.3371H39.9348V4.49915H43.0459V12.3853L47.1941 4.49915H50.478V17.3371Z" fill="black" fill-opacity="0.75"/>
+<path d="M63.1035 17.3371H59.9923V12.1102H55.6713V17.3371H52.5602V4.49915H55.6713V9.54263H59.9923V4.49915H63.1035V17.3371Z" fill="black" fill-opacity="0.75"/>
+<path d="M2.54117 20.6777V21.2128H0.524117V24.8586H0V20.6777H2.54117Z" fill="black" fill-opacity="0.75"/>
+<path d="M5.3078 20.5774C5.87427 20.5774 6.35604 20.7892 6.7531 21.2128C7.15545 21.6365 7.35663 22.1549 7.35663 22.7681C7.35663 23.3813 7.15545 23.8998 6.7531 24.3234C6.35604 24.7471 5.87427 24.9589 5.3078 24.9589C4.60369 24.9589 4.06898 24.6523 3.70369 24.0391V26.5309H3.17957V20.6777H3.70369V21.4971C4.06898 20.8839 4.60369 20.5774 5.3078 20.5774ZM4.15633 23.9471C4.4581 24.2649 4.82869 24.4238 5.2681 24.4238C5.70751 24.4238 6.0781 24.2649 6.37986 23.9471C6.68163 23.6238 6.83251 23.2308 6.83251 22.7681C6.83251 22.3054 6.68163 21.9152 6.37986 21.5975C6.0781 21.2742 5.70751 21.1125 5.2681 21.1125C4.82869 21.1125 4.4581 21.2742 4.15633 21.5975C3.85457 21.9152 3.70369 22.3054 3.70369 22.7681C3.70369 23.2308 3.85457 23.6238 4.15633 23.9471Z" fill="black" fill-opacity="0.75"/>
+<path d="M10.9318 20.6777H11.4877L9.7883 25.2432C9.63477 25.6557 9.41506 25.979 9.12918 26.2132C8.84859 26.4529 8.53359 26.5588 8.18418 26.5309V26.0125C8.66065 26.0682 9.0233 25.7784 9.27212 25.1429L9.37536 24.8836L7.59654 20.6777H8.15242L9.64536 24.1813L10.9318 20.6777Z" fill="black" fill-opacity="0.75"/>
+<path d="M15.4564 20.6777V24.8586H14.9323V21.2128H12.6453V24.8586H12.1211V20.6777H15.4564Z" fill="black" fill-opacity="0.75"/>
+<path d="M19.9001 20.6777V24.8586H19.376V21.2128H17.0889V24.8586H16.5648V20.6777H19.9001Z" fill="black" fill-opacity="0.75"/>
+<path d="M24.4231 20.6777H24.9472V24.8586H24.4231V24.0391C24.0578 24.6523 23.5231 24.9589 22.819 24.9589C22.2525 24.9589 21.7681 24.7471 21.3658 24.3234C20.9687 23.8998 20.7702 23.3813 20.7702 22.7681C20.7702 22.1549 20.9687 21.6365 21.3658 21.2128C21.7681 20.7892 22.2525 20.5774 22.819 20.5774C23.5231 20.5774 24.0578 20.8839 24.4231 21.4971V20.6777ZM21.747 23.9471C22.0487 24.2649 22.4193 24.4238 22.8587 24.4238C23.2981 24.4238 23.6687 24.2649 23.9705 23.9471C24.2722 23.6238 24.4231 23.2308 24.4231 22.7681C24.4231 22.3054 24.2722 21.9152 23.9705 21.5975C23.6687 21.2742 23.2981 21.1125 22.8587 21.1125C22.4193 21.1125 22.0487 21.2742 21.747 21.5975C21.4452 21.9152 21.2943 22.3054 21.2943 22.7681C21.2943 23.2308 21.4452 23.6238 21.747 23.9471Z" fill="black" fill-opacity="0.75"/>
+<path d="M31.2505 24.8586H30.5517L28.5664 22.8434V24.8586H28.0423V20.6777H28.5664V22.5256L30.4564 20.6777H31.1711L29.1223 22.6845L31.2505 24.8586Z" fill="black" fill-opacity="0.75"/>
+<path d="M34.8982 24.3318C34.4958 24.7499 34.0034 24.9589 33.4211 24.9589C32.8387 24.9589 32.3437 24.7499 31.9361 24.3318C31.5337 23.9081 31.3326 23.3869 31.3326 22.7681C31.3326 22.1494 31.5337 21.6309 31.9361 21.2128C32.3437 20.7892 32.8387 20.5774 33.4211 20.5774C34.0034 20.5774 34.4958 20.7892 34.8982 21.2128C35.3058 21.6309 35.5096 22.1494 35.5096 22.7681C35.5096 23.3869 35.3058 23.9081 34.8982 24.3318ZM32.3093 23.9471C32.6111 24.2649 32.9817 24.4238 33.4211 24.4238C33.8605 24.4238 34.2311 24.2649 34.5329 23.9471C34.8346 23.6238 34.9855 23.2308 34.9855 22.7681C34.9855 22.3054 34.8346 21.9152 34.5329 21.5975C34.2311 21.2742 33.8605 21.1125 33.4211 21.1125C32.9817 21.1125 32.6111 21.2742 32.3093 21.5975C32.0076 21.9152 31.8567 22.3054 31.8567 22.7681C31.8567 23.2308 32.0076 23.6238 32.3093 23.9471Z" fill="black" fill-opacity="0.75"/>
+<path d="M40.2779 20.6777V24.8586H39.7537V21.5222L38.364 23.897H38.3005L36.9108 21.5222V24.8586H36.3867V20.6777H36.9902L38.3323 22.9688L39.6743 20.6777H40.2779Z" fill="black" fill-opacity="0.75"/>
+<path d="M44.724 20.6777V24.8586H44.1999V21.2128H41.9128V24.8586H41.3887V20.6777H44.724Z" fill="black" fill-opacity="0.75"/>
+<path d="M49.247 20.6777H49.7712V24.8586H49.247V24.0391C48.8817 24.6523 48.347 24.9589 47.6429 24.9589C47.0765 24.9589 46.592 24.7471 46.1897 24.3234C45.7926 23.8998 45.5941 23.3813 45.5941 22.7681C45.5941 22.1549 45.7926 21.6365 46.1897 21.2128C46.592 20.7892 47.0765 20.5774 47.6429 20.5774C48.347 20.5774 48.8817 20.8839 49.247 21.4971V20.6777ZM46.5709 23.9471C46.8726 24.2649 47.2432 24.4238 47.6826 24.4238C48.122 24.4238 48.4926 24.2649 48.7944 23.9471C49.0962 23.6238 49.247 23.2308 49.247 22.7681C49.247 22.3054 49.0962 21.9152 48.7944 21.5975C48.4926 21.2742 48.122 21.1125 47.6826 21.1125C47.2432 21.1125 46.8726 21.2742 46.5709 21.5975C46.2691 21.9152 46.1182 22.3054 46.1182 22.7681C46.1182 23.2308 46.2691 23.6238 46.5709 23.9471Z" fill="black" fill-opacity="0.75"/>
+<path d="M53.692 20.6777H54.2162V24.8586H53.692V23.0357H51.405V24.8586H50.8809V20.6777H51.405V22.5006H53.692V20.6777Z" fill="black" fill-opacity="0.75"/>
+<path d="M58.2151 20.6777H58.6598V24.8586H58.1357V21.6393L55.7692 24.8586H55.3245V20.6777H55.8486V23.897L58.2151 20.6777Z" fill="black" fill-opacity="0.75"/>
+<path d="M60.4035 20.0088V19.5238H62.4682V20.0088H60.4035ZM62.6587 20.6777H63.1035V24.8586H62.5793V21.6393L60.2129 24.8586H59.7682V20.6777H60.2923V23.897L62.6587 20.6777Z" fill="black" fill-opacity="0.75"/>
+</svg></a><a class="header-location" data-fancybox="" data-options="{&quot;src&quot;: &quot;#choose-town&quot;, &quot;touch&quot;: false}" href="javascript:;"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.81826 11.989L8.90412 8.90391C9.51432 8.2936 9.92985 7.51607 10.0982 6.66961C10.2665 5.82316 10.18 4.9458 9.84972 4.14849C9.51942 3.35117 8.96011 2.6697 8.24252 2.19024C7.52493 1.71078 6.68129 1.45488 5.81826 1.45488C4.95524 1.45488 4.11159 1.71078 3.394 2.19024C2.67641 2.6697 2.1171 3.35117 1.7868 4.14849C1.45651 4.9458 1.37005 5.82316 1.53836 6.66961C1.70667 7.51607 2.1222 8.2936 2.7324 8.90391L5.81826 11.989ZM9.9325 9.93228L5.81826 14.0465L1.70403 9.93228C0.890357 9.11857 0.336251 8.08186 0.111777 6.95323C-0.112698 5.82461 0.00254084 4.65477 0.44292 3.59164C0.883299 2.52851 1.62904 1.61984 2.58584 0.980533C3.54264 0.341227 4.66753 0 5.81826 0C6.96899 0 8.09388 0.341227 9.05068 0.980533C10.0075 1.61984 10.7532 2.52851 11.1936 3.59164C11.634 4.65477 11.7492 5.82461 11.5247 6.95323C11.3003 8.08186 10.7462 9.11857 9.9325 9.93228ZM0.727285 14.5454H10.9092V16H0.727285V14.5454Z" fill="black" fill-opacity="0.75"/>
+</svg><span>г. Санкт-Петербург</span></a></div>
+          <div class="header-menu">
+            <div class="header-menu-item"><a class="header-menu-item__link" href="#">О компании</a></div>
+            <div class="header-menu-item"><a class="header-menu-item__link" href="#">Акции</a></div>
+            <div class="header-menu-item list-item"><a class="header-menu-item__link" href="#">Полезное</a>
+              <div class="header-menu-item-list"><a class="header-menu-item-list__link" href="#">Плюсы и минусы свайно-винтового фундамента</a><a class="header-menu-item-list__link" href="#">Наши работы</a><a class="header-menu-item-list__link" href="#">Новости</a><a class="header-menu-item-list__link" href="#">Блог</a><a class="header-menu-item-list__link" href="#">Отзывы</a></div>
+            </div>
+            <div class="header-menu-item"><a class="header-menu-item__link" href="#">Доставка</a></div>
+            <div class="header-menu-item"><a class="header-menu-item__link" href="#">Галерея</a></div>
+            <div class="header-menu-item"><a class="header-menu-item__link" href="#">Контакты</a></div>
+            <form class="header-menu-search" action="#">
+              <input type="text" placeholder="Искать">
+              <button>Искать</button>
+            </form>
+          </div>
+          <div class="header-col">
+            <div class="header-phones"><a href="tel:89219759844"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.65867 6.82844C6.49274 8.29376 7.70624 9.50726 9.17156 10.3413L9.95733 9.24089C10.0837 9.06394 10.2705 8.93945 10.4825 8.89096C10.6945 8.84248 10.9168 8.87336 11.1076 8.97778C12.3647 9.66482 13.7531 10.078 15.1813 10.1902C15.4042 10.2079 15.6123 10.3089 15.764 10.4732C15.9158 10.6374 16 10.8528 16 11.0764V15.0427C16 15.2628 15.9184 15.475 15.771 15.6384C15.6235 15.8018 15.4207 15.9047 15.2018 15.9271C14.7307 15.976 14.256 16 13.7778 16C6.16889 16 0 9.83111 0 2.22222C0 1.744 0.024 1.26933 0.0728889 0.798222C0.0953374 0.579286 0.198208 0.376463 0.361591 0.229008C0.524974 0.0815531 0.73725 -4.74291e-05 0.957333 2.0682e-08H4.92356C5.14717 -2.80165e-05 5.36257 0.0842236 5.52683 0.235956C5.69108 0.387689 5.79211 0.595754 5.80978 0.818667C5.92198 2.24693 6.33518 3.63527 7.02222 4.89244C7.12664 5.08317 7.15752 5.30555 7.10904 5.51751C7.06055 5.72947 6.93606 5.9163 6.75911 6.04267L5.65867 6.82844ZM3.41689 6.24444L5.10578 5.03822C4.62647 4.00364 4.29809 2.90564 4.13067 1.77778H1.78667C1.78133 1.92533 1.77867 2.07378 1.77867 2.22222C1.77778 8.84978 7.15022 14.2222 13.7778 14.2222C13.9262 14.2222 14.0747 14.2196 14.2222 14.2133V11.8693C13.0944 11.7019 11.9964 11.3735 10.9618 10.8942L9.75556 12.5831C9.26992 12.3944 8.79823 12.1716 8.344 11.9164L8.29245 11.8871C6.54896 10.8949 5.10514 9.45104 4.11289 7.70756L4.08356 7.656C3.82836 7.20177 3.60559 6.73008 3.41689 6.24444Z" fill="black" fill-opacity="0.75"/>
+</svg></a>
+              <div class="header-phones-items"><a href="tel:89219759844">+7 (921) 975-98-44</a></div>
+            </div>
+            <div class="header-burger"><svg width="18" height="10"fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 9H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M1 1H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg>
+            </div>
+          </div>
+        </div>
+        <div class="header-bot">
+          <div class="header-bot-item list-item"><a class="header-bot-item__link" href="#">Винтовые сваи</a>
+            <div class="header-bot-item-list"><a class="header-bot-item-list__link" href="#">Производство</a><a class="header-bot-item-list__link" href="#">Наши работы</a><a class="header-bot-item-list__link" href="#">Новости</a><a class="header-bot-item-list__link" href="#">Блог</a><a class="header-bot-item-list__link" href="#">Отзывы</a></div>
+          </div>
+          <div class="header-bot-item list-item"><a class="header-bot-item__link" href="#">Фундамент</a>
+            <div class="header-bot-item-list"><a class="header-bot-item-list__link" href="#">Производство</a><a class="header-bot-item-list__link" href="#">Наши работы</a><a class="header-bot-item-list__link" href="#">Новости</a><a class="header-bot-item-list__link" href="#">Блог</a><a class="header-bot-item-list__link" href="#">Отзывы</a></div>
+          </div>
+          <div class="header-bot-item list-item"><a class="header-bot-item__link" href="#">Монтаж фундамента</a>
+            <div class="header-bot-item-list"><a class="header-bot-item-list__link" href="#">Производство</a><a class="header-bot-item-list__link" href="#">Наши работы</a><a class="header-bot-item-list__link" href="#">Новости</a><a class="header-bot-item-list__link" href="#">Блог</a><a class="header-bot-item-list__link" href="#">Отзывы</a></div>
+          </div>
+          <div class="header-bot-item list-item"><a class="header-bot-item__link" href="#">Ремонт фундамента</a>
+            <div class="header-bot-item-list"><a class="header-bot-item-list__link" href="#">Производство</a><a class="header-bot-item-list__link" href="#">Наши работы</a><a class="header-bot-item-list__link" href="#">Новости</a><a class="header-bot-item-list__link" href="#">Блог</a><a class="header-bot-item-list__link" href="#">Отзывы</a></div>
+          </div>
+          <div class="header-bot-item list-item"><a class="header-bot-item__link" href="#">Установка заборов</a>
+            <div class="header-bot-item-list"><a class="header-bot-item-list__link" href="#">Производство</a><a class="header-bot-item-list__link" href="#">Наши работы</a><a class="header-bot-item-list__link" href="#">Новости</a><a class="header-bot-item-list__link" href="#">Блог</a><a class="header-bot-item-list__link" href="#">Отзывы</a></div>
+          </div>
+        </div>
+        <div class="header-mobile">
+          <div class="header-mobile-menu">
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">О компании</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Акции</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Полезное</a><span></span></div>
+              <div class="header-mobile-menu-item-list"><a class="header-mobile-menu-item__link" href="#">Плюсы и минусы свайно-винтового фундамента</a><a class="header-mobile-menu-item__link" href="#">Наши работы</a><a class="header-mobile-menu-item__link" href="#">Новости</a><a class="header-mobile-menu-item__link" href="#">Блог</a><a class="header-mobile-menu-item__link" href="#">Отзывы</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Доставка</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Галерея</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Контакты</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Винтовые сваи</a><span></span></div>
+              <div class="header-mobile-menu-item-list"><a class="header-mobile-menu-item__link" href="#">Производство</a><a class="header-mobile-menu-item__link" href="#">Наши работы</a><a class="header-mobile-menu-item__link" href="#">Новости</a><a class="header-mobile-menu-item__link" href="#">Блог</a><a class="header-mobile-menu-item__link" href="#">Отзывы</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Фундамент</a><span></span></div>
+              <div class="header-mobile-menu-item-list"><a class="header-mobile-menu-item__link" href="#">Производство</a><a class="header-mobile-menu-item__link" href="#">Наши работы</a><a class="header-mobile-menu-item__link" href="#">Новости</a><a class="header-mobile-menu-item__link" href="#">Блог</a><a class="header-mobile-menu-item__link" href="#">Отзывы</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Монтаж фундамента</a><span></span></div>
+              <div class="header-mobile-menu-item-list"><a class="header-mobile-menu-item__link" href="#">Производство</a><a class="header-mobile-menu-item__link" href="#">Наши работы</a><a class="header-mobile-menu-item__link" href="#">Новости</a><a class="header-mobile-menu-item__link" href="#">Блог</a><a class="header-mobile-menu-item__link" href="#">Отзывы</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Ремонт фундамента</a><span></span></div>
+              <div class="header-mobile-menu-item-list"><a class="header-mobile-menu-item__link" href="#">Производство</a><a class="header-mobile-menu-item__link" href="#">Наши работы</a><a class="header-mobile-menu-item__link" href="#">Новости</a><a class="header-mobile-menu-item__link" href="#">Блог</a><a class="header-mobile-menu-item__link" href="#">Отзывы</a></div>
+            </div>
+            <div class="header-mobile-menu-item">
+              <div class="header-mobile-menu-item__title"><a href="#">Установка заборов</a><span></span></div>
+              <div class="header-mobile-menu-item-list"><a class="header-mobile-menu-item__link" href="#">Производство</a><a class="header-mobile-menu-item__link" href="#">Наши работы</a><a class="header-mobile-menu-item__link" href="#">Новости</a><a class="header-mobile-menu-item__link" href="#">Блог</a><a class="header-mobile-menu-item__link" href="#">Отзывы</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs"><a class="breadcrumbs__link" href="#">Главная</a><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 7L4 4L1 1" stroke="black" stroke-width="0.75"/>
+</svg><a class="breadcrumbs__link" href="#">Каталог</a><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 7L4 4L1 1" stroke="black" stroke-width="0.75"/>
+</svg>
+        <div class="breadcrumbs__link">Монтаж и установка винтовых свай</div>
+      </div>
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="catalog">
+          <h1 class="title">Винтовые сваи</h1>
+          <div class="catalog-content">
+            <form class="catalog-content-filters" action="#">
+              <div class="catalog-content-filters-wrap">
+                <div class="catalog-content-filters-category">
+                  <div class="catalog-content-filters-category__title active">Вид</div>
+                  <div class="catalog-content-filters-category-items">
+                    <label class="catalog-content-filters-category-items__item" for="check8">
+                      <input type="checkbox" id="check8"><span></span>57 мм
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check9">
+                      <input type="checkbox" id="check9"><span></span>57 мм
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check10">
+                      <input type="checkbox" id="check10"><span></span>57 мм
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check11">
+                      <input type="checkbox" id="check11"><span></span>57 мм
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check12">
+                      <input type="checkbox" id="check12"><span></span>57 мм
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check13">
+                      <input type="checkbox" id="check13"><span></span>57 мм
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check14">
+                      <input type="checkbox" id="check14"><span></span>57 мм
+                    </label>
+                  </div>
+                </div>
+                <div class="catalog-content-filters-category">
+                  <div class="catalog-content-filters-category__title active">Применение</div>
+                  <div class="catalog-content-filters-category-items">
+                    <label class="catalog-content-filters-category-items__item" for="check0">
+                      <input type="checkbox" id="check0"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check1">
+                      <input type="checkbox" id="check1"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check2">
+                      <input type="checkbox" id="check2"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check3">
+                      <input type="checkbox" id="check3"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check4">
+                      <input type="checkbox" id="check4"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check5">
+                      <input type="checkbox" id="check5"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check6">
+                      <input type="checkbox" id="check6"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                    <label class="catalog-content-filters-category-items__item" for="check7">
+                      <input type="checkbox" id="check7"><span></span>Лёгкие вентилируемые заборы
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-content-filters-btns">
+                <button class="catalog-content-filters-btns__submit" type="submit">Показать</button>
+                <button class="catalog-content-filters-btns__reset" type="reset">Сбросить все</button>
+              </div>
+            </form>
+            <div class="catalog-content-main">
+              <div class="catalog-content-main-sort-wrap">
+                <form class="catalog-content-main-sort" action="#">
+                  <select name="sort">
+                    <option value="1">Цена по возрастанию</option>
+                    <option value="2">Цена по убыванию</option>
+                    <option value="3">Цена по возрастанию</option>
+                    <option value="4">Цена по убыванию</option>
+                  </select>
+                </form>
+                <div class="catalog-content-filters-popup">
+                   <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3H17" stroke="black" stroke-linecap="round"/>
+<circle cx="6" cy="3" r="3" fill="black"/>
+<path d="M17 11H1" stroke="black" stroke-linecap="round"/>
+<circle r="3" transform="matrix(-1 0 0 1 12 11)" fill="black"/>
+</svg>Фильтры
+                </div>
+              </div>
+              <div class="catalog-content-main-items">
+                <div class="catalog-content-main-items-wrap"><a class="catalog-content-main-items-item" href="#">
+                    <div class="catalog-content-main-items-item__img"><img src="assets/images/gallery-item.jpg" alt=""></div>
+                    <div class="catalog-content-main-items-item-info">
+                      <div class="catalog-content-main-items-item-info-top">
+                        <div class="catalog-content-main-items-item-info-top__title">Стандартные винтовые сваи со сварным наконечником</div>
+                        <div class="catalog-content-main-items-item-info-top__price">от 950 ₽</div>
+                      </div>
+                      <div class="catalog-content-main-items-item-info-mid">
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                      </div>
+                      <div class="catalog-content-main-items-item-info-bot">
+                        <div class="catalog-content-main-items-item-info-bot-adv"><span>Тяжёлые заборы из профлиста/из дерева</span><span>Лёгкие заборы усиленной конструкции</span></div>
+                        <div class="catalog-content-main-items-item-info-bot__btn">Подробнее</div>
+                      </div>
+                    </div></a><a class="catalog-content-main-items-item" href="#">
+                    <div class="catalog-content-main-items-item__img"><img src="assets/images/gallery-item.jpg" alt=""></div>
+                    <div class="catalog-content-main-items-item-info">
+                      <div class="catalog-content-main-items-item-info-top">
+                        <div class="catalog-content-main-items-item-info-top__title">Стандартные винтовые сваи со сварным наконечником</div>
+                        <div class="catalog-content-main-items-item-info-top__price">от 950 ₽</div>
+                      </div>
+                      <div class="catalog-content-main-items-item-info-mid">
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                        <div class="catalog-content-main-items-item__icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.5 24.5C45.5 36.098 36.098 45.5 24.5 45.5C12.902 45.5 3.5 36.098 3.5 24.5C3.5 12.902 12.902 3.5 24.5 3.5C36.098 3.5 45.5 12.902 45.5 24.5Z" stroke="#FFBC40" stroke-width="3"/>
+<path d="M2 47L11.5 37.5" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+<path d="M37.5 11.5L47 2" stroke="#FFBC40" stroke-width="3" stroke-linecap="round"/>
+</svg><span> <span>57 </span>мм</span>
+                        </div>
+                      </div>
+                      <div class="catalog-content-main-items-item-info-bot">
+                        <div class="catalog-content-main-items-item-info-bot-adv"><span>Тяжёлые заборы из профлиста/из дерева</span><span>Лёгкие заборы усиленной конструкции</span></div>
+                        <div class="catalog-content-main-items-item-info-bot__btn">Подробнее</div>
+                      </div>
+                    </div></a></div>
+                <div class="catalog-content-main-pagination"> <a class="catalog-content-main-pagination__arrow arr-prev disabled" href="#"></a>
+                  <div class="catalog-content-main-pagination-items"><a class="catalog-content-main-pagination__item active disabled" href="#">1</a><a class="catalog-content-main-pagination__item" href="#">2</a><a class="catalog-content-main-pagination__item disabled" href="#">...</a><a class="catalog-content-main-pagination__item" href="#">10</a></div><a class="catalog-content-main-pagination__arrow arr-next" href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-wrap">
+          <div class="footer-col"><a class="footer-logo" href="/"><svg width="74" height="25" viewBox="0 0 74 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M56.0342 0.812063V3.10337C56.0342 3.69741 56.2909 4.29144 56.8043 4.63089L66.6443 11.9291C67.0721 12.1837 67.0721 12.8626 66.6443 13.1172L56.8043 20.4154C56.2909 20.7548 56.0342 21.3489 56.0342 21.9429V24.2342C56.0342 24.8283 56.7187 25.2526 57.2321 24.8283L72.8905 13.202C73.4039 12.8626 73.4039 12.0988 72.8905 11.7594L57.2321 0.13317C56.7187 -0.206281 56.0342 0.13316 56.0342 0.812063Z" fill="#393939"/>
+<path d="M57.4541 8.77112L61.6123 11.6979C62.2208 12.0755 62.2208 12.9253 61.6123 13.3029L57.4541 16.2297C56.8455 16.6073 56.0342 16.2297 56.0342 15.5688V9.43199C56.0342 8.7711 56.8455 8.39347 57.4541 8.77112Z" fill="#FFA500"/>
+<path d="M0 12.2312C2.44857 12.3841 4.17697 12.4605 5.1852 12.4605C5.40605 12.4605 5.57889 12.3943 5.70372 12.2618C5.83815 12.1192 5.90536 11.9307 5.90536 11.6963V11.085C5.90536 10.4737 5.6173 10.168 5.04117 10.168H1.58437V8.02834H4.7531C5.32923 8.02834 5.6173 7.72267 5.6173 7.11134V6.80568C5.6173 6.19435 5.32923 5.88868 4.7531 5.88868H0.144033V3.74902H5.47327C6.41428 3.74902 7.10564 3.97827 7.54734 4.43677C7.98905 4.88508 8.2099 5.57283 8.2099 6.50001C8.2099 7.11134 8.07547 7.6106 7.80661 7.99777C7.54735 8.37476 7.20166 8.63967 6.76957 8.7925C7.54735 9.01666 8.07547 9.56686 8.35393 10.4431C8.44995 10.759 8.49796 11.1257 8.49796 11.5435V11.6963C8.49796 12.6948 8.27711 13.4284 7.83541 13.8971C7.39371 14.3658 6.70235 14.6001 5.76133 14.6001C4.15776 14.6001 2.23732 14.4983 0 14.2945V12.2312Z" fill="black" fill-opacity="0.75"/>
+<path d="M18.5752 14.4473H15.9826V7.87551L12.5258 14.4473H9.7892V3.74902H12.3818V10.3208L15.8386 3.74902H18.5752V14.4473Z" fill="black" fill-opacity="0.75"/>
+<path d="M28.9524 8.48684L26.9359 12.3077H24.9194L22.903 8.48684V14.4473H20.3104V3.74902H23.047L25.9277 9.40383L28.8083 3.74902H31.545V14.4473H28.9524V8.48684Z" fill="black" fill-opacity="0.75"/>
+<path d="M42.065 14.4473H39.4724V7.87551L36.0156 14.4473H33.279V3.74902H35.8716V10.3208L39.3284 3.74902H42.065V14.4473Z" fill="black" fill-opacity="0.75"/>
+<path d="M52.5862 14.4473H49.9936V10.0916H46.3928V14.4473H43.8002V3.74902H46.3928V7.95192H49.9936V3.74902H52.5862V14.4473Z" fill="black" fill-opacity="0.75"/>
+<path d="M2.11765 17.2311V17.6771H0.436764V20.7152H0V17.2311H2.11765Z" fill="black" fill-opacity="0.75"/>
+<path d="M4.42317 17.1475C4.89523 17.1475 5.2967 17.324 5.62758 17.6771C5.96287 18.0301 6.13052 18.4622 6.13052 18.9732C6.13052 19.4842 5.96287 19.9162 5.62758 20.2692C5.2967 20.6223 4.89523 20.7988 4.42317 20.7988C3.83641 20.7988 3.39082 20.5433 3.08641 20.0323V22.1088H2.64964V17.2311H3.08641V17.914C3.39082 17.403 3.83641 17.1475 4.42317 17.1475ZM3.46361 19.9557C3.71508 20.2205 4.02391 20.3528 4.39008 20.3528C4.75626 20.3528 5.06508 20.2205 5.31655 19.9557C5.56802 19.6862 5.69376 19.3587 5.69376 18.9732C5.69376 18.5876 5.56802 18.2624 5.31655 17.9976C5.06508 17.7282 4.75626 17.5935 4.39008 17.5935C4.02391 17.5935 3.71508 17.7282 3.46361 17.9976C3.21214 18.2624 3.08641 18.5876 3.08641 18.9732C3.08641 19.3587 3.21214 19.6862 3.46361 19.9557Z" fill="black" fill-opacity="0.75"/>
+<path d="M9.10986 17.2311H9.57309L8.15692 21.0357C8.02897 21.3795 7.84589 21.6489 7.60765 21.844C7.37383 22.0438 7.11133 22.132 6.82015 22.1088V21.6768C7.21721 21.7232 7.51942 21.4817 7.72677 20.9521L7.8128 20.7361L6.33045 17.2311H6.79368L8.0378 20.1508L9.10986 17.2311Z" fill="black" fill-opacity="0.75"/>
+<path d="M12.8804 17.2311V20.7152H12.4436V17.6771H10.5377V20.7152H10.101V17.2311H12.8804Z" fill="black" fill-opacity="0.75"/>
+<path d="M16.5834 17.2311V20.7152H16.1466V17.6771H14.2408V20.7152H13.804V17.2311H16.5834Z" fill="black" fill-opacity="0.75"/>
+<path d="M20.3526 17.2311H20.7894V20.7152H20.3526V20.0323C20.0482 20.5433 19.6026 20.7988 19.0158 20.7988C18.5438 20.7988 18.1401 20.6223 17.8048 20.2692C17.4739 19.9162 17.3085 19.4842 17.3085 18.9732C17.3085 18.4622 17.4739 18.0301 17.8048 17.6771C18.1401 17.324 18.5438 17.1475 19.0158 17.1475C19.6026 17.1475 20.0482 17.403 20.3526 17.914V17.2311ZM18.1225 19.9557C18.3739 20.2205 18.6828 20.3528 19.0489 20.3528C19.4151 20.3528 19.7239 20.2205 19.9754 19.9557C20.2269 19.6862 20.3526 19.3587 20.3526 18.9732C20.3526 18.5876 20.2269 18.2624 19.9754 17.9976C19.7239 17.7282 19.4151 17.5935 19.0489 17.5935C18.6828 17.5935 18.3739 17.7282 18.1225 17.9976C17.871 18.2624 17.7453 18.5876 17.7453 18.9732C17.7453 19.3587 17.871 19.6862 18.1225 19.9557Z" fill="black" fill-opacity="0.75"/>
+<path d="M26.0421 20.7152H25.4597L23.8053 19.0359V20.7152H23.3685V17.2311H23.8053V18.7711L25.3803 17.2311H25.9759L24.2685 18.9035L26.0421 20.7152Z" fill="black" fill-opacity="0.75"/>
+<path d="M29.0818 20.2762C28.7465 20.6246 28.3362 20.7988 27.8509 20.7988C27.3656 20.7988 26.9531 20.6246 26.6134 20.2762C26.2781 19.9231 26.1105 19.4888 26.1105 18.9732C26.1105 18.4575 26.2781 18.0255 26.6134 17.6771C26.9531 17.324 27.3656 17.1475 27.8509 17.1475C28.3362 17.1475 28.7465 17.324 29.0818 17.6771C29.4215 18.0255 29.5914 18.4575 29.5914 18.9732C29.5914 19.4888 29.4215 19.9231 29.0818 20.2762ZM26.9244 19.9557C27.1759 20.2205 27.4847 20.3528 27.8509 20.3528C28.2171 20.3528 28.5259 20.2205 28.7774 19.9557C29.0289 19.6862 29.1546 19.3587 29.1546 18.9732C29.1546 18.5876 29.0289 18.2624 28.7774 17.9976C28.5259 17.7282 28.2171 17.5935 27.8509 17.5935C27.4847 17.5935 27.1759 17.7282 26.9244 17.9976C26.673 18.2624 26.5472 18.5876 26.5472 18.9732C26.5472 19.3587 26.673 19.6862 26.9244 19.9557Z" fill="black" fill-opacity="0.75"/>
+<path d="M33.5649 17.2311V20.7152H33.1281V17.9349L31.97 19.9139H31.9171L30.759 17.9349V20.7152H30.3222V17.2311H30.8252L31.9436 19.1404L33.0619 17.2311H33.5649Z" fill="black" fill-opacity="0.75"/>
+<path d="M37.27 17.2311V20.7152H36.8332V17.6771H34.9273V20.7152H34.4906V17.2311H37.27Z" fill="black" fill-opacity="0.75"/>
+<path d="M41.0392 17.2311H41.476V20.7152H41.0392V20.0323C40.7348 20.5433 40.2892 20.7988 39.7024 20.7988C39.2304 20.7988 38.8267 20.6223 38.4914 20.2692C38.1605 19.9162 37.9951 19.4842 37.9951 18.9732C37.9951 18.4622 38.1605 18.0301 38.4914 17.6771C38.8267 17.324 39.2304 17.1475 39.7024 17.1475C40.2892 17.1475 40.7348 17.403 41.0392 17.914V17.2311ZM38.8091 19.9557C39.0605 20.2205 39.3694 20.3528 39.7355 20.3528C40.1017 20.3528 40.4105 20.2205 40.662 19.9557C40.9135 19.6862 41.0392 19.3587 41.0392 18.9732C41.0392 18.5876 40.9135 18.2624 40.662 17.9976C40.4105 17.7282 40.1017 17.5935 39.7355 17.5935C39.3694 17.5935 39.0605 17.7282 38.8091 17.9976C38.5576 18.2624 38.4319 18.5876 38.4319 18.9732C38.4319 19.3587 38.5576 19.6862 38.8091 19.9557Z" fill="black" fill-opacity="0.75"/>
+<path d="M44.7434 17.2311H45.1801V20.7152H44.7434V19.1961H42.8375V20.7152H42.4007V17.2311H42.8375V18.7502H44.7434V17.2311Z" fill="black" fill-opacity="0.75"/>
+<path d="M48.5126 17.2311H48.8832V20.7152H48.4464V18.0325L46.4743 20.7152H46.1038V17.2311H46.5405V19.9139L48.5126 17.2311Z" fill="black" fill-opacity="0.75"/>
+<path d="M50.3362 16.6737V16.2695H52.0568V16.6737H50.3362ZM52.2156 17.2311H52.5862V20.7152H52.1494V18.0325L50.1774 20.7152H49.8068V17.2311H50.2436V19.9139L52.2156 17.2311Z" fill="black" fill-opacity="0.75"/>
+</svg></a>
+            <div class="footer__title">© 2019 Группа Компаний "Зимин"</div>
+            <div class="footer__ra">Создание сайта в <a href="https://ra-studio.ru/">RA-Studio</a></div>
+          </div>
+          <div class="footer-col">
+            <div class="footer-menu"><a class="footer-menu__link" href="#">О компании</a><a class="footer-menu__link" href="#">Каталог</a><a class="footer-menu__link" href="#">Доставка</a><a class="footer-menu__link" href="#">Галерея</a><a class="footer-menu__link" href="#">Контакты</a><a class="footer-menu__link" href="#">FAQ </a></div>
+          </div>
+          <div class="footer-col">
+            <div class="footer-info">
+              <div class="footer-info-phones"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.95133 5.97489C5.68115 7.25704 6.74296 8.31885 8.02511 9.04867L8.71267 8.08578C8.82323 7.93095 8.98672 7.82202 9.17218 7.77959C9.35765 7.73717 9.55223 7.76419 9.71911 7.85556C10.8191 8.45672 12.0339 8.81827 13.2837 8.91644C13.4787 8.9319 13.6608 9.0203 13.7935 9.16403C13.9263 9.30775 14 9.49623 14 9.69189V13.1623C14 13.3549 13.9286 13.5406 13.7996 13.6836C13.6706 13.8266 13.4931 13.9166 13.3016 13.9362C12.8893 13.979 12.474 14 12.0556 14C5.39778 14 0 8.60222 0 1.94444C0 1.526 0.021 1.11067 0.0637778 0.698444C0.0834203 0.506876 0.173432 0.329405 0.316392 0.200382C0.459352 0.0713589 0.645094 -4.15005e-05 0.837667 1.80968e-08H4.30811C4.50377 -2.45144e-05 4.69225 0.0736956 4.83597 0.206462C4.9797 0.339228 5.0681 0.521285 5.08356 0.716333C5.18173 1.96606 5.54328 3.18086 6.14444 4.28089C6.23581 4.44777 6.26283 4.64235 6.22041 4.82782C6.17798 5.01328 6.06905 5.17677 5.91422 5.28733L4.95133 5.97489ZM2.98978 5.46389L4.46756 4.40844C4.04816 3.50318 3.76083 2.54243 3.61433 1.55556H1.56333C1.55867 1.68467 1.55633 1.81456 1.55633 1.94444C1.55556 7.74356 6.25644 12.4444 12.0556 12.4444C12.1854 12.4444 12.3153 12.4421 12.4444 12.4367V10.3857C11.4576 10.2392 10.4968 9.95184 9.59156 9.53244L8.53611 11.0102C8.11118 10.8451 7.69845 10.6502 7.301 10.4269L7.25589 10.4012C5.73034 9.533 4.467 8.26966 3.59878 6.74411L3.57311 6.699C3.34982 6.30155 3.15489 5.88882 2.98978 5.46389Z" fill="black" fill-opacity="0.75"/>
+</svg>
+                <div class="footer-info-phones-items"><a href="tel:89219759844">+7 (921) 975-98-44</a></div>
+              </div>
+              <div class="footer-info-address">
+                <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.09098 10.4904L7.79111 7.79092C8.32503 7.2569 8.68862 6.57656 8.83589 5.83591C8.98317 5.09526 8.90752 4.32758 8.6185 3.62993C8.32949 2.93227 7.8401 2.33598 7.21221 1.91646C6.58432 1.49694 5.84613 1.27302 5.09098 1.27302C4.33583 1.27302 3.59764 1.49694 2.96975 1.91646C2.34186 2.33598 1.85247 2.93227 1.56345 3.62993C1.27444 4.32758 1.19879 5.09526 1.34607 5.83591C1.49334 6.57656 1.85693 7.2569 2.39085 7.79092L5.09098 10.4904ZM8.69094 8.69075L5.09098 12.2907L1.49102 8.69075C0.779063 7.97875 0.29422 7.07163 0.0978048 6.08408C-0.0986104 5.09653 0.00222323 4.07292 0.387555 3.14268C0.772887 2.21244 1.42541 1.41736 2.26261 0.857966C3.09981 0.298574 4.08409 0 5.09098 0C6.09787 0 7.08215 0.298574 7.91935 0.857966C8.75655 1.41736 9.40907 2.21244 9.7944 3.14268C10.1797 4.07292 10.2806 5.09653 10.0842 6.08408C9.88774 7.07163 9.40289 7.97875 8.69094 8.69075ZM0.636374 12.7273H9.54558V14H0.636374V12.7273Z" fill="black" fill-opacity="0.75"/>
+</svg>г. Санкт-Петербург, ул.&nbsp;Оборонная, дом 2
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="choose-town" id="choose-town" style="display: none">
+        <div class="choose-town-wrapper"><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a><a class="choose-town__link" href="#">Санкт-Петербург</a>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/jquery.js"></script>
+    <script src="assets/scripts/fancybox/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.suggestions/16.6/js/jquery.suggestions.min.js"></script>
+    <script src="assets/scripts/datapicker.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
