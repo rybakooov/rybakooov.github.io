@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <title> НПО ЭНТ-Технология УФ
+    </title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-wrap"><a class="header-logo" href="index.html"><img class="header-logo__img" src="assets/images/header-logo.svg" alt=""/></a>
+        <nav class="header-nav"><a class="header-nav__link" href="#">Продукция</a><a class="header-nav__link" href="#">О предприятии</a><a class="header-nav__link" href="#">Оплата и Доставка</a><a class="header-nav__link" href="#">Сервис</a><a class="header-nav__link" href="#">Статьи</a><a class="header-nav__link" href="#">Контакты</a></nav><a class="header-phone" href="tel: "><img class="header-icon" src="assets/images/phone-icon.svg" alt=""/>+7 (812) 718-24-92</a>
+        <div class="header-search"><img class="header-icon" src="assets/images/search-icon.svg" alt=""/>
+          <form class="header-search-form" action="">
+            <input class="header-search-form__input" type="text" placeholder="Поисковый запрос по клику"/>
+            <button class="header-search-form__btn" type="submit"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="general-form" id="airform">
+      <div class="general-form-top">
+        <div class="general-form-top__title">подобрать установку</div>
+        <div class="general-form-top__subtitle">для обеззараживания воздуха и поверхностей</div>
+      </div>
+      <div class="general-form-wrap">
+        <div class="general-form-block">
+          <!--.general-form-block-slide.general-form-block-slide_first.general-form-block-slide_current
+          .form-slide-title
+            .form-slide-title__num 
+              span 1
+            .form-slide-title__text Выберите тип установки:
+          .form-slide-btns
+            .form-slide-btns-item(data-slide-id="1")
+              .form-slide-btns-item-wrap
+                .form-slide-btns-item__imgbox(style="background-image: url('assets/images/recirc.png')")
+                .form-slide-btns-item__text УФ<br>Рециркуляторы
+            .form-slide-btns-item(data-slide-id="2")
+              .form-slide-btns-item-wrap
+                .form-slide-btns-item__imgbox(style="background-image: url('assets/images/obluch.png')")
+                .form-slide-btns-item__text УФ<br>Облучатели
+            .form-slide-btns-item(data-slide-id="3")
+              .form-slide-btns-item-wrap
+                .form-slide-btns-item__imgbox(style="background-image: url('assets/images/vent.png')")
+                .form-slide-btns-item__text УФ секции<br>вентсистем
+          ul.form-slide-list
+            li
+              .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
+              | УФ рециркуляторы обеззараживают воздух и поверхности
+            li
+              .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
+              | УФ облучатели обеззараживают поверхности продукции, тары на конвейере, внутренние поверхности емкостей
+            li
+              .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
+              | УФ вентсистем обеззараживают воздух приточный или вытяжной
+          -->
+          <form class="general-form-block-slide general-form-block-slide_second-1">
+            <div class="form-slide-title">
+              <div class="form-slide-title__num"> <span>2</span></div>
+              <div class="form-slide-title__text">Заполните параметры УФ Облучателя:</div>
+            </div>
+          </form>
+          <!--form.general-form-block-slide.general-form-block-slide_second-2
+          .form-slide__title
+            .form-slide-title__num 
+              span 2
+            .form-slide-title__text Заполните параметры рециркуляторов:
+          -->
+          <!--form.general-form-block-slide.general-form-block-slide_second-3
+          .form-slide__title
+            .form-slide-title__num 
+              span 2
+            .form-slide-title__text Заполните параметры вентиляционной секции:
+          -->
+          <div class="general-form-block-slide general-form-block-slide_success"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-logo"><img class="footer-logo__img" src="assets/images/footer-logo.svg" alt=""/>
+          <p class="footer-logo__text">© НПО ЭНТ—ТЕХНОЛОГИЯ УФ, 2020 г.</p>
+        </div>
+        <div class="footer-linklist"><a class="footer-linklist__link" href="#">О предприятии</a><a class="footer-linklist__link" href="#">Доставка</a><a class="footer-linklist__link" href="#">Сервис</a><a class="footer-linklist__link" href="#">Дополнительные услуги</a><a class="footer-linklist__link" href="#">Статьи</a><a class="footer-linklist__link" href="#">Контакты</a></div>
+        <div class="footer-linklist"><a class="footer-linklist__link" href="#">Обеззараживание воздуха и вентиляции</a><a class="footer-linklist__link" href="#">Обеззараживание питьевой воды и бассейнов </a><a class="footer-linklist__link" href="#">Обеззараживание технических и сточных вод</a><a class="footer-linklist__link" href="#">Судовые установки для обеззараживания воды</a><a class="footer-linklist__link" href="#">Обеззарживание воды в рыбоводных хозяйствах </a><a class="footer-linklist__link" href="#">Комплектующие для установок</a></div>
+        <div class="footer-contacts">
+          <div class="footer-contacts-block">
+            <div class="footer-contacts-block__text">199106, г. Санкт-Петербург, 24-я лин. В.О, д. 3-7, лит. Ж, пом. 54-Н, оф. 1</div><a class="footer-contacts-block__link footer-contacts-block__link_mobile" href="tel: +7 (812) 718-24-92">+7 (812) 718-24-92</a>
+          </div>
+          <div class="footer-contacts-block">
+            <div class="footer-contacts-block__text">115230, г. Москва, Варшавское ш., д. 42, оф. 6264</div><a class="footer-contacts-block__link footer-contacts-block__link_mobile" href="tel: +7 (495) 718-24-92">+7 (495) 718-24-92</a><a class="footer-contacts-block__link footer-contacts-block__link_mail" href="mailto: info@npoent.ru">info@npoent.ru</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
