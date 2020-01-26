@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js"></script>
+    <script src="assets/scripts/supaform.js"></script>
     <script src="assets/scripts/main.js"></script>
     <title> НПО ЭНТ-Технология УФ
     </title>
@@ -30,54 +32,679 @@
       </div>
       <div class="general-form-wrap">
         <div class="general-form-block">
-          <!--.general-form-block-slide.general-form-block-slide_first.general-form-block-slide_current
-          .form-slide-title
-            .form-slide-title__num 
-              span 1
-            .form-slide-title__text Выберите тип установки:
-          .form-slide-btns
-            .form-slide-btns-item(data-slide-id="1")
-              .form-slide-btns-item-wrap
-                .form-slide-btns-item__imgbox(style="background-image: url('assets/images/recirc.png')")
-                .form-slide-btns-item__text УФ<br>Рециркуляторы
-            .form-slide-btns-item(data-slide-id="2")
-              .form-slide-btns-item-wrap
-                .form-slide-btns-item__imgbox(style="background-image: url('assets/images/obluch.png')")
-                .form-slide-btns-item__text УФ<br>Облучатели
-            .form-slide-btns-item(data-slide-id="3")
-              .form-slide-btns-item-wrap
-                .form-slide-btns-item__imgbox(style="background-image: url('assets/images/vent.png')")
-                .form-slide-btns-item__text УФ секции<br>вентсистем
-          ul.form-slide-list
-            li
-              .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
-              | УФ рециркуляторы обеззараживают воздух и поверхности
-            li
-              .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
-              | УФ облучатели обеззараживают поверхности продукции, тары на конвейере, внутренние поверхности емкостей
-            li
-              .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
-              | УФ вентсистем обеззараживают воздух приточный или вытяжной
-          -->
+          <div class="general-form-block-slide general-form-block-slide_first general-form-block-slide_current">
+            <div class="form-slide-title">
+              <div class="form-slide-title__num"> <span>1</span></div>
+              <div class="form-slide-title__text">Выберите тип установки:</div>
+            </div>
+            <div class="form-slide-btns">
+              <div class="form-slide-btns-item" data-slide-id="1">
+                <div class="form-slide-btns-item-wrap">
+                  <div class="form-slide-btns-item__imgbox" style="background-image: url('assets/images/recirc.png')"></div>
+                  <div class="form-slide-btns-item__text">УФ<br>Рециркуляторы</div>
+                </div>
+              </div>
+              <div class="form-slide-btns-item" data-slide-id="2">
+                <div class="form-slide-btns-item-wrap">
+                  <div class="form-slide-btns-item__imgbox" style="background-image: url('assets/images/obluch.png')"></div>
+                  <div class="form-slide-btns-item__text">УФ<br>Облучатели</div>
+                </div>
+              </div>
+              <div class="form-slide-btns-item" data-slide-id="3">
+                <div class="form-slide-btns-item-wrap">
+                  <div class="form-slide-btns-item__imgbox" style="background-image: url('assets/images/vent.png')"></div>
+                  <div class="form-slide-btns-item__text">УФ секции<br>вентсистем</div>
+                </div>
+              </div>
+            </div>
+            <ul class="form-slide-list">
+              <li>
+                <div class="form-slide-list__circle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg></div>УФ рециркуляторы обеззараживают воздух и поверхности
+              </li>
+              <li>
+                <div class="form-slide-list__circle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg></div>УФ облучатели обеззараживают поверхности продукции, тары на конвейере, внутренние поверхности емкостей
+              </li>
+              <li>
+                <div class="form-slide-list__circle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg></div>УФ вентсистем обеззараживают воздух приточный или вытяжной
+              </li>
+            </ul>
+          </div>
           <form class="general-form-block-slide general-form-block-slide_second-1">
             <div class="form-slide-title">
+              <div class="form-slide__goBack"></div>
+              <div class="form-slide-title__num"> <span>2</span></div>
+              <div class="form-slide-title__text">Заполните параметры рециркуляторов:</div>
+            </div>
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" data-required="data-required" placeholder="1 000 м³" data-postfix="м³"/>
+                    <p class="general-form-label__title">Объем помещения<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="500 м³/ч" data-postfix="м³/ч"/>
+                    <p class="general-form-label__title">Производительность:</p>
+                  </label>
+                </div>
+                <div class="general-form-row-2">
+                  <p class="general-form-label__title">Тип установки<span>*</span>: </p>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="radio" name="type-ust" data-required="data-required"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox-circle.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Стационарный</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="radio" name="type-ust" data-required="data-required"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox-circle.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Передвижной</p>
+                  </label>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </div>
+                <div class="general-form-row-2">
+                  <p class="general-form-label__title">Назначение помещения:</p>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Торговые центры</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Спортивные учреждения</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Складские помещения</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Учебные учреждения</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Общественного питания</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Медицинские учреждения</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Промышленные помещения</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="123"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Объекты социальной сферы и транспорта</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/recirc.png')"></div>
+            </div>
+          </form>
+          <form class="general-form-block-slide general-form-block-slide_second-2">
+            <div class="form-slide-title">
+              <div class="form-slide__goBack"></div>
               <div class="form-slide-title__num"> <span>2</span></div>
               <div class="form-slide-title__text">Заполните параметры УФ Облучателя:</div>
             </div>
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <div class="general-form-row-2 general-form-row-2_gabarit">
+                  <p class="general-form-label__title">Габариты места установки (Ширина×Длина×Высота)<span>*</span>: </p>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 мм" data-postfix="мм"/>
+                  </label><span>×</span>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 мм" data-postfix="мм"/>
+                  </label><span>×</span>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 мм" data-postfix="мм"/>
+                  </label>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </div>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м/с" data-postfix="м/с"/>
+                    <p class="general-form-label__title">Скорость ленты<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="16 мДж/см2" data-postfix="мДж/см²"/>
+                    <p class="general-form-label__title">УФ-доза<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <div class="general-form-selector">
+                  <p class="general-form-label__title">Вид микроорганизма:</p>
+                  <input type="text"/>
+                  <div class="general-form-selector-wrap">
+                    <div class="general-form-selector__view"></div>
+                    <div class="general-form-selector-list">
+                      <div class="general-form-selector-list__item general-form-selector-list__item_current">бактерии</div>
+                      <div class="general-form-selector-list__item">грибы</div>
+                      <div class="general-form-selector-list__item">вирусы</div>
+                      <div class="general-form-selector-list__item">другое</div>
+                    </div>
+                  </div>
+                </div>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/obluchatel.png')"></div>
+            </div>
           </form>
-          <!--form.general-form-block-slide.general-form-block-slide_second-2
-          .form-slide__title
-            .form-slide-title__num 
-              span 2
-            .form-slide-title__text Заполните параметры рециркуляторов:
-          -->
-          <!--form.general-form-block-slide.general-form-block-slide_second-3
-          .form-slide__title
-            .form-slide-title__num 
-              span 2
-            .form-slide-title__text Заполните параметры вентиляционной секции:
-          -->
-          <div class="general-form-block-slide general-form-block-slide_success"></div>
+          <form class="general-form-block-slide general-form-block-slide_second-3">
+            <div class="form-slide-title">
+              <div class="form-slide__goBack"></div>
+              <div class="form-slide-title__num"> <span>2</span></div>
+              <div class="form-slide-title__text">Заполните параметры вентиляционной секции:</div>
+            </div>
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <div class="general-form-row-2">
+                  <div class="general-form-row-2 general-form-row-2_gabarit">
+                    <p class="general-form-label__title">Сечение вентсекции<span>*</span>: </p>
+                    <label class="general-form-label">
+                      <input class="general-form-label__input" type="text" data-int="data-int" data-required="data-required" placeholder="1 000 мм" data-postfix="мм"/>
+                    </label><span>×</span>
+                    <label class="general-form-label">
+                      <input class="general-form-label__input" type="text" data-int="data-int" data-required="data-required" placeholder="1 000 мм" data-postfix="мм"/>
+                    </label>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </div>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="1 000 мм" data-required="data-required" data-postfix="мм"/>
+                    <p class="general-form-label__title">Длина секции<span>*</span>: </p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="500 м³/ч" data-required="data-required" data-postfix="м³/ч"/>
+                    <p class="general-form-label__title">Производительность<span>*</span>: </p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="99"/>
+                    <p class="general-form-label__title">Категория помещения:</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/vent.png')"></div>
+            </div>
+          </form>
+          <div class="general-form-block-slide general-form-block-slide-success">
+            <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
+            <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="general-form" id="stoch-water">
+      <div class="general-form-top">
+        <div class="general-form-top__title">подобрать установку</div>
+        <div class="general-form-top__subtitle">для обеззараживания сточной воды</div>
+      </div>
+      <div class="general-form-wrap">
+        <div class="general-form-block">
+          <form class="general-form-block-slide general-form-block-slide_current">
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м/с" data-postfix="м/с"/>
+                    <p class="general-form-label__title">Скорость ленты<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="16 мДж/см2" data-postfix="мДж/см²"/>
+                    <p class="general-form-label__title">УФ-доза<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <p class="general-form-label__title">Показатели качества воды <span class="general-form-label__title_light">(перед УФ-установкой)</span>:</p>
+                <div class="general-form-row-oneStroke">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 мг/л" data-postfix="мг/л"/>
+                    <p class="general-form-label__title"><span class="general-form-label__title_light">Взвешенные вещества (макс. кол-во)</span><span>*</span></p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <div class="general-form-row-title-oneInp"> 
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="1 000 кгс/см" data-postfix="кгс/см"/>
+                    <p class="general-form-label__title">Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span></p>
+                  </label>
+                </div>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="200 мг/л" data-postfix="мг/л"/>
+                    <p class="general-form-label__title"><span class="general-form-label__title_light">БПК<sub>5</sub></span><span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="300 мг/л" data-postfix="мг/л"/>
+                    <p class="general-form-label__title"><span class="general-form-label__title_light">ХПК</span><span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/stoch-water.png')"></div>
+            </div>
+          </form>
+          <div class="general-form-block-slide general-form-block-slide-success">
+            <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
+            <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="general-form" id="pit-water">
+      <div class="general-form-top">
+        <div class="general-form-top__title">подобрать установку</div>
+        <div class="general-form-top__subtitle">для обеззараживания питьевой</div>
+      </div>
+      <div class="general-form-wrap">
+        <div class="general-form-block">
+          <form class="general-form-block-slide general-form-block-slide_current">
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="1 000 м/с" data-postfix="м/с"/>
+                    <p class="general-form-label__title">Скорость ленты<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="16 мДж/см2" data-postfix="мДж/см²"/>
+                    <p class="general-form-label__title">УФ-доза<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <div class="general-form-row-title-oneInp"> 
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="1 000 кгс/см" data-postfix="кгс/см"/>
+                    <p class="general-form-label__title">Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span></p>
+                  </label>
+                </div>
+                <div class="general-form-row-2 general-form-row-checkblockWithText" data-valid="false">
+                  <p class="general-form-label__title">Укажите тип источника водоснабжения<span>*</span>:</p>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="312"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Скважина</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="312"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Муниципальный водопровод</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="312"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Колодец</p>
+                  </label>
+                  <label class="general-form-checkblock">
+                    <input class="general-form-checkblock__input" type="checkbox" name="312"/>
+                    <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                    <p class="general-form-checkblock__text">Поверхностный источник (река, озеро, водохранилище)</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" placeholder="Другой вариант"/>
+                  </label>
+                  <p class="general-form-label__text">Данные поля являются обязательными</p>
+                </div>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/pit-water.png')"></div>
+            </div>
+          </form>
+          <div class="general-form-block-slide general-form-block-slide-success">
+            <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
+            <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="general-form" id="ship">      
+      <div class="general-form-top">
+        <div class="general-form-top__title">подобрать установку</div>
+        <div class="general-form-top__subtitle">для морских и речных судов</div>
+      </div>
+      <div class="general-form-wrap">
+        <div class="general-form-block">
+          <form class="general-form-block-slide general-form-block-slide_current">
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" data-int="data-int" placeholder="500 м³/ч" data-postfix="м³/ч"/>
+                  <p class="general-form-label__title">Производительность<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <div class="general-form-selector">
+                    <p class="general-form-label__title">Количество человек<span>*</span>:</p>
+                    <input type="text"/>
+                    <div class="general-form-selector-wrap">
+                      <div class="general-form-selector__view"></div>
+                      <div class="general-form-selector-list">
+                        <div class="general-form-selector-list__item general-form-selector-list__item_current">19</div>
+                        <div class="general-form-selector-list__item">20</div>
+                        <div class="general-form-selector-list__item">21</div>
+                        <div class="general-form-selector-list__item">22</div>
+                      </div>
+                    </div>
+                  </div>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-int="data-int" placeholder="100 л/чел" data-postfix="л/чел"/>
+                    <p class="general-form-label__title">Норма на человека:</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/ship-ust.png')"></div>
+            </div>
+          </form>
+          <div class="general-form-block-slide general-form-block-slide-success">
+            <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
+            <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел  </span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="general-form" id="default-form">     
+      <div class="general-form-top">
+        <div class="general-form-top__title">Оставить заявку</div>
+      </div>
+      <div class="general-form-wrap">
+        <div class="general-form-block">
+          <form class="general-form-block-slide general-form-block-slide_current">
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Текст сообщения</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/default-form.png')"></div>
+            </div>
+          </form>
+          <div class="general-form-block-slide general-form-block-slide-success">
+            <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
+            <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел  </span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="general-form" id="zakazat">    
+      <div class="general-form-top">
+        <div class="general-form-top__title">Заказать услуги</div>
+      </div>
+      <div class="general-form-wrap">
+        <div class="general-form-block">
+          <form class="general-form-block-slide general-form-block-slide_current">
+            <div class="general-form-block-row">
+              <div class="general-form-block-col">
+                <div class="general-form-selector">
+                  <p class="general-form-label__title">Выберите услугу которую хотите заказть<span>*</span>:</p>
+                  <input type="text"/>
+                  <div class="general-form-selector-wrap">
+                    <div class="general-form-selector__view"></div>
+                    <div class="general-form-selector-list">
+                      <div class="general-form-selector-list__item general-form-selector-list__item_current">Гидрообразивная резка0</div>
+                      <div class="general-form-selector-list__item">Гидрообразивная резка1</div>
+                      <div class="general-form-selector-list__item">Гидрообразивная резка2</div>
+                      <div class="general-form-selector-list__item">Гидрообразивная резка3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="general-form-file">
+                  <label class="general-form-file-label">
+                    <input type="file"/><img src="assets/images/file-input.svg" alt=""/>
+                    <p class="general-form-file-label__text"><span class="general-form-file-label__text_blue">Прикрепить</span> файл с <span class="general-form-file-label__text_bold">Техническим заданием</span></p>
+                  </label>
+                  <div class="general-form-file__close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"/> </g> </g></svg></div>
+                </div>
+                <label class="general-form-label">
+                  <textarea class="general-form-label__textarea"></textarea>
+                  <p class="general-form-label__title">Опишите технические требования</p>
+                  <div class="general-form-label__resize"></div>
+                </label>
+                <label class="general-form-label">
+                  <input class="general-form-label__input" type="text" data-required="data-required" placeholder="Иванов Иван"/>
+                  <p class="general-form-label__title">Ваше Имя<span>*</span>:</p>
+                  <p class="general-form-label__text">Данное поле является обязательным</p>
+                </label>
+                <div class="general-form-row-2">
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-required="data-required" data-type="tel" placeholder="+7 (900) 000-00-00"/>
+                    <p class="general-form-label__title">Ваш телефон<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                  <label class="general-form-label">
+                    <input class="general-form-label__input" type="text" data-type="email" placeholder="ivanivanov@mail.ru"/>
+                    <p class="general-form-label__title">Ваше E-mail<span>*</span>:</p>
+                    <p class="general-form-label__text">Данное поле является обязательным</p>
+                  </label>
+                </div>
+                <label class="general-form-checkblock general-form-checkblock_sogl">
+                  <input class="general-form-checkblock__input" type="checkbox" name="" data-required="data-required"/>
+                  <div class="general-form-checkblock__box"><img src="assets/images/checkbox.svg" alt=""/></div>
+                  <p class="general-form-checkblock__text">Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> </p>
+                  <p class="general-form-label__text">Согласие необходимо для отправки формы</p>
+                </label>
+                <button class="general-btn general-btn_green general-form__submit" type="submit" data-type="submit">Отправить</button>
+              </div>
+              <div class="general-form-block-col general-form-block-col_img" style="background-image: url('assets/images/ship-ust.png')"></div>
+            </div>
+          </form>
+          <div class="general-form-block-slide general-form-block-slide-success">
+            <p class="general-form-block-slide-success__title">Ваша заявка<br>успешно отправлена</p>
+            <p class="general-form-block-slide-success__text">Наш менеджер свяжется с Вами в ближайшее время</p><a class="general-btn general-btn_gradient general-form-block-slide-success__btn" href="catalog-active.html"> <span>Вернуться в раздел  </span></a>
+          </div>
         </div>
       </div>
     </div>
