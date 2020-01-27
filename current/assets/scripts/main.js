@@ -44,7 +44,7 @@ $(document).ready(function(){
   /* partners-slider on main */
 
   $('.partners-wrap').slick({
-    slidesToShow: 10,
+    slidesToShow: 7,
     slidesToScroll: 1,
     arrows: true,
     infinity: true,
