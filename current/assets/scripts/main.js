@@ -12,12 +12,42 @@ $(document).ready(function(){
     $('body').removeClass('body-overflow');
   })
 
-/*
+
   $(window).on('resize', function(){
-    $('.header-nav-wrap').slideUp();
+    if(document.documentElement.clientWidth < 1024 && $('body').hasClass('body-overflow')){
+      $('.header-nav-sublist').removeClass('active');
+      $('.header-nav-wrap').slideUp(400, function() {
+        $('.header-nav-wrap').attr('style', '');
+      });
+      $('body').removeClass('body-overflow');
+    }
+  })
+
+  $(document).on('click', '.header-nav-sublist__back', function(){
+    $(this).closest('.header-nav-sublist').removeClass('active');
+  })
+
+  $(document).on('click', '.header-nav-sublist__close', function(){
+    $(this).closest('.header-nav-sublist').removeClass('active');
+    $('.header-nav-wrap').slideUp(400, function() {
+      $('.header-nav-wrap').attr('style', '');
+    });
     $('body').removeClass('body-overflow');
-  })*/
+  })
+
   /* бургер моб меню end */
+
+
+  /* Открытие второго уровня меню */
+
+  $(document).on('click', '.header-nav__link', function(e){
+    if($(this).next('.header-nav-sublist').length == 1){
+      e.preventDefault();
+      $(this).next('.header-nav-sublist').addClass('active');
+    }
+  })
+
+  /* Открытие второго уровня меню end */
 
 
   /* анимация лого в хедере */
@@ -72,6 +102,20 @@ $(document).ready(function(){
     slidesToScroll: 1,
     arrows: true,
     infinity: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow:5,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   })
 
   $('.patents__item:not(.slick-cloned)').fancybox({
@@ -79,6 +123,54 @@ $(document).ready(function(){
   /* partners-slider on main end */
 
 
+  /* footer lists */
+
+  $(document).on('click', '.footer-linklist__header', function(){
+
+    if($(this).next('.footer-linklist').hasClass('opened')){
+      $(this).next('.footer-linklist').slideUp();
+      $(this).next('.footer-linklist').removeClass('opened');
+    } else {
+      if($('.footer-linklist.opened').length){
+        $('.footer-linklist.opened').slideUp();
+        $('.footer-linklist.opened').removeClass('opened');
+
+        
+        $(this).next('.footer-linklist').slideDown();
+        $(this).next('.footer-linklist').addClass('opened');
+      } else {
+        $(this).next('.footer-linklist').slideDown();
+        $(this).next('.footer-linklist').addClass('opened');
+      }
+    }
+    
+  })
+
+  /* footer lists end*/
+
+  var smaller = false;
+  /* catalog mobile */
+  function tableGrid() {
+    if($('.catalog-block-table:not(.catalog-block-table_more)').length){
+      if(document.documentElement.clientWidth < 1024 && smaller == false){
+        smaller = true;
+        $('.catalog-block-table:not(.catalog-block-table_more)').addClass('catalog-block-table_grid');
+      } else if(document.documentElement.clientWidth >= 1024 && smaller == true) {
+        smaller = false;
+        $('.catalog-block-table:not(.catalog-block-table_more)').removeClass('catalog-block-table_grid');
+        if($('.catalog-block-top-switch-view__grid.active').length){
+          $('.catalog-block-top-switch-view__grid.active').removeClass('active');
+          $('.catalog-block-top-switch-view__table').addClass('active');
+        }
+      }
+    }
+  };
+  tableGrid();
+
+  $(window).resize(function(){
+    tableGrid();
+  })
+  /* catalog mobile end */
 
   /* patent-slider on about */
 
@@ -87,18 +179,50 @@ $(document).ready(function(){
     slidesToScroll: 1,
     arrows: true,
     infinity: true,
+    responsive: [
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   })
   /* patent-slider on about end */
 
   /* how we work animation */
 
   $(document).on('mouseover', '.how-we-work-item', function(){
-    $(this).prev('.how-we-work-arr').find('img').addClass('opacity-1');
+    if(document.documentElement.clientWidth >= 1024){
+      $(this).prev('.how-we-work-arr').find('img').addClass('opacity-1');
+    }
   })
 
   $(document).on('mouseout', '.how-we-work-item', function(){
-    $(this).prev('.how-we-work-arr').find('img').removeClass('opacity-1');
+    if(document.documentElement.clientWidth >= 1024){
+      $(this).prev('.how-we-work-arr').find('img').removeClass('opacity-1');
+    }
   })
+
+  $(window).on('scroll', function(){
+    if(document.documentElement.clientWidth < 1024){
+      $('.how-we-work-item').each(function(e){
+        var c = this.getBoundingClientRect()
+        if(c.top < 400 && c.top > 300 && !$(this).hasClass('active')){
+          $('.how-we-work-item.active').removeClass('active');
+          $(this).addClass('active');
+        }
+      })
+    }
+  })
+
+
   /* how we work animation end*/
 
 
@@ -147,15 +271,43 @@ $(document).ready(function(){
 
   /* фильтры и сортировка в каталоге end*/
 
+ /* акккордеоны в карточке товара */
+  $(document).on('click', '.item-main-col_desc-full__open.item-main-col_desc-full__open_opened', function(){
+    $(this).removeClass('item-main-col_desc-full__open_opened');
+    $(this).siblings('.item-main-col_desc-full__akkord').slideUp()
+  })
+
+
+  $(document).on('click', '.item-main-col_desc-full__open:not(.item-main-col_desc-full__open_opened)', function(){
+    if($('.item-main-col_desc-full__open_opened').length){
+      $('.item-main-col_desc-full__open_opened').siblings('.item-main-col_desc-full__akkord').slideUp();
+      $('.item-main-col_desc-full__open_opened').removeClass('item-main-col_desc-full__open_opened');
+    }
+    $(this).addClass('item-main-col_desc-full__open_opened');
+    $(this).siblings('.item-main-col_desc-full__akkord').slideDown();
+  
+  })
+
+  
+/* акккордеоны в карточке товара end */
 
 
   /* слайдеры на карточке товара */
+
 
   $('.item-main-col-preview').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.item-main-col-slider-wrap',
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          dots: true
+        }
+      }
+    ]
   })
 
   $('.item-main-col-slider-wrap').slick({
