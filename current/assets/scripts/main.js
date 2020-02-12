@@ -91,7 +91,8 @@ $(document).ready(function(){
     arrows: false,
     infinity: true,
     dots: true,
-
+    autoplay: true,
+    autoplaySpeed: 2000
   })
   /* banner on main end */
 
@@ -118,8 +119,7 @@ $(document).ready(function(){
     ]
   })
 
-  $('.patents__item:not(.slick-cloned)').fancybox({
-  });
+  $('.patents__item:not(.slick-cloned)').fancybox({});
   /* partners-slider on main end */
 
 
@@ -187,7 +187,13 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 767,
         settings: {
           slidesToShow: 2
         }
@@ -197,31 +203,28 @@ $(document).ready(function(){
   /* patent-slider on about end */
 
   /* how we work animation */
-
-  $(document).on('mouseover', '.how-we-work-item', function(){
-    if(document.documentElement.clientWidth >= 1024){
-      $(this).prev('.how-we-work-arr').find('img').addClass('opacity-1');
-    }
-  })
-
-  $(document).on('mouseout', '.how-we-work-item', function(){
-    if(document.documentElement.clientWidth >= 1024){
-      $(this).prev('.how-we-work-arr').find('img').removeClass('opacity-1');
-    }
-  })
+  
 
   $(window).on('scroll', function(){
     if(document.documentElement.clientWidth < 1024){
       $('.how-we-work-item').each(function(e){
         var c = this.getBoundingClientRect()
-        if(c.top < 400 && c.top > 300 && !$(this).hasClass('active')){
-          $('.how-we-work-item.active').removeClass('active');
-          $(this).addClass('active');
+        if(c.top < 400 && c.top > 300){
+          $(this).addClass('animation-circle-how');
         }
       })
+    } else {
+      var c = document.querySelector('.how-we-work-wrap').getBoundingClientRect()
+      if(c.top < 700){
+        $('.how-we-work-item').each(function(i){
+          let element = $(this);
+          setTimeout(function(){
+            element.addClass('animation-circle-how');
+          }, i * 200)
+        })
+      }
     }
   })
-
 
   /* how we work animation end*/
 
@@ -269,6 +272,11 @@ $(document).ready(function(){
     $(this).closest('.catalog-active-filter-item-list.active').fadeOut('fast');
   })
 
+
+  $(document).on('click', '.catalog-active-filter__icon', function(){
+    $(this).next().slideDown();
+  })
+
   /* фильтры и сортировка в каталоге end*/
 
  /* акккордеоны в карточке товара */
@@ -300,6 +308,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     asNavFor: '.item-main-col-slider-wrap',
     arrows: false,
+    infinite: false,
     responsive: [
       {
         breakpoint: 1023,
@@ -316,10 +325,39 @@ $(document).ready(function(){
     slidesToScroll: 1,
     verticalSwiping: true,
     asNavFor: '.item-main-col-preview',
+    infinite: false,
     vertical: true,
-    prevArrow: '<div class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 18.75"><g id="Слой_2" data-name="Слой 2"><g id="layout"><path class="cls-1" d="M0,18a.75.75,0,0,1,.22-.53L17.47.22a.75.75,0,0,1,1.06,0L35.78,17.47a.75.75,0,1,1-1.06,1.06L18,1.81,1.28,18.53A.75.75,0,0,1,0,18Z"/><path class="cls-1" d="M14.62,10.51a.75.75,0,0,1,.22-.53l2.63-2.63a.75.75,0,0,1,1.06,0l7.37,7.37a.75.75,0,0,1-1.06,1.06L18,8.94,15.9,11a.75.75,0,0,1-1.28-.53Z"/><path class="cls-1" d="M11,14.12a.75.75,0,0,1,.22-.53l1.6-1.6a.75.75,0,1,1,1.06,1.06l-1.6,1.6A.75.75,0,0,1,11,14.12Z"/></g></g></svg></div>',
-    nextArrow: '<div class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 18.75"><g id="Слой_2" data-name="Слой 2"><g id="layout"><path class="cls-1" d="M0,18a.75.75,0,0,1,.22-.53L17.47.22a.75.75,0,0,1,1.06,0L35.78,17.47a.75.75,0,1,1-1.06,1.06L18,1.81,1.28,18.53A.75.75,0,0,1,0,18Z"/><path class="cls-1" d="M14.62,10.51a.75.75,0,0,1,.22-.53l2.63-2.63a.75.75,0,0,1,1.06,0l7.37,7.37a.75.75,0,0,1-1.06,1.06L18,8.94,15.9,11a.75.75,0,0,1-1.28-.53Z"/><path class="cls-1" d="M11,14.12a.75.75,0,0,1,.22-.53l1.6-1.6a.75.75,0,1,1,1.06,1.06l-1.6,1.6A.75.75,0,0,1,11,14.12Z"/></g></g></svg></div>',
+    prevArrow: '<div class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 18.75"><g id="Слой_2" data-name="Слой 2"><g id="layout"><path class="cls-1" d="M0,18a.75.75,0,0,1,.22-.53L17.47.22a.75.75,0,0,1,1.06,0L35.78,17.47a.75.75,0,1,1-1.06,1.06L18,1.81,1.28,18.53A.75.75,0,0,1,0,18Z"/><path class="cls-1" d="M14.62,10.51a.75.75,0,0,1,.22-.53l2.63-2.63a.75.75,0,0,1,1.06,0l7.37,7.37a.75.75,0,0,1-1.06,1.06L18,8.94,15.9,11a.75.75,0,0,1-1.28-.53Z"/><path class="cls-1" d="M11,14.12a.75.75,0,0,1,.22-.53l1.6-1.6a.75.75,0,1,1,1.06,1.06l-1.6,1.6A.75.75,0,0,1,11,14.12Z"/></g></g></svg></div>',
+    nextArrow: '<div class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 18.75"><g id="Слой_2" data-name="Слой 2"><g id="layout"><path class="cls-1" d="M0,18a.75.75,0,0,1,.22-.53L17.47.22a.75.75,0,0,1,1.06,0L35.78,17.47a.75.75,0,1,1-1.06,1.06L18,1.81,1.28,18.53A.75.75,0,0,1,0,18Z"/><path class="cls-1" d="M14.62,10.51a.75.75,0,0,1,.22-.53l2.63-2.63a.75.75,0,0,1,1.06,0l7.37,7.37a.75.75,0,0,1-1.06,1.06L18,8.94,15.9,11a.75.75,0,0,1-1.28-.53Z"/><path class="cls-1" d="M11,14.12a.75.75,0,0,1,.22-.53l1.6-1.6a.75.75,0,1,1,1.06,1.06l-1.6,1.6A.75.75,0,0,1,11,14.12Z"/></g></g></svg></div>',
   })
+
+  function initArr() {
+    var prevArr = $('.item-main-col-slider-wrap').find('.slick-next.slick-arrow');
+    var nextArr = $('.item-main-col-slider-wrap').find('.slick-prev.slick-arrow');;
+    if($('.item-main-col-slider-wrap').find('.slick-track').find('.item-main-col-slider__item:last-child').hasClass('slick-current')){
+      nextArr.addClass('last-arrow');
+    } else {
+      nextArr.removeClass('last-arrow');
+    }
+    if($('.item-main-col-slider-wrap').find('.slick-track').find('.item-main-col-slider__item:first-child').hasClass('slick-current')){
+      prevArr.addClass('last-arrow');
+    } else {
+      prevArr.removeClass('last-arrow');
+    }
+  }
+
+  
+
+  if($('.item-main-col-slider-wrap').length){
+    initArr();
+
+  }
+
+  $('.item-main-col-slider-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    initArr();
+  });
+
+
 
   /* слайдеры на карточке товара end */
 
