@@ -1,0 +1,392 @@
+.general-form#airform
+  .general-form-top
+    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__subtitle для обеззараживания воздуха и поверхностей
+  .general-form-wrap
+    .general-form-block
+      .general-form-block-slide.general-form-block-slide_first.general-form-block-slide_current
+        .form-slide-title
+          .form-slide-title__num 
+            span 1
+          .form-slide-title__text Выберите тип установки:
+        .form-slide-btns
+          .form-slide-btns-item(data-slide-id="1")
+            .form-slide-btns-item-wrap
+              .form-slide-btns-item__imgbox(style="background-image: url('assets/images/recirc.png')")
+              .form-slide-btns-item__text УФ<br>Рециркуляторы
+          .form-slide-btns-item(data-slide-id="2")
+            .form-slide-btns-item-wrap
+              .form-slide-btns-item__imgbox(style="background-image: url('assets/images/obluch.png')")
+              .form-slide-btns-item__text УФ<br>Облучатели
+          .form-slide-btns-item(data-slide-id="3")
+            .form-slide-btns-item-wrap
+              .form-slide-btns-item__imgbox(style="background-image: url('assets/images/vent.png')")
+              .form-slide-btns-item__text УФ секции<br>вентсистем
+        ul.form-slide-list
+          li
+            .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
+            | УФ рециркуляторы обеззараживают воздух и поверхности
+          li
+            .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
+            | УФ облучатели обеззараживают поверхности продукции, тары на конвейере, внутренние поверхности емкостей
+          li
+            .form-slide-list__circle <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:url(#New_Gradient_Swatch_1);}.cls-3{fill:url(#New_Gradient_Swatch_1-2);}</style><linearGradient id="New_Gradient_Swatch_1" y1="8" x2="16" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a92c8e"/><stop offset="0.5" stop-color="#2b2968"/><stop offset="1" stop-color="#25a7de"/></linearGradient><linearGradient id="New_Gradient_Swatch_1-2" x1="4.14" x2="11.86" xlink:href="#New_Gradient_Swatch_1"/></defs><title>list-circle</title><g id="Слой_2" data-name="Слой 2"><g id="layout"><circle class="cls-1" cx="8" cy="8" r="8"/><path class="cls-2" d="M8,.75A7.25,7.25,0,1,1,.75,8,7.26,7.26,0,0,1,8,.75M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z"/><circle class="cls-3" cx="8" cy="8" r="3.86"/></g></g></svg>
+            | УФ вентсистем обеззараживают воздух приточный или вытяжной
+      form.general-form-block-slide.general-form-block-slide_second-1
+        .form-slide-title
+          .form-slide__goBack
+          .form-slide-title__num 
+            span 2
+          .form-slide-title__text Заполните параметры рециркуляторов:
+        .general-form-block-row
+          .general-form-block-col
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-int data-required placeholder="1 000 м³" data-postfix="м³").general-form-label__input
+                p.general-form-label__title Объем помещения<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-int placeholder="500 м³/ч" data-postfix="м³/ч").general-form-label__input
+                p.general-form-label__title Производительность:
+            .general-form-row-2
+              p.general-form-label__title Тип установки<span>*</span>: 
+              label.general-form-checkblock
+                input(type="radio", name="type-ust" data-required).general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox-circle.svg", alt="")
+                p.general-form-checkblock__text Стационарный
+              label.general-form-checkblock
+                input(type="radio", name="type-ust" data-required).general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox-circle.svg", alt="")
+                p.general-form-checkblock__text Передвижной
+              p.general-form-label__text Данное поле является обязательным
+            .general-form-row-2
+              p.general-form-label__title Назначение помещения:
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Торговые центры
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Спортивные учреждения
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Складские помещения
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Учебные учреждения
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Общественного питания
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Медицинские учреждения
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Промышленные помещения
+              label.general-form-checkblock
+                input(type="checkbox", name="123").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Объекты социальной сферы и транспорта
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/recirc.png')")
+      form.general-form-block-slide.general-form-block-slide_second-2
+        .form-slide-title
+          .form-slide__goBack
+          .form-slide-title__num 
+            span 2
+          .form-slide-title__text Заполните параметры УФ Облучателя:
+        .general-form-block-row
+          .general-form-block-col
+            .general-form-row-2.general-form-row-2_gabarit
+              p.general-form-label__title Габариты места установки (Ширина×Длина×Высота)<span>*</span>: 
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 мм" data-postfix="мм").general-form-label__input
+              span ×
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 мм" data-postfix="мм").general-form-label__input
+              span ×
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 мм" data-postfix="мм").general-form-label__input
+              p.general-form-label__text Данное поле является обязательным
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 м/с" data-postfix="м/с").general-form-label__input
+                p.general-form-label__title Скорость ленты<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="16 мДж/см2" data-postfix="мДж/см²").general-form-label__input
+                p.general-form-label__title УФ-доза<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+            .general-form-selector
+              p.general-form-label__title Вид микроорганизма:
+              input(type="text")
+              .general-form-selector-wrap
+                .general-form-selector__view
+                .general-form-selector-list
+                  .general-form-selector-list__item.general-form-selector-list__item_current бактерии
+                  .general-form-selector-list__item грибы
+                  .general-form-selector-list__item вирусы
+                  .general-form-selector-list__item другое
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/obluchatel.png')")
+      form.general-form-block-slide.general-form-block-slide_second-3
+        .form-slide-title
+          .form-slide__goBack
+          .form-slide-title__num 
+            span 2
+          .form-slide-title__text Заполните параметры вентиляционной секции:
+        .general-form-block-row
+          .general-form-block-col
+            .general-form-row-2
+              .general-form-row-2.general-form-row-2_gabarit
+                p.general-form-label__title Сечение вентсекции<span>*</span>: 
+                label.general-form-label
+                  input(type="text" data-int data-required placeholder="1 000 мм" data-postfix="мм").general-form-label__input
+                span ×
+                label.general-form-label
+                  input(type="text" data-int data-required placeholder="1 000 мм" data-postfix="мм").general-form-label__input
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-int placeholder="1 000 мм" data-required data-postfix="мм").general-form-label__input
+                p.general-form-label__title Длина секции<span>*</span>: 
+                p.general-form-label__text Данное поле является обязательным
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-int placeholder="500 м³/ч" data-required data-postfix="м³/ч").general-form-label__input
+                p.general-form-label__title Производительность<span>*</span>: 
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-int placeholder="99").general-form-label__input
+                p.general-form-label__title Категория помещения:
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/vent.png')")
+      .general-form-block-slide.general-form-block-slide-success
+        p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
+        p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
+        a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
+          span Вернуться в раздел
+
+.general-form#stoch-water
+  .general-form-top
+    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__subtitle для обеззараживания сточной воды
+  .general-form-wrap
+    .general-form-block
+      form.general-form-block-slide.general-form-block-slide_current
+        .general-form-block-row
+          .general-form-block-col
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 м/с" data-postfix="м/с").general-form-label__input
+                p.general-form-label__title Скорость ленты<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="16 мДж/см2" data-postfix="мДж/см²").general-form-label__input
+                p.general-form-label__title УФ-доза<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+            p.general-form-label__title Показатели качества воды <span class="general-form-label__title_light">(перед УФ-установкой)</span>:
+            .general-form-row-oneStroke
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 мг/л" data-postfix="мг/л").general-form-label__input
+                p.general-form-label__title <span class="general-form-label__title_light">Взвешенные вещества (макс. кол-во)</span><span>*</span>
+                p.general-form-label__text Данное поле является обязательным
+            .general-form-row-title-oneInp 
+              label.general-form-label
+                input(type="text" data-int placeholder="1 000 кгс/см" data-postfix="кгс/см").general-form-label__input
+                p.general-form-label__title Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span>
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="200 мг/л" data-postfix="мг/л").general-form-label__input
+                p.general-form-label__title <span class="general-form-label__title_light">БПК<sub>5</sub></span><span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="300 мг/л" data-postfix="мг/л").general-form-label__input
+                p.general-form-label__title <span class="general-form-label__title_light">ХПК</span><span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/stoch-water.png')")
+      .general-form-block-slide.general-form-block-slide-success
+        p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
+        p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
+        a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
+          span Вернуться в раздел
+
+.general-form#pit-water
+  .general-form-top
+    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__subtitle для обеззараживания питьевой
+  .general-form-wrap
+    .general-form-block
+      form.general-form-block-slide.general-form-block-slide_current
+        .general-form-block-row
+          .general-form-block-col
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="1 000 м/с" data-postfix="м/с").general-form-label__input
+                p.general-form-label__title Скорость ленты<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-required data-int placeholder="16 мДж/см2" data-postfix="мДж/см²").general-form-label__input
+                p.general-form-label__title УФ-доза<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+            .general-form-row-title-oneInp 
+              label.general-form-label
+                input(type="text" data-int placeholder="1 000 кгс/см" data-postfix="кгс/см").general-form-label__input
+                p.general-form-label__title Максимальное давление воды, <span class="general-form-label__title_light">подаваемой в установку:</span>
+            .general-form-row-2.general-form-row-checkblockWithText(data-valid="false")
+              p.general-form-label__title Укажите тип источника водоснабжения<span>*</span>:
+              label.general-form-checkblock
+                input(type="checkbox", name="312").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Скважина
+              label.general-form-checkblock
+                input(type="checkbox", name="312").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Муниципальный водопровод
+              label.general-form-checkblock
+                input(type="checkbox", name="312").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Колодец
+              label.general-form-checkblock
+                input(type="checkbox", name="312").general-form-checkblock__input
+                .general-form-checkblock__box
+                  img(src="assets/images/checkbox.svg", alt="")
+                p.general-form-checkblock__text Поверхностный источник (река, озеро, водохранилище)
+              label.general-form-label
+                input(type="text" placeholder="Другой вариант").general-form-label__input
+              p.general-form-label__text Данные поля являются обязательными
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/pit-water.png')")
+      .general-form-block-slide.general-form-block-slide-success
+        p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
+        p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
+        a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
+          span Вернуться в раздел
+
+.general-form#ship       
+  .general-form-top
+    .general-form-top__title.centerTitle подобрать установку
+    .general-form-top__subtitle для морских и речных судов
+  .general-form-wrap
+    .general-form-block
+      form.general-form-block-slide.general-form-block-slide_current
+        .general-form-block-row
+          .general-form-block-col
+            label.general-form-label
+              input(type="text" data-required data-int placeholder="500 м³/ч" data-postfix="м³/ч").general-form-label__input
+              p.general-form-label__title Производительность<span>*</span>:
+              p.general-form-label__text Данное поле является обязательным
+            .general-form-row-2
+              .general-form-selector
+                p.general-form-label__title Количество человек<span>*</span>:
+                input(type="text")
+                .general-form-selector-wrap
+                  .general-form-selector__view
+                  .general-form-selector-list
+                    .general-form-selector-list__item.general-form-selector-list__item_current 19
+                    .general-form-selector-list__item 20
+                    .general-form-selector-list__item 21
+                    .general-form-selector-list__item 22
+              label.general-form-label
+                input(type="text" data-int placeholder="100 л/чел" data-postfix="л/чел").general-form-label__input
+                p.general-form-label__title Норма на человека:
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/ship-ust.png')")
+      .general-form-block-slide.general-form-block-slide-success
+        p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
+        p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
+        a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
+          span Вернуться в раздел  
+
+
+.general-form#default-form      
+  .general-form-top
+    .general-form-top__title.centerTitle Оставить заявку
+  .general-form-wrap
+    .general-form-block
+      form.general-form-block-slide.general-form-block-slide_current
+        .general-form-block-row
+          .general-form-block-col
+            include main-form-part
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/default-form.png')")
+      .general-form-block-slide.general-form-block-slide-success
+        p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
+        p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
+        a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
+          span Вернуться в раздел  
+
+
+
+.general-form#zakazat     
+  .general-form-top
+    .general-form-top__title.centerTitle Заказать услуги
+  .general-form-wrap
+    .general-form-block
+      form.general-form-block-slide.general-form-block-slide_current
+        .general-form-block-row
+          .general-form-block-col
+            .general-form-selector
+              p.general-form-label__title Выберите услугу которую хотите заказть<span>*</span>:
+              input(type="text")
+              .general-form-selector-wrap
+                .general-form-selector__view
+                .general-form-selector-list
+                  .general-form-selector-list__item.general-form-selector-list__item_current Гидрообразивная резка0
+                  .general-form-selector-list__item Гидрообразивная резка1
+                  .general-form-selector-list__item Гидрообразивная резка2
+                  .general-form-selector-list__item Гидрообразивная резка3
+            .general-form-file
+              label.general-form-file-label
+                input(type="file")
+                img(src="assets/images/file-input.svg", alt="")
+                p.general-form-file-label__text <span class="general-form-file-label__text_blue">Прикрепить</span> файл с <span class="general-form-file-label__text_bold">Техническим заданием</span>
+              .general-form-file__close <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"/> </g> </g></svg>
+            label.general-form-label
+              textarea.general-form-label__textarea
+              p.general-form-label__title Опишите технические требования
+              .general-form-label__resize
+            label.general-form-label
+              input(type="text" data-required placeholder="Иванов Иван").general-form-label__input
+              p.general-form-label__title Ваше Имя<span>*</span>:
+              p.general-form-label__text Данное поле является обязательным
+            .general-form-row-2
+              label.general-form-label
+                input(type="text" data-required data-type="tel" placeholder="+7 (900) 000-00-00").general-form-label__input
+                p.general-form-label__title Ваш телефон<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+              label.general-form-label
+                input(type="text" data-type="email" placeholder="ivanivanov@mail.ru").general-form-label__input
+                p.general-form-label__title Ваше E-mail<span>*</span>:
+                p.general-form-label__text Данное поле является обязательным
+            label.general-form-checkblock.general-form-checkblock_sogl
+              input(type="checkbox", name="" data-required).general-form-checkblock__input
+              .general-form-checkblock__box
+                img(src="assets/images/checkbox.svg", alt="")
+              p.general-form-checkblock__text Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> 
+              p.general-form-label__text Согласие необходимо для отправки формы
+            button(type="submit" data-type="submit").general-btn.general-btn_green.general-form__submit Отправить
+          .general-form-block-col.general-form-block-col_img(style="background-image: url('assets/images/ship-ust.png')")
+      .general-form-block-slide.general-form-block-slide-success
+        p.general-form-block-slide-success__title Ваша заявка<br>успешно отправлена
+        p.general-form-block-slide-success__text Наш менеджер свяжется с Вами в ближайшее время
+        a(href="catalog-active.html").general-btn.general-btn_gradient.general-form-block-slide-success__btn 
+          span Вернуться в раздел  

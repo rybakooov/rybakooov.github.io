@@ -1,0 +1,34 @@
+header.header
+  .header-wrap
+    img(src="assets/images/burger.svg", alt="").header__burger
+    a(href="index.html").header-logo
+      img(src="assets/images/header-logo.svg", alt="").header-logo__img
+    .header-nav-wrap
+      nav.header-nav
+        a(href="index.html").header-nav-logo
+          img(src="assets/images/header-logo.svg", alt="").header-nav-logo__img
+        hr
+        a(href="catalog.html").header-nav__link Продукция
+        .header-nav-sublist
+          a(href="index.html").header-nav-logo
+            img(src="assets/images/header-logo-blue.svg", alt="").header-nav-logo__img
+          include ../common/sixtangles-block-head
+          .header-nav-sublist-row
+            img(src="assets/images/list-back.svg", alt="").header-nav-sublist__back
+            img(src="assets/images/list-close.svg", alt="").header-nav-sublist__close
+        a(href="about.html").header-nav__link О предприятии
+        a(href="payment.html").header-nav__link Оплата и Доставка
+        a(href="services.html").header-nav__link Сервис
+        a(href="text.html").header-nav__link Статьи
+        a(href="contacts.html").header-nav__link Контакты
+        hr
+        .header-nav-close
+          img(src="assets/images/close-btn.svg", alt="").header-nav-close__btn
+    a(href="tel: +7 (812) 718-24-92").header-phone
+      img(src="assets/images/phone-icon.svg", alt="").header-icon
+      span +7 (812) 718-24-92
+    .header-search
+      img(src="assets/images/search-icon.svg", alt="").header-icon
+      form(action="").header-search-form
+        input(type="text" placeholder="Поисковый запрос по клику").header-search-form__input
+        button(type="submit").header-search-form__btn

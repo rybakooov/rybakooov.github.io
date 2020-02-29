@@ -1,0 +1,132 @@
+.articles{
+  &__title{
+    color: #2A2A68;
+    font-size: 35px;
+    line-height: 47px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    color: #2A2A68;
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &-wrap{
+
+  }
+  &-item{
+    display: flex;
+    &:not(:last-child){
+      margin-bottom: 50px;
+    }
+    &-desc{
+      flex: 1 1 calc(100% - 600px);
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      &__title{
+        font-size: 44px;
+        text-transform: uppercase;
+        line-height: 55px;
+        color: #2A2A68;
+        font-weight: 800;
+      }
+      &__subtitle{
+        font-size: 30px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #2A2A68;
+      }
+      &__text{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: auto;
+        color: #4A5059;
+      }
+      &__link{
+        color: #25A6DE;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+    }
+    &-imgbox{
+      flex: 1 1 600px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+}
+
+.articles-item .item-main-col_desc-full-block_docs{
+  margin-top: 0;
+  .item-main-col_desc-full-block-row-item{
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  .item-main-col_desc-full-block-row-item__preview{
+    width: 50px;
+    margin-right: 20px;
+  }
+  .item-main-col_desc-full-block-row-item__text{
+    text-align: left;
+  }
+}
+
+
+@include w1366{
+  .articles-item-desc{
+    flex: 1 1 calc(100% - 400px);
+  }
+  .articles-item-imgbox{
+    flex: 1 1 400px;
+  }
+}
+
+@include w768{
+  .articles-item-imgbox{
+    display: none;
+  }
+
+
+  .articles__title{
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .articles__subtitle{
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .articles-item-desc{
+    &__title{
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &__subtitle{
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 24px;
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__link{
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  .articles-item:not(:last-child){
+    margin-bottom: 30px;
+  }
+}

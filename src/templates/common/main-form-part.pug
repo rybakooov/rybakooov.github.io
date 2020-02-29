@@ -1,0 +1,24 @@
+label.general-form-label
+  input(type="text" data-required placeholder="Иванов Иван").general-form-label__input
+  p.general-form-label__title Ваше Имя<span>*</span>:
+  p.general-form-label__text Данное поле является обязательным
+.general-form-row-2
+  label.general-form-label
+    input(type="text" data-required data-type="tel" placeholder="+7 (900) 000-00-00").general-form-label__input
+    p.general-form-label__title Ваш телефон<span>*</span>:
+    p.general-form-label__text Данное поле является обязательным
+  label.general-form-label
+    input(type="text" data-type="email" placeholder="ivanivanov@mail.ru").general-form-label__input
+    p.general-form-label__title Ваше E-mail<span>*</span>:
+    p.general-form-label__text Данное поле является обязательным
+label.general-form-label
+  textarea.general-form-label__textarea
+  p.general-form-label__title Текст сообщения
+  .general-form-label__resize
+label.general-form-checkblock.general-form-checkblock_sogl
+  input(type="checkbox", name="" data-required).general-form-checkblock__input
+  .general-form-checkblock__box
+    img(src="assets/images/checkbox.svg", alt="")
+  p.general-form-checkblock__text Соглашение на обработку и хранение <a href="#">персональных данных</a><span>*</span> 
+  p.general-form-label__text Согласие необходимо для отправки формы
+button(type="submit" data-type="submit").general-btn.general-btn_green.general-form__submit Отправить

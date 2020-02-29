@@ -1,0 +1,108 @@
+extends ../template
+block title
+  | НПО ЭНТ-Технология УФ
+block content
+  include ../common/header
+  .contacts
+    h1.contacts__title ООО «НПО ЭНТ-Технология УФ»
+    .contacts-row
+      .contacts-row-desc
+        h2.contacts-row-desc__title Контакты:
+        .cont-grid
+          .cont-grid-left
+            .contacts-row-desc-point
+              .contacts-row-desc-point-top
+                .contacts-row-desc-point-top__index 199106
+                .contacts-row-desc-point-top__city г. Санкт-Петербург
+              .contacts-row-desc-point-main
+                p.contacts-row-desc-point-main__text 24-я линия Васильевского Острова, дом № 3-7, лит. Ж, пом. 54-Н, оф. 1. <br>
+                  | Время работы: 
+                  strong Будние дни (Пн-Пт) с 9:00 – 17:00
+            a(href="tel: +7 (812) 718-24-92").contacts-row-desc__link 
+              img(src="assets/images/phone-link-img.svg", alt="")
+              | +7 (812) 718-24-92
+            a(href="mailto: info@npoent.ru").contacts-row-desc__link 
+              img(src="assets/images/mail-link-img.svg", alt="")
+              | info@npoent.ru
+          .cont-grid-right
+            .contacts-row-maps__title Схема проезда в г. Санкт-Петербург
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A250fb5890f40c2496e108e55e4d82918e196d5f5edc9bbe5ac3aee4406d6f482&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+          .cont-grid-left
+            h2.contacts-row-desc__title Реквизиты: 
+            .contacts-row-desc-requisites
+              .contacts-row-desc-requisites-row.contacts-row-desc-requisites-row_gendir
+                p.contacts-row-desc-requisites-row__key Генеральный директор: 
+                p.contacts-row-desc-requisites-row__value Григартас Альгис Ионасович
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key ИНН:
+                p.contacts-row-desc-requisites-row__value 7801652995
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key КПП:
+                p.contacts-row-desc-requisites-row__value 780101001
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key ОГРН:
+                p.contacts-row-desc-requisites-row__value 1187847298946
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key Расчетный счет:
+                p.contacts-row-desc-requisites-row__value 40702810855000035895
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key Банк:
+                p.contacts-row-desc-requisites-row__value СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key БИК:
+                p.contacts-row-desc-requisites-row__value 044030653
+              .contacts-row-desc-requisites-row
+                p.contacts-row-desc-requisites-row__key Корр. счет:
+                p.contacts-row-desc-requisites-row__value 30101810500000000653
+          .cont-grid-left
+            .contacts-row-desc-point
+              .contacts-row-desc-point-top
+                .contacts-row-desc-point-top__index 115230
+                .contacts-row-desc-point-top__city г. Москва
+              .contacts-row-desc-point-main
+                p.contacts-row-desc-point-main__text Варшавское шоссе, д. 42 , оф. 6264<br>
+                  | Время работы: 
+                  strong Будние дни (Пн-Пт) с 9:00 – 17:00
+          .cont-grid-right
+            .contacts-row-maps__title Схема проезда в г. Санкт-Петербург
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A250fb5890f40c2496e108e55e4d82918e196d5f5edc9bbe5ac3aee4406d6f482&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+          .cont-grid-left
+            h2.contacts-row-desc__title Отделы предприятия:
+            .contacts-row-desc-otdel
+              .contacts-row-desc-otdel-row
+                .contacts-row-desc-otdel__title Отдел продаж:
+                .contacts-row-desc-otdel-links
+                  a(href="tel: +7 (921) 754-68-79").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/phone-link-img.svg", alt="")
+                    | +7 (921) 754-68-79
+                  a(href="tel: +7 (921) 905-95-56").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/phone-link-img.svg", alt="")
+                    | +7 (921) 905-95-56
+              .contacts-row-desc-otdel-row
+                .contacts-row-desc-otdel__title Отдел снабжения:
+                .contacts-row-desc-otdel-links
+                  a(href="tel: +7 (812) 718-24-92").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/phone-link-img.svg", alt="")
+                    | +7 (812) 718-24-92
+                  a(href="mailto: snab@npoent.ru").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/mail-link-img.svg", alt="")
+                    | snab@npoent.ru
+              .contacts-row-desc-otdel-row
+                .contacts-row-desc-otdel__title Отдел сервиса:
+                .contacts-row-desc-otdel-links
+                  a(href="tel: +7 (999) 021-61-20").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/phone-link-img.svg", alt="")
+                    | +7 (999) 021-61-20
+                  a(href="mailto: service@npoent.ru").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/mail-link-img.svg", alt="")
+                    | service@npoent.ru
+              .contacts-row-desc-otdel-row
+                .contacts-row-desc-otdel__title Бухгалтерия:
+                .contacts-row-desc-otdel-links
+                  a(href="tel: +7 (812) 718-24-92 ").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/phone-link-img.svg", alt="")
+                    | +7 (812) 718-24-92 
+                  a(href="mailto: buh@npoent.ru").contacts-row-desc__link.contacts-row-desc-otdel-links__link
+                    img(src="assets/images/mail-link-img.svg", alt="")
+                    | buh@npoent.ru
+  include ../common/footer

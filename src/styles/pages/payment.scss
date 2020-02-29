@@ -1,0 +1,211 @@
+.payment-textBlock{
+  .index-textBlock-wrap-aboutDesc{
+    margin-left: auto;
+  }
+  .index-textBlock-imgbox-wrap .index-textBlock-imgbox{
+    margin-left: 0;
+  }
+  &.index-textBlock_aboutFirst .index-textBlock__text{
+    text-align: left;
+    line-height: 24px;
+    strong{
+      font-weight: 600;
+    }
+    span{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.payment-grid{
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 0 70px 70px;
+  width: 100%;
+  background-image: url(../images/half-circle1.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  &-wrap{
+    margin: -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-block{
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    position: relative;
+    &__bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+    &__img{
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+    &__title{
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 100%;
+      color: #2A2A68;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    &__subtitle{
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 35px;
+      color: #2A2A68;
+    }
+    &__town{
+      font-weight: 600;
+      font-size: 20px;
+      color: #25A6DE;
+      margin-bottom: 30px;
+    }
+    &-how{
+      ul.payment-grid-block-how-ul{
+        margin-bottom: 30px;
+      }
+      li.payment-grid-block-how-ul__li{
+
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: #4A5059;
+        &:before{
+          content: '';
+          width: 12px;
+          height: 12px;
+          flex-shrink: 0;
+          background-image: url('../images/list-marker.svg');
+          background-position: center center;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          margin-right: 25px;
+        }
+        &:not(:last-child){
+          margin-bottom: 6px;
+        }
+      }
+      &:first-of-type:not(:last-child){
+        margin-bottom: 30px;
+      }
+      &-row{
+        display: flex;
+        &__left{
+          margin-right: 30px;
+          color: #4A5059;
+          text-decoration: underline;
+        }
+        &__right{
+          font-weight: 600;
+          font-style: italic;
+          color: #4A5059;
+        }
+      }
+      &-mobile{
+        display: none;
+      }
+      &__text{
+        color: #4A5059;
+        line-height: 24px;
+        strong{
+          font-weight: 600;
+        }
+        &:first-of-type:not(:last-child){
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &_bg{
+
+      flex: 1 1 50%;
+      margin: 0;
+    }
+  }
+}
+
+@include w1366{
+  .payment-grid{
+    padding: 0 20px 40px;
+  }
+  .payment-grid-block-how-mobile{
+    display: block;
+  }
+  .payment-grid-block-how__text_hide{
+    display: none;
+  }
+}
+
+@include w768{
+  .payment-grid-block.payment-grid-block_bg{
+    display: none;
+  }
+  .payment-grid-wrap{
+    display: block;
+  }
+
+
+
+  .index-textBlock_about.payment-textBlock .index-textBlock-imgbox-wrap{
+    position: static;
+    transform: none;
+  }
+  .index-textBlock_about.payment-textBlock .index-textBlock-imgbox-wrap .index-textBlock-imgbox{
+    max-width: none;
+    height: 340px;
+  }
+  .index-textBlock_about.payment-textBlock .index-textBlock-imgbox-wrap .index-textBlock-imgbox__bg{
+    width: auto;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about-inNumber-wrap{
+    display: block;
+  }
+  .index-textBlock_about.payment-textBlock .index-textBlock-wrap-aboutDesc{
+    max-width: none;
+  }
+
+  .payment-textBlock.payment-textBlock_ltr .index-textBlock__title, .payment-textBlock.payment-textBlock_ltr .index-textBlock__subtitle{
+    text-align: left;
+  }
+  .payment-textBlock.payment-textBlock_ltr .index-textBlock__title{
+    font-size: 28px;
+  }
+
+  .payment-grid-block__title{
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .payment-grid-block__subtitle{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .payment-grid-block-how-row{
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .payment-grid-block-how-row__right{
+    white-space: nowrap;;
+  }
+  .payment-grid-block{
+    &:not(:last-child){
+      margin: 10px 10px 30px;
+    }
+  }
+}

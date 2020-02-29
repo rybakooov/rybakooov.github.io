@@ -1,0 +1,263 @@
+extends ../template
+block title
+  | НПО ЭНТ-Технология УФ
+block content
+  include ../common/header
+  .catalog.catalog-active
+    h1.catalog__title Продукция НПО ЭНТ-Технология УФ
+    include ../common/sixtangles-block
+    .catalog-block
+      p.catalog-block__subtitle УФ-оборудование для обеззараживания
+      .catalog-block-top
+        h2.catalog-block-top__title Поверхностей и воздуха
+        .catalog-block-top-switch-view
+          .catalog-block-top-switch-view__table.active
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><g id="Слой_2" data-name="Слой 2"><g id="layout"><path class="cls-1" d="M44.1,11.82H.9a.9.9,0,0,1-.9-.9V.9A.9.9,0,0,1,.9,0H44.1a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,44.1,11.82ZM1.8,10H43.2V1.8H1.8Z"/><path class="cls-1" d="M44.1,28.41H.9a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9H44.1a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,44.1,28.41ZM1.8,26.61H43.2V18.39H1.8Z"/><path class="cls-1" d="M44.1,45H.9a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9H44.1a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,44.1,45ZM1.8,43.2H43.2V35H1.8Z"/></g></g></svg>
+          .catalog-block-top-switch-view__grid
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><g id="Слой_2" data-name="Слой 2"><g id="layout"><path class="cls-1" d="M10.92,11.82H.9a.9.9,0,0,1-.9-.9V.9A.9.9,0,0,1,.9,0h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,10.92,11.82ZM1.8,10H10V1.8H1.8Z"/><path class="cls-1" d="M44.1,11.82h-10a.9.9,0,0,1-.9-.9V.9a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,44.1,11.82ZM35,10H43.2V1.8H35Z"/><path class="cls-1" d="M27.51,11.82h-10a.9.9,0,0,1-.9-.9V.9a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,27.51,11.82ZM18.39,10h8.22V1.8H18.39Z"/><path class="cls-1" d="M10.92,28.41H.9a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,10.92,28.41ZM1.8,26.61H10V18.39H1.8Z"/><path class="cls-1" d="M44.1,28.41h-10a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,44.1,28.41ZM35,26.61H43.2V18.39H35Z"/><path class="cls-1" d="M27.51,28.41h-10a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,27.51,28.41Zm-9.12-1.8h8.22V18.39H18.39Z"/><path class="cls-1" d="M10.92,45H.9a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,10.92,45ZM1.8,43.2H10V35H1.8Z"/><path class="cls-1" d="M44.1,45h-10a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,44.1,45ZM35,43.2H43.2V35H35Z"/><path class="cls-1" d="M27.51,45h-10a.9.9,0,0,1-.9-.9v-10a.9.9,0,0,1,.9-.9h10a.9.9,0,0,1,.9.9v10A.9.9,0,0,1,27.51,45Zm-9.12-1.8h8.22V35H18.39Z"/></g></g></svg>
+      form.catalog-active-filter
+        .catalog-active-filter-item.catalog-active-filter-item_sort
+          .catalog-active-filter-item-view Сортировать: 
+            .catalog-active-filter-item-view__current &nbsp;<span></span>
+              .catalog-active-filter-item-list
+                label.catalog-active-filter-item-list__item <span>по умолчанию</span>
+                  input(type="radio", name="sort" checked)
+                label.catalog-active-filter-item-list__item <span>по цене (сначала дешевые)</span>
+                  input(type="radio", name="sort")
+                label.catalog-active-filter-item-list__item <span>по цене (сначала дорогие)</span>
+                  input(type="radio", name="sort")
+                label.catalog-active-filter-item-list__item <span>по модели (А — Я)</span>
+                  input(type="radio", name="sort")
+                label.catalog-active-filter-item-list__item <span>по модели (Я — А)</span>
+                  input(type="radio", name="sort")
+                label.catalog-active-filter-item-list__item <span>по популярности</span>
+                  input(type="radio", name="sort")
+        img(src="assets/images/filter-icon.svg", alt="").catalog-active-filter__icon
+        .catalog-active-filter-wrap
+          .catalog-active-filter-item
+            .catalog-active-filter-item-view Производительность: 
+              .catalog-active-filter-item-view__current &nbsp;<span></span>
+                .catalog-active-filter-item-list
+                  label.catalog-active-filter-item-list__item 
+                    <span>до 50 м<sup>3</sup>/ч</span>
+                    input(type="radio", name="proizv" checked)
+                  label.catalog-active-filter-item-list__item <span>от 50 м<sup>3</sup>/ч</span>
+                    input(type="radio", name="proizv")
+          .catalog-active-filter-item
+            .catalog-active-filter-item-view Тип ламп: 
+              .catalog-active-filter-item-view__current &nbsp;<span></span>
+                .catalog-active-filter-item-list
+                  label.catalog-active-filter-item-list__item <span>Ртутные</span>
+                    input(type="radio", name="type-lamp" checked)
+                  label.catalog-active-filter-item-list__item <span>Не ртутные</span>
+                    input(type="radio", name="type-lamp")
+          .catalog-active-filter-item
+            .catalog-active-filter-item-view Мощность ламп: 
+              .catalog-active-filter-item-view__current &nbsp;<span></span>
+                .catalog-active-filter-item-list
+                  label.catalog-active-filter-item-list__item <span>до 50 м<sup>2</sup>/ч</span>
+                    input(type="radio", name="mosch-lamp" checked)
+                  label.catalog-active-filter-item-list__item <span>от 50 м<sup>3</sup>/ч</span>
+                    input(type="radio", name="mosch-lamp")
+          <img class="catalog-active-filter-wrap__close" src="assets/images/list-close.svg" alt="">
+          <div class="catalog-block-table-more"><a class="general-btn general-btn_gradient" href="#">Показать (13)</a></div>
+      .catalog-block-table
+        .catalog-block-table-row
+          .catalog-block-table__photo
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+        .catalog-block-table-row
+          .catalog-block-table__photo(style="background-image: url(assets/images/item.png)")
+          .catalog-block-table-desc
+            p.catalog-block-table-desc__name УОВ-2м-2/95
+            p.catalog-block-table-desc__desc рециркулятор
+          .catalog-block-table-param
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Производительность:
+              p.catalog-block-table-param-row__value 300 м<sup>3</sup>/ч
+            .catalog-block-table-param-row
+              p.catalog-block-table-param-row__title Объем помещения:
+              p.catalog-block-table-param-row__value 500 м<sup>3</sup>
+          p.catalog-block-table__price 43 200 ₽
+          .catalog-block-table-more
+            a(href="#").general-btn.general-btn_gradient Подробнее
+    .catalog-active-pagination
+      a(href="#").catalog-active-pagination__more Загрузить еще
+      .catalog-active-pagination-list
+        a(href="#").catalog-active-pagination-list__item.active 01
+        a(href="#").catalog-active-pagination-list__item 02
+        a(href="#").catalog-active-pagination-list__item 03
+        a(href="#").catalog-active-pagination-list__item 04
+        a(href="#").catalog-active-pagination-list__item 05
+        a(href="#").catalog-active-pagination-list__item ↑
+  .index-textBlock.index-textBlock_catalog
+    .index-textBlock-wrap(style="background-image: url('assets/images/catalog-active.png');").index-textBlock-wrap__mobileHideBg
+      .index-textBlock__title применение установок
+      .index-textBlock__subtitle для обеззараживания питьевой воды
+      p.index-textBlock__text Предприятие НПО ЭНТ—Технология УФ разрабатывает и производит УФ оборудование для обеззараживания питьевой воды по собственным патентам с 1991 года и в настоящее время является одним из ведущих в России по этому направлению.
+      p.index-textBlock__text Серийные установки НПО ЭНТ—Технология УФ для обеззараживания питьевой воды (УОВ) содержат блок обеззараживания корпусного типа, шкаф управления и соеденительные кабели.  Установки корпусного типа успешно применяются при водоподготовке питьевой воды на пищевых предприятиях, водоканалах населенных пунктов, а также в частных домах.<br>УОВ НПО ЭНТ—Технология УФ успешно используются в плавательных бассейнах.
+      p.index-textBlock__text Предприятие НПО ЭНТ—Технология УФ разрабатывает установки обеззараживания питьевой воды по индивидуальным параметрам. Для расчета индивидуального проекта заполните форму ниже «Подобрать установку», наши менеджеры произведут расчет и свяжуться с Вами.
+      a(href="#").general-btn.general-btn_green Подобрать установку
+
+  include ../common/footer

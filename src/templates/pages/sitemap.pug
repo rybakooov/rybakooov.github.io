@@ -1,0 +1,43 @@
+extends ../template
+block title
+  | НПО ЭНТ-Технология УФ
+block content
+  include ../common/header
+  .sitemap
+    table
+      tr
+        td
+          a(href="index.html") Главная
+      tr
+        td
+          a(href="catalog.html") Каталог
+        td
+          a(href="catalog-active.html") Каталог (выбран раздел)
+        td
+          a(href="item.html") Карточка товара
+      tr
+        td
+          a(href="contacts.html") Контакты
+      tr
+        td
+          a(href="about.html") О компании
+      tr
+        td
+          a(href="forms.html") Формы
+      tr
+        td
+          a(href="articles.html") Статьи
+        td
+          a(href="text.html") Текстовая 1
+        td
+          a(href="text1.html") Текстовая 2
+      tr
+        td
+          a(href="services.html") Услуги
+      tr
+        td
+          a(href="payment.html") Оплата и доставка
+      tr
+        td
+          a(href="404.html") 404
+  include ../common/footer

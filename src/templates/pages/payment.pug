@@ -1,0 +1,67 @@
+extends ../template
+block title
+  | НПО ЭНТ-Технология УФ
+block content
+  include ../common/header
+  .index-textBlock.index-textBlock_about.index-textBlock_aboutFirst.payment-textBlock.payment-textBlock_ltr
+    .index-textBlock-wrap
+      .index-textBlock-wrap-aboutDesc
+        h1.index-textBlock__title Оплата
+        .index-textBlock__subtitle Оплатить заказ возможно<br>следующими способами
+        p.index-textBlock__text <strong>Наличными.</strong> Осуществляется непосредственно в момент передачи оборудования. Наличный расчет возможен только при <span>самовывозе</span> со склада в г. Санкт-Петербург. Склад располагается по адресу: <strong>г. Санкт-Петербург, 24-я линия Васильевского острова, д. 3-7.</strong> <br>Самовывоз доступен в рабочее время склада: <strong>Будние дни (Пн-Пт) с 9:00 – 17:00</strong>
+        p.index-textBlock__text <strong>Безналичным способом.</strong> Данный способ доступен только д ля юридических лиц и индивидуальных предпринимателей. Осуществляется согласно выставленного счета. После оформления заяявки на сайте с вами свяжется наш менеджер и уточнит детали заказа, после этого будет сформирован счет для оплаты. Наше предприятие работает с НДС 20%.
+        p.index-textBlock__text <strong>Банковской картой.</strong>
+    .index-textBlock-imgbox-wrap
+      .index-textBlock-imgbox
+        img(src="assets/images/payment-gb-1.png", alt="").index-textBlock-imgbox__bg
+        img(src="assets/images/default-form.png", alt="").index-textBlock-imgbox__img
+  .payment-grid
+    .payment-grid-wrap
+      .payment-grid-block
+        h2.payment-grid-block__title Доставка заказов
+        h3.payment-grid-block__subtitle по всей России
+        h4.payment-grid-block__town г. Санкт-Петербург
+        .payment-grid-block-how
+          .payment-grid-block-how-row
+            p.payment-grid-block-how-row__left Самовывоз
+            p.payment-grid-block-how-row__right Бесплатно
+          p.payment-grid-block-how__text Со склада г. Санкт-Петербург. Склад располагается по адресу Санкт-Петербург, <br>24-я линия Васильевского Острова, дом № 3-7. Склад работает в <strong>буднии дни</strong> (Пн-Пт) <strong>с 09:00 до 17:00</strong>
+        .payment-grid-block-how
+          .payment-grid-block-how-row
+            p.payment-grid-block-how-row__left Курьером
+            p.payment-grid-block-how-row__right Оплата по договоренности
+          p.payment-grid-block-how__text Возможна доставка нашей курьерской службой на следующий рабочий день после оформления заказа, при условии наличия необходимых установок на складе.
+      .payment-grid-block.payment-grid-block_bg
+        img(src="assets/images/payment-gb-2.png", alt="").payment-grid-block__bg
+        img(src="assets/images/default-form.png", alt="").payment-grid-block__img
+      .payment-grid-block
+        h4.payment-grid-block__town г. Москва
+        .payment-grid-block-how
+          .payment-grid-block-how-row
+            p.payment-grid-block-how-row__left Транспортной Компанией
+            p.payment-grid-block-how-row__right Оплата по договоренности
+          p.payment-grid-block-how__text.payment-grid-block-how__text_hide (на выбор заказчика)<br>Наше предприятие сотрудничает со всеми возможными Транспортными Компаниями – Деловые Линии, ПЭК, СДЭК, Энергия. 
+          .payment-grid-block-how-mobile 
+            p.payment-grid-block-how__text Наше предприятие сотрудничает со всеми возможными Транспортными Компаниями: 
+            ul.payment-grid-block-how-ul
+              li.payment-grid-block-how-ul__li Деловые Линии
+              li.payment-grid-block-how-ul__li ПЭК
+              li.payment-grid-block-how-ul__li СДЭК
+              li.payment-grid-block-how-ul__li Энергия
+          p.payment-grid-block-how__text <strong>Сроки и стоимость</strong> расчитываются согласно тарифам выбранной Транспортной Компании.
+      .payment-grid-block
+        h4.payment-grid-block__town по России
+        .payment-grid-block-how
+          .payment-grid-block-how-row
+            p.payment-grid-block-how-row__left Транспортной Компанией
+            p.payment-grid-block-how-row__right Оплата по договоренности
+          p.payment-grid-block-how__text.payment-grid-block-how__text_hide (на выбор заказчика)<br>Наше предприятие сотрудничает со всеми возможными Транспортными Компаниями – Деловые Линии, ПЭК, СДЭК, Энергия. 
+          .payment-grid-block-how-mobile 
+            p.payment-grid-block-how__text Наше предприятие сотрудничает со всеми возможными Транспортными Компаниями: 
+            ul.payment-grid-block-how-ul
+              li.payment-grid-block-how-ul__li Деловые Линии
+              li.payment-grid-block-how-ul__li ПЭК
+              li.payment-grid-block-how-ul__li СДЭК
+              li.payment-grid-block-how-ul__li Энергия
+          p.payment-grid-block-how__text <strong>Сроки и стоимость</strong> расчитываются согласно тарифам выбранной Транспортной Компании.
+  include ../common/footer

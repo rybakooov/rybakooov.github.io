@@ -1,0 +1,184 @@
+
+.catalog{
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 60px 70px;
+  width: 100%;
+  .sixtangles-blocks{
+    position: static;
+    margin-bottom: 80px;
+    &-wrap{
+      padding: 0;
+    }
+    
+    .sixtangles-svg{ 
+      .cls-1{
+        fill: #b7b9bd;
+      }
+    }
+    &-item{
+      @media screen and (min-width: 1023px){
+        &:hover{
+          .sixtangles-svg{ 
+            .cls-1{
+              fill: url(#New_Gradient_Swatch_1);
+            }
+          }
+          .sixtangles-blocks-item__icon{
+            .cls-1{
+              fill: #25a6de;
+            }
+          }
+        }
+      }
+      &__text{
+        color: #6e737a;
+      }
+      &__icon{
+        .cls-1{
+          fill: #dadbdc;
+          transition: .3s;
+        }
+      }
+    }
+  }
+  &__title{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+    color: #292B68;
+    margin-bottom: 40px;
+  }
+  &-block{
+    &:not(:last-child){
+      margin-bottom: 50px;
+    }
+    &__subtitle{
+      font-weight: 300;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: #292B68;
+      line-height: 28px;
+      margin-bottom: 5px;
+    }
+    &-top{
+      display: flex;
+      align-items: flex-start;
+      height: 70px;
+      margin-bottom: 12px;
+      &__title{
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        font-size: 44px;
+        font-weight: 800;
+        color: #292B68;
+        text-transform: uppercase;
+        line-height: 44px;
+        &:after{
+          content: '';
+          height: 1px;
+          flex: 1;
+          margin-left: 20px;
+          background:  linear-gradient(to left, #a92c8e 0%, #2b2968 50%, #25a7de 100%);
+          margin-bottom: 7px;
+        }
+      }
+      &__btn{
+        align-self: center;
+      }
+    }
+    &-table{
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      &-row{
+        display: table-row;
+        height: 98px;
+        border: 1px solid #b7b9bd;
+        width: 100%;
+        transition: .3s;
+        &:hover{
+          @media screen and (min-width: 1023px){
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+      &__photo{
+        background-image: url("../images/default-partner.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        display: table-cell;
+        width: 200px;
+        border-right: 1px solid #b7b9bd;
+      }
+      &-desc{
+        display: table-cell;
+        padding-left: 40px;
+        vertical-align: middle;
+        width: 25%;
+        &__name{
+          font-weight: 800;
+          color: #2A2A68;
+          margin-top: -10px;
+          font-size: 28px;
+        }
+        &__desc{
+          font-size: 16px;
+          color: #4A5059;
+        }
+      }
+      &-param{
+        display: table-cell;
+        vertical-align: middle;
+        width: 24%;
+        padding: 0 10px;
+        & > .catalog-block-table-param-row:first-child{
+          margin-bottom: 10px;
+        }
+        &-row{
+          display: flex;
+          justify-content: space-between;
+          &__title{
+            font-size: 16px;
+            color: #4A5059;
+          }
+          &__value{
+            font-size: 16px;
+            color: #4A5059;
+            font-weight: 600;
+          }
+        }
+      }
+      &__price{
+        padding: 0 10px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 20px;
+        color: #AB2E8F;
+      }
+      &-more{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 20px;
+        width: 260px;
+        position: relative;
+        &:after{
+          height: 1px;
+          width: 20px;
+          content: '';
+          display: block;
+          background: linear-gradient(to left, #a92c8e 0%, #2b2968 50%, #25a7de 100%);
+          position: absolute;
+          top: 50%;
+          right: 0;
+        }
+      }
+    }
+  }
+}

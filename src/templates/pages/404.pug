@@ -1,0 +1,14 @@
+extends ../template
+block title
+  | НПО ЭНТ-Технология УФ
+block content
+  include ../common/header
+  .notFound
+    .notFound-wrap
+      .notFound__title Такой страницы<br>не существует
+      .notFound__notFound 404
+      .notFound-links
+        a(href="index.html").notFound-links__link Перейти на главную страницу
+        a(href="catalog.html").notFound-links__link Ознакомится с продукцией
+        a(href="about.html").notFound-links__link Информация о компании
+  include ../common/footer
