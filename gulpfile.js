@@ -13,7 +13,7 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
-	root: './',
+	root: '.',
 	templates: {
 		pages: 'src/templates/pages/*.pug',
 		src: 'src/templates/**/*.pug',
